@@ -9,7 +9,7 @@ output:
 
 #### Instructor
 
--   Randi Garcia (`rgarcia@smith.edu`). Bass Hall 412. Randi's office hours will be held on Thursdays 2:45p-4:00p, Fridays 10:50a-12:05p, or by appointment.
+-   Randi Garcia (`rgarcia@smith.edu`). Bass Hall 412. Randi's office hours will be held on Tuesdays 10:30a-11:30a, Fridays 3:00p-4:00p, or by appointment.
 
 #### Description and Goals
 
@@ -74,13 +74,11 @@ From the [Smith honor code website](https://www.smith.edu/sao/handbook/socialcon
 
 Realizing the benefits of a diverse space can only occur if we create a climate of psychological safety (Edmondson, 1999). To this end, we will always be respectful of one another. Together we should have the goal of creating an environment where we all feel comfortable sharing our thoughts and opinions. To this end, I value **"half-formed,"** informal thoughts---sometimes a deeper understanding is reached via communicating ideas before they are perfectly polished.
 
-Please let me know **your gender pronouns** however you prefer. In your written work for this class I am fine with (even encourage) the use of "they," "their," or simply "she" instead of "his or her" or "he or she." Just please do not write "he," "his" or "himself" when referring to all people. We also should also not say "you guys" when referring to a mixed-gender group, or refer to women as "girls."
-
 #### Accommodations
 
-Everyone should have all that they need to succeed in this course. Please send me your accommodation letter, or have the Disability Office work with me. If you need to register for accommodations, please contact the Disability Services office at [ODS\@smith.edu](mailto:ODS@smith.edu){.email}. Please check out the office [website](https://www.smith.edu/ods/) for more information. Smith provides flexible and individualized accommodation to students with documented disabilities that may affect their ability to fully participate in course activities or to meet course requirements. To receive accommodation services, students must be registered with the Smith College Disability Services office, College Hall 104; phone: (413) 585-2071 (voice, TTY, TDD). Students with disabilities are encouraged to contact the instructor for a confidential discussion of their individual needs for academic accommodation.
+Everyone should have all that they need to succeed in this course. Please send me your accommodation letter, or have the Accessibility Resource Center (ARC) work with me. If you need to register for accommodations, please contact the ARC at arc@smith.edu. Please check out the [center website](https://www.smith.edu/your-campus/offices-services/accessibility-resource-center) for more information. 
 
-If you have special needs concerning quiz taking, please bring documentation of your needs and make an appointment to discuss them with me, at least ONE WEEK BEFORE the first exam. That will give me time to provide accommodation for your needs.
+If you have special needs concerning quiz and exam taking, please bring documentation of your needs and make an appointment to discuss them with me, at least ONE WEEK BEFORE the first exam. That will give me time to provide accommodation for your needs.
 
 ## Assignments {#assignments .unnumbered}
 
@@ -88,7 +86,7 @@ If you have special needs concerning quiz taking, please bring documentation of 
 
 2.  **Participation** \[10%\]: Active participation in class and regular attendance will comprise 10% of your grade. Most class periods will begin with questions from the reading for that day. Participating in the discussion about the readings is a great way to demonstrate engagement. Reading before class will help us move towards a "flipped" classroom. In non-flipped classrooms, students attend lectures and are asked to apply the material outside of class in the form of homework assignments. But often students need the most help from professors when they are in the midst of applying the material (Bergman & Sams, 2012). In flipped classrooms, students are asked to learn the facts at home and do the application in class. There will be many ways to demonstrate engagement throughout the term.
 
-3.  **Exams** \[20%\]: There will be two take home exams throughout the term. See the schedule for tentative dates of these exams. They will usually be distributed on a Tuesday and due that Friday. You will have time in class to work on the exams. **I will be dropping the lowest exam grade at the end of the term.**
+3.  **Exams** \[20%\]: There will be two in-person exams throughout the term. See the schedule for tentative dates of these exams.
 
 4.  **Mini Projects and Presentations** \[30% split as 10% MP1 + 20% MP2\]: There will two mini projects during the semester. The first mini project (MP1) will be completed individually and the second mini project (MP2) will be completed in groups of about three. For these projects, you and your group will be posing your own research questions and designing an experiment. The specific content of your mini projects will vary, but all projects will consist of designing an experiment (or appropriate observational study), collecting and analyzing data, and writing a technical report on your study. For MP2 each group of three students will complete an experiment together. During the last week of class, you (and your group) will create short presentation of your study and record it or present it live to the class. We'll talk more about the project as the term proceeds and detailed instructions for the projects will be posted on the course website.
 
@@ -127,7 +125,7 @@ kable(cbind(Grade, Percent))
 
 #### Course Website and Moodle
 
-The [course website](https://randilgarcia.github.io/sds290spring24/) will be regularly updated with lecture slides, project information, assignments, and other course resources. Assignments and grades will be submitted via Moodle. You should check both regularly.
+The [course website](https://randilgarcia.github.io/sds290fall24/) will be regularly updated with lecture slides, project information, assignments, and other course resources. Assignments and grades will be submitted via Moodle. You should check both regularly.
 
 #### Computing
 
@@ -136,7 +134,7 @@ The use of the `R` statistical computing environment with the [RStudio](http://r
 -   The **server** version of `RStudio` on the [web](http://rstudio.smith.edu). The advantage of using the server version is that all of your work will be stored in the cloud, where it is automatically saved and backed up. This means that you can access your work from any computer with a web browser (Firefox is recommended) and an Internet connection.
 -   A **desktop** version of `RStudio` installed on your machine. The downside to this approach is that your work is only stored locally, and you will have to manage your own installation.
 
-Note that you do not have to choose one or the other -- you may use both. However, it is important that you understand the distinction so that you can keep track of your work. Both `R` and `RStudio` are free and open-source, and are installed on most computer labs on campus. Please see the [Resources](resources.html) page for help with `R`.
+Note that you do not have to choose one or the other -- you may use both. However, it is important that you understand the distinction so that you can keep track of your work. Both `R` and `RStudio` are free and open-source, and are installed on most computer labs on campus. 
 
 #### Use of Technology during Class
 

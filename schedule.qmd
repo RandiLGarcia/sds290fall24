@@ -5,76 +5,86 @@ title: "Schedule"
 Please read the specified sections *before* class that day.
 
 ::: {#past style="color: lightgray"}
+
 ## Week 1
 
-#### Tue, Jan 23
+#### Mon, Sep 2
 
 -   No class
+:::
 
-#### Thurs, Jan 25
+#### Tues, Sep 3
+
+-   **Office hours**: No office hours
+
+#### Wed, Sep 4
 
 -   Introduction to the course
--   [Course questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSdzrD35V7bkrvaTUIMUMo9nzx6e5fmzpDg6ceiYFbZOBBPuPw/viewform?usp=sf_link)
--   [Short experiment](https://smithcollege.qualtrics.com/jfe/form/SV_71nqdhEpN8frd6B)
+-   [Course questionnaire]()
+-   [Short experiment]()
 -   Homework:
-    -   HW #1a: record your name on Moodle
-    -   HW #1b: CITI training
--   **Office hours**: 2:45p - 4:00p
+    -   HW #1: CITI training
 
-#### Fri, Jan 26
+#### Fri, Sep 6
 
--   **Office hours**: 10:50-12:05p
+-   **Office hours**: No office hours
 -   Homework due today:
     -   Read **Stat2** Ch. 0 (PDF on Moodle)
-    -   **HW #1a due today at 11:55p**
+    -   Please record your name on Moodle
 
 ## Week 2
 
-#### Tue, Jan 30
+#### Mon, Sep 9
 
 -   Four-step process
 -   One-way ANOVA
 -   Homework due today:
     -   Read **Stat2** Ch. 5.1-5.2 (Moodle)
+    
+#### Tues, Sep 10
 
-#### Thurs, Feb 1
+-   **Office hours**: 10:30a - 11:30a    
+
+#### Wed, Sep 11
 
 -   One-way ANOVA (cont.)
 -   Homework due today:
     -   Read **Stat2** Ch. 5.3
--   **Office hours**: 2:45p - 4:00p
 
-#### Fri, Feb 2
+#### Fri, Sep 13
 
--   **Office hours**: cancelled today
+-   **Office hours**: 3:00p - 4:00p
 -   Homework due today:
     -   **HW #1b due today at 11:55p**
 
 ## Week 3
 
-#### Tue, Feb 6
+#### Mon, Sep 16
 
 -   Inference for ANOVA
 -   Homework due today:
     -   Read **Stat2** Ch. 5.4
 
-#### Thurs, Feb 8
+#### Tues, Sep 17
+
+-   **Office hours**: 10:30a - 11:30a   
+
+#### Wed, Sep 18
 
 -   ANOVA Conditions
 -   MP1 assignment
 -   Homework due today:
     -   No reading for today
--   **Office hours**: 2:45p - 4:00p
 
-#### Fri, Feb 9
+#### Fri, Sep 20
 
--   **Office hours**: 10:50-12:05p
+-   **Office hours**: 3:00p - 4:00p
 -   Homework due today:
     -   **HW #2 due today at 11:55p**
 
 ## Week 4
 
-#### Tue, Feb 13
+#### Mon, Sep 23
 
 -   Transformations
 -   MP1 topics
@@ -82,7 +92,11 @@ Please read the specified sections *before* class that day.
     -   Brainstorm topics for MP1
     -   Read **Stat2** Ch. 5.5-5.6
 
-#### Thurs, Feb 15
+#### Tues, Sep 24
+
+-   **Office hours**: 10:30a - 11:30a   
+
+#### Wed, Sep 25
 
 -   Confidence intervals and effect sizes
 -   Introduction to Qualtrics
@@ -90,246 +104,280 @@ Please read the specified sections *before* class that day.
     -   Find potential stimuli (images) for MP1
     -   Read **Stat2** 4.5 (up to, not including, example 4.10)
     -   Read **Stat2** 5.7
--   **Office hours**: 2:45p - 4:00p
 
-#### Fri, Feb 16
+#### Fri, Sep 27
 
--   **Office hours**: 10:50-12:05p
+-   **Office hours**: 3:00p - 4:00p
 -   Homework due today:
     -   **HW #3 due on today at 11:55p**
 
 ## Week 5
 
-#### Tue, Feb 20
+#### Mon, Sep 30
 
 -   Multiple comparisons
 -   Time to work on MP1
 -   Homework due today:
     -   Work on Qualtrics survey for MP1
 
-#### Thurs, Feb 22
+#### Tues, Oct 1
+
+-   **Office hours**: 10:30a - 11:30a   
+
+#### Wed, Oct 2
 
 -   Four basic designs
 -   Homework due today:
     -   Read **Cobb** Ch. 1.1-1.3 (PDF on Moodle)
--   **Office hours**: cancelled Rally Day
 
-#### Fri, Feb 23
+#### Fri, Oct 4
 
--   **Office hours**: 10:50-12:05p
+-   **Office hours**: 3:00p - 4:00p
 -   Homework due today:
     -   **HW #4 due on today at 11:55p**
 
 ## Week 6
 
-#### Tue, Feb 27
+#### Mon, Oct 7
 
 -   Blocking
 -   Homework due today:
     -   Read Ch **Stat2** Ch 6.1-6.2
 
-#### Thurs, Feb 29
+#### Tues, Oct 8
+
+-   **Office hours**: 10:30a - 11:30a   
+
+#### Wed, Oct 9
 
 -   Fitting the model for a block design
 -   Homework due today:
     -   Read Ch **Stat2** Ch 6.3
--   **Office hours**: 2:45p - 4:00p
 
-#### Fri, Mar 1
+#### Fri, Oct 11
 
--   **Office hours**: 10:50-12:05p
+-   **Office hours**: 3:00p - 4:00p
 -   Homework due today:
     -   **MP1 Qualtrics survey due for pre-approval by 11:55p**
 
 ## Week 7
 
-#### Tue, Mar 4
+#### Mon, Oct 14
+
+-   No Class: Fall Break
+
+#### Tues, Oct 15
+
+-   **Office hours**: No office hours 
+
+#### Thurs, Oct 16
 
 -   MP1 Data Collection Day
 -   Assessing the block design
-
-#### Thurs, Mar 7
-
 -   Using the block design
 -   Homework due today:
     -   Read Ch **Stat2** 6.4-6.5
--   **Office hours**: Cancelled today
 
-#### Fri, Mar 8
+#### Fri, Oct 18
 
--   **Office hours**: 10:50-12:05p
+-   **Office hours**: 3:00p - 4:00p
 -   Homework due today:
     -   **HW #5 due tonight at 11:55p**
 
 ## Week 8 - Exam 1
 
-#### Tue, Mar 12
+#### Mon, Oct 21
 
 -   Review for Exam 1
--   Analysis of MP1 data
 
-#### Thurs, Mar 14
+#### Tues, Oct 22
 
--   **Time to work on Exam 1**
--   **Office hours**: 2:45p - 4:00p
+-   **Office hours**: 10:30a - 11:30a   
 
-#### Fri, Mar 15
+#### Wed, Oct 23
 
--   **Office hours**: 10:50-12:05p
+-   **Exam 1**
+
+#### Fri, Oct 25
+
+-   **Office hours**: 3:00p - 4:00p
 -   Homework due today:
-    -   **Exam 1 due tonight at 11:59p on Gradescope**
+    -   No homework
 
-## Spring Break
+## Week 9 - MP1 due
 
-#### Tue, Mar 19
+#### Mon, Oct 28
 
--   No class - Spring Break
-
-#### Thurs, Mar 21
-
--   No class - Spring Break
-
-#### Fri, Mar 22
-
--   No class - Spring Break
-
-## Week 10 - MP1 due
-
-#### Tue, Mar 26
-
+-   Analysis of MP1 data
 -   Interactions
 -   Two-way factorial designs
 -   Homework due today:
     -   Read Ch **Stat2** 7.1-7.2
 
-#### Thurs, Mar 28
+#### Tues, Oct 29
+
+-   **Office hours**: 10:30a - 11:30a   
+
+#### Wed, Oct 30
 
 -   Fitting two-way ANOVA
 -   Practice designs
 -   Homework due today:
     -   Read Ch **Stat2** 7.3
--   **Office hours**: 2:45p - 4:00p
 
-#### Fri, Mar 29
+#### Fri, Nov 1
 
--   **Office hours**: 10:50-12:05p
+-   **Office hours**: 3:00p - 4:00p 
 -   Homework due today:
     -   **Mini Project 1 due 11:59p** (upload to Moodle by Midnight)
 
-## Week 11
+## Week 10
 
-#### Tue, Apr 2
-
--   Fitting two-way design
--   Practice designs
--   Homework due today:
-    -   Read Ch **Stat2** 7.4
-
-#### Thurs, Apr 4
-
--   Practice designs
--   **Office hours**: Cancelled today
-
-#### Fri, Apr 5
-
--   **Office hours**: 10:50-12:05p
--   Homework due today:
-    -   [**HW #6 due today at 11:55p**](homework.html)
-
-## Week 12
-
-#### Tue, Apr 9
+#### Mon, Nov 4
 
 -   Assessing two-way design
--   MP2 work time
+-   MP2 assignment and survey
 -   Homework due today:
     -   Read Ch **Stat2** 7.5
 
-#### Thurs, Apr 11
+#### Tues, Nov 5
 
+-   **Office hours**: 10:30a - 11:30a       
+
+#### Wed, Nov 6
+
+-   MP2 group assignments and work time
+-   Homework due today:
+    -   No reading
+    
+#### Fri, Nov 8
+
+-   **Office hours**: 3:00p - 4:00p  
+-   Homework due today:
+    - [**HW #6 due today at 11:55p**](homework.html)  
+
+## Week 11
+
+#### Mon, Nov 11
+
+-   Practice designs
 -   MP2 work time
 -   Homework due today:
     -   No reading
--   **Office hours**: 2:45p - 4:00p
 
-#### Fri, Apr 12
+#### Tues, Nov 12
 
--   **Office hours**: 10:50-12:05p
+-   **Office hours**: 10:30a - 11:30a   
+
+#### Wed, Nov 13
+
+-   Multiple tests
+-   Inference Test for S Condition
+-   Homework due today:
+    -   Read Ch **Stat2** 8.1 - 8.2
+    -   Read Ch **Stat2** 8.6
+
+#### Fri, Nov 15
+
+-   **Office hours**: 3:00p - 4:00p  
 -   Homework due today:
     -   [**HW #7 due today at 11:55p**](homework.html)
 
-## Week 13
+## Week 12
 
-#### Tue, Apr 16
+#### Mon, Nov 18
 
--   MP2 project work time
--   Multiple tests
--   Homework due today:
-    -   Read Ch **Stat2** 8.1 - 8.2
-
-#### Thurs, Apr 18
-
--   Inference Test for S Condition
--   MP2 project work time
--   Homework due today:
-    -   Read Ch **Stat2** 8.6
--   **Office hours**: 2:45p - 4:00p
-
-#### Fri, Apr 19
-
--   **Office hours**: 10:50-12:05p
--   Homework due today:
-    -   **MP2 Pre-approval due tonight 11:55p** (upload to Moodle)
-
-## Week 14
-
-#### Tue, Apr 23
-
--   MP2 Data Collection
+-   Repeated measures designs 
 -   Homework due today:
     -   Read Ch **Stat2** 8.4
 
-#### Thurs, Apr 25
+#### Tues, Nov 19
 
--   MP2 Data Analysis
+-   **Office hours**: 10:30a - 11:30a   
+
+#### Wed, Nov 20
+
 -   Repeated measures designs
 -   Homework due today:
     -   Read Ch **Stat2** 8.7-8.8
--   **Office hours**: 2:45p - 4:00p
 
-#### Fri, Apr 26
+#### Fri, Nov 22
 
+-   **Office hours**: 3:00p - 4:00p  
+-   Homework due today:
+    -   **MP2 Pre-approval due tonight 11:55p** (upload to Moodle)
+
+## Week 13
+
+#### Mon, Nov 25
+
+-   MP2 Data Collection
+-   Repeated measures designs (catch-up)
+
+#### Tues, Nov 26
+
+-   **Office hours**: 10:30a - 11:30a   
+
+#### Wed, Nov 27
+
+-   No class: Thanksgiving break
+
+#### Fri, Nov 29
+
+-   **Office hours**: No office hours
 -   Homework due today:
     -   [**HW #8 due today at 9:20a**](homework.html)
--   **Office hours**: 10:50-12:05p
-:::
 
-## Week 15 - Exam 2
+## Week 14
 
-#### Tue, Apr 30
+#### Mon, Dec 2
 
 -   Review for Exam 2
 
-#### Thurs, May 2
+#### Tues, Dec 3
 
--   **Exam 2 work time**
--   **Office hours**: 2:45p - 4:00p
+-   **Office hours**: 10:30a - 11:30a   
 
-#### Fri, May 3
+#### Wed, Dec 4
 
--   **Office hours**: Cancelled
+-   **Exam 2**
+
+#### Fri, Dec 6
+
+-   **Office hours**: 3:00p - 4:00p  
+
+
+## Week 15 - Exam 2
+
+#### Mon, Dec 9
+
+-   MP2 Data Analysis and group work time
+-   Class wrap-up
+
+#### Tues, Dec 10
+
+-   **Office hours**: 10:30a - 11:30a   
+
+#### Wed, Dec 11
+
+-   No class
+
+#### Fri, Dec 13
+
+-   **Office hours**: No office hours
     
 
 ## Finals Week - MP2 due
 
-#### Tue, May 7
+#### Mon, Dec 16
 
--  **Exam 2 due tonight at 11:59p** (upload to Gradescope)
+-   No class
 
-#### Thurs, May 9
+#### Tues, Dec 17
 
--   [**Extra credit HW #9 due today at 3:00p**](homework.html)
--   **MP2 due today at 11:59p** (upload to Moodle by Midnight)
+-   **Office hours**: No office hours, by appointment   
 
-#### Fri, May 10
+#### Wed, Dec 18
+
+-   **MP2 due today at formal end of finals. Typically 2p or 3p.** (upload to Moodle)
 
