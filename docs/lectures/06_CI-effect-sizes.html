@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Prof Randi Garcia, SDS 290">
+<meta name="dcterms.date" content="2024-02-15">
+
+<title>SDS 290 - Spring 2024 - Confidence Intervals and Effect Sizes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SDS 290 - Spring 2024</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li class="dropdown-header">Helpful Links</li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lectures" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Lectures</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-lectures">    
+        <li>
+    <a class="dropdown-item" href="../lectures/01_intro_to_experimental.html">
+ <span class="dropdown-text">01 - Intro to Experimental Design</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/02_one-way-ANOVA.html">
+ <span class="dropdown-text">02 - One-Way ANOVA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/03_one-way-ANOVAII.html">
+ <span class="dropdown-text">03 - One-Way ANOVA II</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/04_inference-ANOVA.html">
+ <span class="dropdown-text">04 - Inference for ANOVA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/05_ANOVA-conditions.html">
+ <span class="dropdown-text">05 - ANOVA Conditions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/06_CI-effect-sizes.html">
+ <span class="dropdown-text">06 - Confidence Intervals and Effect Sizes</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lectures/07_multiple-comparisons.html">
+ <span class="dropdown-text">07 - Multiple Comparisons</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-code" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Code</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-code">    
+        <li>
+    <a class="dropdown-item" href="../code/01_animal_data.qmd">
+ <span class="dropdown-text">01 - Animal Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../code/02_informal_anova.qmd">
+ <span class="dropdown-text">02 - Informal ANOVA</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../code/SandwichAnts analysis.qmd">
+ <span class="dropdown-text">SandwichAnts Analysis</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-homework" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Homework</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-homework">    
+        <li>
+    <a class="dropdown-item" href="http://moodle.smith.edu">
+ <span class="dropdown-text">HW1a: Record your names on Moodle</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../pdfs/HW 1b_CITI Training.pdf">
+ <span class="dropdown-text">HW1b: CITI Training</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../homework.html">
+ <span class="dropdown-text">HW2: Click Here</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../homework.html">
+ <span class="dropdown-text">HW #3: 5.32, 5.38, 5.54</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../homework.html">
+ <span class="dropdown-text">HW4: 5.59, 5.60, 5.70, 5.36, 5.43</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../project/mini-project-1.html">
+ <span class="dropdown-text">Mini project 1</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#announcements" id="toc-announcements" class="nav-link active" data-scroll-target="#announcements">Announcements</a></li>
+  <li><a href="#agenda" id="toc-agenda" class="nav-link" data-scroll-target="#agenda">Agenda</a></li>
+  <li><a href="#last-time" id="toc-last-time" class="nav-link" data-scroll-target="#last-time">Last time</a>
+  <ul class="collapse">
+  <li><a href="#how-to-check-assumptions" id="toc-how-to-check-assumptions" class="nav-link" data-scroll-target="#how-to-check-assumptions">How to check assumptions</a></li>
+  </ul></li>
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">Try it!</a></li>
+  <li><a href="#transformations-example" id="toc-transformations-example" class="nav-link" data-scroll-target="#transformations-example">Transformations: Example</a></li>
+  <li><a href="#transformations-example-1" id="toc-transformations-example-1" class="nav-link" data-scroll-target="#transformations-example-1">Transformations: Example</a></li>
+  <li><a href="#transformations-example-2" id="toc-transformations-example-2" class="nav-link" data-scroll-target="#transformations-example-2">Transformations: Example</a></li>
+  <li><a href="#common-transformations" id="toc-common-transformations" class="nav-link" data-scroll-target="#common-transformations">Common transformations</a></li>
+  <li><a href="#how-to-transform" id="toc-how-to-transform" class="nav-link" data-scroll-target="#how-to-transform">How to transform</a></li>
+  <li><a href="#when-to-use-log-transformation" id="toc-when-to-use-log-transformation" class="nav-link" data-scroll-target="#when-to-use-log-transformation">When to use log transformation:</a></li>
+  <li><a href="#diagnostic-plot-to-pick-a-transformation" id="toc-diagnostic-plot-to-pick-a-transformation" class="nav-link" data-scroll-target="#diagnostic-plot-to-pick-a-transformation">Diagnostic plot to pick a transformation</a></li>
+  <li><a href="#diagnostic-plot-to-pick-a-transformation-step-1" id="toc-diagnostic-plot-to-pick-a-transformation-step-1" class="nav-link" data-scroll-target="#diagnostic-plot-to-pick-a-transformation-step-1">Diagnostic plot to pick a transformation: Step 1</a></li>
+  <li><a href="#diagnostic-plot-to-pick-a-transformation-step-2" id="toc-diagnostic-plot-to-pick-a-transformation-step-2" class="nav-link" data-scroll-target="#diagnostic-plot-to-pick-a-transformation-step-2">Diagnostic plot to pick a transformation: Step 2</a></li>
+  <li><a href="#diagnostic-plot-to-pick-a-transformation-step-3" id="toc-diagnostic-plot-to-pick-a-transformation-step-3" class="nav-link" data-scroll-target="#diagnostic-plot-to-pick-a-transformation-step-3">Diagnostic plot to pick a transformation: Step 3</a></li>
+  <li><a href="#diagnostic-plot-to-pick-a-transformation-step-3-1" id="toc-diagnostic-plot-to-pick-a-transformation-step-3-1" class="nav-link" data-scroll-target="#diagnostic-plot-to-pick-a-transformation-step-3-1">Diagnostic plot to pick a transformation: Step 3</a></li>
+  <li><a href="#try-it-for-the-hawks" id="toc-try-it-for-the-hawks" class="nav-link" data-scroll-target="#try-it-for-the-hawks">Try it for the Hawks!</a></li>
+  <li><a href="#anova-for-diamonds" id="toc-anova-for-diamonds" class="nav-link" data-scroll-target="#anova-for-diamonds">ANOVA for Diamonds</a></li>
+  <li><a href="#effect-sizes-and-confidence-intervals" id="toc-effect-sizes-and-confidence-intervals" class="nav-link" data-scroll-target="#effect-sizes-and-confidence-intervals">Effect Sizes and Confidence Intervals</a>
+  <ul class="collapse">
+  <li><a href="#some-options" id="toc-some-options" class="nav-link" data-scroll-target="#some-options">Some options:</a></li>
+  </ul></li>
+  <li><a href="#confidence-intervals-for-difference-between-two-groups" id="toc-confidence-intervals-for-difference-between-two-groups" class="nav-link" data-scroll-target="#confidence-intervals-for-difference-between-two-groups">Confidence Intervals for Difference Between two Groups</a></li>
+  <li><a href="#calculating-ci-between-groups-in-r" id="toc-calculating-ci-between-groups-in-r" class="nav-link" data-scroll-target="#calculating-ci-between-groups-in-r">Calculating CI between groups in R</a></li>
+  <li><a href="#calculating-ci-between-groups-in-r-1" id="toc-calculating-ci-between-groups-in-r-1" class="nav-link" data-scroll-target="#calculating-ci-between-groups-in-r-1">Calculating CI between groups in R</a></li>
+  <li><a href="#equivalence-of-confidence-intervals-and-tests" id="toc-equivalence-of-confidence-intervals-and-tests" class="nav-link" data-scroll-target="#equivalence-of-confidence-intervals-and-tests">Equivalence of Confidence Intervals and Tests</a></li>
+  <li><a href="#effect-size-d" id="toc-effect-size-d" class="nav-link" data-scroll-target="#effect-size-d">Effect Size (D)</a></li>
+  <li><a href="#effect-size-d-1" id="toc-effect-size-d-1" class="nav-link" data-scroll-target="#effect-size-d-1">Effect Size (D)</a></li>
+  <li><a href="#r-squared-for-one-way-anova" id="toc-r-squared-for-one-way-anova" class="nav-link" data-scroll-target="#r-squared-for-one-way-anova">R-squared for One-Way ANOVA</a></li>
+  <li><a href="#r-squared-for-diamond-color" id="toc-r-squared-for-diamond-color" class="nav-link" data-scroll-target="#r-squared-for-diamond-color">R-squared for Diamond Color</a></li>
+  <li><a href="#try-it-1" id="toc-try-it-1" class="nav-link" data-scroll-target="#try-it-1">Try it!</a></li>
+  <li><a href="#mini-project-1" id="toc-mini-project-1" class="nav-link" data-scroll-target="#mini-project-1">Mini Project 1</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="06_CI-effect-sizes.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Confidence Intervals and Effect Sizes</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Prof Randi Garcia, SDS 290 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 15, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="announcements" class="level2">
+<h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
+<ul>
+<li>Grades will be posted for HW2 soon
+<ul>
+<li>Solution sheet available on Moodle</li>
+</ul></li>
+<li>HW3 due tomorrow night</li>
+<li>Office hours (Bass 412)
+<ul>
+<li>Today: 2:45p - 4:00p</li>
+<li>Friday: 10:50a - 12:05p</li>
+</ul></li>
+<li>Where to get HW help
+<ul>
+<li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301.</li>
+</ul></li>
+</ul>
+</section>
+<section id="agenda" class="level2">
+<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
+<ul>
+<li>ANOVA Conditions</li>
+<li>Transformations</li>
+<li>Confidence intervals</li>
+<li>Effect sizes</li>
+<li>MP1 introduction
+<ul>
+<li>topics time</li>
+</ul></li>
+</ul>
+</section>
+<section id="last-time" class="level2">
+<h2 class="anchored" data-anchor-id="last-time">Last time</h2>
+<section id="how-to-check-assumptions" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-check-assumptions">How to check assumptions</h3>
+<ul>
+<li><p>C. <strong>Constant effects</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>A. <strong>Additive effects</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>S. <strong>Same standard deviations</strong> – is the biggest SD less than two times as large as the smallest?</p></li>
+<li><p>I. <strong>Independent residuals</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>N. <strong>Normally distributed residuals</strong> – construct a histogram or normal probability plot of residuals.</p></li>
+<li><p>Z. <strong>Zero mean residuals</strong> – construct a histogram or normal probability plot of residuals.</p></li>
+</ul>
+</section>
+</section>
+<section id="try-it" class="level2">
+<h2 class="anchored" data-anchor-id="try-it">Try it!</h2>
+<p>Back in your groups of three, check or discuss the last 4 ANOVA assumptions: The <strong>SINZ</strong>.</p>
+<p><strong>Dataset 1</strong>: <code>SandwichAnts</code></p>
+<ul>
+<li>Factor: <code>Bread</code></li>
+<li>Response: <code>Ants</code></li>
+</ul>
+<p><strong>Dataset 2</strong>: <code>Meniscus</code></p>
+<ul>
+<li>Factor: <code>Method</code></li>
+<li>Response: <code>Displacement</code></li>
+</ul>
+</section>
+<section id="transformations-example" class="level2">
+<h2 class="anchored" data-anchor-id="transformations-example">Transformations: Example</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Stat2Data)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"Diamonds"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> TotalPrice, <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="transformations-example-1" class="level2">
+<h2 class="anchored" data-anchor-id="transformations-example-1">Transformations: Example</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Diamonds <span class="sc">%&gt;%</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Color) <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">m =</span> <span class="fu">mean</span>(TotalPrice, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(TotalPrice, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 4
+  Color     n     m     sd
+  &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt;
+1 D        52 5569.  4764.
+2 E        82 4359.  3696.
+3 F        87 9160. 10937.
+4 G        86 9559.  7993.
+5 H        29 8669.  6379.
+6 I        12 7640.  5461.
+7 J         3 1936.   737.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10937</span><span class="sc">/</span><span class="dv">736</span> <span class="co">#Yikes!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 14.86005</code></pre>
+</div>
+</div>
+</section>
+<section id="transformations-example-2" class="level2">
+<h2 class="anchored" data-anchor-id="transformations-example-2">Transformations: Example</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> <span class="fu">log</span>(TotalPrice), <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="common-transformations" class="level2">
+<h2 class="anchored" data-anchor-id="common-transformations">Common transformations</h2>
+<p>For the response (Y)…</p>
+<p><img src="pics/transformations.png" class="img-fluid"></p>
+</section>
+<section id="how-to-transform" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-transform">How to transform</h2>
+<p>We can do the transformation directly in the visualization code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> <span class="fu">log</span>(TotalPrice), <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>OR, we can create a new variable in the dataset</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Diamonds <span class="ot">&lt;-</span> Diamonds <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ln_TotalPrice =</span> <span class="fu">log</span>(TotalPrice))</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Then, we use the new variable to make our visualization</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> ln_TotalPrice, <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="when-to-use-log-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="when-to-use-log-transformation">When to use log transformation:</h2>
+<p>Look for:</p>
+<ul>
+<li>Distribution of response is skewed towards high end.</li>
+<li>The responses in one group (or more) range over two or more orders of magnitude.</li>
+<li>Variability varies across groups considerably, especially when the spread tracks with the mean.</li>
+</ul>
+</section>
+<section id="diagnostic-plot-to-pick-a-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="diagnostic-plot-to-pick-a-transformation">Diagnostic plot to pick a transformation</h2>
+<p>Steps:</p>
+<ol type="1">
+<li>Save the means and sd’s of groups in a little <strong>dataset</strong>.</li>
+<li>Make a scatterplot of log(sd) versus log(m) with a <strong>line of best fit</strong>.</li>
+<li>Your transformation will be the response raised to the <strong>power of 1-slope</strong> of that line.</li>
+</ol>
+</section>
+<section id="diagnostic-plot-to-pick-a-transformation-step-1" class="level2">
+<h2 class="anchored" data-anchor-id="diagnostic-plot-to-pick-a-transformation-step-1">Diagnostic plot to pick a transformation: Step 1</h2>
+<p>Save the means and sd’s of groups in a little <strong>dataset</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ds <span class="ot">&lt;-</span> Diamonds <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Color) <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">m =</span> <span class="fu">mean</span>(TotalPrice),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd =</span> <span class="fu">sd</span>(TotalPrice))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="diagnostic-plot-to-pick-a-transformation-step-2" class="level2">
+<h2 class="anchored" data-anchor-id="diagnostic-plot-to-pick-a-transformation-step-2">Diagnostic plot to pick a transformation: Step 2</h2>
+<p>Make a scatterplot of log(sd) versus log(m) with a <strong>line of best fit</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">log</span>(m), <span class="at">y =</span> <span class="fu">log</span>(sd), <span class="at">data =</span> ds) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">se =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="diagnostic-plot-to-pick-a-transformation-step-3" class="level2">
+<h2 class="anchored" data-anchor-id="diagnostic-plot-to-pick-a-transformation-step-3">Diagnostic plot to pick a transformation: Step 3</h2>
+<p>Your transformation will be the response raised to the <strong>power of 1-slope</strong> of that line.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(<span class="fu">log</span>(sd) <span class="sc">~</span> <span class="fu">log</span>(m), <span class="at">data =</span> ds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = log(sd) ~ log(m), data = ds)
+
+Coefficients:
+(Intercept)       log(m)  
+     -4.447        1.480  </code></pre>
+</div>
+</div>
+</section>
+<section id="diagnostic-plot-to-pick-a-transformation-step-3-1" class="level2">
+<h2 class="anchored" data-anchor-id="diagnostic-plot-to-pick-a-transformation-step-3-1">Diagnostic plot to pick a transformation: Step 3</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">=</span> <span class="dv">1</span> <span class="sc">-</span> <span class="fl">1.480</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> TotalPrice<span class="sc">^</span>p, <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="try-it-for-the-hawks" class="level2">
+<h2 class="anchored" data-anchor-id="try-it-for-the-hawks">Try it for the Hawks!</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Stat2Data)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"Hawks"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Find a transformation that helps the heterogeneity of variance for Y = Weight and X = Species.</li>
+<li>Run the ANOVA (even if the issue is not completely fixed) and write a sentence interpretation of your ANOVA results.</li>
+</ul>
+<p>Steps for finding a transformation:</p>
+<ol type="1">
+<li>Save the means and sd’s of groups in a little <strong>dataset</strong>.</li>
+<li>Make a scatterplot of log(sd) versus log(m) with a <strong>line of best fit</strong>.</li>
+<li>Your transformation will be the response raised to the <strong>power of 1-slope</strong> of that line.</li>
+</ol>
+</section>
+<section id="anova-for-diamonds" class="level2">
+<h2 class="anchored" data-anchor-id="anova-for-diamonds">ANOVA for Diamonds</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>modDia <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(TotalPrice) <span class="sc">~</span> Color, <span class="at">data =</span> Diamonds)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(modDia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
+
+Response: log(TotalPrice)
+           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    
+Color       6  29.946  4.9909  7.3713 1.972e-07 ***
+Residuals 344 232.913  0.6771                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>There are statistically significant differences in log price of diamonds across colors <span class="math inline">\(F(6, 344) = 7.37\)</span>, <span class="math inline">\(p &lt; .001\)</span>.</p>
+<p>But what else do we want to know??</p>
+</section>
+<section id="effect-sizes-and-confidence-intervals" class="level2">
+<h2 class="anchored" data-anchor-id="effect-sizes-and-confidence-intervals">Effect Sizes and Confidence Intervals</h2>
+<ul>
+<li>The p-value for our F-ratio only tells us if effects are <strong>detectable</strong>.
+<ul>
+<li>Answers the question: <strong>IS there an effect?</strong></li>
+</ul></li>
+<li>Practical significance is different from <strong>statistical</strong> significance.
+<ul>
+<li>Need to answer the question: <strong>How big is IT</strong>?</li>
+</ul></li>
+<li>Which values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)?</li>
+</ul>
+<section id="some-options" class="level3">
+<h3 class="anchored" data-anchor-id="some-options">Some options:</h3>
+<ul>
+<li>A specific group mean.</li>
+<li>How far away a specific condition is from the grand average (the treatment effect).</li>
+<li>How far away a specific condition is from another condition.</li>
+<li>How far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.</li>
+<li>Additional effect size option: The overall variance explained by a factor of interest.</li>
+</ul>
+</section>
+</section>
+<section id="confidence-intervals-for-difference-between-two-groups" class="level2">
+<h2 class="anchored" data-anchor-id="confidence-intervals-for-difference-between-two-groups">Confidence Intervals for Difference Between two Groups</h2>
+<p><span class="math display">\[(\bar{y_i}-\bar{y_j}) \pm t^*\cdot SD \sqrt{1/n_i+1/n_j}\]</span></p>
+<ul>
+<li>Where <span class="math inline">\(SD = \sqrt{MSE}\)</span>.</li>
+<li><span class="math inline">\(t^*\)</span> depends on the confidence level and df of the error.</li>
+<li><span class="math inline">\(Sample\:size\:factor = \sqrt{1/n_i+1/n_j}\)</span>, the larger the sample sizes, the narrower the interval.</li>
+<li><span class="math inline">\(t({df}_{res})\)</span> is the t-value the dictates distance of the interval.</li>
+</ul>
+</section>
+<section id="calculating-ci-between-groups-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="calculating-ci-between-groups-in-r">Calculating CI between groups in R</h2>
+<p><span class="math display">\[(\bar{y_G}-\bar{y_F}) \pm t^*\cdot SD \sqrt{1/n_G+1/n_F}\]</span></p>
+<p>For difference between G (near colorless) and F (colorless)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>MSE <span class="ot">=</span> <span class="fl">0.6771</span> <span class="co">#from our ANOVA source table</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>df_E <span class="ot">=</span> <span class="dv">344</span> <span class="co">#from our ANOVA source table</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="fu">qt</span>(.<span class="dv">975</span>, df_E) <span class="co">#for 95% CI</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>n_g <span class="ot">=</span> <span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"G"</span>)<span class="sc">$</span>n <span class="co">#sample size for G</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>n_f <span class="ot">=</span> <span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"F"</span>)<span class="sc">$</span>n <span class="co">#sample size for F</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>mean_g <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"G"</span>)<span class="sc">$</span>m) <span class="co">#mean for G</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>mean_f <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"F"</span>)<span class="sc">$</span>m) <span class="co">#mean for F</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Confidence interval</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>UL <span class="ot">&lt;-</span> (mean_g<span class="sc">-</span>mean_f) <span class="sc">+</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n_g<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n_f) <span class="co">#upper limit</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>LL <span class="ot">&lt;-</span> (mean_g<span class="sc">-</span>mean_f) <span class="sc">-</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n_g<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n_f) <span class="co">#lower limit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="calculating-ci-between-groups-in-r-1" class="level2">
+<h2 class="anchored" data-anchor-id="calculating-ci-between-groups-in-r-1">Calculating CI between groups in R</h2>
+<p>For difference between G (near colorless) and F (colorless)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>LL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.2035213</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>UL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2886875</code></pre>
+</div>
+</div>
+<p>Sentence interpretation:</p>
+<p>We are 95% confident that the true mean difference in (log) price between near colorless and colorless Diamonds is between -0.20 and 0.29.</p>
+</section>
+<section id="equivalence-of-confidence-intervals-and-tests" class="level2">
+<h2 class="anchored" data-anchor-id="equivalence-of-confidence-intervals-and-tests">Equivalence of Confidence Intervals and Tests</h2>
+<blockquote class="blockquote">
+<p>Two group means are statistically different at the 5% (1%) level if and only if a 95% (99%) confidence interval for their diffrence does not include 0.</p>
+</blockquote>
+</section>
+<section id="effect-size-d" class="level2">
+<h2 class="anchored" data-anchor-id="effect-size-d">Effect Size (D)</h2>
+<p>But <strong>how big is IT</strong>?</p>
+<p>We can compare the differences between groups to to the standard deviation within all groups:</p>
+<p><span class="math display">\[D_{ij} = \frac{(\bar{y_i}-\bar{y_j})}{SD}\]</span></p>
+<ul>
+<li>Where again <span class="math inline">\(SD = \sqrt{MSE}\)</span></li>
+</ul>
+</section>
+<section id="effect-size-d-1" class="level2">
+<h2 class="anchored" data-anchor-id="effect-size-d-1">Effect Size (D)</h2>
+<p>For difference between G (near colorless) and F (colorless)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>D <span class="ot">=</span> (mean_g<span class="sc">-</span>mean_f)<span class="sc">/</span><span class="fu">sqrt</span>(MSE)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>D</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.05175002</code></pre>
+</div>
+</div>
+<p>The difference between the price of nearly colorless diamonds and colorless diamonds is only 0.052 times the size of the typical within-group deviations in price. Such a small difference!</p>
+</section>
+<section id="r-squared-for-one-way-anova" class="level2">
+<h2 class="anchored" data-anchor-id="r-squared-for-one-way-anova">R-squared for One-Way ANOVA</h2>
+<p>But how much does color matter overall?</p>
+<p><span class="math inline">\(R^2\)</span> is the proportion of total variation explained by the factor:</p>
+<p><span class="math display">\[R^2 = \frac{SS_{treatment}}{SS_{Total}}\]</span></p>
+<p>OR</p>
+<p><span class="math display">\[R^2 = 1-\frac{SS_{error}}{SS_{total}}\]</span></p>
+</section>
+<section id="r-squared-for-diamond-color" class="level2">
+<h2 class="anchored" data-anchor-id="r-squared-for-diamond-color">R-squared for Diamond Color</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>modDia <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(TotalPrice) <span class="sc">~</span> Color, <span class="at">data =</span> Diamonds)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(modDia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
+
+Response: log(TotalPrice)
+           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    
+Color       6  29.946  4.9909  7.3713 1.972e-07 ***
+Residuals 344 232.913  0.6771                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>R2 <span class="ot">=</span> <span class="fl">29.946</span><span class="sc">/</span>(<span class="fl">29.946+232.913</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>R2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1139242</code></pre>
+</div>
+</div>
+<p>The <span class="math inline">\(R^2\)</span> value is 0.11, so about 11% of the variation in the total price of a diamonds is explained by the diamonds’ colors.</p>
+</section>
+<section id="try-it-1" class="level2">
+<h2 class="anchored" data-anchor-id="try-it-1">Try it!</h2>
+<p>Use the <code>SandwichAnts</code> dataset to calculate the CI and effect size for difference between <code>MultiGrain</code> and <code>Rye</code> in number of <code>Ants</code>.</p>
+</section>
+<section id="mini-project-1" class="level2">
+<h2 class="anchored" data-anchor-id="mini-project-1">Mini Project 1</h2>
+<p>See <a href="https://randilgarcia.github.io/sds290spring24/project/mini-project-1.html">Mini Project 1 instructions</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+
+<script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
