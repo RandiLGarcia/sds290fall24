@@ -93,7 +93,7 @@ website:
       - text: Homework
         menu:
         - text: 'HW1: CITI Training'
-#          href: pdfs/HW 1b_CITI Training.pdf
+          href: pdfs/HW 1b_CITI Training.pdf
 #        - text: 'HW2: Click Here'
 #          href: homework.html
 #        - text: 'HW #3: 5.32, 5.38, 5.54'
