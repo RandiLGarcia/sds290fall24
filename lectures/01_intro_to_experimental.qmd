@@ -1,7 +1,7 @@
 ---
 title: "SDS 290 Research Design and Analysis"
 author: Prof Randi Garcia
-date: January 24, 2024
+date: September 4, 2024
 format: 
   revealjs:
     scrollable: true
@@ -12,7 +12,7 @@ format:
 
 Please complete the course questionnaire:
 
-**bit.ly/sds290spring24**
+**bit.ly/sds290fall24**
 
 ## Introductions
 
@@ -53,7 +53,7 @@ In groups of three introduce yourselves...
 
 ## Introduction to SDS 290
 
--   Course website at **randilgarcia.github.io/sds290spring24/**
+-   Course website at **randilgarcia.github.io/sds290fall24/**
 -   Let's go through the syllabus
 
 ## Our First Experiment

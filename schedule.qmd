@@ -20,8 +20,8 @@ Please read the specified sections *before* class that day.
 #### Wed, Sep 4
 
 -   Introduction to the course
--   [Course questionnaire]()
--   [Short experiment]()
+-   [Course questionnaire](https://docs.google.com/forms/d/e/1FAIpQLSc23gIulhgDvCQSa0qX7RMxJUcCbVWwvzUxuzJU5G9PraYL_Q/viewform?usp=sf_link)
+-   [Short experiment](https://smithcollege.qualtrics.com/jfe/form/SV_71nqdhEpN8frd6B)
 -   Homework:
     -   HW #1: CITI training
 
