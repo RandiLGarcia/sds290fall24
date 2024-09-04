@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.555">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Prof Randi Garcia">
   <meta name="dcterms.date" content="2024-09-04">
@@ -358,7 +358,8 @@ Prof Randi Garcia
 <section id="guinea-pigs" class="slide level2">
 <h2>Guinea Pigs</h2>
 
-<img data-src="pics/pigs2.JPG" class="r-stretch quarto-figure-center"><p class="caption">Tia and Tamera</p></section>
+<img data-src="pics/pigs2.JPG" class="r-stretch quarto-figure-center"><p class="caption">Tia and Tamera</p><p>RIP Tia 2014-2024</p>
+</section>
 <section id="dog-and-baby-and-teenagers" class="slide level2">
 <h2>Dog and Baby and Teenagers</h2>
 <p>Come to my office hours if you want to see pics of Naomi, Amelia, Devyn, and Roux!</p>
@@ -426,6 +427,11 @@ Prof Randi Garcia
 </ul></li>
 </ul>
 </div>
+</section>
+<section id="exit-ticket" class="slide level2">
+<h2>Exit ticket</h2>
+<p>Please take a few minutes to complete the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdA9eY7gjrQCt8LWgQotznE1GJ66E8JtDKJmfpEy9kWOQx5Hw/viewform?usp=sf_link">exit ticket</a> for today’s class now.</p>
+
 <!-- New Section -->
 <!-- ==================================== -->
 <!-- type: section -->
@@ -436,7 +442,7 @@ Prof Randi Garcia
 <!-- ======================================================== -->
 <!-- $$\sigma^2 = \frac{\sum_{i=1}^{n}(x_i - \mu)^2} {n-1}$$ -->
 
-<div class="quarto-auto-generated-content">
+<img data-src="pics/bit.ly_sds290exit.png" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
@@ -728,24 +734,6 @@ Prof Randi Garcia
         // clear code selection
         e.clearSelection();
       });
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
-            }
-          }
-        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -782,11 +770,7 @@ Prof Randi Garcia
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
+          return note.innerHTML;
         });
       }
       const findCites = (el) => {
