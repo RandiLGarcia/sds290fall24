@@ -13,16 +13,16 @@ output:
 
 #### Description and Goals
 
-This course provides students with an overview of statistical methods needed for scientific research. Our discussions will focus primarily on the basic principles of the design of experiments and observational studies, standard balanced designs, extensions of these designs, and the analysis of data collected under these designs. Most physical, biological, and social processes, produce variable results. This variability can often be quantified and decomposed in ways that enhance our understanding of the process and facilitate decision making. Statisticians and data scientists use four steps to quantify and interpret this variability. The steps are:
+This course provides students with an overview of statistical methods needed for scientific research. Our discussions will focus primarily on the basic principles of the design of experiments and observational studies, standard balanced designs, extensions of these designs, and the analysis of data collected under these designs. Most physical, biological, and social processes, produce variable results. This variability can often be quantified and decomposed in ways that enhance our understanding of the process and facilitate decision making. Statisticians and data scientists use four steps to quantify and interpret this variability. The steps are:   
 
 1.  Formulate a statistical question about the process,
 2.  Design a data collection procedure, or comparison scheme, to answer the question,
 3.  Collect and analyze the data, and
 4.  Interpret and communicate the results in written, visual, and oral forms.
 
-One major objective of this course is to give you practice with all four of these steps. Developing our statistical thinking around the factors that produce variability in observations is a key goal of all statistic courses. SDS 290 course goals:
+One major objective of this course is to give you practice with all four of these steps. Developing our statistical thinking around the factors that produce variability in observations is a key goal of all statistic courses. SDS 290 course learning goals:
 
-1.  Distinguish between observational and experimental studies, and explain the advantages and disadvantages of each.
+1.  Distinguish between observational and experimental studies and factors. Explain the advantages and disadvantages of each.
 2.  Explain the three design principles: random assignment, blocking, factorial crossing.
 3.  Identify the factor structures of the four basic experimental designs: 1) One-way Basic Factorial, 2) One-way Complete Block, 3) Two-way Basic Factorial, and 4) Split Plot/Repeated Measures.
 4.  Recognize potential sources of confounding and selection bias.
