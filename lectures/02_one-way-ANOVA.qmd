@@ -122,8 +122,8 @@ survey %>%
 
 ## One-Way ANOVA
 
-```{r, echo=TRUE}
-qplot(x = as.factor(graduation), y = chalk_est, data = survey)
+```{r, echo=TRUE, warning=FALSE}
+qplot(x = chalk_est, data = survey)
 ```
 
 ## Data Cleaning
@@ -131,6 +131,19 @@ qplot(x = as.factor(graduation), y = chalk_est, data = survey)
 ```{r, echo=TRUE}
 survey <- survey %>%
   filter(chalk_est < 100)
+```
+
+## Data Cleaning
+
+```{r, echo=TRUE, warning=FALSE}
+qplot(x = chalk_est, data = survey)
+```
+
+## Data Cleaning
+
+```{r, echo=TRUE}
+survey <- survey %>%
+  filter(chalk_est < 40)
 ```
 
 ## One-Way ANOVA
@@ -236,7 +249,3 @@ Please take a few minutes to complete the [exit ticket](https://docs.google.com/
 <!--     - students’ times to complete cognitive task -->
 
 <!--     - enzyme concentration -->
-
-## Work on Homework 1b
-
-Find instructions [here](https://randilgarcia.github.io/sds290spring24/pdfs/HW%201b_CITI%20Training.pdf)

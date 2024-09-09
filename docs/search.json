@@ -410,7 +410,7 @@
     "href": "lectures/02_one-way-ANOVA.html#one-way-anova-1",
     "title": "One-Way ANOVA",
     "section": "One-Way ANOVA",
-    "text": "One-Way ANOVA\n\nqplot(x = as.factor(graduation), y = chalk_est, data = survey)"
+    "text": "One-Way ANOVA\n\nqplot(x = chalk_est, data = survey)"
   },
   {
     "objectID": "lectures/02_one-way-ANOVA.html#one-way-anova-2",
@@ -4429,5 +4429,19 @@
     "title": "One-Way ANOVA",
     "section": "Exit ticket",
     "text": "Exit ticket\nPlease take a few minutes to complete the exit ticket for today’s class now."
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#data-cleaning-1",
+    "href": "lectures/02_one-way-ANOVA.html#data-cleaning-1",
+    "title": "One-Way ANOVA",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning\n\nqplot(x = chalk_est, data = survey)"
+  },
+  {
+    "objectID": "lectures/02_one-way-ANOVA.html#data-cleaning-2",
+    "href": "lectures/02_one-way-ANOVA.html#data-cleaning-2",
+    "title": "One-Way ANOVA",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning\n\nsurvey &lt;- survey %&gt;%\n  filter(chalk_est &lt; 40)"
   }
 ]

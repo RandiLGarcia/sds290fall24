@@ -557,7 +557,7 @@ Prof Randi Garcia
 <section id="one-way-anova-1" class="slide level2">
 <h2>One-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> chalk_est, <span class="at">data =</span> survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_one-way-ANOVA_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
@@ -568,20 +568,34 @@ Prof Randi Garcia
 <span id="cb4-2"><a></a>  <span class="fu">filter</span>(chalk_est <span class="sc">&lt;</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="one-way-anova-2" class="slide level2">
-<h2>One-Way ANOVA</h2>
+<section id="data-cleaning-1" class="slide level2">
+<h2>Data Cleaning</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> graduation, <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> chalk_est, <span class="at">data =</span> survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02_one-way-ANOVA_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="data-cleaning-2" class="slide level2">
+<h2>Data Cleaning</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>survey <span class="ot">&lt;-</span> survey <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">filter</span>(chalk_est <span class="sc">&lt;</span> <span class="dv">40</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="one-way-anova-2" class="slide level2">
+<h2>One-Way ANOVA</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> graduation, <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="02_one-way-ANOVA_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
 <section id="one-way-anova-3" class="slide level2">
 <h2>One-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="02_one-way-ANOVA_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<img data-src="02_one-way-ANOVA_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
 <section id="the-meats" class="slide level2">
 <h2>The Meats</h2>
 <p>One-Way Design</p>
@@ -637,12 +651,8 @@ Prof Randi Garcia
 <!-- - **ratio:** numerical variable that has a true zero point.  -->
 <!--     - students’ times to complete cognitive task -->
 <!--     - enzyme concentration -->
-<img data-src="pics/bit.ly_sds290exit.png" class="r-stretch"></section>
-<section id="work-on-homework-1b" class="slide level2">
-<h2>Work on Homework 1b</h2>
-<p>Find instructions <a href="https://randilgarcia.github.io/sds290spring24/pdfs/HW%201b_CITI%20Training.pdf">here</a></p>
 
-<div class="quarto-auto-generated-content">
+<img data-src="pics/bit.ly_sds290exit.png" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
