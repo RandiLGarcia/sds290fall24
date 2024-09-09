@@ -182,12 +182,6 @@ One-Way Design
 
 It is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group.
 
-## Exit ticket
-
-Please take a few minutes to complete the [exit ticket](https://docs.google.com/forms/d/e/1FAIpQLSdA9eY7gjrQCt8LWgQotznE1GJ66E8JtDKJmfpEy9kWOQx5Hw/viewform?usp=sf_link) for today's class now.
-
-![](pics/bit.ly_sds290exit.png)
-
 <!-- Inappropriate Insects -->
 
 <!-- ======================================================= -->
