@@ -8,11 +8,11 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Prof Randi Garcia">
-  <meta name="dcterms.date" content="2024-01-30">
-  <title>SDS 290 - Spring 2024 - One-Way ANOVA</title>
+  <meta name="dcterms.date" content="2024-09-09">
+  <title>SDS 290 - Fall 2024 - One-Way ANOVA</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -222,7 +222,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -402,25 +403,24 @@ Prof Randi Garcia
 </div>
 </div>
 
-  <p class="date">2024-01-30</p>
+  <p class="date">2024-09-09</p>
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li>Homework 1a was due last Friday</li>
-<li><a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://randilgarcia.github.io/sds290spring24/pdfs/HW 1b_CITI Training.pdf">Homework 1b</a> due on Friday 2/2
+<li><a href="https://randilgarcia.github.io/sds290fall24/homework.html">Homework 1</a> due on Friday 9/13
 <ul>
 <li>SDS 290 Slack channels for HW questions</li>
 </ul></li>
-<li>Homework 2 will be submitted on gradescope</li>
+<li>Homework 2 (due 9/20) will be submitted on Gradescope</li>
 <li>Office hours (Bass 412)
 <ul>
-<li>Thurs 2:45p - 4:00p</li>
-<li>Fri office hours cancelled this week</li>
+<li>Tuesdays 10:30-11:30a</li>
+<li>Friday 3:00-4:00p</li>
 </ul></li>
 </ul>
 </section>
-<section id="why-model" class="slide level2">
+<section id="why-model" class="slide level2 scrollable">
 <h2>Why Model?</h2>
 <ol type="1">
 <li>Making Predictions</li>
@@ -428,7 +428,7 @@ Prof Randi Garcia
 <li>Assessing Differences</li>
 </ol>
 </section>
-<section id="why-model-1" class="slide level2">
+<section id="why-model-1" class="slide level2 scrollable">
 <h2>Why Model?</h2>
 <ol type="1">
 <li>Making Predictions</li>
@@ -436,7 +436,7 @@ Prof Randi Garcia
 <li><strong>Assessing Differences</strong></li>
 </ol>
 </section>
-<section id="step-process" class="slide level2">
+<section id="step-process" class="slide level2 scrollable">
 <h2>4 Step Process</h2>
 <ol type="1">
 <li><em>Choose</em> the model: What type of model?</li>
@@ -445,7 +445,7 @@ Prof Randi Garcia
 <li><em>Use</em>: Answer the question of interest</li>
 </ol>
 </section>
-<section id="step-process-1" class="slide level2">
+<section id="step-process-1" class="slide level2 scrollable">
 <h2>4 Step Process</h2>
 <ol type="1">
 <li><em>Choose</em> the model: What type of model?
@@ -533,55 +533,55 @@ Prof Randi Garcia
 <li>One quantitative (non-binary) response variable.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(readr)</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>survey <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://randilgarcia.github.io/sds290spring24/data/class_survey_data.csv"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5"></a></span>
-<span id="cb1-6"><a href="#cb1-6"></a>survey <span class="sc">%&gt;%</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">select</span>(graduation, chalk_est) <span class="sc">%&gt;%</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a>survey <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://randilgarcia.github.io/sds290fall24/data/class_survey_data.csv"</span>)</span>
+<span id="cb1-5"><a></a></span>
+<span id="cb1-6"><a></a>survey <span class="sc">%&gt;%</span></span>
+<span id="cb1-7"><a></a>  <span class="fu">select</span>(graduation, chalk_est) <span class="sc">%&gt;%</span></span>
+<span id="cb1-8"><a></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
   graduation chalk_est
        &lt;dbl&gt;     &lt;dbl&gt;
-1       2024      NA  
-2       2025       2.5
-3       2025      23.4
-4       2025      15  
-5       2025      20  
-6       2025      20  </code></pre>
+1       2026      14  
+2       2027       6  
+3       2027       8.5
+4       2025      11.8
+5       2025       3  
+6       2026      13.5</code></pre>
 </div>
 </div>
 </section>
 <section id="one-way-anova-1" class="slide level2">
 <h2>One-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="02_one-way-ANOVA_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<img data-src="02_one-way-ANOVA_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
 <section id="data-cleaning" class="slide level2">
 <h2>Data Cleaning</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>survey <span class="ot">&lt;-</span> survey <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">filter</span>(chalk_est <span class="sc">&lt;</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>survey <span class="ot">&lt;-</span> survey <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">filter</span>(chalk_est <span class="sc">&lt;</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="one-way-anova-2" class="slide level2">
 <h2>One-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> graduation, <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> graduation, <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="02_one-way-ANOVA_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<img data-src="02_one-way-ANOVA_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
 <section id="one-way-anova-3" class="slide level2">
 <h2>One-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="02_one-way-ANOVA_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<img data-src="02_one-way-ANOVA_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
 <section id="the-meats" class="slide level2">
 <h2>The Meats</h2>
 <p>One-Way Design</p>
@@ -601,6 +601,11 @@ Prof Randi Garcia
 <h2>Leafhopper survival</h2>
 <p>One-Way Design</p>
 <p>It is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group.</p>
+</section>
+<section id="exit-ticket" class="slide level2">
+<h2>Exit ticket</h2>
+<p>Please take a few minutes to complete the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdA9eY7gjrQCt8LWgQotznE1GJ66E8JtDKJmfpEy9kWOQx5Hw/viewform?usp=sf_link">exit ticket</a> for today’s class now.</p>
+
 <!-- Inappropriate Insects -->
 <!-- ======================================================= -->
 <!-- One-Way Complete Block Design CB[1]   -->
@@ -632,13 +637,15 @@ Prof Randi Garcia
 <!-- - **ratio:** numerical variable that has a true zero point.  -->
 <!--     - students’ times to complete cognitive task -->
 <!--     - enzyme concentration -->
-</section>
+<img data-src="pics/bit.ly_sds290exit.png" class="r-stretch"></section>
 <section id="work-on-homework-1b" class="slide level2">
 <h2>Work on Homework 1b</h2>
 <p>Find instructions <a href="https://randilgarcia.github.io/sds290spring24/pdfs/HW%201b_CITI%20Training.pdf">here</a></p>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -667,7 +674,6 @@ Prof Randi Garcia
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -966,10 +972,9 @@ Prof Randi Garcia
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -979,8 +984,17 @@ Prof Randi Garcia
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

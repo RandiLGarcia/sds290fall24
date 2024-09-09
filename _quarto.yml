@@ -16,12 +16,10 @@ website:
         href: schedule.html
       - text: Resources
         menu:
-        - text: Helpful Links
- #         href: resources.html
-#        - text: Downloading R and RStudio
-#          href: Downloading_R_and_RStudio.pdf
-#        - text: Modern Data Science with R
-#          href: https://mdsr-book.github.io/mdsr2e/
+        - text: Downloading R and RStudio
+          href: https://smithcollege-sds.github.io/sds100/lab_01_setup.html
+        - text: R for Data Science Book
+          href: https://r4ds.had.co.nz/
 #        - text: Troubleshooting R Markdown
 #          href: https://smithcollege-sds.github.io/sds-www/rmarkdown_problems.html
 #        - text: Qualtrics
@@ -32,8 +30,8 @@ website:
         menu:
         - text: 01 - Intro to Experimental Design
           href: lectures/01_intro_to_experimental.html
-#        - text: 02 - One-Way ANOVA
-#          href: lectures/02_one-way-ANOVA.html
+        - text: 02 - One-Way ANOVA
+          href: lectures/02_one-way-ANOVA.html
 #        - text: 03 - One-Way ANOVA II
 #          href: lectures/03_one-way-ANOVAII.html
 #        - text: 04 - Inference for ANOVA

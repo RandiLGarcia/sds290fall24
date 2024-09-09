@@ -11,7 +11,6 @@ Please read the specified sections *before* class that day.
 #### Mon, Sep 2
 
 -   No class
-:::
 
 #### Tues, Sep 3
 
@@ -31,6 +30,8 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   Read **Stat2** Ch. 0 (PDF on Moodle)
     -   Please record your name on Moodle
+
+:::
 
 ## Week 2
 

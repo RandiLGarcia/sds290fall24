@@ -1,7 +1,7 @@
 ---
 title: "One-Way ANOVA"
 author: Prof Randi Garcia
-date: January 30, 2024
+date: September 9, 2024
 format: 
   revealjs:
     scrollable: true
@@ -10,13 +10,12 @@ format:
 
 ## Announcements
 
--   Homework 1a was due last Friday
--   [Homework 1b](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://randilgarcia.github.io/sds290spring24/pdfs/HW%201b_CITI%20Training.pdf) due on Friday 2/2
+-   [Homework 1](https://randilgarcia.github.io/sds290fall24/homework.html) due on Friday 9/13
     -   SDS 290 Slack channels for HW questions
--   Homework 2 will be submitted on gradescope
+-   Homework 2 (due 9/20) will be submitted on Gradescope
 -   Office hours (Bass 412)
-    -   Thurs 2:45p - 4:00p
-    -   Fri office hours cancelled this week
+    -   Tuesdays 10:30-11:30a 
+    -   Friday 3:00-4:00p
 
 ## Why Model?
 
@@ -114,7 +113,7 @@ Our data will be "off" in a systematic, non-random, way
 library(tidyverse)
 library(readr)
 
-survey <- read_csv("https://randilgarcia.github.io/sds290spring24/data/class_survey_data.csv")
+survey <- read_csv("https://randilgarcia.github.io/sds290fall24/data/class_survey_data.csv")
 
 survey %>%
   select(graduation, chalk_est) %>%
@@ -169,6 +168,12 @@ One-Way Design
 One-Way Design
 
 It is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group.
+
+## Exit ticket
+
+Please take a few minutes to complete the [exit ticket](https://docs.google.com/forms/d/e/1FAIpQLSdA9eY7gjrQCt8LWgQotznE1GJ66E8JtDKJmfpEy9kWOQx5Hw/viewform?usp=sf_link) for today's class now.
+
+![](pics/bit.ly_sds290exit.png)
 
 <!-- Inappropriate Insects -->
 
