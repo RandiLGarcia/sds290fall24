@@ -31,8 +31,6 @@ Please read the specified sections *before* class that day.
     -   Read **Stat2** Ch. 0 (PDF on Moodle)
     -   Please record your name on Moodle
 
-:::
-
 ## Week 2
 
 #### Mon, Sep 9
@@ -45,6 +43,9 @@ Please read the specified sections *before* class that day.
 #### Tues, Sep 10
 
 -   **Office hours**: 10:30a - 11:30a    
+
+
+:::
 
 #### Wed, Sep 11
 

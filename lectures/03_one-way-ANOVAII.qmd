@@ -1,7 +1,7 @@
 ---
 title: "One-Way ANOVA II"
 author: Prof Randi Garcia
-date: February 1, 2024
+date: September 11, 2024
 format: 
   revealjs:
     scrollable: true
@@ -10,13 +10,14 @@ format:
 
 ## Announcements
 
--   [Homework 1b](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://randilgarcia.github.io/sds290spring24/pdfs/HW%201b_CITI%20Training.pdf) due on Friday 2/2
--   Homework 2 will be submitted on gradescope (more info to come)
+-   [Homework 1](https://randilgarcia.github.io/sds290fall24/homework.html) due on Friday 9/13
+-   Homework 2 (due 9/20) will be submitted on Gradescope
+    -   To be posted on Friday
 -   Office hours (Bass 412)
-    -   Today: 2:45p - 4:00p
-    -   Fri office hours cancelled this week
+    -   Tuesdays 10:30-11:30a 
+    -   Friday 3:00-4:00p
 -   Where to get HW help
-    -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!
+    <!-- -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. -->
 
 ## Confounding Variables
 
@@ -46,7 +47,7 @@ Our data will be "off" in a systematic, non-random, way
 library(tidyverse)
 library(readr)
 
-survey <- read_csv("https://randilgarcia.github.io/sds290spring24/data/class_survey_data.csv")
+survey <- read_csv("https://randilgarcia.github.io/sds290fall24/data/class_survey_data.csv")
 
 survey %>%
   select(graduation, chalk_est) %>%
@@ -55,8 +56,8 @@ survey %>%
 
 ## One-Way ANOVA
 
-```{r, echo=TRUE}
-qplot(x = as.factor(graduation), y = chalk_est, data = survey)
+```{r, echo=TRUE, warning=FALSE}
+qplot(x = chalk_est, data = survey)
 ```
 
 ## Data Cleaning
@@ -64,6 +65,19 @@ qplot(x = as.factor(graduation), y = chalk_est, data = survey)
 ```{r, echo=TRUE}
 survey <- survey %>%
   filter(chalk_est < 100)
+```
+
+## Data Cleaning
+
+```{r, echo=TRUE, warning=FALSE}
+qplot(x = chalk_est, data = survey)
+```
+
+## Data Cleaning
+
+```{r, echo=TRUE}
+survey <- survey %>%
+  filter(chalk_est < 40)
 ```
 
 ## One-Way ANOVA
@@ -122,8 +136,8 @@ It is reasonable to assume that the structure of a sugar molecule has something 
 ```
 ## Simulation in R: Assembly Line Metaphor
 
--   [Animal Data](https://randilgarcia.github.io/sds290spring24/code/01_animal_data.qmd)
--   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290spring24/code/02_informal_anova.qmd)
+-   [Animal Data](https://randilgarcia.github.io/sds290fall24/code/01_animal_data.qmd)
+-   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290fall24/code/02_informal_anova.qmd)
 
 ## Leafhopper survival
 

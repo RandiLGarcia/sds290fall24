@@ -1,7 +1,7 @@
 ---
 title: "Inference for ANOVA"
 author: Prof Randi Garcia
-date: February 6, 2024
+date: September 16, 2024
 format: 
   revealjs:
     scrollable: true
@@ -10,14 +10,14 @@ format:
 
 ## Announcements
 
--   Grades posted for HW1a and HW1b
+-   Grades for HW1 posted by Wed
 -   Homework 2 posted
     -   [Instructions for submitting pdf on gradescope](https://www.youtube.com/watch?v=nksyA0s-Geo)
 -   Office hours (Bass 412)
-    -   Thursday: 2:45p - 4:00p
-    -   Friday: 10:50a - 12:05p
+    -   Tuesdays 10:30-11:30a 
+    -   Friday 3:00-4:00p
 -   Where to get HW help
-    -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!
+    <!-- -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290! -->
 
 ## Assembly Line Metaphor
 
