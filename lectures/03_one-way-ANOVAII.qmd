@@ -16,6 +16,10 @@ format:
 -   Office hours (Bass 412)
     -   Friday 3:00-4:00p
 
+## The Meats
+
+The shelf life of meats is the time a prepackaged cut remains salable, safe, and nutritious. Recent studies suggested controlled gas atmospheres as possible alternatives to existing packaging. To test this, beef steaks (75$g$) were randomly assigned to packaging with either 1) ambient air in a commercial plastic wrap, 2) vacuum packed, 3) 100% carbon dioxide ($CO_2$), or 4) a mixture of 1% carbon monoxide (CO), 40% oxygen ($O_2$), and 59% nitrogen (N). The number of psychrotrophic bacteria on the meat was measured after nine days of storage at 4 degrees C.
+
 ## Confounding Variables
 
 I want to test if smelling a sweet food (fresh cinnamon rolls) versus a non-sweet food (broccoli) has an effect on salivation in humans. So, I recruit some participants to come to my lab, I'll have to bake the cinnamon rolls and run that condition all at once, so I decide that I will bake my rolls at 9a, then from 10a-12p I will run the cinnamon roll condition. I bring people into individual distraction free rooms, hook them up to the salivation sensor, then bring them a plate with a freshly baked cinnamon roll. I record their salivation. Then, I will run the broccoli condition from 1p-3p, using the exact same measurement procedure.
@@ -26,6 +30,13 @@ Are there any issues with my study?
 
 Confounding variables vary **systematically** with the levels of the explanatory factor
 
+## Random sampling and random assignment
+
+-   Random sampling (or selection): The sample was chosen randomly from the population.
+-   Random assignment: The levels of the experimental factor were randomly assigned to experimental units. 
+
+![](pics/random.png)
+
 ## Bias
 
 Our data will be "off" in a systematic, non-random, way
@@ -35,10 +46,15 @@ Our data will be "off" in a systematic, non-random, way
 
 ![](02_four_designs-figure/Bias.png)
 
-## One-Way ANOVA
+## One-Way Analysis of Variance (ANOVA)
 
 -   One factor (explanatory variable) with any number of levels.
 -   One quantitative (non-binary) response variable.
+
+
+## One-Way ANOVA
+
+**Research question**: Are there differences in chalk length estimation across class years?
 
 ```{r, message=FALSE, warning=FALSE, echo=TRUE}
 library(tidyverse)
@@ -89,17 +105,11 @@ qplot(x = graduation, y = chalk_est, data = survey, geom = "boxplot")
 qplot(x = factor(graduation), y = chalk_est, data = survey, geom = "boxplot")
 ```
 
-## The Meats
-
-One-Way Design
-
-The shelf life of meats is the time a prepackaged cut remains salable, safe, and nutritious. Recent studies suggested controlled gas atmospheres as possible alternatives to existing packaging. To test this, beef steaks (75$g$) were randomly assigned to packaging with either 1) ambient air in a commercial plastic wrap, 2) vacuum packed, 3) 100% carbon dioxide ($CO_2$), or 4) a mixture of 1% carbon monoxide (CO), 40% oxygen ($O_2$), and 59% nitrogen (N). The number of psychrotrophic bacteria on the meat was measured after nine days of storage at 4 degrees C.
-
 ## Gender Bias in STEM
 
 One-Way Design
 
-In a randomized double-blind study (n = 127), science faculty from research-intensive universities rated the application materials of a student who was randomly assigned either a male or female name for a laboratory manager position. Faculty participants rated the male applicant as significantly more hireable than the (identical) female applicant. [See materials here](http://www.pnas.org/content/suppl/2012/09/16/1211286109.DCSupplemental/pnas.201211286SI.pdf#nameddest=STXT)
+In a randomized double-blind study (n = 127), science faculty from research-intensive universities rated the application materials of a student who was randomly assigned either a male or female name for a laboratory manager position. Faculty participants rated the male applicant as significantly more hireable than the (identical) female applicant. 
 
 ## Acid Rain
 

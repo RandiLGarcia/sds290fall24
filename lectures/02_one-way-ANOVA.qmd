@@ -95,92 +95,92 @@ Are there any issues with my study?
 
 Confounding variables vary **systematically** with the levels of the explanatory factor
 
-## Bias
+<!-- ## Bias -->
 
-Our data will be "off" in a systematic, non-random, way
+<!-- Our data will be "off" in a systematic, non-random, way -->
 
--   Sampling Bias: Biologist is using a net with large holes to capture a sample of fish from a lake.
--   Selection Bias: Assigning the skinnier rats to the good lab chow.
+<!-- -   Sampling Bias: Biologist is using a net with large holes to capture a sample of fish from a lake. -->
+<!-- -   Selection Bias: Assigning the skinnier rats to the good lab chow. -->
 
-![](02_four_designs-figure/Bias.png)
+<!-- ![](02_four_designs-figure/Bias.png) -->
 
-## One-Way ANOVA
+<!-- ## One-Way ANOVA -->
 
--   One factor (explanatory variable) with any number of levels.
--   One quantitative (non-binary) response variable.
+<!-- -   One factor (explanatory variable) with any number of levels. -->
+<!-- -   One quantitative (non-binary) response variable. -->
 
-```{r, message=FALSE, warning=FALSE, echo=TRUE}
-library(tidyverse)
-library(readr)
+<!-- ```{r, message=FALSE, warning=FALSE, echo=TRUE} -->
+<!-- library(tidyverse) -->
+<!-- library(readr) -->
 
-survey <- read_csv("https://randilgarcia.github.io/sds290fall24/data/class_survey_data.csv")
+<!-- survey <- read_csv("https://randilgarcia.github.io/sds290fall24/data/class_survey_data.csv") -->
 
-survey %>%
-  select(graduation, chalk_est) %>%
-  head()
-```
+<!-- survey %>% -->
+<!--   select(graduation, chalk_est) %>% -->
+<!--   head() -->
+<!-- ``` -->
 
-## One-Way ANOVA
+<!-- ## One-Way ANOVA -->
 
-```{r, echo=TRUE, warning=FALSE}
-qplot(x = chalk_est, data = survey)
-```
+<!-- ```{r, echo=TRUE, warning=FALSE} -->
+<!-- qplot(x = chalk_est, data = survey) -->
+<!-- ``` -->
 
-## Data Cleaning
+<!-- ## Data Cleaning -->
 
-```{r, echo=TRUE}
-survey <- survey %>%
-  filter(chalk_est < 100)
-```
+<!-- ```{r, echo=TRUE} -->
+<!-- survey <- survey %>% -->
+<!--   filter(chalk_est < 100) -->
+<!-- ``` -->
 
-## Data Cleaning
+<!-- ## Data Cleaning -->
 
-```{r, echo=TRUE, warning=FALSE}
-qplot(x = chalk_est, data = survey)
-```
+<!-- ```{r, echo=TRUE, warning=FALSE} -->
+<!-- qplot(x = chalk_est, data = survey) -->
+<!-- ``` -->
 
-## Data Cleaning
+<!-- ## Data Cleaning -->
 
-```{r, echo=TRUE}
-survey <- survey %>%
-  filter(chalk_est < 40)
-```
+<!-- ```{r, echo=TRUE} -->
+<!-- survey <- survey %>% -->
+<!--   filter(chalk_est < 40) -->
+<!-- ``` -->
 
-## One-Way ANOVA
+<!-- ## One-Way ANOVA -->
 
-```{r, echo=TRUE}
-qplot(x = graduation, y = chalk_est, data = survey, geom = "boxplot")
-```
+<!-- ```{r, echo=TRUE} -->
+<!-- qplot(x = graduation, y = chalk_est, data = survey, geom = "boxplot") -->
+<!-- ``` -->
 
-## One-Way ANOVA
+<!-- ## One-Way ANOVA -->
 
-```{r, echo=TRUE}
-qplot(x = factor(graduation), y = chalk_est, data = survey, geom = "boxplot")
-```
+<!-- ```{r, echo=TRUE} -->
+<!-- qplot(x = factor(graduation), y = chalk_est, data = survey, geom = "boxplot") -->
+<!-- ``` -->
 
-## The Meats
+<!-- ## The Meats -->
 
-One-Way Design
+<!-- One-Way Design -->
 
-The shelf life of meats is the time a prepackaged cut remains salable, safe, and nutritious. Recent studies suggested controlled gas atmospheres as possible alternatives to existing packaging. To test this, beef steaks (75$g$) were randomly assigned to packaging with either 1) ambient air in a commercial plastic wrap, 2) vacuum packed, 3) 100% carbon dioxide ($CO_2$), or 4) a mixture of 1% carbon monoxide (CO), 40% oxygen ($O_2$), and 59% nitrogen (N). The number of psychrotrophic bacteria on the meat was measured after nine days of storage at 4 degrees C.
+<!-- The shelf life of meats is the time a prepackaged cut remains salable, safe, and nutritious. Recent studies suggested controlled gas atmospheres as possible alternatives to existing packaging. To test this, beef steaks (75$g$) were randomly assigned to packaging with either 1) ambient air in a commercial plastic wrap, 2) vacuum packed, 3) 100% carbon dioxide ($CO_2$), or 4) a mixture of 1% carbon monoxide (CO), 40% oxygen ($O_2$), and 59% nitrogen (N). The number of psychrotrophic bacteria on the meat was measured after nine days of storage at 4 degrees C. -->
 
-## Gender Bias in STEM
+<!-- ## Gender Bias in STEM -->
 
-One-Way Design
+<!-- One-Way Design -->
 
-In a randomized double-blind study (n = 127), science faculty from research-intensive universities rated the application materials of a student who was randomly assigned either a male or female name for a laboratory manager position. Faculty participants rated the male applicant as significantly more hireable than the (identical) female applicant. [See materials here](http://www.pnas.org/content/suppl/2012/09/16/1211286109.DCSupplemental/pnas.201211286SI.pdf#nameddest=STXT)
+<!-- In a randomized double-blind study (n = 127), science faculty from research-intensive universities rated the application materials of a student who was randomly assigned either a male or female name for a laboratory manager position. Faculty participants rated the male applicant as significantly more hireable than the (identical) female applicant. [See materials here](http://www.pnas.org/content/suppl/2012/09/16/1211286109.DCSupplemental/pnas.201211286SI.pdf#nameddest=STXT) -->
 
-## Acid Rain
+<!-- ## Acid Rain -->
 
-One-Way Design
+<!-- One-Way Design -->
 
-"Clean" precipitation has a pH in the 5.0 to 5.5 range, but observed precipitation pH in northern New Hampshire is often in the 3.0 to 4.0 range. Is this acid rain hurting trees? 240 six-week-old yellow birch seedlings were randomly assigned to one of 5 groups. Each group received an acid rain mist at the following pH levels: 4.7, 4.0, 3.3, 3.0, and 2.3. After 17 weeks, the seedling were weighed, and their total plant (dry) weight was recorded.
+<!-- "Clean" precipitation has a pH in the 5.0 to 5.5 range, but observed precipitation pH in northern New Hampshire is often in the 3.0 to 4.0 range. Is this acid rain hurting trees? 240 six-week-old yellow birch seedlings were randomly assigned to one of 5 groups. Each group received an acid rain mist at the following pH levels: 4.7, 4.0, 3.3, 3.0, and 2.3. After 17 weeks, the seedling were weighed, and their total plant (dry) weight was recorded. -->
 
-## Leafhopper survival
+<!-- ## Leafhopper survival -->
 
-One-Way Design
+<!-- One-Way Design -->
 
-It is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group.
+<!-- It is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group. -->
 
 <!-- Inappropriate Insects -->
 
