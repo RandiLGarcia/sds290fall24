@@ -90,26 +90,31 @@ qplot(x = chalk_est, data = survey)
 
 ```{r, echo=TRUE}
 survey <- survey %>%
-  filter(chalk_est < 40)
+  filter(chalk_est < 40 & !is.na(graduation))
 ```
 
-## One-Way ANOVA
+## Descriptive statistics for One-Way ANOVA
+
+```{r}
+survey %>%
+  group_by(graduation) %>%
+  summarise(n = n(),
+            mean = mean(chalk_est),
+            sd = sd(chalk_est))
+```
+
+## Boxplots for One-Way ANOVA
 
 ```{r, echo=TRUE}
 qplot(x = graduation, y = chalk_est, data = survey, geom = "boxplot")
 ```
 
-## One-Way ANOVA
+## Boxplots for One-Way ANOVA
 
 ```{r, echo=TRUE}
 qplot(x = factor(graduation), y = chalk_est, data = survey, geom = "boxplot")
 ```
 
-## Gender Bias in STEM
-
-One-Way Design
-
-In a randomized double-blind study (n = 127), science faculty from research-intensive universities rated the application materials of a student who was randomly assigned either a male or female name for a laboratory manager position. Faculty participants rated the male applicant as significantly more hireable than the (identical) female applicant. 
 
 ## Acid Rain
 

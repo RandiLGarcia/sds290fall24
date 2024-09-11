@@ -4456,7 +4456,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#data-cleaning-2",
     "title": "One-Way ANOVA II",
     "section": "Data Cleaning",
-    "text": "Data Cleaning\n\nsurvey &lt;- survey %&gt;%\n  filter(chalk_est &lt; 40)"
+    "text": "Data Cleaning\n\nsurvey &lt;- survey %&gt;%\n  filter(chalk_est &lt; 40 & !is.na(graduation))"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#random-sampling-and-random-assignment",
@@ -4471,5 +4471,26 @@
     "title": "One-Way ANOVA II",
     "section": "One-Way Analysis of Variance (ANOVA)",
     "text": "One-Way Analysis of Variance (ANOVA)\n\nOne factor (explanatory variable) with any number of levels.\nOne quantitative (non-binary) response variable."
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#descriptive-statistics-for-one-way-anova",
+    "href": "lectures/03_one-way-ANOVAII.html#descriptive-statistics-for-one-way-anova",
+    "title": "One-Way ANOVA II",
+    "section": "Descriptive statistics for One-Way ANOVA",
+    "text": "Descriptive statistics for One-Way ANOVA\n\n\n# A tibble: 3 × 4\n  graduation     n  mean    sd\n       &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n1       2025    18 10.3   6.23\n2       2026    13 13.1   2.12\n3       2027     6  8.97  2.83"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#boxplots-for-one-way-anova",
+    "href": "lectures/03_one-way-ANOVAII.html#boxplots-for-one-way-anova",
+    "title": "One-Way ANOVA II",
+    "section": "Boxplots for One-Way ANOVA",
+    "text": "Boxplots for One-Way ANOVA\n\nqplot(x = graduation, y = chalk_est, data = survey, geom = \"boxplot\")"
+  },
+  {
+    "objectID": "lectures/03_one-way-ANOVAII.html#boxplots-for-one-way-anova-1",
+    "href": "lectures/03_one-way-ANOVAII.html#boxplots-for-one-way-anova-1",
+    "title": "One-Way ANOVA II",
+    "section": "Boxplots for One-Way ANOVA",
+    "text": "Boxplots for One-Way ANOVA\n\nqplot(x = factor(graduation), y = chalk_est, data = survey, geom = \"boxplot\")"
   }
 ]

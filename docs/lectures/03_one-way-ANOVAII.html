@@ -506,28 +506,36 @@ Prof Randi Garcia
 <h2>Data Cleaning</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>survey <span class="ot">&lt;-</span> survey <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a></a>  <span class="fu">filter</span>(chalk_est <span class="sc">&lt;</span> <span class="dv">40</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-2"><a></a>  <span class="fu">filter</span>(chalk_est <span class="sc">&lt;</span> <span class="dv">40</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(graduation))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="one-way-anova-2" class="slide level2">
-<h2>One-Way ANOVA</h2>
+<section id="descriptive-statistics-for-one-way-anova" class="slide level2">
+<h2>Descriptive statistics for One-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> graduation, <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  graduation     n  mean    sd
+       &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+1       2025    18 10.3   6.23
+2       2026    13 13.1   2.12
+3       2027     6  8.97  2.83</code></pre>
 </div>
-<img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
-<section id="one-way-anova-3" class="slide level2">
-<h2>One-Way ANOVA</h2>
+</div>
+</section>
+<section id="boxplots-for-one-way-anova" class="slide level2">
+<h2>Boxplots for One-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> graduation, <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
-<section id="gender-bias-in-stem" class="slide level2">
-<h2>Gender Bias in STEM</h2>
-<p>One-Way Design</p>
-<p>In a randomized double-blind study (n = 127), science faculty from research-intensive universities rated the application materials of a student who was randomly assigned either a male or female name for a laboratory manager position. Faculty participants rated the male applicant as significantly more hireable than the (identical) female applicant.</p>
-</section>
+<section id="boxplots-for-one-way-anova-1" class="slide level2">
+<h2>Boxplots for One-Way ANOVA</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
 <section id="acid-rain" class="slide level2">
 <h2>Acid Rain</h2>
 <p>One-Way Design</p>
@@ -604,7 +612,7 @@ Prof Randi Garcia
 <h2>Leafhoppers</h2>
 <p>Bar graph of treatment condition averages.</p>
 
-<img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
 <section id="leafhoppers-1" class="slide level2">
 <h2>Leafhoppers</h2>
 <ul>
