@@ -1,7 +1,7 @@
 ---
 title: "01 - Animal Data"
 author: "Randi L. Garcia"
-date: "February 1, 2024"
+date: "September 11, 2024"
 output: html_document
 ---
 
@@ -13,7 +13,7 @@ Loading data.
 library(tidyverse)
 library(readr)
 
-animals <- read_csv("https://randilgarcia.github.io/sds290fall24/data/animals.csv")
+animals <- read_csv("https://randilgarcia.github.io/sds290spring24/data/animals.csv")
 ```
 
 Cleaning the data

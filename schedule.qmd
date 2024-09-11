@@ -44,7 +44,6 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: 10:30a - 11:30a    
 
-
 :::
 
 #### Wed, Sep 11
@@ -63,9 +62,11 @@ Please read the specified sections *before* class that day.
 
 #### Mon, Sep 16
 
+-   Algebraic notation 
+-   Factor diagrams
 -   Inference for ANOVA
 -   Homework due today:
-    -   Read **Stat2** Ch. 5.4
+    -   Read **Stat2** Ch. 5.3 (again!)
 
 #### Tues, Sep 17
 
@@ -76,7 +77,7 @@ Please read the specified sections *before* class that day.
 -   ANOVA Conditions
 -   MP1 assignment
 -   Homework due today:
-    -   No reading for today
+    -   Read **Stat2** Ch. 5.4
 
 #### Fri, Sep 20
 
@@ -88,8 +89,8 @@ Please read the specified sections *before* class that day.
 
 #### Mon, Sep 23
 
+-   Confidence intervals and effect sizes
 -   Transformations
--   MP1 topics
 -   Homework due today:
     -   Brainstorm topics for MP1
     -   Read **Stat2** Ch. 5.5-5.6
@@ -100,7 +101,6 @@ Please read the specified sections *before* class that day.
 
 #### Wed, Sep 25
 
--   Confidence intervals and effect sizes
 -   Introduction to Qualtrics
 -   Homework due today:
     -   Find potential stimuli (images) for MP1
