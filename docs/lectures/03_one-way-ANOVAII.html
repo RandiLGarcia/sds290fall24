@@ -512,6 +512,11 @@ Prof Randi Garcia
 <section id="descriptive-statistics-for-one-way-anova" class="slide level2">
 <h2>Descriptive statistics for One-Way ANOVA</h2>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>survey <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">group_by</span>(graduation) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb7-4"><a></a>            <span class="at">mean =</span> <span class="fu">mean</span>(chalk_est),</span>
+<span id="cb7-5"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(chalk_est))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 4
   graduation     n  mean    sd
@@ -525,14 +530,14 @@ Prof Randi Garcia
 <section id="boxplots-for-one-way-anova" class="slide level2">
 <h2>Boxplots for One-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> graduation, <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> graduation, <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
 <section id="boxplots-for-one-way-anova-1" class="slide level2">
 <h2>Boxplots for One-Way ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">factor</span>(graduation), <span class="at">y =</span> chalk_est, <span class="at">data =</span> survey, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="03_one-way-ANOVAII_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
@@ -545,6 +550,11 @@ Prof Randi Garcia
 <h2>Leafhopper survival</h2>
 <p>One-Way Design</p>
 <p>It is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group.</p>
+</section>
+<section>
+<section id="fitting-the-one-way-anova-model" class="title-slide slide level1 center">
+<h1>Fitting the One-Way ANOVA Model</h1>
+
 </section>
 <section id="assembly-line-metaphor-cobb-2008" class="slide level2">
 <h2>Assembly Line Metaphor (Cobb, 2008)</h2>
@@ -764,7 +774,7 @@ If our null hypothesis, <span class="math inline">\({H}_{0}: True\:E\mathit{f}\m
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

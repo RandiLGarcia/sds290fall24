@@ -4477,7 +4477,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#descriptive-statistics-for-one-way-anova",
     "title": "One-Way ANOVA II",
     "section": "Descriptive statistics for One-Way ANOVA",
-    "text": "Descriptive statistics for One-Way ANOVA\n\n\n# A tibble: 3 × 4\n  graduation     n  mean    sd\n       &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n1       2025    18 10.3   6.23\n2       2026    13 13.1   2.12\n3       2027     6  8.97  2.83"
+    "text": "Descriptive statistics for One-Way ANOVA\n\nsurvey %&gt;%\n  group_by(graduation) %&gt;%\n  summarise(n = n(),\n            mean = mean(chalk_est),\n            sd = sd(chalk_est))\n\n# A tibble: 3 × 4\n  graduation     n  mean    sd\n       &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n1       2025    18 10.3   6.23\n2       2026    13 13.1   2.12\n3       2027     6  8.97  2.83"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#boxplots-for-one-way-anova",
