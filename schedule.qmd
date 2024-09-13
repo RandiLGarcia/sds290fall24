@@ -44,13 +44,13 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: 10:30a - 11:30a    
 
-:::
-
 #### Wed, Sep 11
 
 -   One-way ANOVA (cont.)
 -   Homework due today:
     -   Read **Stat2** Ch. 5.3
+
+:::
 
 #### Fri, Sep 13
 

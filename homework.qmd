@@ -6,10 +6,10 @@ title: 'Homework'
 
     -   HW #1: [CITI Training](pdfs/HW 1_CITI Training.pdf)
 
-<!-- 2.  Due Friday, February 9th: -->
+2.  Due Friday, September 20th:
 
-<!--     -   HW #2: 0.23, 5.11, 5.16, 5.18, 5.27 (a only) -->
-<!--     -   Click [here](pdfs/intro_to_r.html) for more introduction to R and RStudio -->
+    -   HW #2: 0.23, 5.11, 5.16, 5.18, 5.27 (a only)
+    -   Find more details on Gradescope
 
 <!-- 3.  Due Friday, February 16th: -->
 
