@@ -1180,7 +1180,7 @@
     "href": "lectures/04_inference-ANOVA.html#simulation-in-r-assembly-line-metaphor",
     "title": "Inference for ANOVA",
     "section": "Simulation in R: Assembly Line Metaphor",
-    "text": "Simulation in R: Assembly Line Metaphor\nAssembly line for animal data: \\[Calmness = Grand\\:Mean + Animal\\:Effect + Cue\\:Effect + Interaction + Student\\:Effect + Residuals\\]\n\nAnimal Data\nAssembly Line Metaphor code"
+    "text": "Simulation in R: Assembly Line Metaphor\nAssembly line for animal data:\nCalmness = Grand Mean + Animal Effect + Cue Effect + Interaction + Student Effect + Residuals\n\nAnimal Data\nAssembly Line Metaphor code"
   },
   {
     "objectID": "project/mini-project-1.html",

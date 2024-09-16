@@ -87,7 +87,9 @@ kable(data.frame(' ' = c("","","means", "group effects"), control = c(2.3,1.7, 2
 
 ## Simulation in R: Assembly Line Metaphor
 
-Assembly line for animal data: $$Calmness = Grand\:Mean + Animal\:Effect + Cue\:Effect + Interaction + Student\:Effect + Residuals$$
+Assembly line for animal data: 
+
+*Calmness* = *Grand Mean* + *Animal Effect* + *Cue Effect* + *Interaction* + *Student Effect* + *Residuals*
 
 -   [Animal Data](https://randilgarcia.github.io/sds290fall24/code/01_animal_data.qmd)
 -   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290fall24/code/02_informal_anova.qmd)
