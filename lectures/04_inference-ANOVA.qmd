@@ -48,7 +48,7 @@ library(mosaic)
 kable(data.frame(control = c(2.3,1.7), sucrose = c(3.6, 4.0), glucose = c(2.9,2.7), fructose = c(2.1,2.3)))
 ```
 
--   Let's draw a factor diagram, including a place for the grand mean and residuals.
+-   Let's draw our first **factor diagram**, including a place for the grand mean and residuals.
 
 ## Leafhoppers
 
