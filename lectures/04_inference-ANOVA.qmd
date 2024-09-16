@@ -82,7 +82,7 @@ leaf <- leaf %>%
 -   To the factor diagram, let's add in the grand mean, the effects for diet, and the residuals
 
 ```{r, echo = FALSE}
-kable(data.frame(' ' = c("","","means"), control = c(2.3,1.7, 2.0), sucrose = c(3.6, 4.0, 3.8), glucose = c(2.9,2.7,2.8), fructose = c(2.1,2.3,2.2)))
+kable(data.frame(' ' = c("","","means", "group effects"), control = c(2.3,1.7, 2.0, -0.7), sucrose = c(3.6, 4.0, 3.8, 1.1), glucose = c(2.9,2.7,2.8,0.1), fructose = c(2.1,2.3,2.2, -0.5)))
 ```
 
 ## Simulation in R: Assembly Line Metaphor

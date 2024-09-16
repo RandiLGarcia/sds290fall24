@@ -1033,7 +1033,7 @@
     "href": "lectures/04_inference-ANOVA.html#leafhoppers-1",
     "title": "Inference for ANOVA",
     "section": "Leafhoppers",
-    "text": "Leafhoppers\n\nWe’ll now start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.\nTo the factor diagram, let’s add in the grand mean, the effects for diet, and the residuals\n\n\n\n\n\n\nX.\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n\n1.7\n4.0\n2.7\n2.3\n\n\nmeans\n2.0\n3.8\n2.8\n2.2"
+    "text": "Leafhoppers\n\nWe’ll now start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.\nTo the factor diagram, let’s add in the grand mean, the effects for diet, and the residuals\n\n\n\n\n\n\nX.\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n\n1.7\n4.0\n2.7\n2.3\n\n\nmeans\n2.0\n3.8\n2.8\n2.2\n\n\ngroup effects\n-0.7\n1.1\n0.1\n-0.5"
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#one-way-anova-model",
