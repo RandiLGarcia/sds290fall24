@@ -50,13 +50,13 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   Read **Stat2** Ch. 5.3
 
-:::
-
 #### Fri, Sep 13
 
 -   **Office hours**: 3:00p - 4:00p
 -   Homework due today:
     -   **HW #1 due today at 11:55p**
+
+:::
 
 ## Week 3
 

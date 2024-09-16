@@ -137,7 +137,7 @@
     "href": "schedule.html#week-2",
     "title": "Schedule",
     "section": "Week 2",
-    "text": "Week 2\n\nMon, Sep 9\n\nFour-step process\nOne-way ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.1-5.2 (Moodle)\n\n\n\n\nTues, Sep 10\n\nOffice hours: 10:30a - 11:30a\n\n\n\nWed, Sep 11\n\nOne-way ANOVA (cont.)\nHomework due today:\n\nRead Stat2 Ch. 5.3"
+    "text": "Week 2\n\nMon, Sep 9\n\nFour-step process\nOne-way ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.1-5.2 (Moodle)\n\n\n\n\nTues, Sep 10\n\nOffice hours: 10:30a - 11:30a\n\n\n\nWed, Sep 11\n\nOne-way ANOVA (cont.)\nHomework due today:\n\nRead Stat2 Ch. 5.3\n\n\n\n\nFri, Sep 13\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nHW #1 due today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-3",
@@ -732,7 +732,7 @@
     "href": "lectures/03_one-way-ANOVAII.html#leafhopper-survival",
     "title": "One-Way ANOVA II",
     "section": "Leafhopper survival",
-    "text": "Leafhopper survival\nOne-Way Design\nIt is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group."
+    "text": "Leafhopper survival\nOne-Way Design\nIt is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;\n\n–&gt;"
   },
   {
     "objectID": "lectures/03_one-way-ANOVAII.html#assembly-line-metaphor-cobb-2008",
@@ -1004,8 +1004,8 @@
     "objectID": "lectures/04_inference-ANOVA.html#announcements",
     "href": "lectures/04_inference-ANOVA.html#announcements",
     "title": "Inference for ANOVA",
-    "section": "",
-    "text": "Grades posted for HW1a and HW1b\nHomework 2 posted\n\nInstructions for submitting pdf on gradescope\n\nOffice hours (Bass 412)\n\nThursday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!"
+    "section": "Announcements",
+    "text": "Announcements\n\nGrades posted for HW1\nHomework 2 posted\n\nInstructions for submitting pdf on gradescope\n\nOffice hours (Bass 412)\n\nTuesdays 10:30-11:30a\nFriday 3:00-4:00p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z (Sun, Tues), Cindy (Tue, Thurs), and Sarah (Tue) can help with 290!"
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#leafhopper-survival",
@@ -1040,7 +1040,7 @@
     "href": "lectures/04_inference-ANOVA.html#one-way-anova-model",
     "title": "Inference for ANOVA",
     "section": "One-way ANOVA Model",
-    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\n\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
+    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual.\nNote about using SLR for categorical variables\nWhen we have a binary explanatory variable, X, where X is an indicator of category 2:\n\\[Y = \\beta_0+\\beta_1X_{indicator}+\\epsilon\\] where \\(\\beta_0\\) is the mean of category 1, and \\(\\beta_1\\) is the difference between the mean of category 1 and the mean of category 2."
   },
   {
     "objectID": "lectures/04_inference-ANOVA.html#analysis-of-variance-anova",
