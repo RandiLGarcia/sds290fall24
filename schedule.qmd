@@ -56,8 +56,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **HW #1 due today at 11:55p**
 
-:::
-
 ## Week 3
 
 #### Mon, Sep 16
@@ -68,9 +66,12 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   Read **Stat2** Ch. 5.3 (again!)
 
+:::    
+
 #### Tues, Sep 17
 
--   **Office hours**: 10:30a - 11:30a   
+-   **Office hours**: 10:30a - 11:30a 
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Wed, Sep 18
 
@@ -98,6 +99,7 @@ Please read the specified sections *before* class that day.
 #### Tues, Sep 24
 
 -   **Office hours**: 10:30a - 11:30a   
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Wed, Sep 25
 
@@ -125,6 +127,7 @@ Please read the specified sections *before* class that day.
 #### Tues, Oct 1
 
 -   **Office hours**: 10:30a - 11:30a   
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Wed, Oct 2
 
@@ -148,7 +151,8 @@ Please read the specified sections *before* class that day.
 
 #### Tues, Oct 8
 
--   **Office hours**: 10:30a - 11:30a   
+-   **Office hours**: 10:30a - 11:30a  
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Wed, Oct 9
 
@@ -171,6 +175,7 @@ Please read the specified sections *before* class that day.
 #### Tues, Oct 15
 
 -   **Office hours**: No office hours 
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Thurs, Oct 16
 
@@ -195,6 +200,7 @@ Please read the specified sections *before* class that day.
 #### Tues, Oct 22
 
 -   **Office hours**: 10:30a - 11:30a   
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Wed, Oct 23
 
@@ -218,7 +224,8 @@ Please read the specified sections *before* class that day.
 
 #### Tues, Oct 29
 
--   **Office hours**: 10:30a - 11:30a   
+-   **Office hours**: 10:30a - 11:30a  
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Wed, Oct 30
 
@@ -244,7 +251,8 @@ Please read the specified sections *before* class that day.
 
 #### Tues, Nov 5
 
--   **Office hours**: 10:30a - 11:30a       
+-   **Office hours**: 10:30a - 11:30a   
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Wed, Nov 6
 
@@ -270,6 +278,7 @@ Please read the specified sections *before* class that day.
 #### Tues, Nov 12
 
 -   **Office hours**: 10:30a - 11:30a   
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Wed, Nov 13
 
@@ -296,6 +305,7 @@ Please read the specified sections *before* class that day.
 #### Tues, Nov 19
 
 -   **Office hours**: 10:30a - 11:30a   
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Wed, Nov 20
 
@@ -319,6 +329,7 @@ Please read the specified sections *before* class that day.
 #### Tues, Nov 26
 
 -   **Office hours**: 10:30a - 11:30a   
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Wed, Nov 27
 
@@ -339,6 +350,7 @@ Please read the specified sections *before* class that day.
 #### Tues, Dec 3
 
 -   **Office hours**: 10:30a - 11:30a   
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Wed, Dec 4
 
@@ -359,6 +371,7 @@ Please read the specified sections *before* class that day.
 #### Tues, Dec 10
 
 -   **Office hours**: 10:30a - 11:30a   
+-   Cindy, Nora, Sarah **tutoring McConnell 301 7-9p**
 
 #### Wed, Dec 11
 
