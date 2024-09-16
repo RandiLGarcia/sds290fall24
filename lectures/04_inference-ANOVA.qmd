@@ -38,11 +38,6 @@ It is reasonable to assume that the structure of a sugar molecule has something 
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
-## Simulation in R: Assembly Line Metaphor
-
--   [Animal Data](https://randilgarcia.github.io/sds290fall24/code/01_animal_data.qmd)
--   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290fall24/code/02_informal_anova.qmd)
-
 ## Decomposing the data
 
 ```{r, echo = FALSE, message=FALSE, warning=FALSE}
@@ -89,6 +84,13 @@ leaf <- leaf %>%
 ```{r, echo = FALSE}
 kable(data.frame(' ' = c("","","means"), control = c(2.3,1.7, 2.0), sucrose = c(3.6, 4.0, 3.8), glucose = c(2.9,2.7,2.8), fructose = c(2.1,2.3,2.2)))
 ```
+
+## Simulation in R: Assembly Line Metaphor
+
+Assembly line for animal data: $$Calmness = Grand\:Mean + Animal\:Effect + Cue\:Effect + Interaction + Student\:Effect + Residuals$$
+
+-   [Animal Data](https://randilgarcia.github.io/sds290fall24/code/01_animal_data.qmd)
+-   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290fall24/code/02_informal_anova.qmd)
 
 ## One-way ANOVA Model
 
