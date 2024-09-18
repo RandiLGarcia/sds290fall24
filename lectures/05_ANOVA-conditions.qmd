@@ -1,7 +1,7 @@
 ---
 title: "ANOVA Conditions"
 author: Prof Randi Garcia
-date: February 8, 2024
+date: September 18, 2024
 format: 
   revealjs:
     scrollable: true
@@ -13,43 +13,38 @@ format:
 -   Homework 2 due Friday 11:59p
     -   [Instructions for submitting pdf on gradescope](https://www.youtube.com/watch?v=nksyA0s-Geo)
 -   Office hours (Bass 412)
-    -   Today: 2:45p - 4:00p
-    -   Friday: 10:50a - 12:05p
+    -   Friday 3:00-4:00p
 -   Where to get HW help
-    -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Silvia (Sun, Mon, Wed, Thurs) and Elaine (Tue) can help with 290!
+-   Where to get HW help
+    -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z (Sun, Tues), Cindy (Tue, Thurs), and Sarah (Tue) can help with 290!
 
 ## Review of last class
 
 -   Introduced the motivation behind the Analysis of Variance (ANOVA)
 -   Data decomposition
--   Computing the SS, MS, df, and F-ratio
+-   Assembly line or CAT scan metaphor
 
-<!-- ## Leafhopper survival -->
+Assembly line for animal data: 
 
-<!-- One-Way Design -->
+*Calmness* = *Grand Mean* + *Animal Effect* + *Cue Effect* + *Interaction* + *Student Effect* + *Residuals*
 
-<!-- It is reasonable to assume that the structure of a sugar molecule has something to do with its food value. An experiment was conducted to compare the effects of four sugar diets on the survival of leafhoppers. The four diets were glucose and fructose (6-carbon atoms), sucrose (12-carbon), and a control (2% agar). The experimenter prepared two dishes with each diet, divided the leafhoppers into eight groups of equal size, and then randomly assigned them to dishes. Then she counted the number of days until half the insects had died in each group. -->
+-   [Animal Data](https://randilgarcia.github.io/sds290fall24/code/01_animal_data.qmd)
+-   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290fall24/code/02_informal_anova.qmd)
 
 ## Leafhoppers
 
 Bar graph of treatment condition averages.
+
+
+
+## Leafhoppers
 
 ```{r, echo=FALSE}
 library(knitr)
 library(tidyverse)
 library(mosaic)
 
-kable(data.frame(control = c(2.3,1.7), sucrose = c(3.6, 4.0), glucose = c(2.9,2.7), fructose = c(2.1,2.3)))
-
 leaf <- data.frame(diet = c("control","control","sucrose", "sucrose", "glucose", "glucose", "fructose","fructose"), days = c(2.3,1.7,3.6,4.0,2.9,2.7,2.1,2.3))
-leaf %>%
-  group_by(diet) %>%
-  summarise(means = mean(days)) %>%
-  mutate(bench = mean(means)) %>%
-ggplot(aes(x = diet, y = means)) +
-  geom_bar(stat = "identity") +
-  geom_hline(aes(yintercept = bench), color = "red") 
-
 
 leaf <- leaf %>%
   mutate(benchmark = mean(days)) %>%
@@ -62,12 +57,10 @@ leaf <- leaf %>%
          resid_alt = days - fitted)
 ```
 
-## Leafhoppers
-
 -   Now we start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.
 
 ```{r, echo = FALSE}
-kable(data.frame(' ' = c("","","means"), control = c(2.3,1.7, 2.0), sucrose = c(3.6, 4.0, 3.8), glucose = c(2.9,2.7,2.8), fructose = c(2.1,2.3,2.2)))
+kable(data.frame(' ' = c("","","means", "group effects"), control = c(2.3,1.7, 2.0, -0.7), sucrose = c(3.6, 4.0, 3.8, 1.1), glucose = c(2.9,2.7,2.8,0.1), fructose = c(2.1,2.3,2.2, -0.5)))
 ```
 
 ## One-way ANOVA Model
@@ -130,13 +123,13 @@ qplot(x = rf(500, 3, 4), geom = "density")
 
 ## Inference Testing in ANOVA
 
-$${H}_{0}:\mu_1=\mu_2=\mu_3=\mu_4$$
+$${H}_{0}:\alpha_1=\alpha_2=\alpha_3=\alpha_4=0$$
 
-*OR*, ${H}_{0}:\alpha_1=\alpha_2=\alpha_3=\alpha_4=0$
+*OR*, ${H}_{0}:\mu_1=\mu_2=\mu_3=\mu_4$
 
-$${H}_{A}:some\:\mu_i\neq\mu_j$$
+$$H_a: Some\:\alpha_i\neq 0$$
 
-Or $H_a: Some\:\alpha_i\neq 0$. We can find the p-value for our F calculation with the following code
+Or ${H}_{A}:some\:\mu_i\neq\mu_j$. We can find the p-value for our F calculation with the following code
 
 ```{r, echo = TRUE}
 
@@ -242,7 +235,7 @@ data("SandwichAnts")
 
 ### Simulation in R: Assembly Line Metaphor
 
--   Recall the [Assembly Line Metaphor and code](https://randilgarcia.github.io/sds290spring24/code/02_informal_anova.qmd)
+-   Recall the [Assembly Line Metaphor and code](https://randilgarcia.github.io/sds290fall24/code/02_informal_anova.qmd)
 
 ## ANOVA Conditions
 

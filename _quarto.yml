@@ -36,8 +36,8 @@ website:
           href: lectures/03_one-way-ANOVAII.html
         - text: 04 - Inference for ANOVA
           href: lectures/04_inference-ANOVA.html
-#        - text: 05 - ANOVA Conditions
-#          href: lectures/05_ANOVA-conditions.html
+        - text: 05 - ANOVA Conditions
+          href: lectures/05_ANOVA-conditions.html
 #        - text: 06 - Confidence Intervals and Effect Sizes
 #          href: lectures/06_CI-effect-sizes.html
 #        - text: 07 - Multiple Comparisons
@@ -78,8 +78,8 @@ website:
             href: code/01_animal_data.qmd
           - text: Informal ANOVA
             href: code/02_informal_anova.qmd
-#          - text: SandwichAnts Analysis
-#            href: code/SandwichAnts analysis.qmd
+          - text: SandwichAnts Analysis
+            href: code/SandwichAnts analysis.qmd
 #          - text: Two-Way Factorial Design
 #            href: code/09_two-way_fac_inR.qmd    
 #          - text: Complete Block, Spilt-Plot Design in R
@@ -111,7 +111,7 @@ website:
       - text: Projects
         menu:
         - text: 'Mini project 1'
-#          href: project/mini-project-1.html
+          href: project/mini-project-1.html
 #        - text: 'Mini Project 2'
 #          href: project/mini-project-2.html
 
