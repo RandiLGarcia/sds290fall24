@@ -18,24 +18,22 @@ format:
 -   Where to get HW help
     -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z (Sun, Tues), Cindy (Tue, Thurs), and Sarah (Tue) can help with 290!
 
+## Mini Project 1 (MP1)
+
+- [Assignment page for MP1](https://randilgarcia.github.io/sds290fall24/project/mini-project-1.html)
+
 ## Review of last class
 
 -   Introduced the motivation behind the Analysis of Variance (ANOVA)
 -   Data decomposition
 -   Assembly line or CAT scan metaphor
 
-Assembly line for animal data: 
+## Assembly line code 
 
 *Calmness* = *Grand Mean* + *Animal Effect* + *Cue Effect* + *Interaction* + *Student Effect* + *Residuals*
 
 -   [Animal Data](https://randilgarcia.github.io/sds290fall24/code/01_animal_data.qmd)
 -   [Assembly Line Metaphor code](https://randilgarcia.github.io/sds290fall24/code/02_informal_anova.qmd)
-
-## Leafhoppers
-
-Bar graph of treatment condition averages.
-
-
 
 ## Leafhoppers
 
@@ -65,7 +63,7 @@ kable(data.frame(' ' = c("","","means", "group effects"), control = c(2.3,1.7, 2
 
 ## One-way ANOVA Model
 
-$$Y = f(X) + \epsilon$$ For t-test our model is: $$Y = \mu_i + \epsilon$$ For One-Way ANOVA our model is: $$Y = \mu + \alpha_i + \epsilon$$ where $\mu$ is the grand mean, $\alpha_i$ is the treatment effect (difference from the grand mean for the $i^{th}$ group), and $\epsilon$ is the residual.
+$$Y = f(X) + \epsilon$$ The "t-test extension" for our model would be: $$Y = \mu_i + \epsilon$$ The One-Way ANOVA  model instead uses a treatment effects approach: $$Y = \mu + \alpha_i + \epsilon$$ where $\mu$ is the grand mean, $\alpha_i$ is the treatment effect (difference from the grand mean for the $i^{th}$ group), and $\epsilon$ is the residual.
 
 <!-- ### Note about using SLR for categorical variables -->
 

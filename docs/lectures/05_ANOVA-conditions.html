@@ -423,6 +423,12 @@ Prof Randi Garcia
 </ul></li>
 </ul>
 </section>
+<section id="mini-project-1-mp1" class="slide level2">
+<h2>Mini Project 1 (MP1)</h2>
+<ul>
+<li><a href="https://randilgarcia.github.io/sds290fall24/project/mini-project-1.html">Assignment page for MP1</a></li>
+</ul>
+</section>
 <section id="review-of-last-class" class="slide level2">
 <h2>Review of last class</h2>
 <ul>
@@ -430,7 +436,9 @@ Prof Randi Garcia
 <li>Data decomposition</li>
 <li>Assembly line or CAT scan metaphor</li>
 </ul>
-<p>Assembly line for animal data:</p>
+</section>
+<section id="assembly-line-code" class="slide level2">
+<h2>Assembly line code</h2>
 <p><em>Calmness</em> = <em>Grand Mean</em> + <em>Animal Effect</em> + <em>Cue Effect</em> + <em>Interaction</em> + <em>Student Effect</em> + <em>Residuals</em></p>
 <ul>
 <li><a href="https://randilgarcia.github.io/sds290fall24/code/01_animal_data.qmd">Animal Data</a></li>
@@ -438,10 +446,6 @@ Prof Randi Garcia
 </ul>
 </section>
 <section id="leafhoppers" class="slide level2">
-<h2>Leafhoppers</h2>
-<p>Bar graph of treatment condition averages.</p>
-</section>
-<section id="leafhoppers-1" class="slide level2">
 <h2>Leafhoppers</h2>
 <ul>
 <li>Now we start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.</li>
@@ -494,7 +498,7 @@ Prof Randi Garcia
 </section>
 <section id="one-way-anova-model" class="slide level2">
 <h2>One-way ANOVA Model</h2>
-<p><span class="math display">\[Y = f(X) + \epsilon\]</span> For t-test our model is: <span class="math display">\[Y = \mu_i + \epsilon\]</span> For One-Way ANOVA our model is: <span class="math display">\[Y = \mu + \alpha_i + \epsilon\]</span> where <span class="math inline">\(\mu\)</span> is the grand mean, <span class="math inline">\(\alpha_i\)</span> is the treatment effect (difference from the grand mean for the <span class="math inline">\(i^{th}\)</span> group), and <span class="math inline">\(\epsilon\)</span> is the residual.</p>
+<p><span class="math display">\[Y = f(X) + \epsilon\]</span> The “t-test extension” for our model would be: <span class="math display">\[Y = \mu_i + \epsilon\]</span> The One-Way ANOVA model instead uses a treatment effects approach: <span class="math display">\[Y = \mu + \alpha_i + \epsilon\]</span> where <span class="math inline">\(\mu\)</span> is the grand mean, <span class="math inline">\(\alpha_i\)</span> is the treatment effect (difference from the grand mean for the <span class="math inline">\(i^{th}\)</span> group), and <span class="math inline">\(\epsilon\)</span> is the residual.</p>
 <!-- ### Note about using SLR for categorical variables -->
 <!-- When we have a binary explanatory variable, X, where X is an indicator of category 2: -->
 <!-- $$Y = \beta_0+\beta_1X_{indicator}+\epsilon$$ where $\beta_0$ is the mean of category 1, and $\beta_1$ is the difference between the mean of category 1 and the mean of category 2. -->

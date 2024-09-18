@@ -844,7 +844,7 @@
     "href": "lectures/05_ANOVA-conditions.html#review-of-last-class",
     "title": "ANOVA Conditions",
     "section": "Review of last class",
-    "text": "Review of last class\n\nIntroduced the motivation behind the Analysis of Variance (ANOVA)\nData decomposition\nAssembly line or CAT scan metaphor\n\nAssembly line for animal data:\nCalmness = Grand Mean + Animal Effect + Cue Effect + Interaction + Student Effect + Residuals\n\nAnimal Data\nAssembly Line Metaphor code"
+    "text": "Review of last class\n\nIntroduced the motivation behind the Analysis of Variance (ANOVA)\nData decomposition\nAssembly line or CAT scan metaphor"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#anova-for-one-way-anova",
@@ -1264,7 +1264,7 @@
     "href": "lectures/05_ANOVA-conditions.html#leafhoppers",
     "title": "ANOVA Conditions",
     "section": "Leafhoppers",
-    "text": "Leafhoppers\nBar graph of treatment condition averages."
+    "text": "Leafhoppers\n\nNow we start thinking about if those differences in treatment effects are real, or could possibly be due to chance error.\n\n\n\n\n\n\nX.\ncontrol\nsucrose\nglucose\nfructose\n\n\n\n\n\n2.3\n3.6\n2.9\n2.1\n\n\n\n1.7\n4.0\n2.7\n2.3\n\n\nmeans\n2.0\n3.8\n2.8\n2.2\n\n\ngroup effects\n-0.7\n1.1\n0.1\n-0.5"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#leafhoppers-1",
@@ -1278,7 +1278,7 @@
     "href": "lectures/05_ANOVA-conditions.html#one-way-anova-model",
     "title": "ANOVA Conditions",
     "section": "One-way ANOVA Model",
-    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] For t-test our model is: \\[Y = \\mu_i + \\epsilon\\] For One-Way ANOVA our model is: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual."
+    "text": "One-way ANOVA Model\n\\[Y = f(X) + \\epsilon\\] The “t-test extension” for our model would be: \\[Y = \\mu_i + \\epsilon\\] The One-Way ANOVA model instead uses a treatment effects approach: \\[Y = \\mu + \\alpha_i + \\epsilon\\] where \\(\\mu\\) is the grand mean, \\(\\alpha_i\\) is the treatment effect (difference from the grand mean for the \\(i^{th}\\) group), and \\(\\epsilon\\) is the residual."
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#analysis-of-variance-anova",
@@ -4492,5 +4492,19 @@
     "title": "One-Way ANOVA II",
     "section": "Boxplots for One-Way ANOVA",
     "text": "Boxplots for One-Way ANOVA\n\nqplot(x = factor(graduation), y = chalk_est, data = survey, geom = \"boxplot\")"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#mini-project-1-mp1",
+    "href": "lectures/05_ANOVA-conditions.html#mini-project-1-mp1",
+    "title": "ANOVA Conditions",
+    "section": "Mini Project 1 (MP1)",
+    "text": "Mini Project 1 (MP1)\n\nAssignment page for MP1"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#assembly-line-code",
+    "href": "lectures/05_ANOVA-conditions.html#assembly-line-code",
+    "title": "ANOVA Conditions",
+    "section": "Assembly line code",
+    "text": "Assembly line code\nCalmness = Grand Mean + Animal Effect + Cue Effect + Interaction + Student Effect + Residuals\n\nAnimal Data\nAssembly Line Metaphor code"
   }
 ]
