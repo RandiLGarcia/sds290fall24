@@ -506,9 +506,9 @@ Prof Randi Garcia
 <section id="analysis-of-variance-anova" class="slide level2">
 <h2>Analysis of Variance (ANOVA)</h2>
 <p>Formal ANOVA starts with the simple idea that we can compare our estimate of <strong>treatment effect variability</strong> to our estimate of <strong>chance error variability</strong> to measure how large our treatment effect is. &nbsp;<br>
-<span class="math display">\[Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects = True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error\]</span> <span class="math display">\[Variability\:in\:Residuals = Error\]</span> &nbsp;<br>
+<span class="math display">\[Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects =\]</span> <span class="math display">\[True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error\]</span> <span class="math display">\[Variability\:in\:Residuals = Error\]</span> &nbsp;<br>
 We can construct a comparison, which we will call F: &nbsp;<br>
-<span class="math display">\[F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}=\frac{True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error}{Error}\]</span> &nbsp;<br>
+<span class="math display">\[F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}=\]</span> <span class="math display">\[\frac{True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error}{Error}\]</span> &nbsp;<br>
 If our null hypothesis, <span class="math inline">\({H}_{0}: True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences=0\)</span>, is true, then what would we expect the F-ratio to equal?</p>
 </section>
 <section id="sum-of-squares-ss" class="slide level2">
@@ -535,6 +535,9 @@ If our null hypothesis, <span class="math inline">\({H}_{0}: True\:E\mathit{f}\m
 <h2>F-ratios and the F-distribution</h2>
 <p>Finally, the ratio of these two MS’s is called the F ratio. The following quantity is our test statistic for the null hypothesis that there are no treatment effects.</p>
 <p><span class="math display">\[F = \frac{{MS}_{Treatments}}{{MS}_{E}}\]</span></p>
+</section>
+<section id="f-ratios-and-the-f-distribution-1" class="slide level2">
+<h2>F-ratios and the F-distribution</h2>
 <p>If the null hypothesis is true, then F is a random variable <span class="math inline">\(\sim F({df}_{Treatments}, {df}_{E})\)</span>. The <a href="https://en.wikipedia.org/wiki/F-distribution">F-distribution</a>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">rf</span>(<span class="dv">500</span>, <span class="dv">3</span>, <span class="dv">4</span>), <span class="at">geom =</span> <span class="st">"density"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

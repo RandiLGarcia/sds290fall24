@@ -74,9 +74,10 @@ $$Y = f(X) + \epsilon$$ The "t-test extension" for our model would be: $$Y = \mu
 ## Analysis of Variance (ANOVA)
 
 Formal ANOVA starts with the simple idea that we can compare our estimate of **treatment effect variability** to our estimate of **chance error variability** to measure how large our treatment effect is.  \
-$$Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects = True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error$$ $$Variability\:in\:Residuals = Error$$  \
+$$Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects =$$ $$True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error$$ $$Variability\:in\:Residuals = Error$$  \
 We can construct a comparison, which we will call F:  \
-$$F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}=\frac{True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error}{Error}$$  \
+$$F = \frac{Variability\:in\:Treatment\:E\mathit{f}\mathit{f}ects}{Variability\:in\:Residuals}=$$
+$$\frac{True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences + Error}{Error}$$  \
 If our null hypothesis, ${H}_{0}: True\:E\mathit{f}\mathit{f}ect\:Di\mathit{f}\mathit{f}erences=0$, is true, then what would we expect the F-ratio to equal?
 
 ## Sum of Squares (SS)
@@ -112,6 +113,8 @@ The ultimate statistic we want to calculate is $F = \frac{Variability\:in\:Treat
 Finally, the ratio of these two MS's is called the F ratio. The following quantity is our test statistic for the null hypothesis that there are no treatment effects.
 
 $$F = \frac{{MS}_{Treatments}}{{MS}_{E}}$$
+
+## F-ratios and the F-distribution
 
 If the null hypothesis is true, then F is a random variable $\sim F({df}_{Treatments}, {df}_{E})$. The [F-distribution](https://en.wikipedia.org/wiki/F-distribution).
 

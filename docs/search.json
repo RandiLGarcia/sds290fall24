@@ -1285,7 +1285,7 @@
     "href": "lectures/05_ANOVA-conditions.html#analysis-of-variance-anova",
     "title": "ANOVA Conditions",
     "section": "Analysis of Variance (ANOVA)",
-    "text": "Analysis of Variance (ANOVA)\nFormal ANOVA starts with the simple idea that we can compare our estimate of treatment effect variability to our estimate of chance error variability to measure how large our treatment effect is.  \n\\[Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects = True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error\\] \\[Variability\\:in\\:Residuals = Error\\]  \nWe can construct a comparison, which we will call F:  \n\\[F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}=\\frac{True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error}{Error}\\]  \nIf our null hypothesis, \\({H}_{0}: True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences=0\\), is true, then what would we expect the F-ratio to equal?"
+    "text": "Analysis of Variance (ANOVA)\nFormal ANOVA starts with the simple idea that we can compare our estimate of treatment effect variability to our estimate of chance error variability to measure how large our treatment effect is.  \n\\[Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects =\\] \\[True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error\\] \\[Variability\\:in\\:Residuals = Error\\]  \nWe can construct a comparison, which we will call F:  \n\\[F = \\frac{Variability\\:in\\:Treatment\\:E\\mathit{f}\\mathit{f}ects}{Variability\\:in\\:Residuals}=\\] \\[\\frac{True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences + Error}{Error}\\]  \nIf our null hypothesis, \\({H}_{0}: True\\:E\\mathit{f}\\mathit{f}ect\\:Di\\mathit{f}\\mathit{f}erences=0\\), is true, then what would we expect the F-ratio to equal?"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#sum-of-squares-ss",
@@ -1313,7 +1313,7 @@
     "href": "lectures/05_ANOVA-conditions.html#f-ratios-and-the-f-distribution",
     "title": "ANOVA Conditions",
     "section": "F-ratios and the F-distribution",
-    "text": "F-ratios and the F-distribution\nFinally, the ratio of these two MS’s is called the F ratio. The following quantity is our test statistic for the null hypothesis that there are no treatment effects.\n\\[F = \\frac{{MS}_{Treatments}}{{MS}_{E}}\\]\nIf the null hypothesis is true, then F is a random variable \\(\\sim F({df}_{Treatments}, {df}_{E})\\). The F-distribution.\n\nqplot(x = rf(500, 3, 4), geom = \"density\")"
+    "text": "F-ratios and the F-distribution\nFinally, the ratio of these two MS’s is called the F ratio. The following quantity is our test statistic for the null hypothesis that there are no treatment effects.\n\\[F = \\frac{{MS}_{Treatments}}{{MS}_{E}}\\]"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#inference-testing-in-anova",
@@ -4506,5 +4506,12 @@
     "title": "ANOVA Conditions",
     "section": "Assembly line code",
     "text": "Assembly line code\nCalmness = Grand Mean + Animal Effect + Cue Effect + Interaction + Student Effect + Residuals\n\nAnimal Data\nAssembly Line Metaphor code"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#f-ratios-and-the-f-distribution-1",
+    "href": "lectures/05_ANOVA-conditions.html#f-ratios-and-the-f-distribution-1",
+    "title": "ANOVA Conditions",
+    "section": "F-ratios and the F-distribution",
+    "text": "F-ratios and the F-distribution\nIf the null hypothesis is true, then F is a random variable \\(\\sim F({df}_{Treatments}, {df}_{E})\\). The F-distribution.\n\nqplot(x = rf(500, 3, 4), geom = \"density\")"
   }
 ]
