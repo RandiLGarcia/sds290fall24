@@ -858,7 +858,7 @@
     "href": "lectures/05_ANOVA-conditions.html#running-an-anova-in-r",
     "title": "ANOVA Conditions",
     "section": "Running an ANOVA in R",
-    "text": "Running an ANOVA in R\nThree steps:\n\nBoxplots or some data visualization\nDescriptive statistics (n, means, standard deviations)\nANOVA\nCheck assumptions"
+    "text": "Running an ANOVA in R\nFour steps (different from the 4 steps in chapter 0!):\n\nBoxplots or some data visualization\nDescriptive statistics (n, means, standard deviations)\nANOVA\nCheck assumptions"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#step-1.-boxplots",
