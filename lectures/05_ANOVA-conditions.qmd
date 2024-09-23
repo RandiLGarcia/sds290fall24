@@ -227,7 +227,7 @@ data("SandwichAnts")
 ?SandwichAnts
 ```
 
-## ANOVA Conditions
+## Step 4: ANOVA Conditions
 
 **STOP!!**...only under certain conditions can we rely on this inference. There were many assumptions built into:
 

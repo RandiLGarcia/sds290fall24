@@ -893,7 +893,7 @@
     "href": "lectures/05_ANOVA-conditions.html#anova-conditions",
     "title": "ANOVA Conditions",
     "section": "ANOVA Conditions",
-    "text": "ANOVA Conditions\nSTOP!!…only under certain conditions can we rely on this inference. There were many assumptions built into:\n\nhow we decomposed the data, and\nour thoughts about residual errors."
+    "text": "ANOVA Conditions\n\n\nC. Constant effects\nA. Additive effects\nS. Same standard deviations\nI. Independent residuals\nN. Normally distributed residuals\nZ. Zero mean residuals\n\nSimulation in R: Assembly Line Metaphor\n\nRecall the Assembly Line Metaphor and code"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#anova-conditions-1",
@@ -4548,5 +4548,12 @@
     "title": "Data Transformations",
     "section": "Finish up slides from last week",
     "text": "Finish up slides from last week\n\nOne-way ANOVA"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#step-4-anova-conditions",
+    "href": "lectures/05_ANOVA-conditions.html#step-4-anova-conditions",
+    "title": "ANOVA Conditions",
+    "section": "Step 4: ANOVA Conditions",
+    "text": "Step 4: ANOVA Conditions\nSTOP!!…only under certain conditions can we rely on this inference. There were many assumptions built into:\n\nhow we decomposed the data, and\nour thoughts about residual errors."
   }
 ]
