@@ -168,7 +168,7 @@ library(tidyverse)
 leaf <- data.frame(diet = c("control","control","sucrose", "sucrose", "glucose", "glucose", "fructose","fructose"), days = c(2.3,1.7,3.6,4.0,2.9,2.7,2.1,2.3))
 ```
 
-Three steps:
+Four steps (different from the 4 steps in chapter 0!):
 
 1.  Boxplots or some data visualization
 2.  Descriptive statistics (n, means, standard deviations)

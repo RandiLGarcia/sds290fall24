@@ -1332,16 +1332,16 @@
   {
     "objectID": "lectures/06_CI-effect-sizes.html#announcements",
     "href": "lectures/06_CI-effect-sizes.html#announcements",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Announcements",
-    "text": "Announcements\n\nHomework 3 posted\nOffice hours (Bass 412)\n\nTuesdays 10:30-11:30a\nFriday 3:00-4:00p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z (Sun, Tues), Cindy (Tue, Thurs), and Sarah (Tue) can help with 290.\nPost questions to hw3-questions Slack channel."
+    "text": "Announcements\n\nHomework 3 now posted\nOffice hours (Bass 412)\n\nTuesdays 10:30-11:30a\nFriday 3:00-4:00p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z (Sun, Tues), Cindy (Tue, Thurs), and Sarah (Tue) can help with 290.\nPost questions to hw3-questions Slack channel."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#agenda",
     "href": "lectures/06_CI-effect-sizes.html#agenda",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Agenda",
-    "text": "Agenda\n\nANOVA Conditions\nTransformations\nConfidence intervals\nEffect sizes\nMP1 introduction\n\ntopics time"
+    "text": "Agenda\n\nPractice fitting One-Way ANOVA\nANOVA Conditions\nTransformations\nMP1 introduction\n\ntopics time"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#last-time",
@@ -1360,77 +1360,77 @@
   {
     "objectID": "lectures/06_CI-effect-sizes.html#transformations-example",
     "href": "lectures/06_CI-effect-sizes.html#transformations-example",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Transformations: Example",
     "text": "Transformations: Example\n\nlibrary(Stat2Data)\nlibrary(tidyverse)\ndata(\"Diamonds\")\n\nqplot(x = Color, y = TotalPrice, data = Diamonds, geom = \"boxplot\")"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#transformations-example-1",
     "href": "lectures/06_CI-effect-sizes.html#transformations-example-1",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Transformations: Example",
     "text": "Transformations: Example\n\nDiamonds %&gt;%\n  group_by(Color) %&gt;%\n  summarise(n = n(),\n            m = mean(TotalPrice, na.rm = TRUE),\n            sd = sd(TotalPrice, na.rm = TRUE))\n\n# A tibble: 7 × 4\n  Color     n     m     sd\n  &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt;\n1 D        52 5569.  4764.\n2 E        82 4359.  3696.\n3 F        87 9160. 10937.\n4 G        86 9559.  7993.\n5 H        29 8669.  6379.\n6 I        12 7640.  5461.\n7 J         3 1936.   737.\n\n10937/736 #Yikes!\n\n[1] 14.86005"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#transformations-example-2",
     "href": "lectures/06_CI-effect-sizes.html#transformations-example-2",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Transformations: Example",
     "text": "Transformations: Example\n\nqplot(x = Color, y = log(TotalPrice), data = Diamonds, geom = \"boxplot\")"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#common-transformations",
     "href": "lectures/06_CI-effect-sizes.html#common-transformations",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Common transformations",
     "text": "Common transformations\nFor the response (Y)…"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#how-to-transform",
     "href": "lectures/06_CI-effect-sizes.html#how-to-transform",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "How to transform",
     "text": "How to transform\nWe can do the transformation directly in the visualization code:\n\nqplot(x = Color, y = log(TotalPrice), data = Diamonds, geom = \"boxplot\")\n\nOR, we can create a new variable in the dataset\n\nDiamonds &lt;- Diamonds %&gt;%\n  mutate(ln_TotalPrice = log(TotalPrice))\n\n#Then, we use the new variable to make our visualization\nqplot(x = Color, y = ln_TotalPrice, data = Diamonds, geom = \"boxplot\")"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#when-to-use-log-transformation",
     "href": "lectures/06_CI-effect-sizes.html#when-to-use-log-transformation",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "When to use log transformation:",
     "text": "When to use log transformation:\nLook for:\n\nDistribution of response is skewed towards high end.\nThe responses in one group (or more) range over two or more orders of magnitude.\nVariability varies across groups considerably, especially when the spread tracks with the mean."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#diagnostic-plot-to-pick-a-transformation",
     "href": "lectures/06_CI-effect-sizes.html#diagnostic-plot-to-pick-a-transformation",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Diagnostic plot to pick a transformation",
     "text": "Diagnostic plot to pick a transformation\nSteps:\n\nSave the means and sd’s of groups in a little dataset.\nMake a scatterplot of log(sd) versus log(m) with a line of best fit.\nYour transformation will be the response raised to the power of 1-slope of that line."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#diagnostic-plot-to-pick-a-transformation-step-1",
     "href": "lectures/06_CI-effect-sizes.html#diagnostic-plot-to-pick-a-transformation-step-1",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Diagnostic plot to pick a transformation: Step 1",
     "text": "Diagnostic plot to pick a transformation: Step 1\nSave the means and sd’s of groups in a little dataset.\n\nds &lt;- Diamonds %&gt;%\n  group_by(Color) %&gt;%\n  summarise(n = n(),\n            m = mean(TotalPrice),\n            sd = sd(TotalPrice))"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#diagnostic-plot-to-pick-a-transformation-step-2",
     "href": "lectures/06_CI-effect-sizes.html#diagnostic-plot-to-pick-a-transformation-step-2",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Diagnostic plot to pick a transformation: Step 2",
     "text": "Diagnostic plot to pick a transformation: Step 2\nMake a scatterplot of log(sd) versus log(m) with a line of best fit.\n\nqplot(x = log(m), y = log(sd), data = ds) +\n  geom_smooth(method = lm, se = 0)"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#diagnostic-plot-to-pick-a-transformation-step-3",
     "href": "lectures/06_CI-effect-sizes.html#diagnostic-plot-to-pick-a-transformation-step-3",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Diagnostic plot to pick a transformation: Step 3",
     "text": "Diagnostic plot to pick a transformation: Step 3\nYour transformation will be the response raised to the power of 1-slope of that line.\n\nlm(log(sd) ~ log(m), data = ds)\n\n\nCall:\nlm(formula = log(sd) ~ log(m), data = ds)\n\nCoefficients:\n(Intercept)       log(m)  \n     -4.447        1.480"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#diagnostic-plot-to-pick-a-transformation-step-3-1",
     "href": "lectures/06_CI-effect-sizes.html#diagnostic-plot-to-pick-a-transformation-step-3-1",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Diagnostic plot to pick a transformation: Step 3",
     "text": "Diagnostic plot to pick a transformation: Step 3\n\np = 1 - 1.480\n\nqplot(x = Color, y = TotalPrice^p, data = Diamonds, geom = \"boxplot\")"
   },
@@ -1444,7 +1444,7 @@
   {
     "objectID": "lectures/06_CI-effect-sizes.html#anova-for-diamonds",
     "href": "lectures/06_CI-effect-sizes.html#anova-for-diamonds",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "ANOVA for Diamonds",
     "text": "ANOVA for Diamonds\n\nmodDia &lt;- lm(log(TotalPrice) ~ Color, data = Diamonds)\nanova(modDia)\n\nAnalysis of Variance Table\n\nResponse: log(TotalPrice)\n           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nColor       6  29.946  4.9909  7.3713 1.972e-07 ***\nResiduals 344 232.913  0.6771                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nThere are statistically significant differences in log price of diamonds across colors \\(F(6, 344) = 7.37\\), \\(p &lt; .001\\).\nBut what else do we want to know??"
   },
@@ -1528,7 +1528,7 @@
   {
     "objectID": "lectures/06_CI-effect-sizes.html#mini-project-1",
     "href": "lectures/06_CI-effect-sizes.html#mini-project-1",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Mini Project 1",
     "text": "Mini Project 1\nSee Mini Project 1 instructions"
   },
@@ -1759,7 +1759,7 @@
   {
     "objectID": "lectures/06_CI-effect-sizes.html#try-it-for-the-hawks",
     "href": "lectures/06_CI-effect-sizes.html#try-it-for-the-hawks",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Try it for the Hawks!",
     "text": "Try it for the Hawks!\n\nlibrary(Stat2Data)\ndata(\"Hawks\")\n\n\nFind a transformation that helps the heterogeneity of variance for Y = Weight and X = Species.\nRun the ANOVA (even if the issue is not completely fixed) and write a sentence interpretation of your ANOVA results.\n\nSteps for finding a transformation:\n\nSave the means and sd’s of groups in a little dataset.\nMake a scatterplot of log(sd) versus log(m) with a line of best fit.\nYour transformation will be the response raised to the power of 1-slope of that line."
   },
@@ -4513,5 +4513,19 @@
     "title": "ANOVA Conditions",
     "section": "F-ratios and the F-distribution",
     "text": "F-ratios and the F-distribution\nIf the null hypothesis is true, then F is a random variable \\(\\sim F({df}_{Treatments}, {df}_{E})\\). The F-distribution.\n\nqplot(x = rf(500, 3, 4), geom = \"density\")"
+  },
+  {
+    "objectID": "lectures/06_CI-effect-sizes.html#extend-your-analyses",
+    "href": "lectures/06_CI-effect-sizes.html#extend-your-analyses",
+    "title": "Data Transformations",
+    "section": "Extend your analyses",
+    "text": "Extend your analyses\nIn your groups of three, check the last 4 ANOVA assumptions: The SINZ.\nDataset 1: SandwichAnts\n\nFactor: Bread\nResponse: Ants\n\nDataset 2: Meniscus\n\nFactor: Method\nResponse: Displacement"
+  },
+  {
+    "objectID": "lectures/06_CI-effect-sizes.html#how-to-check-assumptions",
+    "href": "lectures/06_CI-effect-sizes.html#how-to-check-assumptions",
+    "title": "Data Transformations",
+    "section": "How to check assumptions",
+    "text": "How to check assumptions\n\nC. Constant effects – think about whether it is reasonable.\nA. Additive effects – think about whether it is reasonable.\nS. Same standard deviations – is the biggest SD less than two times as large as the smallest?\nI. Independent residuals – think about whether it is reasonable.\nN. Normally distributed residuals – construct a histogram or normal probability plot of residuals.\nZ. Zero mean residuals – construct a histogram or normal probability plot of residuals."
   }
 ]

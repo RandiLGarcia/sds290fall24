@@ -8,11 +8,11 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.555">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Prof Randi Garcia, SDS 290">
-  <meta name="dcterms.date" content="2024-09-18">
-  <title>SDS 290 - Fall 2024 - Confidence Intervals and Effect Sizes</title>
+  <meta name="dcterms.date" content="2024-09-23">
+  <title>SDS 290 - Fall 2024 - Data Transformations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -393,7 +393,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Confidence Intervals and Effect Sizes</h1>
+  <h1 class="title">Data Transformations</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -403,12 +403,12 @@ Prof Randi Garcia, SDS 290
 </div>
 </div>
 
-  <p class="date">2024-09-18</p>
+  <p class="date">2024-09-23</p>
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li>Homework 3 posted</li>
+<li>Homework 3 now posted</li>
 <li>Office hours (Bass 412)
 <ul>
 <li>Tuesdays 10:30-11:30a</li>
@@ -424,31 +424,18 @@ Prof Randi Garcia, SDS 290
 <section id="agenda" class="slide level2">
 <h2>Agenda</h2>
 <ul>
+<li>Practice fitting One-Way ANOVA</li>
 <li>ANOVA Conditions</li>
 <li>Transformations</li>
-<li>Confidence intervals</li>
-<li>Effect sizes</li>
 <li>MP1 introduction
 <ul>
 <li>topics time</li>
 </ul></li>
 </ul>
 </section>
-<section id="last-time" class="slide level2">
-<h2>Last time</h2>
-<h3 id="how-to-check-assumptions">How to check assumptions</h3>
-<ul>
-<li><p>C. <strong>Constant effects</strong> – <em>think</em> about whether it is reasonable.</p></li>
-<li><p>A. <strong>Additive effects</strong> – <em>think</em> about whether it is reasonable.</p></li>
-<li><p>S. <strong>Same standard deviations</strong> – is the biggest SD less than two times as large as the smallest?</p></li>
-<li><p>I. <strong>Independent residuals</strong> – <em>think</em> about whether it is reasonable.</p></li>
-<li><p>N. <strong>Normally distributed residuals</strong> – construct a histogram or normal probability plot of residuals.</p></li>
-<li><p>Z. <strong>Zero mean residuals</strong> – construct a histogram or normal probability plot of residuals.</p></li>
-</ul>
-</section>
-<section id="try-it" class="slide level2">
-<h2>Try it!</h2>
-<p>Back in your groups of three, check or discuss the last 4 ANOVA assumptions: The <strong>SINZ</strong>.</p>
+<section id="extend-your-analyses" class="slide level2">
+<h2>Extend your analyses</h2>
+<p>In your groups of three, check the last 4 ANOVA assumptions: The <strong>SINZ</strong>.</p>
 <p><strong>Dataset 1</strong>: <code>SandwichAnts</code></p>
 <ul>
 <li>Factor: <code>Bread</code></li>
@@ -458,6 +445,17 @@ Prof Randi Garcia, SDS 290
 <ul>
 <li>Factor: <code>Method</code></li>
 <li>Response: <code>Displacement</code></li>
+</ul>
+</section>
+<section id="how-to-check-assumptions" class="slide level2">
+<h2>How to check assumptions</h2>
+<ul>
+<li><p>C. <strong>Constant effects</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>A. <strong>Additive effects</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>S. <strong>Same standard deviations</strong> – is the biggest SD less than two times as large as the smallest?</p></li>
+<li><p>I. <strong>Independent residuals</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>N. <strong>Normally distributed residuals</strong> – construct a histogram or normal probability plot of residuals.</p></li>
+<li><p>Z. <strong>Zero mean residuals</strong> – construct a histogram or normal probability plot of residuals.</p></li>
 </ul>
 </section>
 <section id="transformations-example" class="slide level2">
@@ -622,139 +620,79 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>There are statistically significant differences in log price of diamonds across colors <span class="math inline">\(F(6, 344) = 7.37\)</span>, <span class="math inline">\(p &lt; .001\)</span>.</p>
 <p>But what else do we want to know??</p>
-</section>
-<section id="effect-sizes-and-confidence-intervals" class="slide level2">
-<h2>Effect Sizes and Confidence Intervals</h2>
-<ul>
-<li>The p-value for our F-ratio only tells us if effects are <strong>detectable</strong>.
-<ul>
-<li>Answers the question: <strong>IS there an effect?</strong></li>
-</ul></li>
-<li>Practical significance is different from <strong>statistical</strong> significance.
-<ul>
-<li>Need to answer the question: <strong>How big is IT</strong>?</li>
-</ul></li>
-<li>Which values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)?</li>
-</ul>
-<h3 id="some-options">Some options:</h3>
-<ul>
-<li>A specific group mean.</li>
-<li>How far away a specific condition is from the grand average (the treatment effect).</li>
-<li>How far away a specific condition is from another condition.</li>
-<li>How far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.</li>
-<li>Additional effect size option: The overall variance explained by a factor of interest.</li>
-</ul>
-</section>
-<section id="confidence-intervals-for-difference-between-two-groups" class="slide level2">
-<h2>Confidence Intervals for Difference Between two Groups</h2>
-<p><span class="math display">\[(\bar{y_i}-\bar{y_j}) \pm t^*\cdot SD \sqrt{1/n_i+1/n_j}\]</span></p>
-<ul>
-<li>Where <span class="math inline">\(SD = \sqrt{MSE}\)</span>.</li>
-<li><span class="math inline">\(t^*\)</span> depends on the confidence level and df of the error.</li>
-<li><span class="math inline">\(Sample\:size\:factor = \sqrt{1/n_i+1/n_j}\)</span>, the larger the sample sizes, the narrower the interval.</li>
-<li><span class="math inline">\(t({df}_{res})\)</span> is the t-value the dictates distance of the interval.</li>
-</ul>
-</section>
-<section id="calculating-ci-between-groups-in-r" class="slide level2">
-<h2>Calculating CI between groups in R</h2>
-<p><span class="math display">\[(\bar{y_G}-\bar{y_F}) \pm t^*\cdot SD \sqrt{1/n_G+1/n_F}\]</span></p>
-<p>For difference between G (near colorless) and F (colorless)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>MSE <span class="ot">=</span> <span class="fl">0.6771</span> <span class="co">#from our ANOVA source table</span></span>
-<span id="cb17-2"><a></a>df_E <span class="ot">=</span> <span class="dv">344</span> <span class="co">#from our ANOVA source table</span></span>
-<span id="cb17-3"><a></a>t <span class="ot">&lt;-</span> <span class="fu">qt</span>(.<span class="dv">975</span>, df_E) <span class="co">#for 95% CI</span></span>
-<span id="cb17-4"><a></a></span>
-<span id="cb17-5"><a></a>n_g <span class="ot">=</span> <span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"G"</span>)<span class="sc">$</span>n <span class="co">#sample size for G</span></span>
-<span id="cb17-6"><a></a>n_f <span class="ot">=</span> <span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"F"</span>)<span class="sc">$</span>n <span class="co">#sample size for F</span></span>
-<span id="cb17-7"><a></a></span>
-<span id="cb17-8"><a></a>mean_g <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"G"</span>)<span class="sc">$</span>m) <span class="co">#mean for G</span></span>
-<span id="cb17-9"><a></a>mean_f <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"F"</span>)<span class="sc">$</span>m) <span class="co">#mean for F</span></span>
-<span id="cb17-10"><a></a></span>
-<span id="cb17-11"><a></a><span class="co">#Confidence interval</span></span>
-<span id="cb17-12"><a></a>UL <span class="ot">&lt;-</span> (mean_g<span class="sc">-</span>mean_f) <span class="sc">+</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n_g<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n_f) <span class="co">#upper limit</span></span>
-<span id="cb17-13"><a></a>LL <span class="ot">&lt;-</span> (mean_g<span class="sc">-</span>mean_f) <span class="sc">-</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n_g<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n_f) <span class="co">#lower limit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="calculating-ci-between-groups-in-r-1" class="slide level2">
-<h2>Calculating CI between groups in R</h2>
-<p>For difference between G (near colorless) and F (colorless)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>LL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.2035213</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>UL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.2886875</code></pre>
-</div>
-</div>
-<p>Sentence interpretation:</p>
-<p>We are 95% confident that the true mean difference in (log) price between near colorless and colorless Diamonds is between -0.20 and 0.29.</p>
-</section>
-<section id="equivalence-of-confidence-intervals-and-tests" class="slide level2">
-<h2>Equivalence of Confidence Intervals and Tests</h2>
-<blockquote>
-<p>Two group means are statistically different at the 5% (1%) level if and only if a 95% (99%) confidence interval for their diffrence does not include 0.</p>
-</blockquote>
-</section>
-<section id="effect-size-d" class="slide level2">
-<h2>Effect Size (D)</h2>
-<p>But <strong>how big is IT</strong>?</p>
-<p>We can compare the differences between groups to to the standard deviation within all groups:</p>
-<p><span class="math display">\[D_{ij} = \frac{(\bar{y_i}-\bar{y_j})}{SD}\]</span></p>
-<ul>
-<li>Where again <span class="math inline">\(SD = \sqrt{MSE}\)</span></li>
-</ul>
-</section>
-<section id="effect-size-d-1" class="slide level2">
-<h2>Effect Size (D)</h2>
-<p>For difference between G (near colorless) and F (colorless)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>D <span class="ot">=</span> (mean_g<span class="sc">-</span>mean_f)<span class="sc">/</span><span class="fu">sqrt</span>(MSE)</span>
-<span id="cb22-2"><a></a></span>
-<span id="cb22-3"><a></a>D</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.05175002</code></pre>
-</div>
-</div>
-<p>The difference between the price of nearly colorless diamonds and colorless diamonds is only 0.052 times the size of the typical within-group deviations in price. Such a small difference!</p>
-</section>
-<section id="r-squared-for-one-way-anova" class="slide level2">
-<h2>R-squared for One-Way ANOVA</h2>
-<p>But how much does color matter overall?</p>
-<p><span class="math inline">\(R^2\)</span> is the proportion of total variation explained by the factor:</p>
-<p><span class="math display">\[R^2 = \frac{SS_{treatment}}{SS_{Total}}\]</span></p>
-<p>OR</p>
-<p><span class="math display">\[R^2 = 1-\frac{SS_{error}}{SS_{total}}\]</span></p>
-</section>
-<section id="r-squared-for-diamond-color" class="slide level2">
-<h2>R-squared for Diamond Color</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>modDia <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(TotalPrice) <span class="sc">~</span> Color, <span class="at">data =</span> Diamonds)</span>
-<span id="cb24-2"><a></a><span class="fu">anova</span>(modDia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Analysis of Variance Table
-
-Response: log(TotalPrice)
-           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    
-Color       6  29.946  4.9909  7.3713 1.972e-07 ***
-Residuals 344 232.913  0.6771                      
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>R2 <span class="ot">=</span> <span class="fl">29.946</span><span class="sc">/</span>(<span class="fl">29.946+232.913</span>)</span>
-<span id="cb26-2"><a></a>R2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1139242</code></pre>
-</div>
-</div>
-<p>The <span class="math inline">\(R^2\)</span> value is 0.11, so about 11% of the variation in the total price of a diamonds is explained by the diamonds’ colors.</p>
-</section>
-<section id="try-it-1" class="slide level2">
-<h2>Try it!</h2>
-<p>Use the <code>SandwichAnts</code> dataset to calculate the CI and effect size for difference between <code>MultiGrain</code> and <code>Rye</code> in number of <code>Ants</code>.</p>
+<!-- ## Effect Sizes and Confidence Intervals -->
+<!-- -   The p-value for our F-ratio only tells us if effects are **detectable**. -->
+<!--     -   Answers the question: **IS there an effect?** -->
+<!-- -   Practical significance is different from **statistical** significance. -->
+<!--     -   Need to answer the question: **How big is IT**? -->
+<!-- -   Which values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)? -->
+<!-- ### Some options: -->
+<!-- -   A specific group mean. -->
+<!-- -   How far away a specific condition is from the grand average (the treatment effect). -->
+<!-- -   How far away a specific condition is from another condition. -->
+<!-- -   How far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions. -->
+<!-- -   Additional effect size option: The overall variance explained by a factor of interest. -->
+<!-- ## Confidence Intervals for Difference Between two Groups -->
+<!-- $$(\bar{y_i}-\bar{y_j}) \pm t^*\cdot SD \sqrt{1/n_i+1/n_j}$$ -->
+<!-- -   Where $SD = \sqrt{MSE}$. -->
+<!-- -   $t^*$ depends on the confidence level and df of the error. -->
+<!-- -   $Sample\:size\:factor = \sqrt{1/n_i+1/n_j}$, the larger the sample sizes, the narrower the interval. -->
+<!-- -   $t({df}_{res})$ is the t-value the dictates distance of the interval. -->
+<!-- ## Calculating CI between groups in R -->
+<!-- $$(\bar{y_G}-\bar{y_F}) \pm t^*\cdot SD \sqrt{1/n_G+1/n_F}$$ -->
+<!-- For difference between G (near colorless) and F (colorless) -->
+<!-- ```{r} -->
+<!-- MSE = 0.6771 #from our ANOVA source table -->
+<!-- df_E = 344 #from our ANOVA source table -->
+<!-- t <- qt(.975, df_E) #for 95% CI -->
+<!-- n_g = filter(ds, Color == "G")$n #sample size for G -->
+<!-- n_f = filter(ds, Color == "F")$n #sample size for F -->
+<!-- mean_g <- log(filter(ds, Color == "G")$m) #mean for G -->
+<!-- mean_f <- log(filter(ds, Color == "F")$m) #mean for F -->
+<!-- #Confidence interval -->
+<!-- UL <- (mean_g-mean_f) + t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #upper limit -->
+<!-- LL <- (mean_g-mean_f) - t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #lower limit -->
+<!-- ``` -->
+<!-- ## Calculating CI between groups in R -->
+<!-- For difference between G (near colorless) and F (colorless) -->
+<!-- ```{r} -->
+<!-- LL -->
+<!-- UL -->
+<!-- ``` -->
+<!-- Sentence interpretation: -->
+<!-- We are 95% confident that the true mean difference in (log) price between near colorless and colorless Diamonds is between -0.20 and 0.29. -->
+<!-- ## Equivalence of Confidence Intervals and Tests -->
+<!-- > Two group means are statistically different at the 5% (1%) level if and only if a 95% (99%) confidence interval for their diffrence does not include 0. -->
+<!-- ## Effect Size (D) -->
+<!-- But **how big is IT**? -->
+<!-- We can compare the differences between groups to to the standard deviation within all groups: -->
+<!-- $$D_{ij} = \frac{(\bar{y_i}-\bar{y_j})}{SD}$$ -->
+<!-- -   Where again $SD = \sqrt{MSE}$ -->
+<!-- ## Effect Size (D) -->
+<!-- For difference between G (near colorless) and F (colorless) -->
+<!-- ```{r} -->
+<!-- D = (mean_g-mean_f)/sqrt(MSE) -->
+<!-- D -->
+<!-- ``` -->
+<!-- The difference between the price of nearly colorless diamonds and colorless diamonds is only 0.052 times the size of the typical within-group deviations in price. Such a small difference! -->
+<!-- ## R-squared for One-Way ANOVA -->
+<!-- But how much does color matter overall? -->
+<!-- $R^2$ is the proportion of total variation explained by the factor: -->
+<!-- $$R^2 = \frac{SS_{treatment}}{SS_{Total}}$$ -->
+<!-- OR -->
+<!-- $$R^2 = 1-\frac{SS_{error}}{SS_{total}}$$ -->
+<!-- ## R-squared for Diamond Color -->
+<!-- ```{r} -->
+<!-- modDia <- lm(log(TotalPrice) ~ Color, data = Diamonds) -->
+<!-- anova(modDia) -->
+<!-- ``` -->
+<!-- ```{r} -->
+<!-- R2 = 29.946/(29.946+232.913) -->
+<!-- R2 -->
+<!-- ``` -->
+<!-- The $R^2$ value is 0.11, so about 11% of the variation in the total price of a diamonds is explained by the diamonds' colors. -->
+<!-- ## Try it! -->
+<!-- Use the `SandwichAnts` dataset to calculate the CI and effect size for difference between `MultiGrain` and `Rye` in number of `Ants`. -->
 </section>
 <section id="mini-project-1" class="slide level2">
 <h2>Mini Project 1</h2>
@@ -1090,24 +1028,6 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
         // clear code selection
         e.clearSelection();
       });
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
-            }
-          }
-        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1144,11 +1064,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
+          return note.innerHTML;
         });
       }
       const findCites = (el) => {
