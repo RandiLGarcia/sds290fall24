@@ -1761,7 +1761,7 @@
     "href": "lectures/06_CI-effect-sizes.html#try-it-for-the-hawks",
     "title": "Data Transformations",
     "section": "Try it for the Hawks!",
-    "text": "Try it for the Hawks!\nLet’s transformation the Weight variable to help the heterogeneity of variance issues for y = Weight and x = Species\n\nlibrary(Stat2Data)\ndata(\"Hawks\")\n\n\nCheck the S assumption on the raw data\nTransform: Use the following power function for your transformation: \\(y^0.43\\)\nCheck the S assumption again on the transformed data\nUsing the transformed data, create boxplots, run the ANOVA, and write a sentence interpretation of your ANOVA results."
+    "text": "Try it for the Hawks!\nLet’s transformation the Weight variable to help the heterogeneity of variance issues for y = Weight and x = Species\n\nlibrary(Stat2Data)\ndata(\"Hawks\")\n\n\nCheck the S assumption on the raw data\nTransform: Use the following power function for your transformation: \\(y^{0.43}\\)\nCheck the S assumption again on the transformed data\nUsing the transformed data, create boxplots, run the ANOVA, and write a sentence interpretation of your ANOVA results."
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#notes-on-hw-4",
