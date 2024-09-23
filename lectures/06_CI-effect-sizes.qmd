@@ -149,7 +149,7 @@ data("Hawks")
 ```
 
 1.   Check the S assumption on the raw data
-2.   Transform: Use the following power function for your transformation: $y^{0.43}$ 
+2.   **Transform**: Use the following power function for your transformation: $y^{0.43}$ 
 3.   Check the S assumption again on the transformed data
 4.   Using the transformed data, create boxplots, run the ANOVA, and write a sentence interpretation of your ANOVA results.
 

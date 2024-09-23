@@ -956,21 +956,21 @@
     "href": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz",
     "title": "ANOVA Conditions",
     "section": "To check the Residual Assumptions: SINZ",
-    "text": "To check the Residual Assumptions: SINZ\nS: calculate descriptive statistics and divide largest SD by smallest.\n\nleaf %&gt;%\n  group_by(diet) %&gt;%\n  summarize(n = n(),\n            m = mean(days),\n            sd = sd(days))\n\n# A tibble: 4 × 4\n  diet         n     m    sd\n  &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 control      2   2   0.424\n2 fructose     2   2.2 0.141\n3 glucose      2   2.8 0.141\n4 sucrose      2   3.8 0.283\n\n0.424/0.141\n\n[1] 3.007092\n\n\nI: Judge for yourself – what do we think about the leafhopper dishes?"
+    "text": "To check the Residual Assumptions: SINZ\nS: calculate descriptive statistics and divide largest SD by smallest.\n\nleaf %&gt;%\n  group_by(diet) %&gt;%\n  summarize(n = n(),\n            m = mean(days),\n            sd = sd(days))\n\n# A tibble: 4 × 4\n  diet         n     m    sd\n  &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 control      2   2   0.424\n2 fructose     2   2.2 0.141\n3 glucose      2   2.8 0.141\n4 sucrose      2   3.8 0.283\n\n0.424/0.141\n\n[1] 3.007092"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz-1",
     "href": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz-1",
     "title": "ANOVA Conditions",
     "section": "To check the Residual Assumptions: SINZ",
-    "text": "To check the Residual Assumptions: SINZ\nN: Look at histogram and normal probability plots of residuals.\n\n#normal probability plot of residuals\nplot(mod, which = 2)"
+    "text": "To check the Residual Assumptions: SINZ\nI: Judge for yourself – what do we think about the leafhopper dishes?"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz-2",
     "href": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz-2",
     "title": "ANOVA Conditions",
     "section": "To check the Residual Assumptions: SINZ",
-    "text": "To check the Residual Assumptions: SINZ\nZ: Look at histogram of residuals.\n\n#histogram of residuals\nqplot(x = mod$residuals, bins = 4)"
+    "text": "To check the Residual Assumptions: SINZ\nN: Look at histogram and normal probability plots of residuals.\n\n#normal probability plot of residuals\nplot(mod, which = 2)"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#try-it-1",
@@ -4555,5 +4555,12 @@
     "title": "ANOVA Conditions",
     "section": "Step 4: ANOVA Conditions",
     "text": "Step 4: ANOVA Conditions\nSTOP!!…only under certain conditions can we rely on this inference. There were many assumptions built into:\n\nhow we decomposed the data, and\nour thoughts about residual errors."
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz-3",
+    "href": "lectures/05_ANOVA-conditions.html#to-check-the-residual-assumptions-sinz-3",
+    "title": "ANOVA Conditions",
+    "section": "To check the Residual Assumptions: SINZ",
+    "text": "To check the Residual Assumptions: SINZ\nZ: Look at histogram of residuals.\n\n#histogram of residuals\nqplot(x = mod$residuals, bins = 4)"
   }
 ]

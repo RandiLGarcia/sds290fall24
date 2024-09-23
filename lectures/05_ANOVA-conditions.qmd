@@ -335,6 +335,8 @@ leaf %>%
 0.424/0.141
 ```
 
+## To check the Residual Assumptions: SINZ
+
 **I**: Judge for yourself -- what do we think about the leafhopper dishes?
 
 ## To check the Residual Assumptions: SINZ
