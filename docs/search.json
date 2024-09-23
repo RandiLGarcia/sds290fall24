@@ -4541,5 +4541,12 @@
     "title": "Data Transformations",
     "section": "Answer code",
     "text": "Answer code\n\nHawks %&gt;%\n  group_by(Species) %&gt;%\n  summarise(m = mean(Weight, na.rm = TRUE),\n            sd = sd(Weight, na.rm = TRUE))\n\n189.21/80.65 #check S assumption\n\nHawks &lt;- Hawks %&gt;%\n  mutate(Weight_new = (Weight)^.43) #transform\n\nHawks %&gt;%\n  group_by(Species) %&gt;%\n  summarise(m = mean(Weight_new, na.rm = TRUE),\n            sd = sd(Weight_new, na.rm = TRUE))\n\n2.19/1.43 # check S assumption with transformed data\n\nggplot(Hawks, aes(x = Species, y = Weight_new)) +\n  geom_boxplot()\n\nmod &lt;- lm(Weight_new ~ Species, data = Hawks) #fitting anova model\nanova(mod)"
+  },
+  {
+    "objectID": "lectures/06_CI-effect-sizes.html#finish-up-slides-from-last-week",
+    "href": "lectures/06_CI-effect-sizes.html#finish-up-slides-from-last-week",
+    "title": "Data Transformations",
+    "section": "Finish up slides from last week",
+    "text": "Finish up slides from last week\n\nOne-way ANOVA"
   }
 ]

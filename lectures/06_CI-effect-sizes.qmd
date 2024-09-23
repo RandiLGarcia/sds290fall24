@@ -32,6 +32,10 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
     -   topics time
 -   Begin confidence intervals
 
+## Finish up slides from last week
+
+-   [One-way ANOVA](https://randilgarcia.github.io/sds290fall24/lectures/05_ANOVA-conditions.html#/anova-for-one-way-anova)
+
 ## Extend your analyses
 
 In your groups of three, check the last 4 ANOVA assumptions: The **SINZ**.
