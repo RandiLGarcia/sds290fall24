@@ -149,7 +149,7 @@ data("Hawks")
 
 ## Answer code
 
-```{r}
+```{r, eval=FALSE}
 Hawks %>%
   group_by(Species) %>%
   summarise(m = mean(Weight, na.rm = TRUE),
@@ -225,6 +225,14 @@ anova(mod)
 <!-- 1.  Save the means and sd's of groups in a little **dataset**. -->
 <!-- 2.  Make a scatterplot of log(sd) versus log(m) with a **line of best fit**. -->
 <!-- 3.  Your transformation will be the response raised to the **power of 1-slope** of that line. -->
+
+# Mini Project Time
+
+## Mini Project 1
+
+See [Mini Project 1 instructions](https://randilgarcia.github.io/sds290fall24/project/mini-project-1.html)
+
+# Confidence Intervals and Effect Sizes
 
 ## ANOVA for Diamonds
 
@@ -359,6 +367,3 @@ We are 95% confident that the true mean difference in (log) price between near c
 
 <!-- Use the `SandwichAnts` dataset to calculate the CI and effect size for difference between `MultiGrain` and `Rye` in number of `Ants`. -->
 
-## Mini Project 1
-
-See [Mini Project 1 instructions](https://randilgarcia.github.io/sds290spring24/project/mini-project-1.html)
