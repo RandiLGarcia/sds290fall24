@@ -1334,14 +1334,14 @@
     "href": "lectures/06_CI-effect-sizes.html#announcements",
     "title": "Data Transformations",
     "section": "Announcements",
-    "text": "Announcements\n\nHomework 3 now posted\nOffice hours (Bass 412)\n\nTuesdays 10:30-11:30a\nFriday 3:00-4:00p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z (Sun, Tues), Cindy (Tue, Thurs), and Sarah (Tue) can help with 290.\nPost questions to hw3-questions Slack channel."
+    "text": "Announcements\n\nHomework 3 now posted\nSee board for update to notes\nOffice hours (Bass 412)\n\nTuesdays 10:30-11:30a\nFriday 3:00-4:00p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z, Cindy, and Sarah can help with 290.\nPost questions to hw3-questions Slack channel."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#agenda",
     "href": "lectures/06_CI-effect-sizes.html#agenda",
     "title": "Data Transformations",
     "section": "Agenda",
-    "text": "Agenda\n\nPractice fitting One-Way ANOVA\nANOVA Conditions\nTransformations\nMP1 introduction\n\ntopics time"
+    "text": "Agenda\n\nPractice fitting One-Way ANOVA\nANOVA Conditions\nTransformations\nMP1 introduction\n\ntopics time\n\nBegin confidence intervals"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#last-time",
@@ -1362,7 +1362,7 @@
     "href": "lectures/06_CI-effect-sizes.html#transformations-example",
     "title": "Data Transformations",
     "section": "Transformations: Example",
-    "text": "Transformations: Example\n\nlibrary(Stat2Data)\nlibrary(tidyverse)\ndata(\"Diamonds\")\n\nqplot(x = Color, y = TotalPrice, data = Diamonds, geom = \"boxplot\")"
+    "text": "Transformations: Example\n\nlibrary(Stat2Data)\nlibrary(tidyverse)\ndata(\"Diamonds\")\n\nggplot(Diamonds, aes(x = Color, y = TotalPrice)) +\n  geom_boxplot()"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#transformations-example-1",
@@ -1376,7 +1376,7 @@
     "href": "lectures/06_CI-effect-sizes.html#transformations-example-2",
     "title": "Data Transformations",
     "section": "Transformations: Example",
-    "text": "Transformations: Example\n\nqplot(x = Color, y = log(TotalPrice), data = Diamonds, geom = \"boxplot\")"
+    "text": "Transformations: Example\n\nggplot(Diamonds, aes(x = Color, y = log(TotalPrice))) +\n  geom_boxplot()"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#common-transformations",
@@ -1390,14 +1390,14 @@
     "href": "lectures/06_CI-effect-sizes.html#how-to-transform",
     "title": "Data Transformations",
     "section": "How to transform",
-    "text": "How to transform\nWe can do the transformation directly in the visualization code:\n\nqplot(x = Color, y = log(TotalPrice), data = Diamonds, geom = \"boxplot\")\n\nOR, we can create a new variable in the dataset\n\nDiamonds &lt;- Diamonds %&gt;%\n  mutate(ln_TotalPrice = log(TotalPrice))\n\n#Then, we use the new variable to make our visualization\nqplot(x = Color, y = ln_TotalPrice, data = Diamonds, geom = \"boxplot\")"
+    "text": "How to transform\nWe can do the transformation directly in the visualization code:\n\nggplot(Diamonds, aes(x = Color, y = log(TotalPrice))) +\n  geom_boxplot()\n\nOR, we can create a new variable in the dataset\n\nDiamonds &lt;- Diamonds %&gt;%\n  mutate(ln_TotalPrice = log(TotalPrice))\n\n#Then, we use the new variable to make our visualization\nggplot(Diamonds, aes(x = Color, y = ln_TotalPrice)) +\n  geom_boxplot()"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#when-to-use-log-transformation",
     "href": "lectures/06_CI-effect-sizes.html#when-to-use-log-transformation",
     "title": "Data Transformations",
     "section": "When to use log transformation:",
-    "text": "When to use log transformation:\nLook for:\n\nDistribution of response is skewed towards high end.\nThe responses in one group (or more) range over two or more orders of magnitude.\nVariability varies across groups considerably, especially when the spread tracks with the mean."
+    "text": "When to use log transformation:\nLook for:\n\nDistribution of response is skewed towards high end.\nThe responses in one group (or more) range over two or more orders of magnitude.\nVariability (e.g., standard deviation) varies considerably across groups, especially when the spread is positively correlated with the mean."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#diagnostic-plot-to-pick-a-transformation",
@@ -1451,7 +1451,7 @@
   {
     "objectID": "lectures/06_CI-effect-sizes.html#effect-sizes-and-confidence-intervals",
     "href": "lectures/06_CI-effect-sizes.html#effect-sizes-and-confidence-intervals",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Effect Sizes and Confidence Intervals",
     "text": "Effect Sizes and Confidence Intervals\n\nThe p-value for our F-ratio only tells us if effects are detectable.\n\nAnswers the question: IS there an effect?\n\nPractical significance is different from statistical significance.\n\nNeed to answer the question: How big is IT?\n\nWhich values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)?\n\nSome options:\n\nA specific group mean.\nHow far away a specific condition is from the grand average (the treatment effect).\nHow far away a specific condition is from another condition.\nHow far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.\nAdditional effect size option: The overall variance explained by a factor of interest."
   },
@@ -1465,28 +1465,28 @@
   {
     "objectID": "lectures/06_CI-effect-sizes.html#confidence-intervals-for-difference-between-two-groups",
     "href": "lectures/06_CI-effect-sizes.html#confidence-intervals-for-difference-between-two-groups",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Confidence Intervals for Difference Between two Groups",
     "text": "Confidence Intervals for Difference Between two Groups\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\).\n\\(t^*\\) depends on the confidence level and df of the error.\n\\(Sample\\:size\\:factor = \\sqrt{1/n_i+1/n_j}\\), the larger the sample sizes, the narrower the interval.\n\\(t({df}_{res})\\) is the t-value the dictates distance of the interval."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#calculating-ci-between-groups-in-r",
     "href": "lectures/06_CI-effect-sizes.html#calculating-ci-between-groups-in-r",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Calculating CI between groups in R",
-    "text": "Calculating CI between groups in R\n\\[(\\bar{y_G}-\\bar{y_F}) \\pm t^*\\cdot SD \\sqrt{1/n_G+1/n_F}\\]\nFor difference between G (near colorless) and F (colorless)\n\nMSE = 0.6771 #from our ANOVA source table\ndf_E = 344 #from our ANOVA source table\nt &lt;- qt(.975, df_E) #for 95% CI\n\nn_g = filter(ds, Color == \"G\")$n #sample size for G\nn_f = filter(ds, Color == \"F\")$n #sample size for F\n\nmean_g &lt;- log(filter(ds, Color == \"G\")$m) #mean for G\nmean_f &lt;- log(filter(ds, Color == \"F\")$m) #mean for F\n\n#Confidence interval\nUL &lt;- (mean_g-mean_f) + t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #upper limit\nLL &lt;- (mean_g-mean_f) - t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #lower limit"
+    "text": "Calculating CI between groups in R\n\\[(\\bar{y_G}-\\bar{y_F}) \\pm t^*\\cdot SD \\sqrt{1/n_G+1/n_F}\\]\nFor difference between G (near colorless) and F (colorless)\n\nds &lt;- Diamonds %&gt;%\n  group_by(Color) %&gt;%\n  summarise(n = n(),\n            m = mean(TotalPrice),\n            sd = sd(TotalPrice))\n\nMSE = 0.6771 #from our ANOVA source table\ndf_E = 344 #from our ANOVA source table\nt &lt;- qt(.975, df_E) #for 95% CI\n\nn_g = filter(ds, Color == \"G\")$n #sample size for G\nn_f = filter(ds, Color == \"F\")$n #sample size for F\n\nmean_g &lt;- log(filter(ds, Color == \"G\")$m) #mean for G\nmean_f &lt;- log(filter(ds, Color == \"F\")$m) #mean for F\n\n#Confidence interval\nUL &lt;- (mean_g-mean_f) + t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #upper limit\nLL &lt;- (mean_g-mean_f) - t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #lower limit"
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#calculating-ci-between-groups-in-r-1",
     "href": "lectures/06_CI-effect-sizes.html#calculating-ci-between-groups-in-r-1",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Calculating CI between groups in R",
     "text": "Calculating CI between groups in R\nFor difference between G (near colorless) and F (colorless)\n\nLL\n\n[1] -0.2035213\n\nUL\n\n[1] 0.2886875\n\n\nSentence interpretation:\nWe are 95% confident that the true mean difference in (log) price between near colorless and colorless Diamonds is between -0.20 and 0.29."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#equivalence-of-confidence-intervals-and-tests",
     "href": "lectures/06_CI-effect-sizes.html#equivalence-of-confidence-intervals-and-tests",
-    "title": "Confidence Intervals and Effect Sizes",
+    "title": "Data Transformations",
     "section": "Equivalence of Confidence Intervals and Tests",
     "text": "Equivalence of Confidence Intervals and Tests\n\nTwo group means are statistically different at the 5% (1%) level if and only if a 95% (99%) confidence interval for their diffrence does not include 0."
   },
@@ -1761,7 +1761,7 @@
     "href": "lectures/06_CI-effect-sizes.html#try-it-for-the-hawks",
     "title": "Data Transformations",
     "section": "Try it for the Hawks!",
-    "text": "Try it for the Hawks!\n\nlibrary(Stat2Data)\ndata(\"Hawks\")\n\n\nFind a transformation that helps the heterogeneity of variance for Y = Weight and X = Species.\nRun the ANOVA (even if the issue is not completely fixed) and write a sentence interpretation of your ANOVA results.\n\nSteps for finding a transformation:\n\nSave the means and sd’s of groups in a little dataset.\nMake a scatterplot of log(sd) versus log(m) with a line of best fit.\nYour transformation will be the response raised to the power of 1-slope of that line."
+    "text": "Try it for the Hawks!\nLet’s transformation the Weight variable to help the heterogeneity of variance issues for y = Weight and x = Species\n\nlibrary(Stat2Data)\ndata(\"Hawks\")\n\n\nCheck the S assumption on the raw data\nTransform: Use the following power function for your transformation: \\(y^0.43\\)\nCheck the S assumption again on the transformed data\nUsing the transformed data, create boxplots, run the ANOVA, and write a sentence interpretation of your ANOVA results."
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#notes-on-hw-4",
@@ -4527,5 +4527,19 @@
     "title": "Data Transformations",
     "section": "How to check assumptions",
     "text": "How to check assumptions\n\nC. Constant effects – think about whether it is reasonable.\nA. Additive effects – think about whether it is reasonable.\nS. Same standard deviations – is the biggest SD less than two times as large as the smallest?\nI. Independent residuals – think about whether it is reasonable.\nN. Normally distributed residuals – construct a histogram or normal probability plot of residuals.\nZ. Zero mean residuals – construct a histogram or normal probability plot of residuals."
+  },
+  {
+    "objectID": "lectures/06_CI-effect-sizes.html#when-to-not-use-a-log-transformation",
+    "href": "lectures/06_CI-effect-sizes.html#when-to-not-use-a-log-transformation",
+    "title": "Data Transformations",
+    "section": "When to NOT use a log transformation:",
+    "text": "When to NOT use a log transformation:\n\nWhen it doesn’t help\nWhen there is a better transformation to use\n\nSee page 236 Diagnostic Plot for Equalizing Spreads and example 5.21 for a general tool for finding an appropriate transformation."
+  },
+  {
+    "objectID": "lectures/06_CI-effect-sizes.html#answer-code",
+    "href": "lectures/06_CI-effect-sizes.html#answer-code",
+    "title": "Data Transformations",
+    "section": "Answer code",
+    "text": "Answer code\n\nHawks %&gt;%\n  group_by(Species) %&gt;%\n  summarise(m = mean(Weight, na.rm = TRUE),\n            sd = sd(Weight, na.rm = TRUE))\n\n# A tibble: 3 × 3\n  Species     m    sd\n  &lt;fct&gt;   &lt;dbl&gt; &lt;dbl&gt;\n1 CH       420. 162. \n2 RT      1094. 189. \n3 SS       148.  80.7\n\n189.21/80.65 #check S assumption\n\n[1] 2.346063\n\nHawks &lt;- Hawks %&gt;%\n  mutate(Weight_new = (Weight)^.43) #transform\n\nHawks %&gt;%\n  group_by(Species) %&gt;%\n  summarise(m = mean(Weight_new, na.rm = TRUE),\n            sd = sd(Weight_new, na.rm = TRUE))\n\n# A tibble: 3 × 3\n  Species     m    sd\n  &lt;fct&gt;   &lt;dbl&gt; &lt;dbl&gt;\n1 CH      13.2   2.19\n2 RT      20.2   1.64\n3 SS       8.41  1.43\n\n2.19/1.43 # check S assumption with transformed data\n\n[1] 1.531469\n\nggplot(Hawks, aes(x = Species, y = Weight_new)) +\n  geom_boxplot()\n\nmod &lt;- lm(Weight_new ~ Species, data = Hawks) #fitting anova model\nanova(mod)\n\nAnalysis of Variance Table\n\nResponse: Weight_new\n           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nSpecies     2 25241.4 12620.7  4734.3 &lt; 2.2e-16 ***\nResiduals 895  2385.9     2.7                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   }
 ]

@@ -409,6 +409,7 @@ Prof Randi Garcia, SDS 290
 <h2>Announcements</h2>
 <ul>
 <li>Homework 3 now posted</li>
+<li>See board for update to notes</li>
 <li>Office hours (Bass 412)
 <ul>
 <li>Tuesdays 10:30-11:30a</li>
@@ -416,7 +417,7 @@ Prof Randi Garcia, SDS 290
 </ul></li>
 <li>Where to get HW help
 <ul>
-<li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z (Sun, Tues), Cindy (Tue, Thurs), and Sarah (Tue) can help with 290.</li>
+<li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z, Cindy, and Sarah can help with 290.</li>
 <li>Post questions to <a href="https://smith.enterprise.slack.com/archives/C07NL5E7K8A">hw3-questions</a> Slack channel.</li>
 </ul></li>
 </ul>
@@ -431,6 +432,7 @@ Prof Randi Garcia, SDS 290
 <ul>
 <li>topics time</li>
 </ul></li>
+<li>Begin confidence intervals</li>
 </ul>
 </section>
 <section id="extend-your-analyses" class="slide level2">
@@ -465,7 +467,8 @@ Prof Randi Garcia, SDS 290
 <span id="cb1-2"><a></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-3"><a></a><span class="fu">data</span>(<span class="st">"Diamonds"</span>)</span>
 <span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> TotalPrice, <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a></a><span class="fu">ggplot</span>(Diamonds, <span class="fu">aes</span>(<span class="at">x =</span> Color, <span class="at">y =</span> TotalPrice)) <span class="sc">+</span></span>
+<span id="cb1-6"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
@@ -498,20 +501,44 @@ Prof Randi Garcia, SDS 290
 <section id="transformations-example-2" class="slide level2">
 <h2>Transformations: Example</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> <span class="fu">log</span>(TotalPrice), <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(Diamonds, <span class="fu">aes</span>(<span class="at">x =</span> Color, <span class="at">y =</span> <span class="fu">log</span>(TotalPrice))) <span class="sc">+</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<section>
+<section id="log-is-not-the-only-transformation" class="title-slide slide level1 center">
+<h1>Log is not the only transformation!!</h1>
+
+</section>
 <section id="common-transformations" class="slide level2">
 <h2>Common transformations</h2>
 <p>For the response (Y)…</p>
 
 <img data-src="pics/transformations.png" class="r-stretch"></section>
+<section id="when-to-use-log-transformation" class="slide level2">
+<h2>When to use log transformation:</h2>
+<p>Look for:</p>
+<ul>
+<li>Distribution of response is skewed towards high end.</li>
+<li>The responses in one group (or more) range over two or more orders of magnitude.</li>
+<li>Variability (e.g., standard deviation) varies considerably across groups, especially when the spread is positively correlated with the mean.</li>
+</ul>
+</section>
+<section id="when-to-not-use-a-log-transformation" class="slide level2">
+<h2>When to NOT use a log transformation:</h2>
+<ul>
+<li>When it doesn’t help</li>
+<li>When there is a better transformation to use</li>
+</ul>
+<p>See page 236 <em>Diagnostic Plot for Equalizing Spreads</em> and example 5.21 for a general tool for finding an appropriate transformation.</p>
+</section>
 <section id="how-to-transform" class="slide level2">
 <h2>How to transform</h2>
 <p>We can do the transformation directly in the visualization code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> <span class="fu">log</span>(TotalPrice), <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(Diamonds, <span class="fu">aes</span>(<span class="at">x =</span> Color, <span class="at">y =</span> <span class="fu">log</span>(TotalPrice))) <span class="sc">+</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>OR, we can create a new variable in the dataset</p>
 <div class="cell">
@@ -519,94 +546,118 @@ Prof Randi Garcia, SDS 290
 <span id="cb8-2"><a></a>  <span class="fu">mutate</span>(<span class="at">ln_TotalPrice =</span> <span class="fu">log</span>(TotalPrice))</span>
 <span id="cb8-3"><a></a></span>
 <span id="cb8-4"><a></a><span class="co">#Then, we use the new variable to make our visualization</span></span>
-<span id="cb8-5"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> ln_TotalPrice, <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-5"><a></a><span class="fu">ggplot</span>(Diamonds, <span class="fu">aes</span>(<span class="at">x =</span> Color, <span class="at">y =</span> ln_TotalPrice)) <span class="sc">+</span></span>
+<span id="cb8-6"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="when-to-use-log-transformation" class="slide level2">
-<h2>When to use log transformation:</h2>
-<p>Look for:</p>
-<ul>
-<li>Distribution of response is skewed towards high end.</li>
-<li>The responses in one group (or more) range over two or more orders of magnitude.</li>
-<li>Variability varies across groups considerably, especially when the spread tracks with the mean.</li>
-</ul>
-</section>
-<section id="diagnostic-plot-to-pick-a-transformation" class="slide level2 scrollable">
-<h2>Diagnostic plot to pick a transformation</h2>
-<p>Steps:</p>
-<ol type="1">
-<li>Save the means and sd’s of groups in a little <strong>dataset</strong>.</li>
-<li>Make a scatterplot of log(sd) versus log(m) with a <strong>line of best fit</strong>.</li>
-<li>Your transformation will be the response raised to the <strong>power of 1-slope</strong> of that line.</li>
-</ol>
-</section>
-<section id="diagnostic-plot-to-pick-a-transformation-step-1" class="slide level2">
-<h2>Diagnostic plot to pick a transformation: Step 1</h2>
-<p>Save the means and sd’s of groups in a little <strong>dataset</strong>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>ds <span class="ot">&lt;-</span> Diamonds <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">group_by</span>(Color) <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb9-4"><a></a>            <span class="at">m =</span> <span class="fu">mean</span>(TotalPrice),</span>
-<span id="cb9-5"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(TotalPrice))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="diagnostic-plot-to-pick-a-transformation-step-2" class="slide level2">
-<h2>Diagnostic plot to pick a transformation: Step 2</h2>
-<p>Make a scatterplot of log(sd) versus log(m) with a <strong>line of best fit</strong>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> <span class="fu">log</span>(m), <span class="at">y =</span> <span class="fu">log</span>(sd), <span class="at">data =</span> ds) <span class="sc">+</span></span>
-<span id="cb10-2"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm, <span class="at">se =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
-<section id="diagnostic-plot-to-pick-a-transformation-step-3" class="slide level2">
-<h2>Diagnostic plot to pick a transformation: Step 3</h2>
-<p>Your transformation will be the response raised to the <strong>power of 1-slope</strong> of that line.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">lm</span>(<span class="fu">log</span>(sd) <span class="sc">~</span> <span class="fu">log</span>(m), <span class="at">data =</span> ds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = log(sd) ~ log(m), data = ds)
-
-Coefficients:
-(Intercept)       log(m)  
-     -4.447        1.480  </code></pre>
-</div>
-</div>
-</section>
-<section id="diagnostic-plot-to-pick-a-transformation-step-3-1" class="slide level2">
-<h2>Diagnostic plot to pick a transformation: Step 3</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>p <span class="ot">=</span> <span class="dv">1</span> <span class="sc">-</span> <span class="fl">1.480</span></span>
-<span id="cb13-2"><a></a></span>
-<span id="cb13-3"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> Color, <span class="at">y =</span> TotalPrice<span class="sc">^</span>p, <span class="at">data =</span> Diamonds, <span class="at">geom =</span> <span class="st">"boxplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
 <section id="try-it-for-the-hawks" class="slide level2 scrollable">
 <h2>Try it for the Hawks!</h2>
+<p>Let’s transformation the <code>Weight</code> variable to help the heterogeneity of variance issues for <code>y = Weight</code> and <code>x = Species</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">library</span>(Stat2Data)</span>
-<span id="cb14-2"><a></a><span class="fu">data</span>(<span class="st">"Hawks"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">library</span>(Stat2Data)</span>
+<span id="cb9-2"><a></a><span class="fu">data</span>(<span class="st">"Hawks"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ul>
-<li>Find a transformation that helps the heterogeneity of variance for Y = Weight and X = Species.</li>
-<li>Run the ANOVA (even if the issue is not completely fixed) and write a sentence interpretation of your ANOVA results.</li>
-</ul>
-<p>Steps for finding a transformation:</p>
 <ol type="1">
-<li>Save the means and sd’s of groups in a little <strong>dataset</strong>.</li>
-<li>Make a scatterplot of log(sd) versus log(m) with a <strong>line of best fit</strong>.</li>
-<li>Your transformation will be the response raised to the <strong>power of 1-slope</strong> of that line.</li>
+<li>Check the S assumption on the raw data</li>
+<li>Transform: Use the following power function for your transformation: <span class="math inline">\(y^0.43\)</span></li>
+<li>Check the S assumption again on the transformed data</li>
+<li>Using the transformed data, create boxplots, run the ANOVA, and write a sentence interpretation of your ANOVA results.</li>
 </ol>
 </section>
+<section id="answer-code" class="slide level2">
+<h2>Answer code</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>Hawks <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a></a>  <span class="fu">summarise</span>(<span class="at">m =</span> <span class="fu">mean</span>(Weight, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb10-4"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(Weight, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  Species     m    sd
+  &lt;fct&gt;   &lt;dbl&gt; &lt;dbl&gt;
+1 CH       420. 162. 
+2 RT      1094. 189. 
+3 SS       148.  80.7</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fl">189.21</span><span class="sc">/</span><span class="fl">80.65</span> <span class="co">#check S assumption</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.346063</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>Hawks <span class="ot">&lt;-</span> Hawks <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">mutate</span>(<span class="at">Weight_new =</span> (Weight)<span class="sc">^</span>.<span class="dv">43</span>) <span class="co">#transform</span></span>
+<span id="cb14-3"><a></a></span>
+<span id="cb14-4"><a></a>Hawks <span class="sc">%&gt;%</span></span>
+<span id="cb14-5"><a></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
+<span id="cb14-6"><a></a>  <span class="fu">summarise</span>(<span class="at">m =</span> <span class="fu">mean</span>(Weight_new, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb14-7"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(Weight_new, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  Species     m    sd
+  &lt;fct&gt;   &lt;dbl&gt; &lt;dbl&gt;
+1 CH      13.2   2.19
+2 RT      20.2   1.64
+3 SS       8.41  1.43</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fl">2.19</span><span class="sc">/</span><span class="fl">1.43</span> <span class="co"># check S assumption with transformed data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.531469</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(Hawks, <span class="fu">aes</span>(<span class="at">x =</span> Species, <span class="at">y =</span> Weight_new)) <span class="sc">+</span></span>
+<span id="cb18-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(Weight_new <span class="sc">~</span> Species, <span class="at">data =</span> Hawks) <span class="co">#fitting anova model</span></span>
+<span id="cb19-2"><a></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
+
+Response: Weight_new
+           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    
+Species     2 25241.4 12620.7  4734.3 &lt; 2.2e-16 ***
+Residuals 895  2385.9     2.7                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<!-- ## Diagnostic plot to pick a transformation -->
+<!-- Steps: -->
+<!-- 1.  Save the means and sd's of groups in a little **dataset**. -->
+<!-- 2.  Make a scatterplot of log(sd) versus log(m) with a **line of best fit**. -->
+<!-- 3.  Your transformation will be the response raised to the **power of 1-slope** of that line. -->
+<!-- ## Diagnostic plot to pick a transformation: Step 1 -->
+<!-- Save the means and sd's of groups in a little **dataset**. -->
+<!-- ```{r} -->
+<!-- ds <- Diamonds %>% -->
+<!--   group_by(Color) %>% -->
+<!--   summarise(n = n(), -->
+<!--             m = mean(TotalPrice), -->
+<!--             sd = sd(TotalPrice)) -->
+<!-- ``` -->
+<!-- ## Diagnostic plot to pick a transformation: Step 2 -->
+<!-- Make a scatterplot of log(sd) versus log(m) with a **line of best fit**. -->
+<!-- ```{r} -->
+<!-- qplot(x = log(m), y = log(sd), data = ds) + -->
+<!--   geom_smooth(method = lm, se = 0) -->
+<!-- ``` -->
+<!-- ## Diagnostic plot to pick a transformation: Step 3 -->
+<!-- Your transformation will be the response raised to the **power of 1-slope** of that line. -->
+<!-- ```{r} -->
+<!-- lm(log(sd) ~ log(m), data = ds) -->
+<!-- ``` -->
+<!-- ## Diagnostic plot to pick a transformation: Step 3 -->
+<!-- ```{r} -->
+<!-- p = 1 - 1.480 -->
+<!-- qplot(x = Color, y = TotalPrice^p, data = Diamonds, geom = "boxplot") -->
+<!-- ``` -->
+<!-- Steps for finding a transformation: -->
+<!-- 1.  Save the means and sd's of groups in a little **dataset**. -->
+<!-- 2.  Make a scatterplot of log(sd) versus log(m) with a **line of best fit**. -->
+<!-- 3.  Your transformation will be the response raised to the **power of 1-slope** of that line. -->
+<img data-src="06_CI-effect-sizes_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
 <section id="anova-for-diamonds" class="slide level2">
 <h2>ANOVA for Diamonds</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>modDia <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(TotalPrice) <span class="sc">~</span> Color, <span class="at">data =</span> Diamonds)</span>
-<span id="cb15-2"><a></a><span class="fu">anova</span>(modDia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>modDia <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(TotalPrice) <span class="sc">~</span> Color, <span class="at">data =</span> Diamonds)</span>
+<span id="cb21-2"><a></a><span class="fu">anova</span>(modDia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -620,49 +671,86 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>There are statistically significant differences in log price of diamonds across colors <span class="math inline">\(F(6, 344) = 7.37\)</span>, <span class="math inline">\(p &lt; .001\)</span>.</p>
 <p>But what else do we want to know??</p>
-<!-- ## Effect Sizes and Confidence Intervals -->
-<!-- -   The p-value for our F-ratio only tells us if effects are **detectable**. -->
-<!--     -   Answers the question: **IS there an effect?** -->
-<!-- -   Practical significance is different from **statistical** significance. -->
-<!--     -   Need to answer the question: **How big is IT**? -->
-<!-- -   Which values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)? -->
-<!-- ### Some options: -->
-<!-- -   A specific group mean. -->
-<!-- -   How far away a specific condition is from the grand average (the treatment effect). -->
-<!-- -   How far away a specific condition is from another condition. -->
-<!-- -   How far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions. -->
-<!-- -   Additional effect size option: The overall variance explained by a factor of interest. -->
-<!-- ## Confidence Intervals for Difference Between two Groups -->
-<!-- $$(\bar{y_i}-\bar{y_j}) \pm t^*\cdot SD \sqrt{1/n_i+1/n_j}$$ -->
-<!-- -   Where $SD = \sqrt{MSE}$. -->
-<!-- -   $t^*$ depends on the confidence level and df of the error. -->
-<!-- -   $Sample\:size\:factor = \sqrt{1/n_i+1/n_j}$, the larger the sample sizes, the narrower the interval. -->
-<!-- -   $t({df}_{res})$ is the t-value the dictates distance of the interval. -->
-<!-- ## Calculating CI between groups in R -->
-<!-- $$(\bar{y_G}-\bar{y_F}) \pm t^*\cdot SD \sqrt{1/n_G+1/n_F}$$ -->
-<!-- For difference between G (near colorless) and F (colorless) -->
-<!-- ```{r} -->
-<!-- MSE = 0.6771 #from our ANOVA source table -->
-<!-- df_E = 344 #from our ANOVA source table -->
-<!-- t <- qt(.975, df_E) #for 95% CI -->
-<!-- n_g = filter(ds, Color == "G")$n #sample size for G -->
-<!-- n_f = filter(ds, Color == "F")$n #sample size for F -->
-<!-- mean_g <- log(filter(ds, Color == "G")$m) #mean for G -->
-<!-- mean_f <- log(filter(ds, Color == "F")$m) #mean for F -->
-<!-- #Confidence interval -->
-<!-- UL <- (mean_g-mean_f) + t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #upper limit -->
-<!-- LL <- (mean_g-mean_f) - t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #lower limit -->
-<!-- ``` -->
-<!-- ## Calculating CI between groups in R -->
-<!-- For difference between G (near colorless) and F (colorless) -->
-<!-- ```{r} -->
-<!-- LL -->
-<!-- UL -->
-<!-- ``` -->
-<!-- Sentence interpretation: -->
-<!-- We are 95% confident that the true mean difference in (log) price between near colorless and colorless Diamonds is between -0.20 and 0.29. -->
-<!-- ## Equivalence of Confidence Intervals and Tests -->
-<!-- > Two group means are statistically different at the 5% (1%) level if and only if a 95% (99%) confidence interval for their diffrence does not include 0. -->
+</section>
+<section id="effect-sizes-and-confidence-intervals" class="slide level2">
+<h2>Effect Sizes and Confidence Intervals</h2>
+<ul>
+<li>The p-value for our F-ratio only tells us if effects are <strong>detectable</strong>.
+<ul>
+<li>Answers the question: <strong>IS there an effect?</strong></li>
+</ul></li>
+<li>Practical significance is different from <strong>statistical</strong> significance.
+<ul>
+<li>Need to answer the question: <strong>How big is IT</strong>?</li>
+</ul></li>
+<li>Which values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)?</li>
+</ul>
+<h3 id="some-options">Some options:</h3>
+<ul>
+<li>A specific group mean.</li>
+<li>How far away a specific condition is from the grand average (the treatment effect).</li>
+<li>How far away a specific condition is from another condition.</li>
+<li>How far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.</li>
+<li>Additional effect size option: The overall variance explained by a factor of interest.</li>
+</ul>
+</section>
+<section id="confidence-intervals-for-difference-between-two-groups" class="slide level2">
+<h2>Confidence Intervals for Difference Between two Groups</h2>
+<p><span class="math display">\[(\bar{y_i}-\bar{y_j}) \pm t^*\cdot SD \sqrt{1/n_i+1/n_j}\]</span></p>
+<ul>
+<li>Where <span class="math inline">\(SD = \sqrt{MSE}\)</span>.</li>
+<li><span class="math inline">\(t^*\)</span> depends on the confidence level and df of the error.</li>
+<li><span class="math inline">\(Sample\:size\:factor = \sqrt{1/n_i+1/n_j}\)</span>, the larger the sample sizes, the narrower the interval.</li>
+<li><span class="math inline">\(t({df}_{res})\)</span> is the t-value the dictates distance of the interval.</li>
+</ul>
+</section>
+<section id="calculating-ci-between-groups-in-r" class="slide level2">
+<h2>Calculating CI between groups in R</h2>
+<p><span class="math display">\[(\bar{y_G}-\bar{y_F}) \pm t^*\cdot SD \sqrt{1/n_G+1/n_F}\]</span></p>
+<p>For difference between G (near colorless) and F (colorless)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>ds <span class="ot">&lt;-</span> Diamonds <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a></a>  <span class="fu">group_by</span>(Color) <span class="sc">%&gt;%</span></span>
+<span id="cb23-3"><a></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb23-4"><a></a>            <span class="at">m =</span> <span class="fu">mean</span>(TotalPrice),</span>
+<span id="cb23-5"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(TotalPrice))</span>
+<span id="cb23-6"><a></a></span>
+<span id="cb23-7"><a></a>MSE <span class="ot">=</span> <span class="fl">0.6771</span> <span class="co">#from our ANOVA source table</span></span>
+<span id="cb23-8"><a></a>df_E <span class="ot">=</span> <span class="dv">344</span> <span class="co">#from our ANOVA source table</span></span>
+<span id="cb23-9"><a></a>t <span class="ot">&lt;-</span> <span class="fu">qt</span>(.<span class="dv">975</span>, df_E) <span class="co">#for 95% CI</span></span>
+<span id="cb23-10"><a></a></span>
+<span id="cb23-11"><a></a>n_g <span class="ot">=</span> <span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"G"</span>)<span class="sc">$</span>n <span class="co">#sample size for G</span></span>
+<span id="cb23-12"><a></a>n_f <span class="ot">=</span> <span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"F"</span>)<span class="sc">$</span>n <span class="co">#sample size for F</span></span>
+<span id="cb23-13"><a></a></span>
+<span id="cb23-14"><a></a>mean_g <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"G"</span>)<span class="sc">$</span>m) <span class="co">#mean for G</span></span>
+<span id="cb23-15"><a></a>mean_f <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"F"</span>)<span class="sc">$</span>m) <span class="co">#mean for F</span></span>
+<span id="cb23-16"><a></a></span>
+<span id="cb23-17"><a></a><span class="co">#Confidence interval</span></span>
+<span id="cb23-18"><a></a>UL <span class="ot">&lt;-</span> (mean_g<span class="sc">-</span>mean_f) <span class="sc">+</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n_g<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n_f) <span class="co">#upper limit</span></span>
+<span id="cb23-19"><a></a>LL <span class="ot">&lt;-</span> (mean_g<span class="sc">-</span>mean_f) <span class="sc">-</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n_g<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n_f) <span class="co">#lower limit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="calculating-ci-between-groups-in-r-1" class="slide level2">
+<h2>Calculating CI between groups in R</h2>
+<p>For difference between G (near colorless) and F (colorless)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>LL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.2035213</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>UL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2886875</code></pre>
+</div>
+</div>
+<p>Sentence interpretation:</p>
+<p>We are 95% confident that the true mean difference in (log) price between near colorless and colorless Diamonds is between -0.20 and 0.29.</p>
+</section>
+<section id="equivalence-of-confidence-intervals-and-tests" class="slide level2">
+<h2>Equivalence of Confidence Intervals and Tests</h2>
+<blockquote>
+<p>Two group means are statistically different at the 5% (1%) level if and only if a 95% (99%) confidence interval for their diffrence does not include 0.</p>
+</blockquote>
 <!-- ## Effect Size (D) -->
 <!-- But **how big is IT**? -->
 <!-- We can compare the differences between groups to to the standard deviation within all groups: -->
@@ -703,7 +791,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
