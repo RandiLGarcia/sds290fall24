@@ -245,7 +245,7 @@ data("SandwichAnts")
 -   **N**. Normally distributed residuals
 -   **Z**. Zero mean residuals
 
-### Simulation in R: Assembly Line Metaphor
+## Simulation in R: Assembly Line Metaphor
 
 -   Recall the [Assembly Line Metaphor and code](https://randilgarcia.github.io/sds290fall24/code/02_informal_anova.qmd)
 

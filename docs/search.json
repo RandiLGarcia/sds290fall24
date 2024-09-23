@@ -893,7 +893,7 @@
     "href": "lectures/05_ANOVA-conditions.html#anova-conditions",
     "title": "ANOVA Conditions",
     "section": "ANOVA Conditions",
-    "text": "ANOVA Conditions\n\n\nC. Constant effects\nA. Additive effects\nS. Same standard deviations\nI. Independent residuals\nN. Normally distributed residuals\nZ. Zero mean residuals\n\nSimulation in R: Assembly Line Metaphor\n\nRecall the Assembly Line Metaphor and code"
+    "text": "ANOVA Conditions\n\n\nC. Constant effects\nA. Additive effects\nS. Same standard deviations\nI. Independent residuals\nN. Normally distributed residuals\nZ. Zero mean residuals"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#anova-conditions-1",
@@ -4562,5 +4562,12 @@
     "title": "ANOVA Conditions",
     "section": "To check the Residual Assumptions: SINZ",
     "text": "To check the Residual Assumptions: SINZ\nZ: Look at histogram of residuals.\n\n#histogram of residuals\nqplot(x = mod$residuals, bins = 4)"
+  },
+  {
+    "objectID": "lectures/05_ANOVA-conditions.html#simulation-in-r-assembly-line-metaphor",
+    "href": "lectures/05_ANOVA-conditions.html#simulation-in-r-assembly-line-metaphor",
+    "title": "ANOVA Conditions",
+    "section": "Simulation in R: Assembly Line Metaphor",
+    "text": "Simulation in R: Assembly Line Metaphor\n\nRecall the Assembly Line Metaphor and code"
   }
 ]
