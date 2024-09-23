@@ -209,7 +209,7 @@ Diet has a statistically significant effect on leafhopper survival rates, $F(3, 
 
 ## Try it!
 
-In groups of three run all three steps (visualize, descriptive stats, and ANOVA) for the two datasets below. Write a sentence about your conclusion from the ANOVA.
+Run first 3 steps (visualize, descriptive stats, and ANOVA) for the two datasets below. Write a sentence about your conclusion from the ANOVA.
 
 **Dataset 1**: `SandwichAnts`
 
@@ -234,10 +234,6 @@ data("SandwichAnts")
 -   how we decomposed the data, and
 -   our thoughts about residual errors.
 
-### Simulation in R: Assembly Line Metaphor
-
--   Recall the [Assembly Line Metaphor and code](https://randilgarcia.github.io/sds290fall24/code/02_informal_anova.qmd)
-
 ## ANOVA Conditions
 
 ![](pics/CA-SINZ2.png)
@@ -249,11 +245,15 @@ data("SandwichAnts")
 -   **N**. Normally distributed residuals
 -   **Z**. Zero mean residuals
 
+### Simulation in R: Assembly Line Metaphor
+
+-   Recall the [Assembly Line Metaphor and code](https://randilgarcia.github.io/sds290fall24/code/02_informal_anova.qmd)
+
 ## C. Constant effects
 
 We assume every observation in a similar condition is affected exactly the same. (Gets the same "true score").
 
-```{r, eval=FALSE}
+```{r, echo = TRUE, eval=FALSE}
 animals_sim <- animals %>%
   mutate(benchmark = mean(calm)) %>%
   group_by(animal) %>%

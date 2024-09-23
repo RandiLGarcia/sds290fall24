@@ -886,28 +886,28 @@
     "href": "lectures/05_ANOVA-conditions.html#try-it",
     "title": "ANOVA Conditions",
     "section": "Try it!",
-    "text": "Try it!\nIn groups of three run all three steps (visualize, descriptive stats, and ANOVA) for the two datasets below. Write a sentence about your conclusion from the ANOVA.\nDataset 1: SandwichAnts\n\nFactor: Bread\nResponse: Ants\n\nDataset 2: Meniscus\n\nFactor: Method\nResponse: Displacement\n\n\nlibrary(Stat2Data)\ndata(\"SandwichAnts\")\n?SandwichAnts"
+    "text": "Try it!\nRun first 3 steps (visualize, descriptive stats, and ANOVA) for the two datasets below. Write a sentence about your conclusion from the ANOVA.\nDataset 1: SandwichAnts\n\nFactor: Bread\nResponse: Ants\n\nDataset 2: Meniscus\n\nFactor: Method\nResponse: Displacement\n\n\nlibrary(Stat2Data)\ndata(\"SandwichAnts\")\n?SandwichAnts"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#anova-conditions",
     "href": "lectures/05_ANOVA-conditions.html#anova-conditions",
     "title": "ANOVA Conditions",
     "section": "ANOVA Conditions",
-    "text": "ANOVA Conditions\nSTOP!!…only under certain conditions can we rely on this inference. There were many assumptions built into:\n\nhow we decomposed the data, and\nour thoughts about residual errors.\n\nSimulation in R: Assembly Line Metaphor\n\nRecall the Assembly Line Metaphor and code"
+    "text": "ANOVA Conditions\nSTOP!!…only under certain conditions can we rely on this inference. There were many assumptions built into:\n\nhow we decomposed the data, and\nour thoughts about residual errors."
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#anova-conditions-1",
     "href": "lectures/05_ANOVA-conditions.html#anova-conditions-1",
     "title": "ANOVA Conditions",
     "section": "ANOVA Conditions",
-    "text": "ANOVA Conditions\n\n\nC. Constant effects\nA. Additive effects\nS. Same standard deviations\nI. Independent residuals\nN. Normally distributed residuals\nZ. Zero mean residuals"
+    "text": "ANOVA Conditions\n\n\nC. Constant effects\nA. Additive effects\nS. Same standard deviations\nI. Independent residuals\nN. Normally distributed residuals\nZ. Zero mean residuals\n\nSimulation in R: Assembly Line Metaphor\n\nRecall the Assembly Line Metaphor and code"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#c.-constant-effects",
     "href": "lectures/05_ANOVA-conditions.html#c.-constant-effects",
     "title": "ANOVA Conditions",
     "section": "C. Constant effects",
-    "text": "C. Constant effects\nWe assume every observation in a similar condition is affected exactly the same. (Gets the same “true score”)."
+    "text": "C. Constant effects\nWe assume every observation in a similar condition is affected exactly the same. (Gets the same “true score”).\n\nanimals_sim &lt;- animals %&gt;%\n  mutate(benchmark = mean(calm)) %&gt;%\n  group_by(animal) %&gt;%\n  mutate(animal_mean = mean(calm),\n         aminal_effect = animal_mean - benchmark)"
   },
   {
     "objectID": "lectures/05_ANOVA-conditions.html#a.-additive-effects",
