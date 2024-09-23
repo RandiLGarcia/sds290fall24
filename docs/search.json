@@ -32,7 +32,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Due Friday, September 13th:\n\nHW #1: CITI Training\n\nDue Friday, September 20th:\n\nHW #2: 0.23, 5.11, 5.16, 5.18, 5.27 (a only)\nFind more details on Gradescope"
+    "text": "Due Friday, September 13th:\n\nHW #1: CITI Training\n\nDue Friday, September 20th:\n\nHW #2: 0.23, 5.11, 5.16, 5.18, 5.27 (a only)\nFind more details on Gradescope\n\nDue Friday, February 16th:\n\nHW #3: 5.32, 5.38, 5.54\nFind more details on Gradescope"
   },
   {
     "objectID": "syllabus.html",
@@ -144,14 +144,14 @@
     "href": "schedule.html#week-3",
     "title": "Schedule",
     "section": "Week 3",
-    "text": "Week 3\n\nMon, Sep 16\n\nAlgebraic notation\nFactor diagrams\nInference for ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.3 (again!)\n\n\n\n\nTues, Sep 17\n\nOffice hours: 10:30a - 11:30a\nCindy, Nora, Sarah tutoring McConnell 301 7-9p"
+    "text": "Week 3\n\nMon, Sep 16\n\nAlgebraic notation\nFactor diagrams\nInference for ANOVA\nHomework due today:\n\nRead Stat2 Ch. 5.3 (again!)\n\n\n\n\nTues, Sep 17\n\nOffice hours: 10:30a - 11:30a\nCindy, Nora, Sarah tutoring McConnell 301 7-9p\n\n\n\nWed, Sep 18\n\nANOVA Conditions\nMP1 assignment\nHomework due today:\n\nRead Stat2 Ch. 5.4\n\n\n\n\nFri, Sep 20\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nHW #2 due today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-4",
     "href": "schedule.html#week-4",
     "title": "Schedule",
     "section": "Week 4",
-    "text": "Week 4\n\nMon, Sep 23\n\nConfidence intervals and effect sizes\nTransformations\nHomework due today:\n\nBrainstorm topics for MP1\nRead Stat2 Ch. 5.5-5.6\n\n\n\n\nTues, Sep 24\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring McConnell 301 7-9p\n\n\n\nWed, Sep 25\n\nIntroduction to Qualtrics\nHomework due today:\n\nFind potential stimuli (images) for MP1\nRead Stat2 4.5 (up to, not including, example 4.10)\nRead Stat2 5.7\n\n\n\n\nFri, Sep 27\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nHW #3 due on today at 11:55p"
+    "text": "Week 4\n\nMon, Sep 23\n\nTransformations\nHomework due today:\n\nBrainstorm topics for MP1\nRead Stat2 Ch. 5.5-5.6\n\n\n\n\nTues, Sep 24\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring McConnell 301 7-9p\n\n\n\nWed, Sep 25\n\nConfidence intervals and effect sizes\nIntroduction to Qualtrics\nHomework due today:\n\nFind potential stimuli (images) for MP1\nRead Stat2 4.5 (up to, not including, example 4.10)\nRead Stat2 5.7\n\n\n\n\nFri, Sep 27\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nHW #3 due on today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-5",
@@ -1333,8 +1333,8 @@
     "objectID": "lectures/06_CI-effect-sizes.html#announcements",
     "href": "lectures/06_CI-effect-sizes.html#announcements",
     "title": "Confidence Intervals and Effect Sizes",
-    "section": "",
-    "text": "Grades will be posted for HW2 soon\n\nSolution sheet available on Moodle\n\nHW3 due tomorrow night\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301."
+    "section": "Announcements",
+    "text": "Announcements\n\nHomework 3 posted\nOffice hours (Bass 412)\n\nTuesdays 10:30-11:30a\nFriday 3:00-4:00p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z (Sun, Tues), Cindy (Tue, Thurs), and Sarah (Tue) can help with 290.\nPost questions to hw3-questions Slack channel."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#agenda",
@@ -1348,7 +1348,7 @@
     "href": "lectures/06_CI-effect-sizes.html#last-time",
     "title": "Confidence Intervals and Effect Sizes",
     "section": "Last time",
-    "text": "Last time\n\nHow to check assumptions\n\nC. Constant effects – think about whether it is reasonable.\nA. Additive effects – think about whether it is reasonable.\nS. Same standard deviations – is the biggest SD less than two times as large as the smallest?\nI. Independent residuals – think about whether it is reasonable.\nN. Normally distributed residuals – construct a histogram or normal probability plot of residuals.\nZ. Zero mean residuals – construct a histogram or normal probability plot of residuals."
+    "text": "Last time\nHow to check assumptions\n\nC. Constant effects – think about whether it is reasonable.\nA. Additive effects – think about whether it is reasonable.\nS. Same standard deviations – is the biggest SD less than two times as large as the smallest?\nI. Independent residuals – think about whether it is reasonable.\nN. Normally distributed residuals – construct a histogram or normal probability plot of residuals.\nZ. Zero mean residuals – construct a histogram or normal probability plot of residuals."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#try-it",
@@ -1453,7 +1453,7 @@
     "href": "lectures/06_CI-effect-sizes.html#effect-sizes-and-confidence-intervals",
     "title": "Confidence Intervals and Effect Sizes",
     "section": "Effect Sizes and Confidence Intervals",
-    "text": "Effect Sizes and Confidence Intervals\n\nThe p-value for our F-ratio only tells us if effects are detectable.\n\nAnswers the question: IS there an effect?\n\nPractical significance is different from statistical significance.\n\nNeed to answer the question: How big is IT?\n\nWhich values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)?\n\n\nSome options:\n\nA specific group mean.\nHow far away a specific condition is from the grand average (the treatment effect).\nHow far away a specific condition is from another condition.\nHow far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.\nAdditional effect size option: The overall variance explained by a factor of interest."
+    "text": "Effect Sizes and Confidence Intervals\n\nThe p-value for our F-ratio only tells us if effects are detectable.\n\nAnswers the question: IS there an effect?\n\nPractical significance is different from statistical significance.\n\nNeed to answer the question: How big is IT?\n\nWhich values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)?\n\nSome options:\n\nA specific group mean.\nHow far away a specific condition is from the grand average (the treatment effect).\nHow far away a specific condition is from another condition.\nHow far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.\nAdditional effect size option: The overall variance explained by a factor of interest."
   },
   {
     "objectID": "lectures/06_CI-effect-sizes.html#effect-sizes-and-confidence-intervals-1",

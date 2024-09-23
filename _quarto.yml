@@ -38,8 +38,8 @@ website:
           href: lectures/04_inference-ANOVA.html
         - text: 05 - ANOVA Conditions
           href: lectures/05_ANOVA-conditions.html
-#        - text: 06 - Confidence Intervals and Effect Sizes
-#          href: lectures/06_CI-effect-sizes.html
+        - text: 06 - Confidence Intervals and Effect Sizes
+          href: lectures/06_CI-effect-sizes.html
 #        - text: 07 - Multiple Comparisons
 #          href: lectures/07_multiple-comparisons.html
 #        - text: 08 - Four Designs
@@ -94,8 +94,8 @@ website:
           href: homework.html
         - text: 'HW2: 0.23, 5.11, 5.16, 5.18, 5.27 (a only)'
           href: homework.html
-#        - text: 'HW3: 5.32, 5.38, 5.54'
-#          href: homework.html
+        - text: 'HW3: 5.32, 5.38, 5.54'
+          href: homework.html
 #        - text: 'HW4: 5.59, 5.60, 5.70, 5.36, 5.43'
 #          href: homework.html
 #        - text: 'HW5: 5.46, 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)'
