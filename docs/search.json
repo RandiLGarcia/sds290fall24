@@ -1621,21 +1621,21 @@
     "href": "lectures/07_multiple-comparisons.html#ci-for-pairwise-group-differences",
     "title": "Multiple Comparisons",
     "section": "CI for Pairwise Group Differences",
-    "text": "CI for Pairwise Group Differences\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\nDiamonds example: For difference between G (near colorless) and F (colorless)\n\nMSE = 0.6771 #from our ANOVA source table\ndf_E = 344 #from our ANOVA source table\nt &lt;- qt(.975, df_E) #for 95% CI\n\nn_g = filter(ds, Color == \"G\")$n #sample size for G\nn_f = filter(ds, Color == \"F\")$n #sample size for F\n\nmean_g &lt;- log(filter(ds, Color == \"G\")$m) #mean for G\nmean_f &lt;- log(filter(ds, Color == \"F\")$m) #mean for F\n\n#Confidence interval\nUL &lt;- (mean_g-mean_f) + t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #upper limit\nLL &lt;- (mean_g-mean_f) - t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #lower limit\n\nWe are 95% confident that the true mean difference in (log) price between near colorless and colorless diamonds is between -0.20 and 0.29. (There is no evidence of a difference between mean prices for colorless and near colorless diamonds.)"
+    "text": "CI for Pairwise Group Differences\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\nDiamonds example: For difference between G (near colorless) and F (colorless)\n\nMSE = 0.6771 #from our ANOVA source table\ndf_E = 344 #from our ANOVA source table\nt &lt;- qt(.975, df_E) #for 95% CI\n\nn_g = filter(ds, Color == \"G\")$n #sample size for G\nn_f = filter(ds, Color == \"F\")$n #sample size for F\n\nmean_g &lt;- filter(ds, Color == \"G\")$m #mean for G\nmean_f &lt;- filter(ds, Color == \"F\")$m #mean for F\n\n#Confidence interval\nUL &lt;- (mean_g-mean_f) + t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #upper limit\nLL &lt;- (mean_g-mean_f) - t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #lower limit\n\nLL\n\n[1] -0.0168944\n\nUL\n\n[1] 0.4753144\n\n\nWe are 95% confident that the true mean difference in (log) price between near colorless and colorless diamonds is between -0.02 and 0.48. (There is no evidence of a difference between mean prices for colorless and near colorless diamonds.)"
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#effect-size",
     "href": "lectures/07_multiple-comparisons.html#effect-size",
     "title": "Multiple Comparisons",
     "section": "Effect Size",
-    "text": "Effect Size\nEffect Size (D)\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere again \\(SD = \\sqrt{MSE}\\)\n\n\nD = (mean_g-mean_f)/sqrt(MSE)\nD\n\n[1] 0.05175002\n\n\nThe difference between the price of nearly colorless diamonds and colorless diamonds is only 0.052 times the size of the typical within-group deviations in price. Such a small difference!"
+    "text": "Effect Size\nEffect Size (D)\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere again \\(SD = \\sqrt{MSE}\\)\n\n\nD = (mean_g-mean_f)/sqrt(MSE)\nD\n\n[1] 0.2785525\n\n\nThe difference between the (log) price of nearly colorless diamonds and colorless diamonds is 0.28 times the size of the typical within-group deviations in price. A small difference."
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#effect-size-1",
     "href": "lectures/07_multiple-comparisons.html#effect-size-1",
     "title": "Multiple Comparisons",
     "section": "Effect Size",
-    "text": "Effect Size\nR-squared for One-Way ANOVA\n\\(R^2\\) is the proportion of total variation explained by the factor:\n\\[R^2 = \\frac{SS_{treatment}}{SS_{Total}}\\]\n\nmodDia &lt;- lm(log(TotalPrice) ~ Color, data = Diamonds)\nanova(modDia)\n\nAnalysis of Variance Table\n\nResponse: log(TotalPrice)\n           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nColor       6  29.946  4.9909  7.3713 1.972e-07 ***\nResiduals 344 232.913  0.6771                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "text": "Effect Size\nR-squared for One-Way ANOVA\n\\(R^2\\) is the proportion of total variation explained by the factor:\n\\[R^2 = \\frac{SS_{treatment}}{SS_{Total}}\\]\n\nmodDia &lt;- lm(ln_TotalPrice ~ Color, data = Diamonds)\nanova(modDia)\n\nAnalysis of Variance Table\n\nResponse: ln_TotalPrice\n           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nColor       6  29.946  4.9909  7.3713 1.972e-07 ***\nResiduals 344 232.913  0.6771                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#effect-size-2",
@@ -4582,14 +4582,14 @@
     "href": "lectures/07_multiple-comparisons.html#diamond-price-by-color",
     "title": "Multiple Comparisons",
     "section": "Diamond Price by Color",
-    "text": "Diamond Price by Color\n\nggplot(Diamonds, aes(x = Color, y = log(TotalPrice))) +\n  geom_boxplot()"
+    "text": "Diamond Price by Color\n\nggplot(Diamonds, aes(x = Color, y = ln_TotalPrice)) +\n  geom_boxplot()"
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#anova-for-diamonds",
     "href": "lectures/07_multiple-comparisons.html#anova-for-diamonds",
     "title": "Multiple Comparisons",
     "section": "ANOVA for Diamonds",
-    "text": "ANOVA for Diamonds\n\nmodDia &lt;- lm(log(TotalPrice) ~ Color, data = Diamonds)\nanova(modDia)\n\nAnalysis of Variance Table\n\nResponse: log(TotalPrice)\n           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nColor       6  29.946  4.9909  7.3713 1.972e-07 ***\nResiduals 344 232.913  0.6771                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nThere are statistically significant differences in log price of diamonds across colors \\(F(6, 344) = 7.37\\), \\(p &lt; .001\\).\nBut what else do we want to know??"
+    "text": "ANOVA for Diamonds\n\nmodDia &lt;- lm(ln_TotalPrice ~ Color, data = Diamonds)\nanova(modDia)\n\nAnalysis of Variance Table\n\nResponse: ln_TotalPrice\n           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nColor       6  29.946  4.9909  7.3713 1.972e-07 ***\nResiduals 344 232.913  0.6771                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nThere are statistically significant differences in log price of diamonds across colors \\(F(6, 344) = 7.37\\), \\(p &lt; .001\\).\nBut what else do we want to know??"
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#effect-sizes-and-confidence-intervals",
@@ -4597,5 +4597,12 @@
     "title": "Multiple Comparisons",
     "section": "Effect Sizes and Confidence Intervals",
     "text": "Effect Sizes and Confidence Intervals\n\nThe p-value for our F-ratio only tells us if effects are detectable.\n\nAnswers the question: IS there an effect?\n\nPractical significance is different from statistical significance.\n\nNeed to answer the question: How big is IT?\n\nWhich values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)?\n\nSome options:\n\nA specific group mean.\nHow far away a specific condition is from the grand average (the treatment effect).\nPairwise group differences: How far away a specific condition is from another condition.\nHow far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.\nAdditional effect size option: The overall variance explained by a factor of interest."
+  },
+  {
+    "objectID": "lectures/07_multiple-comparisons.html#descriptive-statistics",
+    "href": "lectures/07_multiple-comparisons.html#descriptive-statistics",
+    "title": "Multiple Comparisons",
+    "section": "Descriptive statistics",
+    "text": "Descriptive statistics\nWe’ll need this later!\n\nds &lt;- Diamonds %&gt;%\n  group_by(Color) %&gt;%\n  summarise(n = n(),\n            m = mean(ln_TotalPrice),\n            sd = sd(ln_TotalPrice))"
   }
 ]

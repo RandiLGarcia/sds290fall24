@@ -16,11 +16,8 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
 library(Stat2Data)
 library(tidyverse)
 data("Diamonds")
-ds <- Diamonds %>%
-  group_by(Color) %>%
-  summarise(n = n(),
-            m = mean(TotalPrice),
-            sd = sd(TotalPrice))
+Diamonds <- Diamonds %>%
+  mutate(ln_TotalPrice = log(TotalPrice))
 ```
 
 ## Announcements
@@ -47,14 +44,27 @@ ds <- Diamonds %>%
 ## Diamond Price by Color
 
 ```{r}
-ggplot(Diamonds, aes(x = Color, y = log(TotalPrice))) +
+ggplot(Diamonds, aes(x = Color, y = ln_TotalPrice)) +
   geom_boxplot()
 ```
+
+## Descriptive statistics
+
+We'll need this later! 
+
+```{r}
+ds <- Diamonds %>%
+  group_by(Color) %>%
+  summarise(n = n(),
+            m = mean(ln_TotalPrice),
+            sd = sd(ln_TotalPrice))
+```
+
 
 ## ANOVA for Diamonds
 
 ```{r}
-modDia <- lm(log(TotalPrice) ~ Color, data = Diamonds)
+modDia <- lm(ln_TotalPrice ~ Color, data = Diamonds)
 anova(modDia)
 ```
 
@@ -92,15 +102,18 @@ t <- qt(.975, df_E) #for 95% CI
 n_g = filter(ds, Color == "G")$n #sample size for G
 n_f = filter(ds, Color == "F")$n #sample size for F
 
-mean_g <- log(filter(ds, Color == "G")$m) #mean for G
-mean_f <- log(filter(ds, Color == "F")$m) #mean for F
+mean_g <- filter(ds, Color == "G")$m #mean for G
+mean_f <- filter(ds, Color == "F")$m #mean for F
 
 #Confidence interval
 UL <- (mean_g-mean_f) + t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #upper limit
 LL <- (mean_g-mean_f) - t*sqrt(MSE)*sqrt(1/n_g+1/n_f) #lower limit
+
+LL
+UL
 ```
 
-We are 95% confident that the true mean difference in (log) price between near colorless and colorless diamonds is between -0.20 and 0.29. (There is no evidence of a difference between mean prices for colorless and near colorless diamonds.)
+We are 95% confident that the true mean difference in (log) price between near colorless and colorless diamonds is between -0.02 and 0.48. (There is no evidence of a difference between mean prices for colorless and near colorless diamonds.)
 
 ## Effect Size
 
@@ -115,7 +128,7 @@ D = (mean_g-mean_f)/sqrt(MSE)
 D
 ```
 
-The difference between the price of nearly colorless diamonds and colorless diamonds is only 0.052 times the size of the typical within-group deviations in price. Such a small difference!
+The difference between the (log) price of nearly colorless diamonds and colorless diamonds is 0.28 times the size of the typical within-group deviations in price. A small difference.
 
 ## Effect Size
 
@@ -126,7 +139,7 @@ $R^2$ is the proportion of total variation explained by the factor:
 $$R^2 = \frac{SS_{treatment}}{SS_{Total}}$$
 
 ```{r}
-modDia <- lm(log(TotalPrice) ~ Color, data = Diamonds)
+modDia <- lm(ln_TotalPrice ~ Color, data = Diamonds)
 anova(modDia)
 ```
 
@@ -150,8 +163,6 @@ Use the `SandwichAnts` dataset to:
 3.  Calculate the $R^2$ for your model and interpret it in a sentence.
 
 ### I'll do it with you!
-
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjFZHkSMoVLVMmPdJMbOWRxUEwMpDAi9kHiA&usqp=CAU)
 
 <!-- ## Multiple Comparisons -->
 
@@ -294,7 +305,7 @@ Use the `SandwichAnts` dataset to:
 
 ## Introduction to Qualtrics
 
--   Log in to [Qualtrics](smithcollege.qualtrics.com) and enter your Smith credentials.
+-   Log in to [Qualtrics](https://smithcollege.qualtrics.com) and enter your Smith credentials.
     -   I usually just google "Smith Qualtrics"
     
 ## Mini Project 1
