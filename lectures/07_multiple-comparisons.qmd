@@ -25,6 +25,7 @@ ds <- Diamonds %>%
 
 ## Announcements
 
+-   HW2 grades now posted
 -   HW3 due on Friday 
 -   Office hours (Bass 412)
     -   Friday 3:00-4:00p
