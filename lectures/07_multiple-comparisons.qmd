@@ -1,7 +1,7 @@
 ---
 title: "Multiple Comparisons"
 author: Prof Randi Garcia, SDS 290
-date: February 20, 2024
+date: September 25, 2024
 format: 
   revealjs:
     scrollable: true
@@ -25,102 +25,59 @@ ds <- Diamonds %>%
 
 ## Announcements
 
--   Grades for HW2: Scale fixed on Moodle
--   HW3 being graded now
--   HW4 posted, due Friday night
+-   Grades for HW2 on Moodle
+-   HW3 due on Friday 
 -   Office hours (Bass 412)
-    -   Thurs cancelled due to Rally Day
-    -   Friday: 10:50a - 12:05p
+    -   Friday 3:00-4:00p
 -   Where to get HW help
-    -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301.
-    -   Use `#hw4-questions` channel on Slack.
-    -   Direct message me on Slack.
-
-## Notes on HW 4
-
--   5.70: Open ended Hawks `culmen`
+    -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z, Cindy, and Sarah can help with 290.
+    -   Post questions to [hw3-questions](https://smith.enterprise.slack.com/archives/C07NL5E7K8A) Slack channel. 
 
 ## Agenda
 
--   Warm-up
--   CI and Effect sizes review
+-   Transformations
+-   CI and Effect sizes
 -   Multiple comparisons
 -   MP1 topics time
     -   Introduction to Qualtrics (video on Moodle)
 
-## Warm-up: Walking Babies Example
+## Finish up slides from Monday
 
-As a rule it takes about a year before a baby takes its first steps alone. Scientists wondered if they could get babies to walk sooner by prescribing a set of special exercises. They decided to compare babies given special exercises with a control group of babies. But the scientists recognized that just showing an interest in the babies and their parents could cause a placebo effect. That is, the attention alone could influence parents and their babies in ways that would shorten the time to walk. 24 babies were randomly assigned to one of four conditions:
+-   [Data Transformations](https://randilgarcia.github.io/sds290fall24/lectures/06_CI-effect-sizes.html#/data-transformations)
 
-1.  **Special exercises**: Shown special exercises and parents are called weekly and asked it their baby was walking.
-2.  **Exercise control**: No special exercises but parents were told to have baby exercise for 15 min every day. Parents were called each week.
-3.  **Weekly report**: No exercises but parents were called each week.
-4.  **Final report**: Only a report at the end on the study.
-
-They recorded the age (in months) the babies first walked.
-
-## Warm-up: Walking Babies Example
-
-```{r, eval=FALSE}
-data("WalkingBabies")
-qplot(x = Group, y = Age, data = WalkingBabies, geom = "boxplot")
-```
-
-Conduct an ANOVA to test if there are mean differences in walking age between treatments. Check the ANOVA conditions (SINZ only). What do you conclude?
-
-![](https://i.gifer.com/ZWGT.gif)
-
-## Warm-up: Walking Babies Example
+## Diamond Price by Color
 
 ```{r}
-data("WalkingBabies")
-qplot(x = Group, y = Age, data = WalkingBabies, geom = "boxplot")
+ggplot(Diamonds, aes(x = Color, y = log(TotalPrice))) +
+  geom_boxplot()
 ```
 
-## Warm-up: Walking Babies Example
+## ANOVA for Diamonds
 
 ```{r}
-WalkingBabies %>%
-  group_by(Group) %>%
-  summarise(n = n(),
-            m = mean(Age),
-            sd = sd(Age))
-1.90/0.871
+modDia <- lm(log(TotalPrice) ~ Color, data = Diamonds)
+anova(modDia)
 ```
 
-S: No...but could be worse. I: babies are in different families.
+There are statistically significant differences in log price of diamonds across colors $F(6, 344) = 7.37$, $p < .001$.
 
-## Warm-up: Walking Babies Example
+But what else do we want to know??
 
-```{r}
-babyMod <- lm(Age ~ Group, data = WalkingBabies)
-anova(babyMod)
-```
+## Effect Sizes and Confidence Intervals
 
-## Warm-up: Walking Babies Example
+-   The p-value for our F-ratio only tells us if effects are **detectable**.
+    -   Answers the question: **IS there an effect?**
+-   Practical significance is different from **statistical** significance.
+    -   Need to answer the question: **How big is IT**?
+-   Which values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)?
 
-```{r}
-plot(babyMod, which = 2)
-```
+### Some options:
 
-N: looks ok with possible skew
-
-## Warm-up: Walking Babies Example
-
-```{r}
-qplot(x = babyMod$residuals, bins = 8)
-```
-
-N: normality is satisfied; Z: Yes, centered at zero.
-
-## Last time
-
-### Effect Sizes and Confidence Intervals
-
--   **IS there an effect?**
-    -   The p-value for our F-ratio only tells us if effects are **detectable**.
--   **How big is IT**?
-    -   **Practical significance** is different from statistical significance.
+-   A specific group mean.
+-   How far away a specific condition is from the grand average (the treatment effect).
+-   **Pairwise group differences:** How far away a specific condition is from another condition.
+-   How far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.
+-   Additional effect size option: The overall variance explained by a factor of interest.
 
 ## CI for Pairwise Group Differences
 
@@ -187,13 +144,13 @@ The $R^2$ value is 0.11, so about 11% of the variation in the total price of a d
 
 ## Try it on the Sandwich Ants data
 
-Use the `SandwichAnts` dataset to
+Use the `SandwichAnts` dataset to:
 
-1.  Check the ANOVA conditions (**SINZ**) and test if there are difference in Ants depending on the sandwich `Filling` using **ANOVA**. Interpret the results of your analysis in context.
+1.  Test if there are difference in Ants depending on the sandwich `Filling` using **ANOVA**. Check the ANOVA conditions (**SINZ**) and interpret the results of your analysis in context. 
 2.  Calculate the **CI** and **effect size (D)** for the difference between `HamPickles` and `PeanutButter`, and for the difference between `PeanutButter` and `Vegemite`. Interpret the results of your analysis in context.
-3.  Calculate the $R^2$ for `Filling` and interpret it in a sentence.
+3.  Calculate the $R^2$ for your model and interpret it in a sentence.
 
-### I'll do it with you! (and post the code afterwards)
+### I'll do it with you!
 
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjFZHkSMoVLVMmPdJMbOWRxUEwMpDAi9kHiA&usqp=CAU)
 
@@ -203,19 +160,19 @@ If we want to do all pairwise comparisons for the walking babies, how many compa
 
 ## Multiple Comparisons
 
-If we want to do all pairwise comparisons for the walking babies, how many comparisons would we need to make? We could use the *n choose k* formula:
+If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make? We could use the *n choose k* formula:
 
 $${n \choose k} = \frac{n!}{k!(n-k)!}$$
 
 ## Multiple Comparisons
 
-If we want to do all pairwise comparisons for the walking babies, how many comparisons would we need to make? We could use the *4 choose 2* formula:
+If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make? We could use the *4 choose 2* formula:
 
 $${4 \choose 2} = \frac{4!}{2!(4-2)!}=\frac{4\cdot3\cdot2\cdot1}{2\cdot1(2\cdot1)}=\frac{24}{4}=6$$
 
 ## Multiple Comparisons
 
-If we want to do all pairwise comparisons for the walking babies, how many comparisons would we need to make?
+If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make?
 
 $${n \choose k} = \frac{n!}{k!(n-k)!}$$
 

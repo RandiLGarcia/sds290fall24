@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.549">
+  <meta name="generator" content="quarto-1.4.555">
 
   <meta name="author" content="Prof Randi Garcia, SDS 290">
   <meta name="dcterms.date" content="2024-09-23">
@@ -644,140 +644,6 @@ Prof Randi Garcia, SDS 290
 <section id="mini-project-1" class="slide level2">
 <h2>Mini Project 1</h2>
 <p>See <a href="https://randilgarcia.github.io/sds290fall24/project/mini-project-1.html">Mini Project 1 instructions</a></p>
-</section></section>
-<section>
-<section id="confidence-intervals-and-effect-sizes" class="title-slide slide level1 center">
-<h1>Confidence Intervals and Effect Sizes</h1>
-
-</section>
-<section id="anova-for-diamonds" class="slide level2">
-<h2>ANOVA for Diamonds</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>modDia <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(TotalPrice) <span class="sc">~</span> Color, <span class="at">data =</span> Diamonds)</span>
-<span id="cb11-2"><a></a><span class="fu">anova</span>(modDia)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Analysis of Variance Table
-
-Response: log(TotalPrice)
-           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    
-Color       6  29.946  4.9909  7.3713 1.972e-07 ***
-Residuals 344 232.913  0.6771                      
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-</div>
-<p>There are statistically significant differences in log price of diamonds across colors <span class="math inline">\(F(6, 344) = 7.37\)</span>, <span class="math inline">\(p &lt; .001\)</span>.</p>
-<p>But what else do we want to know??</p>
-</section>
-<section id="effect-sizes-and-confidence-intervals" class="slide level2">
-<h2>Effect Sizes and Confidence Intervals</h2>
-<ul>
-<li>The p-value for our F-ratio only tells us if effects are <strong>detectable</strong>.
-<ul>
-<li>Answers the question: <strong>IS there an effect?</strong></li>
-</ul></li>
-<li>Practical significance is different from <strong>statistical</strong> significance.
-<ul>
-<li>Need to answer the question: <strong>How big is IT</strong>?</li>
-</ul></li>
-<li>Which values in ANOVA do we want to construct confidence intervals for (or calculate an effect size for)?</li>
-</ul>
-<h3 id="some-options">Some options:</h3>
-<ul>
-<li>A specific group mean.</li>
-<li>How far away a specific condition is from the grand average (the treatment effect).</li>
-<li>How far away a specific condition is from another condition.</li>
-<li>How far away a specific condition (or set of conditions) is(are) from a(nother) set of conditions.</li>
-<li>Additional effect size option: The overall variance explained by a factor of interest.</li>
-</ul>
-</section>
-<section id="confidence-intervals-for-difference-between-two-groups" class="slide level2">
-<h2>Confidence Intervals for Difference Between two Groups</h2>
-<p><span class="math display">\[(\bar{y_i}-\bar{y_j}) \pm t^*\cdot SD \sqrt{1/n_i+1/n_j}\]</span></p>
-<ul>
-<li>Where <span class="math inline">\(SD = \sqrt{MSE}\)</span>.</li>
-<li><span class="math inline">\(t^*\)</span> depends on the confidence level and df of the error.</li>
-<li><span class="math inline">\(Sample\:size\:factor = \sqrt{1/n_i+1/n_j}\)</span>, the larger the sample sizes, the narrower the interval.</li>
-<li><span class="math inline">\(t({df}_{res})\)</span> is the t-value the dictates distance of the interval.</li>
-</ul>
-</section>
-<section id="calculating-ci-between-groups-in-r" class="slide level2">
-<h2>Calculating CI between groups in R</h2>
-<p><span class="math display">\[(\bar{y_G}-\bar{y_F}) \pm t^*\cdot SD \sqrt{1/n_G+1/n_F}\]</span></p>
-<p>For difference between G (near colorless) and F (colorless)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>ds <span class="ot">&lt;-</span> Diamonds <span class="sc">%&gt;%</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">group_by</span>(Color) <span class="sc">%&gt;%</span></span>
-<span id="cb13-3"><a></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb13-4"><a></a>            <span class="at">m =</span> <span class="fu">mean</span>(TotalPrice),</span>
-<span id="cb13-5"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(TotalPrice))</span>
-<span id="cb13-6"><a></a></span>
-<span id="cb13-7"><a></a>MSE <span class="ot">=</span> <span class="fl">0.6771</span> <span class="co">#from our ANOVA source table</span></span>
-<span id="cb13-8"><a></a>df_E <span class="ot">=</span> <span class="dv">344</span> <span class="co">#from our ANOVA source table</span></span>
-<span id="cb13-9"><a></a>t <span class="ot">&lt;-</span> <span class="fu">qt</span>(.<span class="dv">975</span>, df_E) <span class="co">#for 95% CI</span></span>
-<span id="cb13-10"><a></a></span>
-<span id="cb13-11"><a></a>n_g <span class="ot">=</span> <span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"G"</span>)<span class="sc">$</span>n <span class="co">#sample size for G</span></span>
-<span id="cb13-12"><a></a>n_f <span class="ot">=</span> <span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"F"</span>)<span class="sc">$</span>n <span class="co">#sample size for F</span></span>
-<span id="cb13-13"><a></a></span>
-<span id="cb13-14"><a></a>mean_g <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"G"</span>)<span class="sc">$</span>m) <span class="co">#mean for G</span></span>
-<span id="cb13-15"><a></a>mean_f <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="fu">filter</span>(ds, Color <span class="sc">==</span> <span class="st">"F"</span>)<span class="sc">$</span>m) <span class="co">#mean for F</span></span>
-<span id="cb13-16"><a></a></span>
-<span id="cb13-17"><a></a><span class="co">#Confidence interval</span></span>
-<span id="cb13-18"><a></a>UL <span class="ot">&lt;-</span> (mean_g<span class="sc">-</span>mean_f) <span class="sc">+</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n_g<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n_f) <span class="co">#upper limit</span></span>
-<span id="cb13-19"><a></a>LL <span class="ot">&lt;-</span> (mean_g<span class="sc">-</span>mean_f) <span class="sc">-</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n_g<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n_f) <span class="co">#lower limit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="calculating-ci-between-groups-in-r-1" class="slide level2">
-<h2>Calculating CI between groups in R</h2>
-<p>For difference between G (near colorless) and F (colorless)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>LL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.2035213</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>UL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.2886875</code></pre>
-</div>
-</div>
-<p>Sentence interpretation:</p>
-<p>We are 95% confident that the true mean difference in (log) price between near colorless and colorless Diamonds is between -0.20 and 0.29.</p>
-</section>
-<section id="equivalence-of-confidence-intervals-and-tests" class="slide level2">
-<h2>Equivalence of Confidence Intervals and Tests</h2>
-<blockquote>
-<p>Two group means are statistically different at the 5% (1%) level if and only if a 95% (99%) confidence interval for their diffrence does not include 0.</p>
-</blockquote>
-<!-- ## Effect Size (D) -->
-<!-- But **how big is IT**? -->
-<!-- We can compare the differences between groups to to the standard deviation within all groups: -->
-<!-- $$D_{ij} = \frac{(\bar{y_i}-\bar{y_j})}{SD}$$ -->
-<!-- -   Where again $SD = \sqrt{MSE}$ -->
-<!-- ## Effect Size (D) -->
-<!-- For difference between G (near colorless) and F (colorless) -->
-<!-- ```{r} -->
-<!-- D = (mean_g-mean_f)/sqrt(MSE) -->
-<!-- D -->
-<!-- ``` -->
-<!-- The difference between the price of nearly colorless diamonds and colorless diamonds is only 0.052 times the size of the typical within-group deviations in price. Such a small difference! -->
-<!-- ## R-squared for One-Way ANOVA -->
-<!-- But how much does color matter overall? -->
-<!-- $R^2$ is the proportion of total variation explained by the factor: -->
-<!-- $$R^2 = \frac{SS_{treatment}}{SS_{Total}}$$ -->
-<!-- OR -->
-<!-- $$R^2 = 1-\frac{SS_{error}}{SS_{total}}$$ -->
-<!-- ## R-squared for Diamond Color -->
-<!-- ```{r} -->
-<!-- modDia <- lm(log(TotalPrice) ~ Color, data = Diamonds) -->
-<!-- anova(modDia) -->
-<!-- ``` -->
-<!-- ```{r} -->
-<!-- R2 = 29.946/(29.946+232.913) -->
-<!-- R2 -->
-<!-- ``` -->
-<!-- The $R^2$ value is 0.11, so about 11% of the variation in the total price of a diamonds is explained by the diamonds' colors. -->
-<!-- ## Try it! -->
-<!-- Use the `SandwichAnts` dataset to calculate the CI and effect size for difference between `MultiGrain` and `Rye` in number of `Ants`. -->
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -1109,6 +975,24 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1145,7 +1029,11 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

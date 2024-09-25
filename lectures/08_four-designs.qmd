@@ -25,7 +25,6 @@ ds <- Diamonds %>%
 
 ## Announcements
 
--   Grades for HW3 posted
 -   HW4 due Friday 11:55p
 -   Office hours (Bass 412)
     -   Today cancelled due to Rally Day
@@ -36,15 +35,86 @@ ds <- Diamonds %>%
 
 ## Agenda
 
+-   Warm up
 -   Finish up multiple comparisons
 -   Four designs
 -   MP1 topics time
+
 
 ## HW4 Problem 5.59c and sampling error
 
 > **Question:** Explain why it's not sufficient to examine the four sample means, note that they all differ, and conclude that all races do have birth weight distributions that differ from each other.
 
 **Answer:** Because this is just one a sample from a population. If we collected another sample we would see slightly different mean birth weights for the four groups. We need to consider if the group differences we see in this sample are greater than the differences we would expect from sample to sample.
+
+## Notes on HW 4
+
+-   5.70: Open ended Hawks `culmen`
+
+## Warm-up: Walking Babies Example
+
+As a rule it takes about a year before a baby takes its first steps alone. Scientists wondered if they could get babies to walk sooner by prescribing a set of special exercises. They decided to compare babies given special exercises with a control group of babies. But the scientists recognized that just showing an interest in the babies and their parents could cause a placebo effect. That is, the attention alone could influence parents and their babies in ways that would shorten the time to walk. 24 babies were randomly assigned to one of four conditions:
+
+1.  **Special exercises**: Shown special exercises and parents are called weekly and asked it their baby was walking.
+2.  **Exercise control**: No special exercises but parents were told to have baby exercise for 15 min every day. Parents were called each week.
+3.  **Weekly report**: No exercises but parents were called each week.
+4.  **Final report**: Only a report at the end on the study.
+
+They recorded the age (in months) the babies first walked.
+
+## Warm-up: Walking Babies Example
+
+```{r, eval=FALSE}
+data("WalkingBabies")
+qplot(x = Group, y = Age, data = WalkingBabies, geom = "boxplot")
+```
+
+Conduct an ANOVA to test if there are mean differences in walking age between treatments. Check the ANOVA conditions (SINZ only). What do you conclude?
+
+![](https://i.gifer.com/ZWGT.gif)
+
+## Warm-up: Walking Babies Example
+
+```{r}
+data("WalkingBabies")
+qplot(x = Group, y = Age, data = WalkingBabies, geom = "boxplot")
+```
+
+## Warm-up: Walking Babies Example
+
+```{r}
+WalkingBabies %>%
+  group_by(Group) %>%
+  summarise(n = n(),
+            m = mean(Age),
+            sd = sd(Age))
+1.90/0.871
+```
+
+S: No...but could be worse. I: babies are in different families.
+
+## Warm-up: Walking Babies Example
+
+```{r}
+babyMod <- lm(Age ~ Group, data = WalkingBabies)
+anova(babyMod)
+```
+
+## Warm-up: Walking Babies Example
+
+```{r}
+plot(babyMod, which = 2)
+```
+
+N: looks ok with possible skew
+
+## Warm-up: Walking Babies Example
+
+```{r}
+qplot(x = babyMod$residuals, bins = 8)
+```
+
+N: normality is satisfied; Z: Yes, centered at zero.
 
 ## Adjusting for Multiple Comparisons
 
