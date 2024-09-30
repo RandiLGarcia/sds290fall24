@@ -24,8 +24,8 @@ Diamonds <- Diamonds %>%
 
 -   HW4 due on Friday 
 -   Office hours (Bass 412)
-    -   Tomorrow 10:30-11:30a
-    -   Friday office house cancelled
+    -   Tomorrow (tue) 10:30-11:30a
+    -   Friday office hours cancelled
 -   Where to get HW help
     -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z, Cindy, and Sarah can help with 290.
     -   Post questions to [hw4-questions](https://smith.enterprise.slack.com/archives/C07PFFF2H62) Slack channel. 
