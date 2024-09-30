@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.549">
+  <meta name="generator" content="quarto-1.4.555">
 
   <meta name="author" content="Prof Randi Garcia, SDS 290">
-  <meta name="dcterms.date" content="2024-09-25">
+  <meta name="dcterms.date" content="2024-09-30">
   <title>SDS 290 - Fall 2024 - Multiple Comparisons</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -403,13 +403,12 @@ Prof Randi Garcia, SDS 290
 </div>
 </div>
 
-  <p class="date">2024-09-25</p>
+  <p class="date">2024-09-30</p>
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li>HW2 grades now posted</li>
-<li>HW3 due on Friday</li>
+<li>HW4 due on Friday</li>
 <li>Office hours (Bass 412)
 <ul>
 <li>Friday 3:00-4:00p</li>
@@ -417,26 +416,25 @@ Prof Randi Garcia, SDS 290
 <li>Where to get HW help
 <ul>
 <li><a href="https://www.smith.edu/qlc/tutoring.html">Spinelli center</a> tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z, Cindy, and Sarah can help with 290.</li>
-<li>Post questions to <a href="https://smith.enterprise.slack.com/archives/C07NL5E7K8A">hw3-questions</a> Slack channel.</li>
+<li>Post questions to <a href="https://smith.enterprise.slack.com/archives/C07PFFF2H62">hw4-questions</a> Slack channel.</li>
 </ul></li>
 </ul>
 </section>
 <section id="agenda" class="slide level2">
 <h2>Agenda</h2>
 <ul>
-<li>Transformations</li>
+<li>Review
+<ul>
 <li>CI and Effect sizes</li>
+</ul></li>
+<li>Multiple Comparisons</li>
 <li>MP1 topics time
 <ul>
-<li>Introduction to Qualtrics (video on Moodle)</li>
+<li>(More) Introduction to Qualtrics</li>
 </ul></li>
 </ul>
-</section>
-<section id="finish-up-slides-from-monday" class="slide level2">
-<h2>Finish up slides from Monday</h2>
-<ul>
-<li><a href="https://randilgarcia.github.io/sds290fall24/lectures/06_CI-effect-sizes.html#/data-transformations">Data Transformations</a></li>
-</ul>
+<!-- ## Finish up slides from Monday -->
+<!-- -   [Data Transformations](https://randilgarcia.github.io/sds290fall24/lectures/06_CI-effect-sizes.html#/data-transformations) -->
 </section>
 <section id="diamond-price-by-color" class="slide level2">
 <h2>Diamond Price by Color</h2>
@@ -584,104 +582,179 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <li>Calculate the <strong>CI</strong> and <strong>effect size (D)</strong> for the difference between <code>HamPickles</code> and <code>PeanutButter</code>, and for the difference between <code>PeanutButter</code> and <code>Vegemite</code>. Interpret the results of your analysis in context.</li>
 <li>Calculate the <span class="math inline">\(R^2\)</span> for your model and interpret it in a sentence.</li>
 </ol>
-<h3 id="ill-do-it-with-you">I’ll do it with you!</h3>
-<!-- ## Multiple Comparisons -->
-<!-- If we want to do all pairwise comparisons for the walking babies, how many comparisons would we need to make? -->
-<!-- ## Multiple Comparisons -->
-<!-- If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make? We could use the *n choose k* formula: -->
-<!-- $${n \choose k} = \frac{n!}{k!(n-k)!}$$ -->
-<!-- ## Multiple Comparisons -->
-<!-- If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make? We could use the *4 choose 2* formula: -->
-<!-- $${4 \choose 2} = \frac{4!}{2!(4-2)!}=\frac{4\cdot3\cdot2\cdot1}{2\cdot1(2\cdot1)}=\frac{24}{4}=6$$ -->
-<!-- ## Multiple Comparisons -->
-<!-- If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make? -->
-<!-- $${n \choose k} = \frac{n!}{k!(n-k)!}$$ -->
-<!-- -   When we have more than two levels of a factor of interest, we might want to compare specific groups to see which one differ from each other. We can -->
-<!--     -   Compute a confidence interval for the difference between two groups. -->
-<!--     -   Run a set of all **pairwise comparisons**. -->
-<!--     -   Create **custom contrasts** of more complex ideas. -->
-<!-- ### Recall: our Type I error rate is 5% for one test! If the null hypothesis were true, 1 out of 20 tests we run would be significant. -->
-<!-- ## Adjusting for Multiple Comparisons -->
-<!-- When we do multiple significance tests (or construct multiple confidence intervals), our effective type I error rate is inflated. Most statisticians agree that we should adjust our type I error rate to account for our multiple tests, and control the **familywise** error rate. -->
-<!-- Four methods for controlling the familywise : -->
-<!-- 1.  Fisher Least Significant Difference (Fisher's LSD) -->
-<!-- 2.  Tukey Honest Significant Difference (Tukey's HSD) -->
-<!-- 3.  Scheffe test -->
-<!-- 4.  The Bonferroni correction -->
-<!-- ## Adjusting for Multiple Comparisons -->
-<!-- When we do multiple significance tests (or construct multiple confidence intervals), our effective type I error rate is inflated. Most statisticians agree that we should adjust our type I error rate to account for our multiple tests, and control the **familywise** error rate. -->
-<!-- Four methods for controlling the familywise : -->
-<!-- 1.  **Fisher Least Significant Difference (Fisher's LSD)** -->
-<!-- 2.  Tukey Honest Significant Difference (Tukey's HSD) -->
-<!-- 3.  Scheffe test -->
-<!-- 4.  **The Bonferroni correction** -->
-<!-- ## Fisher's LSD -->
-<!-- Fisher's LSD reasons that a pairwise difference is significant as long as it's larger than the margin of error for that pairwise comparison. Thee step process: -->
-<!-- -   **Step 1**: Is the omnibus ANOVA F-test significant? No $\longrightarrow$ Stop, Yes $\longrightarrow$ Step 2, -->
-<!--   -->
-<!-- -   **Step 2**: Find the least significant difference (LSD) for each pair: -->
-<!-- $$LSD = t^*\cdot SD \sqrt{1/n_1+1/n_2}$$ -->
-<!-- -   Where $t^*$ is your critical $t$ for the $df_{error}$ and your level of confidence, -->
-<!-- -   and $SD = \sqrt{MSE}$. -->
-<!--   -->
-<!-- -   **Step 3**: Declare each difference of group means significant if the difference is as large as the LSD. -->
-<!-- ## Fisher's LSD -->
-<!-- For the sandwich ants. -->
-<!-- ```{r, include=FALSE} -->
-<!-- data("SandwichAnts") -->
-<!-- SandwichAnts %>% -->
-<!--   group_by(Filling) %>% -->
-<!--   summarise(n = n(), -->
-<!--             m = mean(Ants), -->
-<!--             sd = sd(Ants)) -->
-<!-- ``` -->
-<!-- ```{r} -->
-<!-- mean_v = 34.625 -->
-<!-- mean_h = 55.500 -->
-<!-- mean_p = 40.375 -->
-<!-- MSE = 157.01 #from our ANOVA source table -->
-<!-- df_E = 45 #from our ANOVA source table -->
-<!-- t <- qt(.975, df_E) #for 95% CI -->
-<!-- n = 16 #this is a balance design! -->
-<!-- LSD = t*sqrt(MSE)*sqrt(1/n+1/n) -->
-<!-- LSD -->
-<!-- ``` -->
-<!-- ## Fisher's LSD -->
-<!-- For the sandwich ants. Fisher's **LSD is 8.923**. -->
-<!-- ```{r} -->
-<!-- mean_h-mean_p -->
-<!-- mean_h-mean_v -->
-<!-- mean_p-mean_v -->
-<!-- ``` -->
-<!-- Based on Fisher's LSD there are statistically significant differences between the number of ants on the ham and pickles filled sandwiches and both the peanut butter and Vegemite sandwiches, but not between the peanut butter and Vegemite sandwiches. Do ants like meat or pickles?! -->
-<!-- ## Bonferroni Correction -->
-<!-- The bonferroni correction simply takes our type I error rate ($\alpha = .05$) and divides by the number of tests we're conducting. For sandwich ants it is 3. Here's the n choose k formula again for sandwich ants: -->
-<!-- $${3 \choose 2} = \frac{3!}{2!(3-2)!}=3$$ -->
-<!-- ```{r} -->
-<!-- #bonferroni correction -->
-<!-- .05/3 -->
-<!-- ``` -->
-<!-- We could conduct $t$-tests (or multiple regression!) for all pairs of conditions, but use an alpha of .0167 (instead of .05) to make your decision about rejecting the null hypothesis. Your $p$-value will need to be less than .0167 to reject the null hypothesis. -->
-<!-- ## Using Multiple Regression -->
-<!-- ```{r} -->
-<!-- antsMod <- lm(Ants ~ Filling, data = SandwichAnts) -->
-<!-- summary(antsMod) -->
-<!-- ``` -->
-<!-- ## Using Multiple Regression -->
-<!-- ```{r, echo=FALSE} -->
-<!-- antsMod <- lm(Ants ~ Filling, data = SandwichAnts) -->
-<!-- summary(antsMod) -->
-<!-- ``` -->
-<!-- Using multiple regression with a bonferroni correction applied, what do we conclude about the differences in ants between filling conditions? Which comparison is missing? -->
+<h3 id="answers">Answers</h3>
+<p>See <a href="https://randilgarcia.github.io/sds290fall24/code/SandwichAnts%20analysis.qmd">SandwichAnts Analysis code here</a></p>
 </section>
-<section id="introduction-to-qualtrics" class="slide level2">
-<h2>Introduction to Qualtrics</h2>
+<section id="multiple-comparisons" class="slide level2">
+<h2>Multiple Comparisons</h2>
+<p>If we want to do all pairwise comparisons for the walking babies, how many comparisons would we need to make?</p>
+</section>
+<section id="multiple-comparisons-1" class="slide level2">
+<h2>Multiple Comparisons</h2>
+<p>If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make? We could use the <em>n choose k</em> formula:</p>
+<p><span class="math display">\[{n \choose k} = \frac{n!}{k!(n-k)!}\]</span></p>
+</section>
+<section id="multiple-comparisons-2" class="slide level2">
+<h2>Multiple Comparisons</h2>
+<p>If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make? We could use the <em>4 choose 2</em> formula:</p>
+<p><span class="math display">\[{4 \choose 2} = \frac{4!}{2!(4-2)!}=\frac{4\cdot3\cdot2\cdot1}{2\cdot1(2\cdot1)}=\frac{24}{4}=6\]</span></p>
+</section>
+<section id="multiple-comparisons-3" class="slide level2">
+<h2>Multiple Comparisons</h2>
+<p>If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make?</p>
+<p><span class="math display">\[{n \choose k} = \frac{n!}{k!(n-k)!}\]</span></p>
 <ul>
-<li>Log in to <a href="https://smithcollege.qualtrics.com">Qualtrics</a> and enter your Smith credentials.
+<li>When we have more than two levels of a factor of interest, we might want to compare specific groups to see which one differ from each other. We can
 <ul>
-<li>I usually just google “Smith Qualtrics”</li>
+<li>Compute a confidence interval for the difference between two groups.</li>
+<li>Run a set of all <strong>pairwise comparisons</strong>.</li>
+<li>Create <strong>custom contrasts</strong> of more complex ideas.</li>
 </ul></li>
 </ul>
+<h3 id="recall-our-type-i-error-rate-is-5-for-one-test-if-the-null-hypothesis-were-true-1-out-of-20-tests-we-run-would-be-significant.">Recall: our Type I error rate is 5% for one test! If the null hypothesis were true, 1 out of 20 tests we run would be significant.</h3>
+</section>
+<section id="adjusting-for-multiple-comparisons" class="slide level2 scrollable">
+<h2>Adjusting for Multiple Comparisons</h2>
+<p>When we do multiple significance tests (or construct multiple confidence intervals), our effective type I error rate is inflated. Most statisticians agree that we should adjust our type I error rate to account for our multiple tests, and control the <strong>familywise</strong> error rate.</p>
+<p>Four methods for controlling the familywise :</p>
+<ol type="1">
+<li>Fisher Least Significant Difference (Fisher’s LSD)</li>
+<li>Tukey Honest Significant Difference (Tukey’s HSD)</li>
+<li>Scheffe test</li>
+<li>The Bonferroni correction</li>
+</ol>
+</section>
+<section id="adjusting-for-multiple-comparisons-1" class="slide level2 scrollable">
+<h2>Adjusting for Multiple Comparisons</h2>
+<p>When we do multiple significance tests (or construct multiple confidence intervals), our effective type I error rate is inflated. Most statisticians agree that we should adjust our type I error rate to account for our multiple tests, and control the <strong>familywise</strong> error rate.</p>
+<p>Four methods for controlling the familywise :</p>
+<ol type="1">
+<li><strong>Fisher Least Significant Difference (Fisher’s LSD)</strong></li>
+<li>Tukey Honest Significant Difference (Tukey’s HSD)</li>
+<li>Scheffe test</li>
+<li><strong>The Bonferroni correction</strong></li>
+</ol>
+</section>
+<section id="fishers-lsd" class="slide level2">
+<h2>Fisher’s LSD</h2>
+<p>Fisher’s LSD reasons that a pairwise difference is significant as long as it’s larger than the margin of error for that pairwise comparison. Thee step process:</p>
+<ul>
+<li><p><strong>Step 1</strong>: Is the omnibus ANOVA F-test significant? No <span class="math inline">\(\longrightarrow\)</span> Stop, Yes <span class="math inline">\(\longrightarrow\)</span> Step 2,</p></li>
+<li><p><strong>Step 2</strong>: Find the least significant difference (LSD) for each pair:</p></li>
+</ul>
+<p><span class="math display">\[LSD = t^*\cdot SD \sqrt{1/n_1+1/n_2}\]</span></p>
+<ul>
+<li><p>Where <span class="math inline">\(t^*\)</span> is your critical <span class="math inline">\(t\)</span> for the <span class="math inline">\(df_{error}\)</span> and your level of confidence,</p></li>
+<li><p>and <span class="math inline">\(SD = \sqrt{MSE}\)</span>.</p></li>
+<li><p><strong>Step 3</strong>: Declare each difference of group means significant if the difference is as large as the LSD.</p></li>
+</ul>
+</section>
+<section id="fishers-lsd-1" class="slide level2">
+<h2>Fisher’s LSD</h2>
+<p>For the sandwich ants.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>mean_v <span class="ot">=</span> <span class="fl">34.625</span></span>
+<span id="cb15-2"><a></a>mean_h <span class="ot">=</span> <span class="fl">55.500</span></span>
+<span id="cb15-3"><a></a>mean_p <span class="ot">=</span> <span class="fl">40.375</span></span>
+<span id="cb15-4"><a></a></span>
+<span id="cb15-5"><a></a>MSE <span class="ot">=</span> <span class="fl">157.01</span> <span class="co">#from our ANOVA source table</span></span>
+<span id="cb15-6"><a></a>df_E <span class="ot">=</span> <span class="dv">45</span> <span class="co">#from our ANOVA source table</span></span>
+<span id="cb15-7"><a></a>t <span class="ot">&lt;-</span> <span class="fu">qt</span>(.<span class="dv">975</span>, df_E) <span class="co">#for 95% CI</span></span>
+<span id="cb15-8"><a></a></span>
+<span id="cb15-9"><a></a>n <span class="ot">=</span> <span class="dv">16</span> <span class="co">#this is a balance design!</span></span>
+<span id="cb15-10"><a></a>LSD <span class="ot">=</span> t<span class="sc">*</span><span class="fu">sqrt</span>(MSE)<span class="sc">*</span><span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>n<span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>n)</span>
+<span id="cb15-11"><a></a>LSD</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8.922785</code></pre>
+</div>
+</div>
+</section>
+<section id="fishers-lsd-2" class="slide level2">
+<h2>Fisher’s LSD</h2>
+<p>For the sandwich ants. Fisher’s <strong>LSD is 8.923</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>mean_h<span class="sc">-</span>mean_p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 15.125</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>mean_h<span class="sc">-</span>mean_v</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 20.875</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>mean_p<span class="sc">-</span>mean_v</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5.75</code></pre>
+</div>
+</div>
+<p>Based on Fisher’s LSD there are statistically significant differences between the number of ants on the ham and pickles filled sandwiches and both the peanut butter and Vegemite sandwiches, but not between the peanut butter and Vegemite sandwiches. Do ants like meat or pickles?!</p>
+</section>
+<section id="bonferroni-correction" class="slide level2">
+<h2>Bonferroni Correction</h2>
+<p>The bonferroni correction simply takes our type I error rate (<span class="math inline">\(\alpha = .05\)</span>) and divides by the number of tests we’re conducting. For sandwich ants it is 3. Here’s the n choose k formula again for sandwich ants:</p>
+<p><span class="math display">\[{3 \choose 2} = \frac{3!}{2!(3-2)!}=3\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="co">#bonferroni correction</span></span>
+<span id="cb23-2"><a></a>.<span class="dv">05</span><span class="sc">/</span><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.01666667</code></pre>
+</div>
+</div>
+<p>We could conduct <span class="math inline">\(t\)</span>-tests (or multiple regression!) for all pairs of conditions, but use an alpha of .0167 (instead of .05) to make your decision about rejecting the null hypothesis. Your <span class="math inline">\(p\)</span>-value will need to be less than .0167 to reject the null hypothesis.</p>
+</section>
+<section id="using-multiple-regression" class="slide level2">
+<h2>Using Multiple Regression</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>antsMod <span class="ot">&lt;-</span> <span class="fu">lm</span>(Ants <span class="sc">~</span> Filling, <span class="at">data =</span> SandwichAnts)</span>
+<span id="cb25-2"><a></a><span class="fu">summary</span>(antsMod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Ants ~ Filling, data = SandwichAnts)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-21.500 -10.094   2.938   9.500  22.375 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)           55.500      3.133  17.717  &lt; 2e-16 ***
+FillingPeanutButter  -15.125      4.430  -3.414  0.00136 ** 
+FillingVegemite      -20.875      4.430  -4.712 2.38e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 12.53 on 45 degrees of freedom
+Multiple R-squared:  0.3449,    Adjusted R-squared:  0.3158 
+F-statistic: 11.85 on 2 and 45 DF,  p-value: 7.351e-05</code></pre>
+</div>
+</div>
+</section>
+<section id="using-multiple-regression-1" class="slide level2">
+<h2>Using Multiple Regression</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Ants ~ Filling, data = SandwichAnts)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-21.500 -10.094   2.938   9.500  22.375 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)           55.500      3.133  17.717  &lt; 2e-16 ***
+FillingPeanutButter  -15.125      4.430  -3.414  0.00136 ** 
+FillingVegemite      -20.875      4.430  -4.712 2.38e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 12.53 on 45 degrees of freedom
+Multiple R-squared:  0.3449,    Adjusted R-squared:  0.3158 
+F-statistic: 11.85 on 2 and 45 DF,  p-value: 7.351e-05</code></pre>
+</div>
+</div>
+<p>Using multiple regression with a bonferroni correction applied, what do we conclude about the differences in ants between filling conditions? Which comparison is missing?</p>
 </section>
 <section id="mini-project-1" class="slide level2 scrollable">
 <h2>Mini Project 1</h2>
@@ -691,6 +764,15 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <li>Get into groups of three and take turns discussing your ideas.</li>
 <li>Raise your hand if you have any questions.</li>
 </ol>
+</section>
+<section id="introduction-to-qualtrics" class="slide level2">
+<h2>Introduction to Qualtrics</h2>
+<ul>
+<li>Log in to <a href="https://smithcollege.qualtrics.com">Qualtrics</a> and enter your Smith credentials.
+<ul>
+<li>I usually just google “Smith Qualtrics”</li>
+</ul></li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -1022,6 +1104,24 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1058,7 +1158,11 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

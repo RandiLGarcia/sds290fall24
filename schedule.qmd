@@ -107,13 +107,13 @@ Please read the specified sections *before* class that day.
     -   Read **Stat2** 4.5 (up to, not including, example 4.10)
     -   Read **Stat2** 5.7
 
-:::  
-
 #### Fri, Sep 27
 
 -   **Office hours**: 3:00p - 4:00p
 -   Homework due today:
     -   **HW #3 due on today at 11:55p**
+
+:::  
 
 ## Week 5
 

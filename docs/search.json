@@ -151,7 +151,7 @@
     "href": "schedule.html#week-4",
     "title": "Schedule",
     "section": "Week 4",
-    "text": "Week 4\n\nMon, Sep 23\n\nTransformations\nHomework due today:\n\nBrainstorm topics for MP1\nRead Stat2 Ch. 5.5-5.6\n\n\n\n\nTues, Sep 24\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring McConnell 301 7-9p\n\n\n\nWed, Sep 25\n\nConfidence intervals and effect sizes\nIntroduction to Qualtrics\nHomework due today:\n\nFind potential stimuli (images) for MP1\nRead Stat2 4.5 (up to, not including, example 4.10)\nRead Stat2 5.7"
+    "text": "Week 4\n\nMon, Sep 23\n\nTransformations\nHomework due today:\n\nBrainstorm topics for MP1\nRead Stat2 Ch. 5.5-5.6\n\n\n\n\nTues, Sep 24\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring McConnell 301 7-9p\n\n\n\nWed, Sep 25\n\nConfidence intervals and effect sizes\nIntroduction to Qualtrics\nHomework due today:\n\nFind potential stimuli (images) for MP1\nRead Stat2 4.5 (up to, not including, example 4.10)\nRead Stat2 5.7\n\n\n\n\nFri, Sep 27\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nHW #3 due on today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-5",
@@ -1544,7 +1544,7 @@
     "href": "lectures/07_multiple-comparisons.html#announcements",
     "title": "Multiple Comparisons",
     "section": "Announcements",
-    "text": "Announcements\n\nHW2 grades now posted\nHW3 due on Friday\nOffice hours (Bass 412)\n\nFriday 3:00-4:00p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z, Cindy, and Sarah can help with 290.\nPost questions to hw3-questions Slack channel."
+    "text": "Announcements\n\nHW4 due on Friday\nOffice hours (Bass 412)\n\nFriday 3:00-4:00p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z, Cindy, and Sarah can help with 290.\nPost questions to hw4-questions Slack channel."
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#notes-on-hw-3",
@@ -1558,7 +1558,7 @@
     "href": "lectures/07_multiple-comparisons.html#agenda",
     "title": "Multiple Comparisons",
     "section": "Agenda",
-    "text": "Agenda\n\nTransformations\nCI and Effect sizes\nMP1 topics time\n\nIntroduction to Qualtrics (video on Moodle)"
+    "text": "Agenda\n\nReview\n\nCI and Effect sizes\n\nMultiple Comparisons\nMP1 topics time\n\n(More) Introduction to Qualtrics"
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#warm-up-walking-babies-example",
@@ -1649,7 +1649,7 @@
     "href": "lectures/07_multiple-comparisons.html#try-it-on-the-sandwich-ants-data",
     "title": "Multiple Comparisons",
     "section": "Try it on the Sandwich Ants data",
-    "text": "Try it on the Sandwich Ants data\nUse the SandwichAnts dataset to:\n\nTest if there are difference in Ants depending on the sandwich Filling using ANOVA. Check the ANOVA conditions (SINZ) and interpret the results of your analysis in context.\nCalculate the CI and effect size (D) for the difference between HamPickles and PeanutButter, and for the difference between PeanutButter and Vegemite. Interpret the results of your analysis in context.\nCalculate the \\(R^2\\) for your model and interpret it in a sentence.\n\nI’ll do it with you!"
+    "text": "Try it on the Sandwich Ants data\nUse the SandwichAnts dataset to:\n\nTest if there are difference in Ants depending on the sandwich Filling using ANOVA. Check the ANOVA conditions (SINZ) and interpret the results of your analysis in context.\nCalculate the CI and effect size (D) for the difference between HamPickles and PeanutButter, and for the difference between PeanutButter and Vegemite. Interpret the results of your analysis in context.\nCalculate the \\(R^2\\) for your model and interpret it in a sentence.\n\nAnswers\nSee SandwichAnts Analysis code here"
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#multiple-comparisons",
@@ -1698,7 +1698,7 @@
     "href": "lectures/07_multiple-comparisons.html#fishers-lsd",
     "title": "Multiple Comparisons",
     "section": "Fisher’s LSD",
-    "text": "Fisher’s LSD\nFisher’s LSD reasons that a pairwise difference is significant as long as it’s larger than the margin of error for that pairwise comparison. Thee step process:\n\nStep 1: Is the omnibus ANOVA F-test significant? No \\(\\longrightarrow\\) Stop, Yes \\(\\longrightarrow\\) Step 2,\n\n \n\nStep 2: Find the least significant difference (LSD) for each pair:\n\n\\[LSD = t^*\\cdot SD \\sqrt{1/n_1+1/n_2}\\]\n\nWhere \\(t^*\\) is your critical \\(t\\) for the \\(df_{error}\\) and your level of confidence,\nand \\(SD = \\sqrt{MSE}\\).\n\n \n\nStep 3: Declare each difference of group means significant if the difference is as large as the LSD."
+    "text": "Fisher’s LSD\nFisher’s LSD reasons that a pairwise difference is significant as long as it’s larger than the margin of error for that pairwise comparison. Thee step process:\n\nStep 1: Is the omnibus ANOVA F-test significant? No \\(\\longrightarrow\\) Stop, Yes \\(\\longrightarrow\\) Step 2,\nStep 2: Find the least significant difference (LSD) for each pair:\n\n\\[LSD = t^*\\cdot SD \\sqrt{1/n_1+1/n_2}\\]\n\nWhere \\(t^*\\) is your critical \\(t\\) for the \\(df_{error}\\) and your level of confidence,\nand \\(SD = \\sqrt{MSE}\\).\nStep 3: Declare each difference of group means significant if the difference is as large as the LSD."
   },
   {
     "objectID": "lectures/07_multiple-comparisons.html#fishers-lsd-1",

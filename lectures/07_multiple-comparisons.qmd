@@ -1,7 +1,7 @@
 ---
 title: "Multiple Comparisons"
 author: Prof Randi Garcia, SDS 290
-date: September 25, 2024
+date: September 30, 2024
 format: 
   revealjs:
     scrollable: true
@@ -22,24 +22,24 @@ Diamonds <- Diamonds %>%
 
 ## Announcements
 
--   HW2 grades now posted
--   HW3 due on Friday 
+-   HW4 due on Friday 
 -   Office hours (Bass 412)
     -   Friday 3:00-4:00p
 -   Where to get HW help
     -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z, Cindy, and Sarah can help with 290.
-    -   Post questions to [hw3-questions](https://smith.enterprise.slack.com/archives/C07NL5E7K8A) Slack channel. 
+    -   Post questions to [hw4-questions](https://smith.enterprise.slack.com/archives/C07PFFF2H62) Slack channel. 
 
 ## Agenda
 
--   Transformations
--   CI and Effect sizes
+-   Review
+    -   CI and Effect sizes
+-   Multiple Comparisons
 -   MP1 topics time
-    -   Introduction to Qualtrics (video on Moodle)
+    -   (More) Introduction to Qualtrics
 
-## Finish up slides from Monday
+<!-- ## Finish up slides from Monday -->
 
--   [Data Transformations](https://randilgarcia.github.io/sds290fall24/lectures/06_CI-effect-sizes.html#/data-transformations)
+<!-- -   [Data Transformations](https://randilgarcia.github.io/sds290fall24/lectures/06_CI-effect-sizes.html#/data-transformations) -->
 
 ## Diamond Price by Color
 
@@ -162,151 +162,148 @@ Use the `SandwichAnts` dataset to:
 2.  Calculate the **CI** and **effect size (D)** for the difference between `HamPickles` and `PeanutButter`, and for the difference between `PeanutButter` and `Vegemite`. Interpret the results of your analysis in context.
 3.  Calculate the $R^2$ for your model and interpret it in a sentence.
 
-### I'll do it with you!
+### Answers
 
-<!-- ## Multiple Comparisons -->
+See [SandwichAnts Analysis code here](https://randilgarcia.github.io/sds290fall24/code/SandwichAnts%20analysis.qmd)
 
-<!-- If we want to do all pairwise comparisons for the walking babies, how many comparisons would we need to make? -->
+## Multiple Comparisons
 
-<!-- ## Multiple Comparisons -->
+If we want to do all pairwise comparisons for the walking babies, how many comparisons would we need to make?
 
-<!-- If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make? We could use the *n choose k* formula: -->
+## Multiple Comparisons
 
-<!-- $${n \choose k} = \frac{n!}{k!(n-k)!}$$ -->
+If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make? We could use the *n choose k* formula:
 
-<!-- ## Multiple Comparisons -->
+$${n \choose k} = \frac{n!}{k!(n-k)!}$$
 
-<!-- If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make? We could use the *4 choose 2* formula: -->
+## Multiple Comparisons
 
-<!-- $${4 \choose 2} = \frac{4!}{2!(4-2)!}=\frac{4\cdot3\cdot2\cdot1}{2\cdot1(2\cdot1)}=\frac{24}{4}=6$$ -->
+If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make? We could use the *4 choose 2* formula:
 
-<!-- ## Multiple Comparisons -->
+$${4 \choose 2} = \frac{4!}{2!(4-2)!}=\frac{4\cdot3\cdot2\cdot1}{2\cdot1(2\cdot1)}=\frac{24}{4}=6$$
 
-<!-- If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make? -->
+## Multiple Comparisons
 
-<!-- $${n \choose k} = \frac{n!}{k!(n-k)!}$$ -->
+If we want to do all pairwise comparisons for the leafhoppers, how many comparisons would we need to make?
 
-<!-- -   When we have more than two levels of a factor of interest, we might want to compare specific groups to see which one differ from each other. We can -->
-<!--     -   Compute a confidence interval for the difference between two groups. -->
-<!--     -   Run a set of all **pairwise comparisons**. -->
-<!--     -   Create **custom contrasts** of more complex ideas. -->
+$${n \choose k} = \frac{n!}{k!(n-k)!}$$
 
-<!-- ### Recall: our Type I error rate is 5% for one test! If the null hypothesis were true, 1 out of 20 tests we run would be significant. -->
+-   When we have more than two levels of a factor of interest, we might want to compare specific groups to see which one differ from each other. We can
+    -   Compute a confidence interval for the difference between two groups.
+    -   Run a set of all **pairwise comparisons**.
+    -   Create **custom contrasts** of more complex ideas.
 
-<!-- ## Adjusting for Multiple Comparisons -->
+### Recall: our Type I error rate is 5% for one test! If the null hypothesis were true, 1 out of 20 tests we run would be significant.
 
-<!-- When we do multiple significance tests (or construct multiple confidence intervals), our effective type I error rate is inflated. Most statisticians agree that we should adjust our type I error rate to account for our multiple tests, and control the **familywise** error rate. -->
+## Adjusting for Multiple Comparisons
 
-<!-- Four methods for controlling the familywise : -->
+When we do multiple significance tests (or construct multiple confidence intervals), our effective type I error rate is inflated. Most statisticians agree that we should adjust our type I error rate to account for our multiple tests, and control the **familywise** error rate.
 
-<!-- 1.  Fisher Least Significant Difference (Fisher's LSD) -->
-<!-- 2.  Tukey Honest Significant Difference (Tukey's HSD) -->
-<!-- 3.  Scheffe test -->
-<!-- 4.  The Bonferroni correction -->
+Four methods for controlling the familywise :
 
-<!-- ## Adjusting for Multiple Comparisons -->
+1.  Fisher Least Significant Difference (Fisher's LSD)
+2.  Tukey Honest Significant Difference (Tukey's HSD)
+3.  Scheffe test
+4.  The Bonferroni correction
 
-<!-- When we do multiple significance tests (or construct multiple confidence intervals), our effective type I error rate is inflated. Most statisticians agree that we should adjust our type I error rate to account for our multiple tests, and control the **familywise** error rate. -->
+## Adjusting for Multiple Comparisons
 
-<!-- Four methods for controlling the familywise : -->
+When we do multiple significance tests (or construct multiple confidence intervals), our effective type I error rate is inflated. Most statisticians agree that we should adjust our type I error rate to account for our multiple tests, and control the **familywise** error rate.
 
-<!-- 1.  **Fisher Least Significant Difference (Fisher's LSD)** -->
-<!-- 2.  Tukey Honest Significant Difference (Tukey's HSD) -->
-<!-- 3.  Scheffe test -->
-<!-- 4.  **The Bonferroni correction** -->
+Four methods for controlling the familywise :
 
-<!-- ## Fisher's LSD -->
+1.  **Fisher Least Significant Difference (Fisher's LSD)**
+2.  Tukey Honest Significant Difference (Tukey's HSD)
+3.  Scheffe test
+4.  **The Bonferroni correction**
 
-<!-- Fisher's LSD reasons that a pairwise difference is significant as long as it's larger than the margin of error for that pairwise comparison. Thee step process: -->
+## Fisher's LSD
 
-<!-- -   **Step 1**: Is the omnibus ANOVA F-test significant? No $\longrightarrow$ Stop, Yes $\longrightarrow$ Step 2, -->
+Fisher's LSD reasons that a pairwise difference is significant as long as it's larger than the margin of error for that pairwise comparison. Thee step process:
 
-<!--   -->
+-   **Step 1**: Is the omnibus ANOVA F-test significant? No $\longrightarrow$ Stop, Yes $\longrightarrow$ Step 2,
 
-<!-- -   **Step 2**: Find the least significant difference (LSD) for each pair: -->
 
-<!-- $$LSD = t^*\cdot SD \sqrt{1/n_1+1/n_2}$$ -->
 
-<!-- -   Where $t^*$ is your critical $t$ for the $df_{error}$ and your level of confidence, -->
-<!-- -   and $SD = \sqrt{MSE}$. -->
+-   **Step 2**: Find the least significant difference (LSD) for each pair:
 
-<!--   -->
+$$LSD = t^*\cdot SD \sqrt{1/n_1+1/n_2}$$
 
-<!-- -   **Step 3**: Declare each difference of group means significant if the difference is as large as the LSD. -->
+-   Where $t^*$ is your critical $t$ for the $df_{error}$ and your level of confidence,
+-   and $SD = \sqrt{MSE}$.
 
-<!-- ## Fisher's LSD -->
 
-<!-- For the sandwich ants. -->
 
-<!-- ```{r, include=FALSE} -->
-<!-- data("SandwichAnts") -->
+-   **Step 3**: Declare each difference of group means significant if the difference is as large as the LSD.
 
-<!-- SandwichAnts %>% -->
-<!--   group_by(Filling) %>% -->
-<!--   summarise(n = n(), -->
-<!--             m = mean(Ants), -->
-<!--             sd = sd(Ants)) -->
-<!-- ``` -->
+## Fisher's LSD
 
-<!-- ```{r} -->
-<!-- mean_v = 34.625 -->
-<!-- mean_h = 55.500 -->
-<!-- mean_p = 40.375 -->
+For the sandwich ants.
 
-<!-- MSE = 157.01 #from our ANOVA source table -->
-<!-- df_E = 45 #from our ANOVA source table -->
-<!-- t <- qt(.975, df_E) #for 95% CI -->
+```{r, include=FALSE}
+data("SandwichAnts")
 
-<!-- n = 16 #this is a balance design! -->
-<!-- LSD = t*sqrt(MSE)*sqrt(1/n+1/n) -->
-<!-- LSD -->
-<!-- ``` -->
+SandwichAnts %>%
+  group_by(Filling) %>%
+  summarise(n = n(),
+            m = mean(Ants),
+            sd = sd(Ants))
+```
 
-<!-- ## Fisher's LSD -->
+```{r}
+mean_v = 34.625
+mean_h = 55.500
+mean_p = 40.375
 
-<!-- For the sandwich ants. Fisher's **LSD is 8.923**. -->
+MSE = 157.01 #from our ANOVA source table
+df_E = 45 #from our ANOVA source table
+t <- qt(.975, df_E) #for 95% CI
 
-<!-- ```{r} -->
-<!-- mean_h-mean_p -->
-<!-- mean_h-mean_v -->
-<!-- mean_p-mean_v -->
-<!-- ``` -->
+n = 16 #this is a balance design!
+LSD = t*sqrt(MSE)*sqrt(1/n+1/n)
+LSD
+```
 
-<!-- Based on Fisher's LSD there are statistically significant differences between the number of ants on the ham and pickles filled sandwiches and both the peanut butter and Vegemite sandwiches, but not between the peanut butter and Vegemite sandwiches. Do ants like meat or pickles?! -->
+## Fisher's LSD
 
-<!-- ## Bonferroni Correction -->
+For the sandwich ants. Fisher's **LSD is 8.923**.
 
-<!-- The bonferroni correction simply takes our type I error rate ($\alpha = .05$) and divides by the number of tests we're conducting. For sandwich ants it is 3. Here's the n choose k formula again for sandwich ants: -->
+```{r}
+mean_h-mean_p
+mean_h-mean_v
+mean_p-mean_v
+```
 
-<!-- $${3 \choose 2} = \frac{3!}{2!(3-2)!}=3$$ -->
+Based on Fisher's LSD there are statistically significant differences between the number of ants on the ham and pickles filled sandwiches and both the peanut butter and Vegemite sandwiches, but not between the peanut butter and Vegemite sandwiches. Do ants like meat or pickles?!
 
-<!-- ```{r} -->
-<!-- #bonferroni correction -->
-<!-- .05/3 -->
-<!-- ``` -->
+## Bonferroni Correction
 
-<!-- We could conduct $t$-tests (or multiple regression!) for all pairs of conditions, but use an alpha of .0167 (instead of .05) to make your decision about rejecting the null hypothesis. Your $p$-value will need to be less than .0167 to reject the null hypothesis. -->
+The bonferroni correction simply takes our type I error rate ($\alpha = .05$) and divides by the number of tests we're conducting. For sandwich ants it is 3. Here's the n choose k formula again for sandwich ants:
 
-<!-- ## Using Multiple Regression -->
+$${3 \choose 2} = \frac{3!}{2!(3-2)!}=3$$
 
-<!-- ```{r} -->
-<!-- antsMod <- lm(Ants ~ Filling, data = SandwichAnts) -->
-<!-- summary(antsMod) -->
-<!-- ``` -->
+```{r}
+#bonferroni correction
+.05/3
+```
 
-<!-- ## Using Multiple Regression -->
+We could conduct $t$-tests (or multiple regression!) for all pairs of conditions, but use an alpha of .0167 (instead of .05) to make your decision about rejecting the null hypothesis. Your $p$-value will need to be less than .0167 to reject the null hypothesis.
 
-<!-- ```{r, echo=FALSE} -->
-<!-- antsMod <- lm(Ants ~ Filling, data = SandwichAnts) -->
-<!-- summary(antsMod) -->
-<!-- ``` -->
+## Using Multiple Regression
 
-<!-- Using multiple regression with a bonferroni correction applied, what do we conclude about the differences in ants between filling conditions? Which comparison is missing? -->
+```{r}
+antsMod <- lm(Ants ~ Filling, data = SandwichAnts)
+summary(antsMod)
+```
 
-## Introduction to Qualtrics
+## Using Multiple Regression
 
--   Log in to [Qualtrics](https://smithcollege.qualtrics.com) and enter your Smith credentials.
-    -   I usually just google "Smith Qualtrics"
+```{r, echo=FALSE}
+antsMod <- lm(Ants ~ Filling, data = SandwichAnts)
+summary(antsMod)
+```
+
+Using multiple regression with a bonferroni correction applied, what do we conclude about the differences in ants between filling conditions? Which comparison is missing?
     
 ## Mini Project 1
 
@@ -314,4 +311,10 @@ Topic brainstorming
 
 1.  Two minute free write to write down some ideas for your factor of interest and response variable.
 2.  Get into groups of three and take turns discussing your ideas.
-3.  Raise your hand if you have any questions.    
+3.  Raise your hand if you have any questions.   
+
+
+## Introduction to Qualtrics
+
+-   Log in to [Qualtrics](https://smithcollege.qualtrics.com) and enter your Smith credentials.
+    -   I usually just google "Smith Qualtrics"
