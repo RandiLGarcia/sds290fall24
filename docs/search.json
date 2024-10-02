@@ -158,7 +158,7 @@
     "href": "schedule.html#week-5",
     "title": "Schedule",
     "section": "Week 5",
-    "text": "Week 5\n\nMon, Sep 30\n\nMultiple comparisons\nTime to work on MP1\nHomework due today:\n\nWork on Qualtrics survey for MP1\n\n\n\n\nTues, Oct 1\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Oct 2\n\nFour basic designs\nHomework due today:\n\nRead Cobb Ch. 1.1-1.3 (PDF on Moodle)\n\n\n\n\nFri, Oct 4\n\nOffice hours cancelled\nHomework due today:\n\nHW #4 due on today at 11:55p"
+    "text": "Week 5\n\nMon, Sep 30\n\nMultiple comparisons\nTime to work on MP1\nHomework due today:\n\nWork on Qualtrics survey for MP1\n\n\n\n\nTues, Oct 1\n\nMountain Day!"
   },
   {
     "objectID": "schedule.html#week-6",
@@ -1774,8 +1774,8 @@
     "objectID": "lectures/08_four-designs.html#announcements",
     "href": "lectures/08_four-designs.html#announcements",
     "title": "Four Desgins",
-    "section": "",
-    "text": "Grades for HW3 posted\nHW4 due Friday 11:55p\nOffice hours (Bass 412)\n\nToday cancelled due to Rally Day\nFriday (tomorrow): 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #homework4-questions channel on Slack!"
+    "section": "Announcements",
+    "text": "Announcements\n\nWorking on HW3 grades\nHW4 due on Friday\nOffice hours (Bass 412)\n\nFriday office hours cancelled\nBy appointment\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z, Cindy, and Sarah can help with 290.\nPost questions to hw4-questions Slack channel."
   },
   {
     "objectID": "lectures/08_four-designs.html#c-and-sampling-error",
@@ -1845,7 +1845,7 @@
     "href": "lectures/08_four-designs.html#agenda",
     "title": "Four Desgins",
     "section": "Agenda",
-    "text": "Agenda\n\nFinish up multiple comparisons\nFour designs\nMP1 topics time"
+    "text": "Agenda\n\nWarm up\nFour designs\nMP1 time"
   },
   {
     "objectID": "lectures/08_four-designs.html#kellys-hamster-study",
@@ -4604,5 +4604,54 @@
     "title": "Multiple Comparisons",
     "section": "Descriptive statistics",
     "text": "Descriptive statistics\nWe’ll need this later!\n\nds &lt;- Diamonds %&gt;%\n  group_by(Color) %&gt;%\n  summarise(n = n(),\n            m = mean(ln_TotalPrice),\n            sd = sd(ln_TotalPrice))"
+  },
+  {
+    "objectID": "lectures/08_four-designs.html#warm-up-walking-babies-example",
+    "href": "lectures/08_four-designs.html#warm-up-walking-babies-example",
+    "title": "Four Desgins",
+    "section": "Warm-up: Walking Babies Example",
+    "text": "Warm-up: Walking Babies Example\nAs a rule it takes about a year before a baby takes its first steps alone. Scientists wondered if they could get babies to walk sooner by prescribing a set of special exercises. They decided to compare babies given special exercises with a control group of babies. But the scientists recognized that just showing an interest in the babies and their parents could cause a placebo effect. That is, the attention alone could influence parents and their babies in ways that would shorten the time to walk. 24 babies were randomly assigned to one of four conditions:\n\nSpecial exercises: Shown special exercises and parents are called weekly and asked it their baby was walking.\nExercise control: No special exercises but parents were told to have baby exercise for 15 min every day. Parents were called each week.\nWeekly report: No exercises but parents were called each week.\nFinal report: Only a report at the end on the study.\n\nThey recorded the age (in months) the babies first walked."
+  },
+  {
+    "objectID": "lectures/08_four-designs.html#warm-up-walking-babies-example-1",
+    "href": "lectures/08_four-designs.html#warm-up-walking-babies-example-1",
+    "title": "Four Desgins",
+    "section": "Warm-up: Walking Babies Example",
+    "text": "Warm-up: Walking Babies Example\n\ndata(\"WalkingBabies\")\nqplot(x = Group, y = Age, data = WalkingBabies, geom = \"boxplot\")\n\nConduct an ANOVA to test if there are mean differences in walking age between treatments. Check the ANOVA conditions (SINZ only). What do you conclude?"
+  },
+  {
+    "objectID": "lectures/08_four-designs.html#warm-up-walking-babies-example-2",
+    "href": "lectures/08_four-designs.html#warm-up-walking-babies-example-2",
+    "title": "Four Desgins",
+    "section": "Warm-up: Walking Babies Example",
+    "text": "Warm-up: Walking Babies Example\n\ndata(\"WalkingBabies\")\nqplot(x = Group, y = Age, data = WalkingBabies, geom = \"boxplot\")"
+  },
+  {
+    "objectID": "lectures/08_four-designs.html#warm-up-walking-babies-example-3",
+    "href": "lectures/08_four-designs.html#warm-up-walking-babies-example-3",
+    "title": "Four Desgins",
+    "section": "Warm-up: Walking Babies Example",
+    "text": "Warm-up: Walking Babies Example\n\nWalkingBabies %&gt;%\n  group_by(Group) %&gt;%\n  summarise(n = n(),\n            m = mean(Age),\n            sd = sd(Age))\n\n# A tibble: 4 × 4\n  Group                 n     m    sd\n  &lt;fct&gt;             &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 exercise control      6  11.4 1.90 \n2 final report          6  12.4 0.871\n3 special exercises     6  10.1 1.45 \n4 weekly report         6  11.6 1.56 \n\n1.90/0.871\n\n[1] 2.181401\n\n\nS: No…but could be worse. I: babies are in different families."
+  },
+  {
+    "objectID": "lectures/08_four-designs.html#warm-up-walking-babies-example-4",
+    "href": "lectures/08_four-designs.html#warm-up-walking-babies-example-4",
+    "title": "Four Desgins",
+    "section": "Warm-up: Walking Babies Example",
+    "text": "Warm-up: Walking Babies Example\n\nbabyMod &lt;- lm(Age ~ Group, data = WalkingBabies)\nanova(babyMod)\n\nAnalysis of Variance Table\n\nResponse: Age\n          Df Sum Sq Mean Sq F value Pr(&gt;F)\nGroup      3 15.597  5.1991  2.3418 0.1039\nResiduals 20 44.402  2.2201"
+  },
+  {
+    "objectID": "lectures/08_four-designs.html#warm-up-walking-babies-example-5",
+    "href": "lectures/08_four-designs.html#warm-up-walking-babies-example-5",
+    "title": "Four Desgins",
+    "section": "Warm-up: Walking Babies Example",
+    "text": "Warm-up: Walking Babies Example\n\nplot(babyMod, which = 2)\n\n\nN: looks ok with possible skew"
+  },
+  {
+    "objectID": "lectures/08_four-designs.html#warm-up-walking-babies-example-6",
+    "href": "lectures/08_four-designs.html#warm-up-walking-babies-example-6",
+    "title": "Four Desgins",
+    "section": "Warm-up: Walking Babies Example",
+    "text": "Warm-up: Walking Babies Example\n\nqplot(x = babyMod$residuals, bins = 8)\n\n\nN: normality is satisfied; Z: Yes, centered at zero."
   }
 ]

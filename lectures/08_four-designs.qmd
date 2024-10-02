@@ -1,7 +1,7 @@
 ---
 title: "Four Desgins"
 author: Prof Randi Garcia, SDS 290
-date: February 22, 2024
+date: October 2, 2024
 format: 
   revealjs:
     scrollable: true
@@ -25,31 +25,20 @@ ds <- Diamonds %>%
 
 ## Announcements
 
--   HW4 due Friday 11:55p
+-   Working on HW3 grades
+-   HW4 due on Friday 
 -   Office hours (Bass 412)
-    -   Today cancelled due to Rally Day
-    -   Friday (tomorrow): 10:50a - 12:05p
+    -   Friday office hours cancelled
+    -   By appointment
 -   Where to get HW help
-    -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301.
-    -   Post questions to #homework4-questions channel on Slack!
+    -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z, Cindy, and Sarah can help with 290.
+    -   Post questions to [hw4-questions](https://smith.enterprise.slack.com/archives/C07PFFF2H62) Slack channel. 
 
 ## Agenda
 
 -   Warm up
--   Finish up multiple comparisons
 -   Four designs
--   MP1 topics time
-
-
-## HW4 Problem 5.59c and sampling error
-
-> **Question:** Explain why it's not sufficient to examine the four sample means, note that they all differ, and conclude that all races do have birth weight distributions that differ from each other.
-
-**Answer:** Because this is just one a sample from a population. If we collected another sample we would see slightly different mean birth weights for the four groups. We need to consider if the group differences we see in this sample are greater than the differences we would expect from sample to sample.
-
-## Notes on HW 4
-
--   5.70: Open ended Hawks `culmen`
+-   MP1 time
 
 ## Warm-up: Walking Babies Example
 
@@ -116,104 +105,104 @@ qplot(x = babyMod$residuals, bins = 8)
 
 N: normality is satisfied; Z: Yes, centered at zero.
 
-## Adjusting for Multiple Comparisons
+<!-- ## Adjusting for Multiple Comparisons -->
 
-When we do multiple significance tests (or construct multiple confidence intervals), our effective type I error rate is inflated. Most statisticians agree that we should adjust our type I error rate to account for our multiple tests, and control the **familywise** error rate.
+<!-- When we do multiple significance tests (or construct multiple confidence intervals), our effective type I error rate is inflated. Most statisticians agree that we should adjust our type I error rate to account for our multiple tests, and control the **familywise** error rate. -->
 
-Four methods for controlling the familywise :
+<!-- Four methods for controlling the familywise : -->
 
-1.  **Fisher Least Significant Difference (Fisher's LSD)**
-2.  Tukey Honest Significant Difference (Tukey's HSD)
-3.  Scheffe test
-4.  **The Bonferroni correction**
+<!-- 1.  **Fisher Least Significant Difference (Fisher's LSD)** -->
+<!-- 2.  Tukey Honest Significant Difference (Tukey's HSD) -->
+<!-- 3.  Scheffe test -->
+<!-- 4.  **The Bonferroni correction** -->
 
-## Fisher's LSD
+<!-- ## Fisher's LSD -->
 
-Fisher's LSD reasons that a pairwise difference is significant as long as it's larger than the margin of error for that pairwise comparison. Thee step process:
+<!-- Fisher's LSD reasons that a pairwise difference is significant as long as it's larger than the margin of error for that pairwise comparison. Thee step process: -->
 
--   **Step 1**: Is the omnibus ANOVA F-test significant? No $\longrightarrow$ Stop, Yes $\longrightarrow$ Step 2,
+<!-- -   **Step 1**: Is the omnibus ANOVA F-test significant? No $\longrightarrow$ Stop, Yes $\longrightarrow$ Step 2, -->
 
- 
+<!--   -->
 
--   **Step 2**: Find the least significant difference (LSD) for each pair:
+<!-- -   **Step 2**: Find the least significant difference (LSD) for each pair: -->
 
-$$LSD = t^*\cdot SD \sqrt{1/n_1+1/n_2}$$
+<!-- $$LSD = t^*\cdot SD \sqrt{1/n_1+1/n_2}$$ -->
 
--   Where $t^*$ is your critical $t$ for the $df_{error}$ and your level of confidence,
--   and $SD = \sqrt{MSE}$.
+<!-- -   Where $t^*$ is your critical $t$ for the $df_{error}$ and your level of confidence, -->
+<!-- -   and $SD = \sqrt{MSE}$. -->
 
- 
+<!--   -->
 
--   **Step 3**: Declare each difference of group means significant if the difference is as large as the LSD.
+<!-- -   **Step 3**: Declare each difference of group means significant if the difference is as large as the LSD. -->
 
-## Fisher's LSD
+<!-- ## Fisher's LSD -->
 
-For the sandwich ants.
+<!-- For the sandwich ants. -->
 
-```{r, include=FALSE}
-data("SandwichAnts")
+<!-- ```{r, include=FALSE} -->
+<!-- data("SandwichAnts") -->
 
-SandwichAnts %>%
-  group_by(Filling) %>%
-  summarise(n = n(),
-            m = mean(Ants),
-            sd = sd(Ants))
-```
+<!-- SandwichAnts %>% -->
+<!--   group_by(Filling) %>% -->
+<!--   summarise(n = n(), -->
+<!--             m = mean(Ants), -->
+<!--             sd = sd(Ants)) -->
+<!-- ``` -->
 
-```{r}
-mean_v = 34.625
-mean_h = 55.500
-mean_p = 40.375
+<!-- ```{r} -->
+<!-- mean_v = 34.625 -->
+<!-- mean_h = 55.500 -->
+<!-- mean_p = 40.375 -->
 
-MSE = 157.01 #from our ANOVA source table
-df_E = 45 #from our ANOVA source table
-t <- qt(.975, df_E) #for 95% CI
+<!-- MSE = 157.01 #from our ANOVA source table -->
+<!-- df_E = 45 #from our ANOVA source table -->
+<!-- t <- qt(.975, df_E) #for 95% CI -->
 
-n = 16 #this is a balance design!
-LSD = t*sqrt(MSE)*sqrt(1/n+1/n)
-LSD
-```
+<!-- n = 16 #this is a balance design! -->
+<!-- LSD = t*sqrt(MSE)*sqrt(1/n+1/n) -->
+<!-- LSD -->
+<!-- ``` -->
 
-## Fisher's LSD
+<!-- ## Fisher's LSD -->
 
-For the sandwich ants. Fisher's **LSD is 8.923**.
+<!-- For the sandwich ants. Fisher's **LSD is 8.923**. -->
 
-```{r}
-mean_h-mean_p
-mean_h-mean_v
-mean_p-mean_v
-```
+<!-- ```{r} -->
+<!-- mean_h-mean_p -->
+<!-- mean_h-mean_v -->
+<!-- mean_p-mean_v -->
+<!-- ``` -->
 
-Based on Fisher's LSD there are statistically significant differences between the number of ants on the ham and pickles filled sandwiches and both the peanut butter and Vegemite sandwiches, but not between the peanut butter and Vegemite sandwiches. Do ants like meat or pickles?!
+<!-- Based on Fisher's LSD there are statistically significant differences between the number of ants on the ham and pickles filled sandwiches and both the peanut butter and Vegemite sandwiches, but not between the peanut butter and Vegemite sandwiches. Do ants like meat or pickles?! -->
 
-## Bonferroni Correction
+<!-- ## Bonferroni Correction -->
 
-The bonferroni correction simply takes our type I error rate ($\alpha = .05$) and divides by the number of tests we're conducting. For sandwich ants it is 3. Here's the n choose k formula again for sandwich ants:
+<!-- The bonferroni correction simply takes our type I error rate ($\alpha = .05$) and divides by the number of tests we're conducting. For sandwich ants it is 3. Here's the n choose k formula again for sandwich ants: -->
 
-$${3 \choose 2} = \frac{3!}{2!(3-2)!}=3$$
+<!-- $${3 \choose 2} = \frac{3!}{2!(3-2)!}=3$$ -->
 
-```{r}
-#bonferroni correction
-.05/3
-```
+<!-- ```{r} -->
+<!-- #bonferroni correction -->
+<!-- .05/3 -->
+<!-- ``` -->
 
-We could conduct $t$-tests (or multiple regression!) for all pairs of conditions, but use an alpha of .0167 (instead of .05) to make your decision about rejecting the null hypothesis. Your $p$-value will need to be less than .0167 to reject the null hypothesis.
+<!-- We could conduct $t$-tests (or multiple regression!) for all pairs of conditions, but use an alpha of .0167 (instead of .05) to make your decision about rejecting the null hypothesis. Your $p$-value will need to be less than .0167 to reject the null hypothesis. -->
 
-## Using Multiple Regression
+<!-- ## Using Multiple Regression -->
 
-```{r}
-antsMod <- lm(Ants ~ Filling, data = SandwichAnts)
-summary(antsMod)
-```
+<!-- ```{r} -->
+<!-- antsMod <- lm(Ants ~ Filling, data = SandwichAnts) -->
+<!-- summary(antsMod) -->
+<!-- ``` -->
 
-## Using Multiple Regression
+<!-- ## Using Multiple Regression -->
 
-```{r, echo=FALSE}
-antsMod <- lm(Ants ~ Filling, data = SandwichAnts)
-summary(antsMod)
-```
+<!-- ```{r, echo=FALSE} -->
+<!-- antsMod <- lm(Ants ~ Filling, data = SandwichAnts) -->
+<!-- summary(antsMod) -->
+<!-- ``` -->
 
-Using multiple regression with a bonferroni correction applied, what do we conclude about the differences in ants between filling conditions? Which comparison is missing?
+<!-- Using multiple regression with a bonferroni correction applied, what do we conclude about the differences in ants between filling conditions? Which comparison is missing? -->
 
 ## Kelly's Hamster Study
 
