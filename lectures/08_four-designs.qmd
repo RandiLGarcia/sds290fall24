@@ -248,5 +248,5 @@ Design 4: Split Plot/Repeated Measures Design
 
 ## Time to work on MP1
 
--   Log in to [Qualtrics](smithcollege.qualtrics.com) and enter your Smith credentials.
+-   Log in to [Qualtrics](https://www.smith.edu/your-campus/offices-services/institutional-research/surveys) and enter your Smith credentials.
     -   I usually just Google "Smith Qualtrics"
