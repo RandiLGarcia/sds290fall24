@@ -126,8 +126,6 @@ Please read the specified sections *before* class that day.
 
 -   Mountain Day!
 
-:::  
-
 #### Wed, Oct 2
 
 -   Four basic designs
@@ -139,6 +137,8 @@ Please read the specified sections *before* class that day.
 -   **Office hours cancelled**, by appointment only
 -   Homework due today:
     -   **HW #4 due on today at 11:55p**
+
+::: 
 
 ## Week 6
 
@@ -161,7 +161,7 @@ Please read the specified sections *before* class that day.
 
 #### Fri, Oct 11
 
--   **Office hours**: 3:00p - 4:00p
+-   **Office hours cancelled**, by appointment only
 -   Homework due today:
     -   **MP1 Qualtrics survey due for pre-approval by 11:55p**
 
@@ -317,18 +317,18 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 3:00p - 4:00p  
 -   Homework due today:
     -   **MP2 Pre-approval due tonight 11:55p** (upload to Moodle)
+    -   [**HW #8 due today at 9:20a**](homework.html)
 
 ## Week 13
 
 #### Mon, Nov 25
 
--   MP2 Data Collection
--   Repeated measures designs (catch-up)
+-   **No Class**
+-   MP2 Data Collection (remotely)
 
 #### Tues, Nov 26
 
--   **Office hours**: 10:30a - 11:30a   
--   Cindy, Nora, Sarah **tutoring Sabin-Reed 301 7-9p**
+-   **Office hours**: No office hours   
 
 #### Wed, Nov 27
 
@@ -337,8 +337,6 @@ Please read the specified sections *before* class that day.
 #### Fri, Nov 29
 
 -   **Office hours**: No office hours
--   Homework due today:
-    -   [**HW #8 due today at 9:20a**](homework.html)
 
 ## Week 14
 

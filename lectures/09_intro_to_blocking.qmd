@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Blocking"
 author: Prof Randi Garcia, SDS 290
-date: February 27, 2024
+date: October 7, 2024
 format: 
   revealjs:
     scrollable: true
@@ -25,17 +25,17 @@ ds <- Diamonds %>%
 
 ## Announcements
 
+-   HW3 grades now posted
 -   HW4 being graded now
+-   Qualtrics surveys for MP1 due on Friday
 -   Office hours (Bass 412)
-    -   Thurs: 2:45p - 4:00p
-    -   Friday: 10:50a - 12:05p
--   Where to get MP1 help
-    -   Post questions to #mini-project1 channel on Slack!
-    -   Direct message me on Slack.
+    -   Tuesday 10:30a - 11:30a
+    -   Friday office hours cancelled (again)
+    -   By appointment
 
 ## MP1 Pre-Approval
 
-Your completed Qualtrics experiments are due for Pre-Approval by **Fri Mar 1 11:55p** on Moodle.
+Your completed Qualtrics experiments are due for Pre-Approval by **Fri Oct 11 11:59p** on Moodle.
 
 1.  Export your survey as a Word doc. Include the survey flow and any skip logic you used.
 2.  Upload the Word doc to Moodle.
@@ -53,7 +53,7 @@ Once you have completed any revisions and receive approval from me you can compl
 3.  [Download the data](https://www.qualtrics.com/support/survey-platform/data-and-analysis-module/data/download-data/export-data-overview/) and make sure it makes sense.
 4.  Zero out the [randomization counts](https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/standard-elements/randomizer/#EditingCounts) in the survey flow.
 5.  [Delete](https://www.qualtrics.com/support/survey-platform/data-and-analysis-module/data/recorded-responses/#DeletingResponses) all of the fake responses.
-6.  [Upgrade](https://www.qualtrics.com/support/survey-platform/sp-administration/coupon-codes/#UpgradingasanExistingUser) your Qualtrics account with the code: SDS290Spring2024.
+6.  [Upgrade](https://www.qualtrics.com/support/survey-platform/sp-administration/coupon-codes/#UpgradingasanExistingUser) your Qualtrics account with the code: SDS290Fall2024.
 7.  Publish/Activate your survey.
 8.  Get the [anonymous survey link](https://www.qualtrics.com/support/survey-platform/distributions-module/distributions-overview/)!
 
