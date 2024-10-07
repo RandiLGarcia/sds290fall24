@@ -96,18 +96,18 @@ This experiment is interested in the blood concentration of a drug after it has 
 
 ## Three Ways to Block
 
-1.  Sort units into similar groups
+1.  **Sort** units into similar groups
     -   Albino rats
-2.  Subdivide larger chunks of material into sets of smaller pieces
+2.  **Subdivide** larger chunks of material into sets of smaller pieces
     -   Mealybug trees
-3.  Reuse subjects or material in each of several times slots
+3.  **Reuse** subjects or material in each of several times slots
     -   Drug study
 
-## Complete Block Design
+## Randomized Complete Block Design
 
 -   Experimental material are separated into groups (or reused) to create similar units
--   Then each unit within a block is then is assigned one level of the factor of interest
--   "Complete Block" means that every block x treatment combination is tested
+-   Then each unit within a block is then is randomly assigned one level of the factor of interest
+-   "Complete" block means that every block x treatment combination has a measurement on the response
 
 ## Inappropriate Insects
 
