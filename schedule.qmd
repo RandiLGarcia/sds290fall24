@@ -158,10 +158,11 @@ Please read the specified sections *before* class that day.
 -   Fitting the model for a block design
 -   Homework due today:
     -   Read Ch **Stat2** Ch 6.3
+-   **Office hours**: Thursday 4p-5p and by appointment
 
 #### Fri, Oct 11
 
--   **Office hours cancelled**, by appointment only
+-   **Office hours cancelled**
 -   Homework due today:
     -   **MP1 Qualtrics survey due for pre-approval by 11:55p**
 

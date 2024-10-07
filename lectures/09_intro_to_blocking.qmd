@@ -31,7 +31,7 @@ ds <- Diamonds %>%
 -   Office hours (Bass 412)
     -   Tuesday 10:30a - 11:30a
     -   Friday office hours cancelled (again)
-    -   By appointment
+    -   Thursday 4p-5p or by appointment
 
 ## MP1 Pre-Approval
 
