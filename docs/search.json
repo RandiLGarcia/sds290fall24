@@ -4653,5 +4653,12 @@
     "title": "Four Desgins",
     "section": "Warm-up: Walking Babies Example",
     "text": "Warm-up: Walking Babies Example\n\nqplot(x = babyMod$residuals, bins = 8)\n\n\nN: normality is satisfied; Z: Yes, centered at zero."
+  },
+  {
+    "objectID": "lectures/09_intro_to_blocking.html#randomized-complete-block-design",
+    "href": "lectures/09_intro_to_blocking.html#randomized-complete-block-design",
+    "title": "Introduction to Blocking",
+    "section": "Randomized Complete Block Design",
+    "text": "Randomized Complete Block Design\n\nExperimental material are separated into groups (or reused) to create similar units\nThen each unit within a block is then is randomly assigned one level of the factor of interest\n“Complete” block means that every block x treatment combination has a measurement on the response"
   }
 ]
