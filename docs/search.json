@@ -2013,7 +2013,7 @@
     "href": "lectures/09_intro_to_blocking.html#complete-block-design",
     "title": "Introduction to Blocking",
     "section": "Complete Block Design",
-    "text": "Complete Block Design\n\nExperimental material are separated into groups (or reused) to create similar units\nThen each unit within a block is then is assigned one level of the factor of interest\n“Complete Block” means that every block x treatment combination is tested"
+    "text": "Complete Block Design\n\nExperimental material are subdivided, separated into groups, or reused to create similar units.\nEach unit within a block represents one level of the factor of interest (no random assignment).\nThe factor of interest is an observational (not experimental) factor.\n“Complete” block means that every block x treatment combination has a measurement on the response."
   },
   {
     "objectID": "lectures/09_intro_to_blocking.html#inappropriate-insects",
@@ -4659,6 +4659,6 @@
     "href": "lectures/09_intro_to_blocking.html#randomized-complete-block-design",
     "title": "Introduction to Blocking",
     "section": "Randomized Complete Block Design",
-    "text": "Randomized Complete Block Design\n\nExperimental material are separated into groups (or reused) to create similar units\nThen each unit within a block is then is randomly assigned one level of the factor of interest\n“Complete” block means that every block x treatment combination has a measurement on the response"
+    "text": "Randomized Complete Block Design\n\nExperimental material are subdivided, separated into groups, or reused to create similar units.\nThen each unit within a block is then is randomly assigned one level of the factor of interest.\n“Complete” block means that every block x treatment combination has a measurement on the response."
   }
 ]
