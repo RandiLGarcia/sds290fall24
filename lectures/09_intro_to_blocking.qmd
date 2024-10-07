@@ -103,17 +103,18 @@ This experiment is interested in the blood concentration of a drug after it has 
 3.  **Reuse** subjects or material in each of several times slots
     -   Drug study
 
-## Randomized Complete Block Design
 
--   Experimental material are subdivided, separated into groups, or reused to create similar units.
--   Then each unit within a block is then is randomly assigned one level of the factor of interest.
--   "Complete" block means that every block x treatment combination has a measurement on the response.
-
-## Complete Block Design
+## Complete Block Design (observational)
 
 -   Experimental material are subdivided, separated into groups, or reused to create similar units.
 -   Each unit within a block represents one level of the factor of interest (no random assignment).
 -   The factor of interest is an observational (not experimental) factor.
+-   "Complete" block means that every block x treatment combination has a measurement on the response.
+
+## Randomized Complete Block Design (experimental)
+
+-   Experimental material are subdivided, separated into groups, or reused to create similar units.
+-   Then each unit within a block is then is randomly assigned one level of the factor of interest.
 -   "Complete" block means that every block x treatment combination has a measurement on the response.
 
 ## Inappropriate Insects
