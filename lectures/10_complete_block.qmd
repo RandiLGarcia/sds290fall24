@@ -128,7 +128,7 @@ We can see that Tree 2's infestation was very responsive to the treatments where
 
 ## Formal ANOVA for Complete Block Design
 
-$${y}_{ijk}={\mu}+{\tau}_{i}+{\beta}_{j}+{e}_{ijk}$$
+$${y}_{ij}={\mu}+{\tau}_{i}+{\beta}_{j}+{e}_{ij}$$
 
 |    Source |                                         SS                                          |      df      |             MS              |              F              |
 |--------------:|:-------------:|:-------------:|:-------------:|:-------------:|
