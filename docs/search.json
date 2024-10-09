@@ -2104,7 +2104,7 @@
     "href": "lectures/10_complete_block.html#agenda",
     "title": "Analysis of the Complete Block Design",
     "section": "Agenda",
-    "text": "Agenda\n\nComplete Block Design\nTime for MP1"
+    "text": "Agenda\n\nComplete Block Design"
   },
   {
     "objectID": "lectures/10_complete_block.html#mp1-discussions",
@@ -2146,7 +2146,7 @@
     "href": "lectures/10_complete_block.html#side-by-side-dotplot",
     "title": "Analysis of the Complete Block Design",
     "section": "Side-by-side dotplot",
-    "text": "Side-by-side dotplot\nWe add our blocking factor as color and also as group.\n\nqplot(x = treatment, y = bugs_change, color = tree, group = tree, data = mealybugs) + \n  geom_line()\n\n\nWe can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not."
+    "text": "Side-by-side dotplot\nWe add our blocking factor as color and also as group.\n\nggplot(mealybugs, aes(x = treatment, y = bugs_change, color = tree, group = tree)) + \n  geom_line()\n\n\nWe can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not."
   },
   {
     "objectID": "lectures/10_complete_block.html#formal-anova-for-complete-block-design",
@@ -2188,7 +2188,7 @@
     "href": "lectures/10_complete_block.html#anscombe-block-plots",
     "title": "Analysis of the Complete Block Design",
     "section": "Anscombe Block Plots",
-    "text": "Anscombe Block Plots\n\nScatterplots of two levels of the factor of interest.\nUsed for\n\nexploring the data, and\nassessing the additivity (A) condition."
+    "text": "Anscombe Block Plots\n\nScatterplots of two levels (e.g., level 1 vs. level 2) of the factor of interest.\nUsed for\n\nexploring the data, and\nassessing the additivity (A) condition.\n\nIf we compare a spore observation to an oil observation from the same tree, the only difference should be the difference in treatment effects.\nThus, the line-of-best fit should have a slope of approximately 1."
   },
   {
     "objectID": "lectures/10_complete_block.html#scatterplots",

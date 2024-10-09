@@ -49,7 +49,6 @@ Once you have completed any revisions and receive approval from me you can compl
 ## Agenda
 
 1.  Complete Block Design
-2.  Time for MP1
 
 ## Inappropriate Insects
 
@@ -89,7 +88,7 @@ Draw the factor diagram.
 We add our blocking factor as `color` and also as `group`.
 
 ```{r}
-qplot(x = treatment, y = bugs_change, color = tree, group = tree, data = mealybugs) + 
+ggplot(mealybugs, aes(x = treatment, y = bugs_change, color = tree, group = tree)) + 
   geom_line()
 ```
 
@@ -196,10 +195,12 @@ mealybugs_wide
 
 ## Anscombe Block Plots
 
--   Scatterplots of two levels of the factor of interest.
+-   Scatterplots of two levels (e.g., level 1 vs. level 2) of the factor of interest.
 -   Used for
     -   exploring the data, and
     -   assessing the **additivity (A)** condition.
+-   If we compare a spore observation to an oil observation from the same tree, the only difference should be the difference in treatment effects.
+-   Thus, the line-of-best fit should have a slope of approximately 1. 
 
 ## Informal Analysis Structure
 

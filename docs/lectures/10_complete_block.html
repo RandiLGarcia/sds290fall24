@@ -447,7 +447,6 @@ Prof Randi Garcia, SDS 290
 <h2>Agenda</h2>
 <ol type="1">
 <li>Complete Block Design</li>
-<li>Time for MP1</li>
 </ol>
 </section>
 <section id="inappropriate-insects" class="slide level2">
@@ -513,7 +512,7 @@ Prof Randi Garcia, SDS 290
 <h2>Side-by-side dotplot</h2>
 <p>We add our blocking factor as <code>color</code> and also as <code>group</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> bugs_change, <span class="at">color =</span> tree, <span class="at">group =</span> tree, <span class="at">data =</span> mealybugs) <span class="sc">+</span> </span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">ggplot</span>(mealybugs, <span class="fu">aes</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> bugs_change, <span class="at">color =</span> tree, <span class="at">group =</span> tree)) <span class="sc">+</span> </span>
 <span id="cb1-2"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
@@ -675,12 +674,14 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="anscombe-block-plots" class="slide level2">
 <h2>Anscombe Block Plots</h2>
 <ul>
-<li>Scatterplots of two levels of the factor of interest.</li>
+<li>Scatterplots of two levels (e.g., level 1 vs.&nbsp;level 2) of the factor of interest.</li>
 <li>Used for
 <ul>
 <li>exploring the data, and</li>
 <li>assessing the <strong>additivity (A)</strong> condition.</li>
 </ul></li>
+<li>If we compare a spore observation to an oil observation from the same tree, the only difference should be the difference in treatment effects.</li>
+<li>Thus, the line-of-best fit should have a slope of approximately 1.</li>
 </ul>
 </section>
 <section id="informal-analysis-structure-1" class="slide level2">
