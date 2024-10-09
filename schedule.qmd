@@ -207,7 +207,10 @@ Please read the specified sections *before* class that day.
 
 #### Fri, Oct 25
 
--   **Exam 1 - Self-Scheduled** Friday-Sunday
+-   **Exam 1 - Self-Scheduled** McConnell Foyer ([more information](https://www.science.smith.edu/self-scheduled-exams/))
+    -   Friday 10/25 3-6p
+    -   Saturday 10/26 12-6p 
+    -   Sunday 10/27 12-6p
 -   **Office hours**: 3:00p - 4:00p
 -   Homework due today:
     -   No homework
