@@ -1,7 +1,7 @@
 ---
 title: "Analysis of the Complete Block Design"
 author: Prof Randi Garcia, SDS 290
-date: February 29, 2024
+date: October 9, 2024
 format: 
   revealjs:
     scrollable: true
@@ -15,19 +15,16 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
 ## Announcements
 
 -   Grades posted for HW4
--   HW5 is now posted, due Fri Mar 8
+-   HW5 posted on Friday
 -   MP1 pre-approval due Friday 11:55p
-    -   Please submit as soon as you can
 -   Office hours (Bass 412)
-    -   Today: 2:45p - 4:00p
-    -   Friday: 10:50a - 12:05p
--   Where to get MP1 help
-    -   Post questions to #mini-project1 channel on Slack!
-    -   Direct message me on Slack.
+    -   Tuesday 10:30a - 11:30a
+    -   Friday office hours cancelled (again)
+    -   Thursday 4p-5p or by appointment
 
 ## MP1 Pre-Approval
 
-Your completed Qualtrics experiments are due for Pre-Approval by **Fri Mar 1 11:55p**.
+Your completed Qualtrics experiments are due for Pre-Approval by **Fri Oct 11 11:59p**.
 
 1.  Export your survey as a Word doc. Include the survey flow and any skip logic you used.
 2.  Upload the Word doc to Moodle.
@@ -45,30 +42,18 @@ Once you have completed any revisions and receive approval from me you can compl
 3.  [Download the data](https://www.qualtrics.com/support/survey-platform/data-and-analysis-module/data/download-data/export-data-overview/) and make sure it makes sense.
 4.  Zero out the [randomization counts](https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/standard-elements/randomizer/#EditingCounts) in the survey flow.
 5.  [Delete](https://www.qualtrics.com/support/survey-platform/data-and-analysis-module/data/recorded-responses/#DeletingResponses) all of the fake responses.
-6.  [Upgrade](https://www.qualtrics.com/support/survey-platform/sp-administration/coupon-codes/#UpgradingasanExistingUser) your Qualtrics account with the code **SDS290Spring2024**.
+6.  [Upgrade](https://www.qualtrics.com/support/survey-platform/sp-administration/coupon-codes/#UpgradingasanExistingUser) your Qualtrics account with the code **SDS290Fall2024**.
 7.  Activate your survey.
 8.  Get the [anonymous survey link](https://www.qualtrics.com/support/survey-platform/distributions-module/distributions-overview/)!
 
 ## Agenda
 
-1.  Discuss your MP1 ideas in groups!
-2.  Complete Block design
-
-## MP1 discussions
-
--   Groups of about four.
--   Take turns describing your plan for MP1.
--   Help your group mates think about what features of their stimuli they'll want to try to control ("hold constant") across conditions.
+1.  Complete Block Design
+2.  Time for MP1
 
 ## Inappropriate Insects
 
 Modern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. Three branches are randomly selected from each tree, and 3 cm by 3 cm patches are marked on each branch. The number of mealybugs on the patch is counted. The three treatments then get randomly assigned to the three branches for each tree. After three days the mealybugs are counted again. The change in number of mealybugs is computed ($before-after$).
-
-## Complete Block Design
-
--   Experimental material are separated into groups (or reused) to create similar units
--   Then each unit within a block is then is assigned one level of the factor of interest
--   "Complete Block" means that every block x treatment combination is tested
 
 ## Inappropriate Insects
 
@@ -97,7 +82,7 @@ Draw the factor diagram.
 -   **Main effect** refers to the effect for a single factor. For a block design there are two sets of main effects, for blocks and for treatments (e.g., *Trees* and *Treatment*).
 -   The two sets of main effects are called **additive** if each treatment adds or subtracts the same amount to the response variable for all blocks.
 -   A **factor of interest** is *Treatment*, which is directly related to the goal of the study. A **nuisance factor** is *Trees* which is included as a factor only because it is a source of variation and its inclusion will reduce the sum of squares for error (residuals).
--   Typically, factors of interest are **fixed**, which means their effects are an unknown constant. Nuisance factors are **random**, which means their effects behave according to chance (the levels themselves are samples from a population).
+<!-- -   Typically, factors of interest are **fixed**, which means their effects are an unknown constant. Nuisance factors are **random**, which means their effects behave according to chance (the levels themselves are samples from a population). -->
 
 ## Side-by-side dotplot
 
@@ -195,6 +180,20 @@ mealybugs_wide <- mealybugs %>%
 mealybugs_wide
 ```
 
+## How to check assumptions
+
+-   C. **Constant effects** -- *think* about whether it is reasonable.
+
+-   A. **Additive effects** -- check Anscombe block plots.
+
+-   S. **Same standard deviations** -- is the biggest SD less than two times as large as the smallest? check residual versus fitted plot: *does the plot thicken*?
+
+-   I. **Independent residuals** -- *think* about whether it is reasonable.
+
+-   N. **Normally distributed residuals** -- construct a histogram or normal probability plot of residuals.
+
+-   Z. **Zero mean residuals** -- construct a histogram or normal probability plot of residuals.
+
 ## Anscombe Block Plots
 
 -   Scatterplots of two levels of the factor of interest.
@@ -202,7 +201,16 @@ mealybugs_wide
     -   exploring the data, and
     -   assessing the **additivity (A)** condition.
 
-## Scatterplots
+## Informal Analysis Structure
+
+```{r}
+mealybugs_wide <- mealybugs %>%
+  pivot_wider(names_from = treatment, values_from = bugs_change)
+
+mealybugs_wide
+```
+
+## Anscombe Block Plots
 
 ```{r}
 qplot(x = spores, y = oil, data = mealybugs_wide) +
@@ -210,7 +218,7 @@ qplot(x = spores, y = oil, data = mealybugs_wide) +
   geom_smooth(method = "lm", se = 0, color = "orange")
 ```
 
-## Scatterplots
+## Anscombe Block Plots
 
 ```{r}
 qplot(x = spores, y = water, data = mealybugs_wide) +
@@ -218,10 +226,94 @@ qplot(x = spores, y = water, data = mealybugs_wide) +
   geom_smooth(method = "lm", se = 0, color = "orange")
 ```
 
-## Scatterplots
+## Anscombe Block Plots
 
 ```{r}
 qplot(x = oil, y = water, data = mealybugs_wide) +
   geom_abline(intercept = 4.4 - 13.6, slope = 1, color = "blue", linetype = 2) + 
   geom_smooth(method = "lm", se = 0, color = "orange")
+```
+
+## Assessing S Condition
+
+```{r}
+mealybugs %>%
+  group_by(treatment) %>%
+  summarize(m = mean(bugs_change),
+            sd = sd(bugs_change))
+
+mealybugs %>%
+  group_by(treatment) %>%
+  summarize(m = mean(bugs_change),
+            sd = sd(bugs_change)) %>%
+  summarize(max(sd)/min(sd)) #calculating using min and max function
+```
+
+## Assessing S Condition
+
+$$\hat{{y}}_{ij}={\mu}+{\tau}_{i}+{\beta}_{j}$$
+
+-   Where $\hat{{y}}_{ij}$ are the **fitted values**, that is, everything but the ticket at the end of the assembly line.
+
+```{r}
+plot(mod, which = 1)
+```
+
+If the **plot thickens**, that is, has a patterning that looks like a funnel, then the S condition is not satisfied.
+
+## Assessing N Condition
+
+```{r}
+plot(mod, which = 2)
+```
+
+We're looking for residuals to be on the line. If so, then we can say they are normally distributed.
+
+## Assessing the Z Condition
+
+```{r}
+qplot(mod$residuals, bins = 6)
+```
+
+If the histogram centered at zero? Then the Z condition is satisfied.
+
+## Sleeping Shrews
+
+Assess the CA-SINZ conditions for the `SleepingShrews` dataset from example 6.7b in your textbook.
+
+```{r}
+library(Stat2Data)
+data("SleepingShrews")
+
+#You'll need the WIDE dataset for the Anscombe block plots
+SleepingShrews_wide <- SleepingShrews %>%
+  select(-ID) %>%
+  pivot_wider(names_from = Phase, values_from = Rate)
+```
+
+## Testing Condition for Sleeping Shrews Data
+
+```{r, eval = FALSE}
+qplot(x = DSW, y = LSW, data = SleepingShrews_wide) +
+  geom_abline(intercept = 2, slope = 1, color = "blue", linetype = 2) +   
+  geom_smooth(method = "lm", se = 0, color = "orange") #A condition
+
+qplot(x = DSW, y = REM, data = SleepingShrews_wide) +
+  geom_abline(intercept = 2, slope = 1, color = "blue", linetype = 2) +   
+  geom_smooth(method = "lm", se = 0, color = "orange") #A condition
+
+qplot(x = LSW, y = REM, data = SleepingShrews_wide) +
+  geom_abline(intercept = -2, slope = 1, color = "blue", linetype = 2) +   
+  geom_smooth(method = "lm", se = 0, color = "orange") #A condition
+
+SleepingShrews %>%
+  group_by(Phase) %>%
+  summarize(m = mean(Rate),
+            sd = sd(Rate)) %>%
+  summarize(max(sd)/min(sd)) #S condition
+
+mod <- lm(Rate ~ Phase + Shrew, data = SleepingShrews)
+plot(mod, which = 1) #S condition
+plot(mod, which = 2) #N condition
+qplot(mod$residuals, bins = 6) #N and Z conditions
 ```

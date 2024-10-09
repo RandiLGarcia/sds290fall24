@@ -8,11 +8,11 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Prof Randi Garcia, SDS 290">
-  <meta name="dcterms.date" content="2024-02-29">
-  <title>SDS 290 - Spring 2024 - Analysis of the Complete Block Design</title>
+  <meta name="dcterms.date" content="2024-10-09">
+  <title>SDS 290 - Fall 2024 - Analysis of the Complete Block Design</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -222,7 +222,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -402,39 +403,32 @@ Prof Randi Garcia, SDS 290
 </div>
 </div>
 
-  <p class="date">2024-02-29</p>
+  <p class="date">2024-10-09</p>
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
 <li>Grades posted for HW4</li>
-<li>HW5 is now posted, due Fri Mar 8</li>
-<li>MP1 pre-approval due Friday 11:55p
-<ul>
-<li>Please submit as soon as you can</li>
-</ul></li>
+<li>HW5 posted on Friday</li>
+<li>MP1 pre-approval due Friday 11:55p</li>
 <li>Office hours (Bass 412)
 <ul>
-<li>Today: 2:45p - 4:00p</li>
-<li>Friday: 10:50a - 12:05p</li>
-</ul></li>
-<li>Where to get MP1 help
-<ul>
-<li>Post questions to #mini-project1 channel on Slack!</li>
-<li>Direct message me on Slack.</li>
+<li>Tuesday 10:30a - 11:30a</li>
+<li>Friday office hours cancelled (again)</li>
+<li>Thursday 4p-5p or by appointment</li>
 </ul></li>
 </ul>
 </section>
-<section id="mp1-pre-approval" class="slide level2">
+<section id="mp1-pre-approval" class="slide level2 scrollable">
 <h2>MP1 Pre-Approval</h2>
-<p>Your completed Qualtrics experiments are due for Pre-Approval by <strong>Fri Mar 1 11:55p</strong>.</p>
+<p>Your completed Qualtrics experiments are due for Pre-Approval by <strong>Fri Oct 11 11:59p</strong>.</p>
 <ol type="1">
 <li>Export your survey as a Word doc. Include the survey flow and any skip logic you used.</li>
 <li>Upload the Word doc to Moodle.</li>
 </ol>
 <p>I should be able to see any images you used or links to media. I’ll be paying particular attention to your consent form. It’s not unusual for me to ask for revisions before you launch your study.</p>
 </section>
-<section id="next-steps" class="slide level2">
+<section id="next-steps" class="slide level2 scrollable">
 <h2>Next steps:</h2>
 <p>I will give you approval or revisions via Slack direct messages. Watch out for those!</p>
 <p>Once you have completed any revisions and receive approval from me you can complete the following <strong>checklist</strong> and then share your anonymous survey link.</p>
@@ -444,37 +438,21 @@ Prof Randi Garcia, SDS 290
 <li><a href="https://www.qualtrics.com/support/survey-platform/data-and-analysis-module/data/download-data/export-data-overview/">Download the data</a> and make sure it makes sense.</li>
 <li>Zero out the <a href="https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/standard-elements/randomizer/#EditingCounts">randomization counts</a> in the survey flow.</li>
 <li><a href="https://www.qualtrics.com/support/survey-platform/data-and-analysis-module/data/recorded-responses/#DeletingResponses">Delete</a> all of the fake responses.</li>
-<li><a href="https://www.qualtrics.com/support/survey-platform/sp-administration/coupon-codes/#UpgradingasanExistingUser">Upgrade</a> your Qualtrics account with the code <strong>SDS290Spring2024</strong>.</li>
+<li><a href="https://www.qualtrics.com/support/survey-platform/sp-administration/coupon-codes/#UpgradingasanExistingUser">Upgrade</a> your Qualtrics account with the code <strong>SDS290Fall2024</strong>.</li>
 <li>Activate your survey.</li>
 <li>Get the <a href="https://www.qualtrics.com/support/survey-platform/distributions-module/distributions-overview/">anonymous survey link</a>!</li>
 </ol>
 </section>
-<section id="agenda" class="slide level2">
+<section id="agenda" class="slide level2 scrollable">
 <h2>Agenda</h2>
 <ol type="1">
-<li>Discuss your MP1 ideas in groups!</li>
-<li>Complete Block design</li>
+<li>Complete Block Design</li>
+<li>Time for MP1</li>
 </ol>
-</section>
-<section id="mp1-discussions" class="slide level2">
-<h2>MP1 discussions</h2>
-<ul>
-<li>Groups of about four.</li>
-<li>Take turns describing your plan for MP1.</li>
-<li>Help your group mates think about what features of their stimuli they’ll want to try to control (“hold constant”) across conditions.</li>
-</ul>
 </section>
 <section id="inappropriate-insects" class="slide level2">
 <h2>Inappropriate Insects</h2>
 <p>Modern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. Three branches are randomly selected from each tree, and 3 cm by 3 cm patches are marked on each branch. The number of mealybugs on the patch is counted. The three treatments then get randomly assigned to the three branches for each tree. After three days the mealybugs are counted again. The change in number of mealybugs is computed (<span class="math inline">\(before-after\)</span>).</p>
-</section>
-<section id="complete-block-design" class="slide level2">
-<h2>Complete Block Design</h2>
-<ul>
-<li>Experimental material are separated into groups (or reused) to create similar units</li>
-<li>Then each unit within a block is then is assigned one level of the factor of interest</li>
-<li>“Complete Block” means that every block x treatment combination is tested</li>
-</ul>
 </section>
 <section id="inappropriate-insects-1" class="slide level2">
 <h2>Inappropriate Insects</h2>
@@ -528,16 +506,15 @@ Prof Randi Garcia, SDS 290
 <li>The two factors <em>Trees</em> and <em>Treatment</em> are <strong>crossed</strong>. This means that we collect data on all combinations of <em>Trees</em> and <em>Treatment</em>. A <strong>cell</strong> is a particular combination.</li>
 <li><strong>Main effect</strong> refers to the effect for a single factor. For a block design there are two sets of main effects, for blocks and for treatments (e.g., <em>Trees</em> and <em>Treatment</em>).</li>
 <li>The two sets of main effects are called <strong>additive</strong> if each treatment adds or subtracts the same amount to the response variable for all blocks.</li>
-<li>A <strong>factor of interest</strong> is <em>Treatment</em>, which is directly related to the goal of the study. A <strong>nuisance factor</strong> is <em>Trees</em> which is included as a factor only because it is a source of variation and its inclusion will reduce the sum of squares for error (residuals).</li>
-<li>Typically, factors of interest are <strong>fixed</strong>, which means their effects are an unknown constant. Nuisance factors are <strong>random</strong>, which means their effects behave according to chance (the levels themselves are samples from a population).</li>
+<li>A <strong>factor of interest</strong> is <em>Treatment</em>, which is directly related to the goal of the study. A <strong>nuisance factor</strong> is <em>Trees</em> which is included as a factor only because it is a source of variation and its inclusion will reduce the sum of squares for error (residuals). <!-- -   Typically, factors of interest are **fixed**, which means their effects are an unknown constant. Nuisance factors are **random**, which means their effects behave according to chance (the levels themselves are samples from a population). --></li>
 </ul>
 </section>
 <section id="side-by-side-dotplot" class="slide level2">
 <h2>Side-by-side dotplot</h2>
 <p>We add our blocking factor as <code>color</code> and also as <code>group</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> bugs_change, <span class="at">color =</span> tree, <span class="at">group =</span> tree, <span class="at">data =</span> mealybugs) <span class="sc">+</span> </span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> bugs_change, <span class="at">color =</span> tree, <span class="at">group =</span> tree, <span class="at">data =</span> mealybugs) <span class="sc">+</span> </span>
+<span id="cb1-2"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="10_complete_block_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><p>We can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not.</p>
@@ -606,7 +583,7 @@ Prof Randi Garcia, SDS 290
 <section id="data-analysis-structure" class="slide level2">
 <h2>Data Analysis Structure</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>mealybugs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>mealybugs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    tree treatment bugs_change
 1  tree1     water          -9
@@ -630,9 +607,9 @@ Prof Randi Garcia, SDS 290
 <section id="formal-anova" class="slide level2">
 <h2>Formal ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
-<span id="cb4-2"><a href="#cb4-2"></a></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -650,9 +627,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="formal-anova-1" class="slide level2">
 <h2>Formal ANOVA</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
-<span id="cb6-2"><a href="#cb6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -670,10 +647,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="informal-analysis-structure" class="slide level2">
 <h2>Informal Analysis Structure</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>mealybugs_wide <span class="ot">&lt;-</span> mealybugs <span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">spread</span>(treatment, bugs_change)</span>
-<span id="cb8-3"><a href="#cb8-3"></a></span>
-<span id="cb8-4"><a href="#cb8-4"></a>mealybugs_wide</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>mealybugs_wide <span class="ot">&lt;-</span> mealybugs <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">spread</span>(treatment, bugs_change)</span>
+<span id="cb8-3"><a></a></span>
+<span id="cb8-4"><a></a>mealybugs_wide</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   tree oil spores water
 1 tree1   4     -4    -9
@@ -683,6 +660,17 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 5 tree5   7     11    -6</code></pre>
 </div>
 </div>
+</section>
+<section id="how-to-check-assumptions" class="slide level2">
+<h2>How to check assumptions</h2>
+<ul>
+<li><p>C. <strong>Constant effects</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>A. <strong>Additive effects</strong> – check Anscombe block plots.</p></li>
+<li><p>S. <strong>Same standard deviations</strong> – is the biggest SD less than two times as large as the smallest? check residual versus fitted plot: <em>does the plot thicken</em>?</p></li>
+<li><p>I. <strong>Independent residuals</strong> – <em>think</em> about whether it is reasonable.</p></li>
+<li><p>N. <strong>Normally distributed residuals</strong> – construct a histogram or normal probability plot of residuals.</p></li>
+<li><p>Z. <strong>Zero mean residuals</strong> – construct a histogram or normal probability plot of residuals.</p></li>
+</ul>
 </section>
 <section id="anscombe-block-plots" class="slide level2">
 <h2>Anscombe Block Plots</h2>
@@ -695,35 +683,152 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </ul></li>
 </ul>
 </section>
-<section id="scatterplots" class="slide level2">
-<h2>Scatterplots</h2>
+<section id="informal-analysis-structure-1" class="slide level2">
+<h2>Informal Analysis Structure</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> spores, <span class="at">y =</span> oil, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">13.6-7.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>mealybugs_wide <span class="ot">&lt;-</span> mealybugs <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> treatment, <span class="at">values_from =</span> bugs_change)</span>
+<span id="cb10-3"><a></a></span>
+<span id="cb10-4"><a></a>mealybugs_wide</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 4
+  tree  water spores   oil
+  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+1 tree1    -9     -4     4
+2 tree2    18     29    29
+3 tree3    10      4    14
+4 tree4     9     -2    14
+5 tree5    -6     11     7</code></pre>
 </div>
-<img data-src="10_complete_block_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
-<section id="scatterplots-1" class="slide level2">
-<h2>Scatterplots</h2>
+</div>
+</section>
+<section id="anscombe-block-plots-1" class="slide level2">
+<h2>Anscombe Block Plots</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> spores, <span class="at">y =</span> water, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">4.4</span> <span class="sc">-</span> <span class="fl">13.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> spores, <span class="at">y =</span> oil, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
+<span id="cb12-2"><a></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">13.6-7.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb12-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="10_complete_block_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
-<section id="scatterplots-2" class="slide level2">
-<h2>Scatterplots</h2>
+<section id="anscombe-block-plots-2" class="slide level2">
+<h2>Anscombe Block Plots</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">qplot</span>(<span class="at">x =</span> oil, <span class="at">y =</span> water, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">4.4</span> <span class="sc">-</span> <span class="fl">13.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> spores, <span class="at">y =</span> water, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">4.4</span> <span class="sc">-</span> <span class="fl">13.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb13-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
+<img data-src="10_complete_block_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="anscombe-block-plots-3" class="slide level2">
+<h2>Anscombe Block Plots</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> oil, <span class="at">y =</span> water, <span class="at">data =</span> mealybugs_wide) <span class="sc">+</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">4.4</span> <span class="sc">-</span> <span class="fl">13.6</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb14-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-<img data-src="10_complete_block_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"><div class="footer footer-default">
+</div>
+<img data-src="10_complete_block_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="assessing-s-condition" class="slide level2">
+<h2>Assessing S Condition</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>mealybugs <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a></a>  <span class="fu">group_by</span>(treatment) <span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">mean</span>(bugs_change),</span>
+<span id="cb15-4"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(bugs_change))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  treatment     m    sd
+  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;
+1 oil        13.6  9.66
+2 spores      7.6 13.3 
+3 water       4.4 11.5 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>mealybugs <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a></a>  <span class="fu">group_by</span>(treatment) <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">mean</span>(bugs_change),</span>
+<span id="cb17-4"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(bugs_change)) <span class="sc">%&gt;%</span></span>
+<span id="cb17-5"><a></a>  <span class="fu">summarize</span>(<span class="fu">max</span>(sd)<span class="sc">/</span><span class="fu">min</span>(sd)) <span class="co">#calculating using min and max function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  `max(sd)/min(sd)`
+              &lt;dbl&gt;
+1              1.38</code></pre>
+</div>
+</div>
+</section>
+<section id="assessing-s-condition-1" class="slide level2">
+<h2>Assessing S Condition</h2>
+<p><span class="math display">\[\hat{{y}}_{ij}={\mu}+{\tau}_{i}+{\beta}_{j}\]</span></p>
+<ul>
+<li>Where <span class="math inline">\(\hat{{y}}_{ij}\)</span> are the <strong>fitted values</strong>, that is, everything but the ticket at the end of the assembly line.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">plot</span>(mod, <span class="at">which =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
+</div>
+<img data-src="10_complete_block_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"><p>If the <strong>plot thickens</strong>, that is, has a patterning that looks like a funnel, then the S condition is not satisfied.</p>
+</section>
+<section id="assessing-n-condition" class="slide level2">
+<h2>Assessing N Condition</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">plot</span>(mod, <span class="at">which =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="10_complete_block_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"><p>We’re looking for residuals to be on the line. If so, then we can say they are normally distributed.</p>
+</section>
+<section id="assessing-the-z-condition" class="slide level2">
+<h2>Assessing the Z Condition</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">qplot</span>(mod<span class="sc">$</span>residuals, <span class="at">bins =</span> <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="10_complete_block_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"><p>If the histogram centered at zero? Then the Z condition is satisfied.</p>
+</section>
+<section id="sleeping-shrews" class="slide level2">
+<h2>Sleeping Shrews</h2>
+<p>Assess the CA-SINZ conditions for the <code>SleepingShrews</code> dataset from example 6.7b in your textbook.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">library</span>(Stat2Data)</span>
+<span id="cb22-2"><a></a><span class="fu">data</span>(<span class="st">"SleepingShrews"</span>)</span>
+<span id="cb22-3"><a></a></span>
+<span id="cb22-4"><a></a><span class="co">#You'll need the WIDE dataset for the Anscombe block plots</span></span>
+<span id="cb22-5"><a></a>SleepingShrews_wide <span class="ot">&lt;-</span> SleepingShrews <span class="sc">%&gt;%</span></span>
+<span id="cb22-6"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>ID) <span class="sc">%&gt;%</span></span>
+<span id="cb22-7"><a></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Phase, <span class="at">values_from =</span> Rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="testing-condition-for-sleeping-shrews-data" class="slide level2">
+<h2>Testing Condition for Sleeping Shrews Data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> DSW, <span class="at">y =</span> LSW, <span class="at">data =</span> SleepingShrews_wide) <span class="sc">+</span></span>
+<span id="cb23-2"><a></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">2</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span>   </span>
+<span id="cb23-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>) <span class="co">#A condition</span></span>
+<span id="cb23-4"><a></a></span>
+<span id="cb23-5"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> DSW, <span class="at">y =</span> REM, <span class="at">data =</span> SleepingShrews_wide) <span class="sc">+</span></span>
+<span id="cb23-6"><a></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">2</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span>   </span>
+<span id="cb23-7"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>) <span class="co">#A condition</span></span>
+<span id="cb23-8"><a></a></span>
+<span id="cb23-9"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> LSW, <span class="at">y =</span> REM, <span class="at">data =</span> SleepingShrews_wide) <span class="sc">+</span></span>
+<span id="cb23-10"><a></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="sc">-</span><span class="dv">2</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span>   </span>
+<span id="cb23-11"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"orange"</span>) <span class="co">#A condition</span></span>
+<span id="cb23-12"><a></a></span>
+<span id="cb23-13"><a></a>SleepingShrews <span class="sc">%&gt;%</span></span>
+<span id="cb23-14"><a></a>  <span class="fu">group_by</span>(Phase) <span class="sc">%&gt;%</span></span>
+<span id="cb23-15"><a></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">mean</span>(Rate),</span>
+<span id="cb23-16"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(Rate)) <span class="sc">%&gt;%</span></span>
+<span id="cb23-17"><a></a>  <span class="fu">summarize</span>(<span class="fu">max</span>(sd)<span class="sc">/</span><span class="fu">min</span>(sd)) <span class="co">#S condition</span></span>
+<span id="cb23-18"><a></a></span>
+<span id="cb23-19"><a></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(Rate <span class="sc">~</span> Phase <span class="sc">+</span> Shrew, <span class="at">data =</span> SleepingShrews)</span>
+<span id="cb23-20"><a></a><span class="fu">plot</span>(mod, <span class="at">which =</span> <span class="dv">1</span>) <span class="co">#S condition</span></span>
+<span id="cb23-21"><a></a><span class="fu">plot</span>(mod, <span class="at">which =</span> <span class="dv">2</span>) <span class="co">#N condition</span></span>
+<span id="cb23-22"><a></a><span class="fu">qplot</span>(mod<span class="sc">$</span>residuals, <span class="at">bins =</span> <span class="dv">6</span>) <span class="co">#N and Z conditions</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+
+</div>
 </div>
 </section>
     </div>
@@ -752,7 +857,6 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1051,10 +1155,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1064,8 +1167,17 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

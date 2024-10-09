@@ -138,7 +138,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **HW #4 due on today at 11:55p**
 
-::: 
 
 ## Week 6
 
@@ -152,6 +151,8 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: 10:30a - 11:30a  
 -   Cindy, Nora, Sarah **tutoring Sabin-Reed 301 7-9p**
+
+::: 
 
 #### Wed, Oct 9
 
@@ -170,18 +171,16 @@ Please read the specified sections *before* class that day.
 
 #### Mon, Oct 14
 
--   No Class: Fall Break
+-   **No Class**: Fall Break
 
 #### Tues, Oct 15
 
--   **Office hours**: No office hours 
--   Cindy, Nora, Sarah **tutoring Sabin-Reed 301 7-9p**
+-   **No Office hours**: Fall Break 
 
 #### Thurs, Oct 16
 
 -   MP1 Data Collection Day
--   Assessing the block design
--   Using the block design
+-   Complete block design catch-up
 -   Homework due today:
     -   Read Ch **Stat2** 6.4-6.5
 
@@ -204,10 +203,11 @@ Please read the specified sections *before* class that day.
 
 #### Wed, Oct 23
 
--   **Exam 1**
+-   **No Class**: Study for Exam 1
 
 #### Fri, Oct 25
 
+-   **Exam 1 - Self-Scheduled** Friday-Sunday
 -   **Office hours**: 3:00p - 4:00p
 -   Homework due today:
     -   No homework

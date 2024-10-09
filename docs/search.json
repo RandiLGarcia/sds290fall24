@@ -32,7 +32,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Due Friday, September 13th:\n\nHW #1: CITI Training\n\nDue Friday, September 20th:\n\nHW #2: 0.23, 5.11, 5.16, 5.18, 5.27 (a only)\nFind more details on Gradescope\n\nDue Friday, September 27th:\n\nHW #3: 5.32, 5.38, 5.54\nFind more details on Gradescope\n\nDue Friday, October 4th:\n\nHW #4: 5.59, 5.60, 5.70, 5.36\nFind more details on Gradescope"
+    "text": "Due Friday, September 13th:\n\nHW #1: CITI Training\n\nDue Friday, September 20th:\n\nHW #2: 0.23, 5.11, 5.16, 5.18, 5.27 (a only)\nFind more details on Gradescope\n\nDue Friday, September 27th:\n\nHW #3: 5.32, 5.38, 5.54\nFind more details on Gradescope\n\nDue Friday, October 4th:\n\nHW #4: 5.59, 5.60, 5.70, 5.36\nFind more details on Gradescope\n\nDue Friday, October 18th:\n\nHW #5: 5.46, 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)"
   },
   {
     "objectID": "syllabus.html",
@@ -60,7 +60,7 @@
     "href": "syllabus.html#assignments",
     "title": "Syllabus",
     "section": "Assignments",
-    "text": "Assignments\n\nHomework [40%]: Weekly homework will be due on Fridays by 11:55p on Gradescope. Late homework will NOT be accepted except in cases of a family or personal health emergency. Each student will granted 2 no-questions-asked extensions on homework assignments. You must Slack message me before the deadline, during working hours (9a-5p), to request use of an extension. Homework will be a combination of problems sets from the book and statistical computation exercises in R. I recommend that you form study groups of 3 or 4 students from the class, and get together outside of class to discuss the homework. Each of you should try the exercises on your own and then get together to discuss your work. This process helps you to develop your own way of thinking about statistics questions before hearing how others think. I will be dropping the lowest homework grade at the end of the term.\nParticipation [10%]: Active participation in class and regular attendance will comprise 10% of your grade. Most class periods will begin with questions from the reading for that day and all class periods will end with completion of an “exit ticket.” Participating in the discussion about the readings is a great way to demonstrate engagement. Reading before class will help us move towards a “flipped” classroom. In non-flipped classrooms, students attend lectures and are asked to apply the material outside of class in the form of homework assignments. But often students need the most help from professors when they are in the midst of applying the material (Bergman & Sams, 2012). In flipped classrooms, students are asked to learn the facts at home and do the application in class. There will be many ways to demonstrate engagement throughout the term. At the end of the term you will also be completing a self-assessment of your attendance and participation.\nExams [20%]: There will be two closed-book, in-class exams throughout the term. See the schedule for tentative dates of these exams.\nMini Projects and Presentations [30% split as 10% MP1 + 20% MP2]: There will two mini projects during the semester. The first mini project (MP1) will be completed individually and the second mini project (MP2) will be completed in groups of about three. For these projects, you and your group will be posing your own research questions and designing an experiment. The specific content of your mini projects will vary, but all projects will consist of designing an experiment (or appropriate observational study), collecting and analyzing data, and writing a technical report on your study. For MP2 each group of three students will complete an experiment together. During the last week of class, you (and your group) will create short presentation of your study and record it (or present it live to the class, time permitting). We’ll talk more about the project as the term proceeds and detailed instructions for the projects will be posted on the course website. A self-assessment will accompany the first mini project and a self- and peer-assessment will accompany the second mini project.\n\n\nSummary\n\n\n\n\n\nAssignment\nPercent of Total\nDue Date\n\n\n\n\nHomework\n40%\nFridays\n\n\nParticipation\n10%\nDaily\n\n\nExams\n20%\nOct 23 and Dec 4\n\n\nMini Project 1\n10%\nNov 1\n\n\nMini Project 2\n20%\nDec 18\n\n\nFinal Grade\n100%\n\n\n\n\n\n\n\n\nGrading\nWhen we grade your written work, I am looking for problem solutions that are technically correct and reasoning that is clearly explained. Numerically correct answers, alone, are not sufficient on homework or exams. I value neatness and brief, clear, well-organized answers that explain your thinking. If the grader cannot read or follow your work, she cannot give you credit for it. The grader will check each homework submission for completeness and grade a subset of the exercises. Homework answer keys will be posted on Moodle after the due date. When submitting your homework on Gradescope, you must tag specific pages of your submission for each problem solution. If you fail to do this, we will doc 2 out of 10 points from your total assignment grade.\n\n\nAssignment Late Policy\nEach student will granted 2 no-questions-asked extensions on homework assignments. You must Slack message me before the deadline, during working hours (9a-5p), to request use of an extension. In addition to these two planned extensions, you may submit one assignment (except for mini project 2) up to 3 days late, without needing to check in with me first.\n\n\nFinal Grade Brackets\n\n\n\n\n\nGrade\nPercent\n\n\n\n\nA\n95-100%\n\n\nA-\n90-95%\n\n\nB+\n87-89%\n\n\nB\n83-86%\n\n\nB-\n80-82%\n\n\nC+\n77-79%\n\n\nC\n73-76%\n\n\nC-\n70-72%\n\n\nD+\n60-66%\n\n\nD\n67-69%\n\n\nE\n59% and below"
+    "text": "Assignments\n\nHomework [40%]: Weekly homework will be due on Fridays by 11:55p on Gradescope. Late homework will NOT be accepted except in cases of a family or personal health emergency. Each student will granted 2 no-questions-asked extensions on homework assignments. You must Slack message me before the deadline, during working hours (9a-5p), to request use of an extension. Homework will be a combination of problems sets from the book and statistical computation exercises in R. I recommend that you form study groups of 3 or 4 students from the class, and get together outside of class to discuss the homework. Each of you should try the exercises on your own and then get together to discuss your work. This process helps you to develop your own way of thinking about statistics questions before hearing how others think. I will be dropping the lowest homework grade at the end of the term.\nParticipation [10%]: Active participation in class and regular attendance will comprise 10% of your grade. Most class periods will begin with questions from the reading for that day and all class periods will end with completion of an “exit ticket.” Participating in the discussion about the readings is a great way to demonstrate engagement. Reading before class will help us move towards a “flipped” classroom. In non-flipped classrooms, students attend lectures and are asked to apply the material outside of class in the form of homework assignments. But often students need the most help from professors when they are in the midst of applying the material (Bergman & Sams, 2012). In flipped classrooms, students are asked to learn the facts at home and do the application in class. There will be many ways to demonstrate engagement throughout the term. At the end of the term you will also be completing a self-assessment of your attendance and participation.\nExams [20%]: There will be two closed-book, self-scheduled exams throughout the term. See the schedule for tentative dates of these exams.\nMini Projects and Presentations [30% split as 10% MP1 + 20% MP2]: There will two mini projects during the semester. The first mini project (MP1) will be completed individually and the second mini project (MP2) will be completed in groups of about three. For these projects, you and your group will be posing your own research questions and designing an experiment. The specific content of your mini projects will vary, but all projects will consist of designing an experiment (or appropriate observational study), collecting and analyzing data, and writing a technical report on your study. For MP2 each group of three students will complete an experiment together. During the last week of class, you (and your group) will create short presentation of your study and record it (or present it live to the class, time permitting). We’ll talk more about the project as the term proceeds and detailed instructions for the projects will be posted on the course website. A self-assessment will accompany the first mini project and a self- and peer-assessment will accompany the second mini project.\n\n\nSummary\n\n\n\n\n\nAssignment\nPercent of Total\nDue Date\n\n\n\n\nHomework\n40%\nFridays\n\n\nParticipation\n10%\nDaily\n\n\nExams\n20%\nOct 23 and Dec 4\n\n\nMini Project 1\n10%\nNov 1\n\n\nMini Project 2\n20%\nDec 18\n\n\nFinal Grade\n100%\n\n\n\n\n\n\n\n\nGrading\nWhen we grade your written work, I am looking for problem solutions that are technically correct and reasoning that is clearly explained. Numerically correct answers, alone, are not sufficient on homework or exams. I value neatness and brief, clear, well-organized answers that explain your thinking. If the grader cannot read or follow your work, she cannot give you credit for it. The grader will check each homework submission for completeness and grade a subset of the exercises. Homework answer keys will be posted on Moodle after the due date. When submitting your homework on Gradescope, you must tag specific pages of your submission for each problem solution. If you fail to do this, we will doc 2 out of 10 points from your total assignment grade.\n\n\nAssignment Late Policy\nEach student will granted 2 no-questions-asked extensions on homework assignments. You must Slack message me before the deadline, during working hours (9a-5p), to request use of an extension. In addition to these two planned extensions, you may submit one assignment (except for mini project 2) up to 3 days late, without needing to check in with me first.\n\n\nFinal Grade Brackets\n\n\n\n\n\nGrade\nPercent\n\n\n\n\nA\n95-100%\n\n\nA-\n90-95%\n\n\nB+\n87-89%\n\n\nB\n83-86%\n\n\nB-\n80-82%\n\n\nC+\n77-79%\n\n\nC\n73-76%\n\n\nC-\n70-72%\n\n\nD+\n60-66%\n\n\nD\n67-69%\n\n\nE\n59% and below"
   },
   {
     "objectID": "syllabus.html#resources",
@@ -165,14 +165,14 @@
     "href": "schedule.html#week-6",
     "title": "Schedule",
     "section": "Week 6",
-    "text": "Week 6\n\nMon, Oct 7\n\nBlocking\nHomework due today:\n\nRead Ch Stat2 Ch 6.1-6.2\n\n\n\n\nTues, Oct 8\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Oct 9\n\nFitting the model for a block design\nHomework due today:\n\nRead Ch Stat2 Ch 6.3\n\nOffice hours: Thursday 4p-5p and by appointment\n\n\n\nFri, Oct 11\n\nOffice hours cancelled\nHomework due today:\n\nMP1 Qualtrics survey due for pre-approval by 11:55p"
+    "text": "Week 6\n\nMon, Oct 7\n\nBlocking\nHomework due today:\n\nRead Ch Stat2 Ch 6.1-6.2\n\n\n\n\nTues, Oct 8\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p"
   },
   {
     "objectID": "schedule.html#week-7",
     "href": "schedule.html#week-7",
     "title": "Schedule",
     "section": "Week 7",
-    "text": "Week 7\n\nMon, Oct 14\n\nNo Class: Fall Break\n\n\n\nTues, Oct 15\n\nOffice hours: No office hours\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nThurs, Oct 16\n\nMP1 Data Collection Day\nAssessing the block design\nUsing the block design\nHomework due today:\n\nRead Ch Stat2 6.4-6.5\n\n\n\n\nFri, Oct 18\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nHW #5 due tonight at 11:55p"
+    "text": "Week 7\n\nMon, Oct 14\n\nNo Class: Fall Break\n\n\n\nTues, Oct 15\n\nNo Office hours: Fall Break\n\n\n\nThurs, Oct 16\n\nMP1 Data Collection Day\nComplete block design catch-up\nHomework due today:\n\nRead Ch Stat2 6.4-6.5\n\n\n\n\nFri, Oct 18\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nHW #5 due tonight at 11:55p"
   },
   {
     "objectID": "schedule.html#week-8",
@@ -291,7 +291,7 @@
     "href": "schedule.html#week-8---exam-1",
     "title": "Schedule",
     "section": "Week 8 - Exam 1",
-    "text": "Week 8 - Exam 1\n\nMon, Oct 21\n\nReview for Exam 1\n\n\n\nTues, Oct 22\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Oct 23\n\nExam 1\n\n\n\nFri, Oct 25\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nNo homework"
+    "text": "Week 8 - Exam 1\n\nMon, Oct 21\n\nReview for Exam 1\n\n\n\nTues, Oct 22\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Oct 23\n\nNo Class: Study for Exam 1\n\n\n\nFri, Oct 25\n\nExam 1 - Self-Scheduled Friday-Sunday\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nNo homework"
   },
   {
     "objectID": "schedule.html#week-10---mp1-due",
@@ -2083,28 +2083,28 @@
     "href": "lectures/10_complete_block.html#announcements",
     "title": "Analysis of the Complete Block Design",
     "section": "Announcements",
-    "text": "Announcements\n\nGrades posted for HW4\nHW5 is now posted, due Fri Mar 8\nMP1 pre-approval due Friday 11:55p\n\nPlease submit as soon as you can\n\nOffice hours (Bass 412)\n\nToday: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get MP1 help\n\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
+    "text": "Announcements\n\nGrades posted for HW4\nHW5 posted on Friday\nMP1 pre-approval due Friday 11:55p\nOffice hours (Bass 412)\n\nTuesday 10:30a - 11:30a\nFriday office hours cancelled (again)\nThursday 4p-5p or by appointment"
   },
   {
     "objectID": "lectures/10_complete_block.html#mp1-pre-approval",
     "href": "lectures/10_complete_block.html#mp1-pre-approval",
     "title": "Analysis of the Complete Block Design",
     "section": "MP1 Pre-Approval",
-    "text": "MP1 Pre-Approval\nYour completed Qualtrics experiments are due for Pre-Approval by Fri Mar 1 11:55p.\n\nExport your survey as a Word doc. Include the survey flow and any skip logic you used.\nUpload the Word doc to Moodle.\n\nI should be able to see any images you used or links to media. I’ll be paying particular attention to your consent form. It’s not unusual for me to ask for revisions before you launch your study."
+    "text": "MP1 Pre-Approval\nYour completed Qualtrics experiments are due for Pre-Approval by Fri Oct 11 11:59p.\n\nExport your survey as a Word doc. Include the survey flow and any skip logic you used.\nUpload the Word doc to Moodle.\n\nI should be able to see any images you used or links to media. I’ll be paying particular attention to your consent form. It’s not unusual for me to ask for revisions before you launch your study."
   },
   {
     "objectID": "lectures/10_complete_block.html#next-steps",
     "href": "lectures/10_complete_block.html#next-steps",
     "title": "Analysis of the Complete Block Design",
     "section": "Next steps:",
-    "text": "Next steps:\nI will give you approval or revisions via Slack direct messages. Watch out for those!\nOnce you have completed any revisions and receive approval from me you can complete the following checklist and then share your anonymous survey link.\n\nProof read for errors.\nTest (preview) your survey multiple times, creating fake data.\nDownload the data and make sure it makes sense.\nZero out the randomization counts in the survey flow.\nDelete all of the fake responses.\nUpgrade your Qualtrics account with the code SDS290Spring2024.\nActivate your survey.\nGet the anonymous survey link!"
+    "text": "Next steps:\nI will give you approval or revisions via Slack direct messages. Watch out for those!\nOnce you have completed any revisions and receive approval from me you can complete the following checklist and then share your anonymous survey link.\n\nProof read for errors.\nTest (preview) your survey multiple times, creating fake data.\nDownload the data and make sure it makes sense.\nZero out the randomization counts in the survey flow.\nDelete all of the fake responses.\nUpgrade your Qualtrics account with the code SDS290Fall2024.\nActivate your survey.\nGet the anonymous survey link!"
   },
   {
     "objectID": "lectures/10_complete_block.html#agenda",
     "href": "lectures/10_complete_block.html#agenda",
     "title": "Analysis of the Complete Block Design",
     "section": "Agenda",
-    "text": "Agenda\n\nDiscuss your MP1 ideas in groups!\nComplete Block design"
+    "text": "Agenda\n\nComplete Block Design\nTime for MP1"
   },
   {
     "objectID": "lectures/10_complete_block.html#mp1-discussions",
@@ -2139,7 +2139,7 @@
     "href": "lectures/10_complete_block.html#more-design-terminology",
     "title": "Analysis of the Complete Block Design",
     "section": "MORE Design Terminology",
-    "text": "MORE Design Terminology\n\nThe two factors Trees and Treatment are crossed. This means that we collect data on all combinations of Trees and Treatment. A cell is a particular combination.\nMain effect refers to the effect for a single factor. For a block design there are two sets of main effects, for blocks and for treatments (e.g., Trees and Treatment).\nThe two sets of main effects are called additive if each treatment adds or subtracts the same amount to the response variable for all blocks.\nA factor of interest is Treatment, which is directly related to the goal of the study. A nuisance factor is Trees which is included as a factor only because it is a source of variation and its inclusion will reduce the sum of squares for error (residuals).\nTypically, factors of interest are fixed, which means their effects are an unknown constant. Nuisance factors are random, which means their effects behave according to chance (the levels themselves are samples from a population)."
+    "text": "MORE Design Terminology\n\nThe two factors Trees and Treatment are crossed. This means that we collect data on all combinations of Trees and Treatment. A cell is a particular combination.\nMain effect refers to the effect for a single factor. For a block design there are two sets of main effects, for blocks and for treatments (e.g., Trees and Treatment).\nThe two sets of main effects are called additive if each treatment adds or subtracts the same amount to the response variable for all blocks.\nA factor of interest is Treatment, which is directly related to the goal of the study. A nuisance factor is Trees which is included as a factor only because it is a source of variation and its inclusion will reduce the sum of squares for error (residuals)."
   },
   {
     "objectID": "lectures/10_complete_block.html#side-by-side-dotplot",
@@ -4674,5 +4674,82 @@
     "title": "Introduction to Blocking",
     "section": "Randomized Complete Block Design (experimental)",
     "text": "Randomized Complete Block Design (experimental)\n\nExperimental material are subdivided, separated into groups, or reused to create similar units.\nThen each unit within a block is then is randomly assigned one level of the factor of interest.\n“Complete” block means that every block x treatment combination has a measurement on the response."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#how-to-check-assumptions",
+    "href": "lectures/10_complete_block.html#how-to-check-assumptions",
+    "title": "Analysis of the Complete Block Design",
+    "section": "How to check assumptions",
+    "text": "How to check assumptions\n\nC. Constant effects – think about whether it is reasonable.\nA. Additive effects – check Anscombe block plots.\nS. Same standard deviations – is the biggest SD less than two times as large as the smallest? check residual versus fitted plot: does the plot thicken?\nI. Independent residuals – think about whether it is reasonable.\nN. Normally distributed residuals – construct a histogram or normal probability plot of residuals.\nZ. Zero mean residuals – construct a histogram or normal probability plot of residuals."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#informal-analysis-structure-1",
+    "href": "lectures/10_complete_block.html#informal-analysis-structure-1",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Informal Analysis Structure",
+    "text": "Informal Analysis Structure\n\nmealybugs_wide &lt;- mealybugs %&gt;%\n  pivot_wider(names_from = treatment, values_from = bugs_change)\n\nmealybugs_wide\n\n# A tibble: 5 × 4\n  tree  water spores   oil\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n1 tree1    -9     -4     4\n2 tree2    18     29    29\n3 tree3    10      4    14\n4 tree4     9     -2    14\n5 tree5    -6     11     7"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#anscombe-block-plots-1",
+    "href": "lectures/10_complete_block.html#anscombe-block-plots-1",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Anscombe Block Plots",
+    "text": "Anscombe Block Plots\n\nqplot(x = spores, y = oil, data = mealybugs_wide) +\n  geom_abline(intercept = 13.6-7.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#anscombe-block-plots-2",
+    "href": "lectures/10_complete_block.html#anscombe-block-plots-2",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Anscombe Block Plots",
+    "text": "Anscombe Block Plots\n\nqplot(x = spores, y = water, data = mealybugs_wide) +\n  geom_abline(intercept = 4.4 - 13.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#anscombe-block-plots-3",
+    "href": "lectures/10_complete_block.html#anscombe-block-plots-3",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Anscombe Block Plots",
+    "text": "Anscombe Block Plots\n\nqplot(x = oil, y = water, data = mealybugs_wide) +\n  geom_abline(intercept = 4.4 - 13.6, slope = 1, color = \"blue\", linetype = 2) + \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\")"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#assessing-s-condition",
+    "href": "lectures/10_complete_block.html#assessing-s-condition",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Assessing S Condition",
+    "text": "Assessing S Condition\n\nmealybugs %&gt;%\n  group_by(treatment) %&gt;%\n  summarize(m = mean(bugs_change),\n            sd = sd(bugs_change))\n\n# A tibble: 3 × 3\n  treatment     m    sd\n  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;\n1 oil        13.6  9.66\n2 spores      7.6 13.3 \n3 water       4.4 11.5 \n\nmealybugs %&gt;%\n  group_by(treatment) %&gt;%\n  summarize(m = mean(bugs_change),\n            sd = sd(bugs_change)) %&gt;%\n  summarize(max(sd)/min(sd)) #calculating using min and max function\n\n# A tibble: 1 × 1\n  `max(sd)/min(sd)`\n              &lt;dbl&gt;\n1              1.38"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#assessing-s-condition-1",
+    "href": "lectures/10_complete_block.html#assessing-s-condition-1",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Assessing S Condition",
+    "text": "Assessing S Condition\n\\[\\hat{{y}}_{ij}={\\mu}+{\\tau}_{i}+{\\beta}_{j}\\]\n\nWhere \\(\\hat{{y}}_{ij}\\) are the fitted values, that is, everything but the ticket at the end of the assembly line.\n\n\nplot(mod, which = 1)\n\n\nIf the plot thickens, that is, has a patterning that looks like a funnel, then the S condition is not satisfied."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#assessing-n-condition",
+    "href": "lectures/10_complete_block.html#assessing-n-condition",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Assessing N Condition",
+    "text": "Assessing N Condition\n\nplot(mod, which = 2)\n\n\nWe’re looking for residuals to be on the line. If so, then we can say they are normally distributed."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#assessing-the-z-condition",
+    "href": "lectures/10_complete_block.html#assessing-the-z-condition",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Assessing the Z Condition",
+    "text": "Assessing the Z Condition\n\nqplot(mod$residuals, bins = 6)\n\n\nIf the histogram centered at zero? Then the Z condition is satisfied."
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#sleeping-shrews",
+    "href": "lectures/10_complete_block.html#sleeping-shrews",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Sleeping Shrews",
+    "text": "Sleeping Shrews\nAssess the CA-SINZ conditions for the SleepingShrews dataset from example 6.7b in your textbook.\n\nlibrary(Stat2Data)\ndata(\"SleepingShrews\")\n\n#You'll need the WIDE dataset for the Anscombe block plots\nSleepingShrews_wide &lt;- SleepingShrews %&gt;%\n  select(-ID) %&gt;%\n  pivot_wider(names_from = Phase, values_from = Rate)"
+  },
+  {
+    "objectID": "lectures/10_complete_block.html#testing-condition-for-sleeping-shrews-data",
+    "href": "lectures/10_complete_block.html#testing-condition-for-sleeping-shrews-data",
+    "title": "Analysis of the Complete Block Design",
+    "section": "Testing Condition for Sleeping Shrews Data",
+    "text": "Testing Condition for Sleeping Shrews Data\n\nqplot(x = DSW, y = LSW, data = SleepingShrews_wide) +\n  geom_abline(intercept = 2, slope = 1, color = \"blue\", linetype = 2) +   \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\") #A condition\n\nqplot(x = DSW, y = REM, data = SleepingShrews_wide) +\n  geom_abline(intercept = 2, slope = 1, color = \"blue\", linetype = 2) +   \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\") #A condition\n\nqplot(x = LSW, y = REM, data = SleepingShrews_wide) +\n  geom_abline(intercept = -2, slope = 1, color = \"blue\", linetype = 2) +   \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\") #A condition\n\nSleepingShrews %&gt;%\n  group_by(Phase) %&gt;%\n  summarize(m = mean(Rate),\n            sd = sd(Rate)) %&gt;%\n  summarize(max(sd)/min(sd)) #S condition\n\nmod &lt;- lm(Rate ~ Phase + Shrew, data = SleepingShrews)\nplot(mod, which = 1) #S condition\nplot(mod, which = 2) #N condition\nqplot(mod$residuals, bins = 6) #N and Z conditions"
   }
 ]

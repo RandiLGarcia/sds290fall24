@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -156,6 +156,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./lectures/09_intro_to_blocking.html">
  <span class="dropdown-text">09 - Intro to Blocking</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./lectures/10_complete_block.html">
+ <span class="dropdown-text">10 - Analysis of Complete Block</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -197,6 +201,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="./homework.html">
  <span class="dropdown-text">HW4: 5.59, 5.60, 5.70, 5.36</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./homework.html">
+ <span class="dropdown-text">HW5: 5.46, 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)</span></a>
   </li>  
     </ul>
   </li>
@@ -337,14 +345,14 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><p><strong>Homework</strong> [40%]: Weekly homework will be due on <strong>Fridays by 11:55p</strong> on Gradescope. Late homework will NOT be accepted except in cases of a family or personal health emergency. <strong>Each student will granted 2 no-questions-asked extensions on homework assignments.</strong> You must Slack message me before the deadline, during working hours (9a-5p), to request use of an extension. Homework will be a combination of problems sets from the book and statistical computation exercises in R. I recommend that you form study groups of 3 or 4 students from the class, and get together outside of class to discuss the homework. Each of you should try the exercises on your own and then get together to discuss your work. This process helps you to develop your own way of thinking about statistics questions before hearing how others think. <strong>I will be dropping the lowest homework grade at the end of the term.</strong></p></li>
 <li><p><strong>Participation</strong> [10%]: Active participation in class and regular attendance will comprise 10% of your grade. Most class periods will begin with questions from the reading for that day and all class periods will end with completion of an “exit ticket.” Participating in the discussion about the readings is a great way to demonstrate engagement. Reading before class will help us move towards a “flipped” classroom. In non-flipped classrooms, students attend lectures and are asked to apply the material outside of class in the form of homework assignments. But often students need the most help from professors when they are in the midst of applying the material (Bergman &amp; Sams, 2012). In flipped classrooms, students are asked to learn the facts at home and do the application in class. There will be many ways to demonstrate engagement throughout the term. At the end of the term you will also be completing <strong>a self-assessment of your attendance and participation.</strong></p></li>
-<li><p><strong>Exams</strong> [20%]: There will be two closed-book, in-class exams throughout the term. See the schedule for tentative dates of these exams.</p></li>
+<li><p><strong>Exams</strong> [20%]: There will be two closed-book, self-scheduled exams throughout the term. See the schedule for tentative dates of these exams.</p></li>
 <li><p><strong>Mini Projects and Presentations</strong> [30% split as 10% MP1 + 20% MP2]: There will two mini projects during the semester. The first mini project (MP1) will be completed individually and the second mini project (MP2) will be completed in groups of about three. For these projects, you and your group will be posing your own research questions and designing an experiment. The specific content of your mini projects will vary, but all projects will consist of designing an experiment (or appropriate observational study), collecting and analyzing data, and writing a technical report on your study. For MP2 each group of three students will complete an experiment together. During the last week of class, you (and your group) will create short presentation of your study and record it (or present it live to the class, time permitting). We’ll talk more about the project as the term proceeds and detailed instructions for the projects will be posted on the course website. A <strong>self-assessment</strong> will accompany the first mini project and a self- and <strong>peer-assessment</strong> will accompany the second mini project.</p></li>
 </ol>
 <section id="summary" class="level4">
 <h4 class="anchored" data-anchor-id="summary">Summary</h4>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Assignment</th>
@@ -400,7 +408,7 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="final-grade-brackets">Final Grade Brackets</h4>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Grade</th>
@@ -568,24 +576,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -620,11 +610,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

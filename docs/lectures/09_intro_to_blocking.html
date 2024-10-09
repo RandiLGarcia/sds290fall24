@@ -30,71 +30,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -516,207 +451,56 @@ Prof Randi Garcia, SDS 290
 <li>Then each unit within a block is then is randomly assigned one level of the factor of interest.</li>
 <li>“Complete” block means that every block x treatment combination has a measurement on the response.</li>
 </ul>
-</section>
-<section id="inappropriate-insects" class="slide level2">
-<h2>Inappropriate Insects</h2>
-<p>Modern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. Three branches are randomly selected from each tree, and 3 cm by 3 cm patches are marked on each branch. The number of mealybugs on the patch is counted. The three treatments then get randomly assigned to the three branches for each tree. After three days the mealybugs are counted again. The change in number of mealybugs is computed (<span class="math inline">\(before-after\)</span>).</p>
-</section>
-<section id="inappropriate-insects-1" class="slide level2">
-<h2>Inappropriate Insects</h2>
-<div class="cell">
-<div class="cell-output-display">
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">treatment</th>
-<th style="text-align: right;">tree1</th>
-<th style="text-align: right;">tree2</th>
-<th style="text-align: right;">tree3</th>
-<th style="text-align: right;">tree4</th>
-<th style="text-align: right;">tree5</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">oil</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">29</td>
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">7</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">spores</td>
-<td style="text-align: right;">-4</td>
-<td style="text-align: right;">29</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">-2</td>
-<td style="text-align: right;">11</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">water</td>
-<td style="text-align: right;">-9</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">-6</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Draw the factor diagram.</p>
-</section>
-<section id="formal-anova-for-complete-block-design" class="slide level2">
-<h2>Formal ANOVA for Complete Block Design</h2>
-<p><span class="math display">\[{y}_{ijk}={\mu}+{\tau}_{i}+{\beta}_{j}+{e}_{ijk}\]</span></p>
-<table>
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: right;">Source</th>
-<th style="text-align: center;">SS</th>
-<th style="text-align: center;">df</th>
-<th style="text-align: center;">MS</th>
-<th style="text-align: center;">F</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">Treatment</td>
-<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}b(\bar{y}_{i.}-\bar{y}_{..})^{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(a-1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{T}}{{df}_{T}}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{T}}{{MS}_{E}}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">Blocks</td>
-<td style="text-align: center;"><span class="math inline">\(\sum_{j=1}^{b}a(\bar{y}_{.j}-\bar{y}_{..})^{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(b-1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{B}}{{df}_{B}}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{B}}{{MS}_{E}}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">Error</td>
-<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}\sum_{j=1}^{b}({y}_{ij}-\bar{y}_{i.}-\bar{y}_{.j}+\bar{y}_{..})^{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\((a-1)(b-1)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{E}}{{df}_{E}}\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="data-analysis-structure" class="slide level2">
-<h2>Data Analysis Structure</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>mealybugs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    tree treatment bugs_change
-1  tree1     water          -9
-2  tree1    spores          -4
-3  tree1       oil           4
-4  tree2     water          18
-5  tree2    spores          29
-6  tree2       oil          29
-7  tree3     water          10
-8  tree3    spores           4
-9  tree3       oil          14
-10 tree4     water           9
-11 tree4    spores          -2
-12 tree4       oil          14
-13 tree5     water          -6
-14 tree5    spores          11
-15 tree5       oil           7</code></pre>
-</div>
-</div>
-</section>
-<section id="informal-analysis-structure" class="slide level2">
-<h2>Informal Analysis Structure</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a>mealybugs <span class="sc">%&gt;%</span></span>
-<span id="cb3-4"><a></a>  <span class="fu">spread</span>(treatment, bugs_change)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   tree oil spores water
-1 tree1   4     -4    -9
-2 tree2  29     29    18
-3 tree3  14      4    10
-4 tree4  14     -2     9
-5 tree5   7     11    -6</code></pre>
-</div>
-</div>
-<p>This structure will be useful for checking ANOVA conditions.</p>
-</section>
-<section id="data-analysis-structure-1" class="slide level2">
-<h2>Data Analysis Structure</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>mealybugs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    tree treatment bugs_change
-1  tree1     water          -9
-2  tree1    spores          -4
-3  tree1       oil           4
-4  tree2     water          18
-5  tree2    spores          29
-6  tree2       oil          29
-7  tree3     water          10
-8  tree3    spores           4
-9  tree3       oil          14
-10 tree4     water           9
-11 tree4    spores          -2
-12 tree4       oil          14
-13 tree5     water          -6
-14 tree5    spores          11
-15 tree5       oil           7</code></pre>
-</div>
-</div>
-</section>
-<section id="formal-anova" class="slide level2">
-<h2>Formal ANOVA</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
-<span id="cb7-2"><a></a></span>
-<span id="cb7-3"><a></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Analysis of Variance Table
-
-Response: bugs_change
-          Df  Sum Sq Mean Sq F value   Pr(&gt;F)   
-treatment  2  218.13  109.07  2.9963 0.106846   
-tree       4 1316.40  329.10  9.0412 0.004603 **
-Residuals  8  291.20   36.40                    
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-</div>
-<p>Write a sentence interpreting the results of the F-test for treatment and a sentence interpreting the F-test for tree in the context of the problem.</p>
-</section>
-<section id="formal-anova-1" class="slide level2">
-<h2>Formal ANOVA</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(bugs_change <span class="sc">~</span> treatment <span class="sc">+</span> tree, <span class="at">data =</span> mealybugs)</span>
-<span id="cb9-2"><a></a></span>
-<span id="cb9-3"><a></a><span class="fu">anova</span>(mod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Analysis of Variance Table
-
-Response: bugs_change
-          Df  Sum Sq Mean Sq F value   Pr(&gt;F)   
-treatment  2  218.13  109.07  2.9963 0.106846   
-tree       4 1316.40  329.10  9.0412 0.004603 **
-Residuals  8  291.20   36.40                    
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-</div>
-<p>There are no statistically significant differences in the reduction in mealy bugs between the three treatment conditions, <span class="math inline">\(F(2, 8) = 3.00\)</span>, <span class="math inline">\(p = .107\)</span>. There are significant differences in the reduction in mealy bugs across trees, however, <span class="math inline">\(F(4, 8) = 9.04\)</span>, <span class="math inline">\(p = .005\)</span>. That is, some trees improved more than other trees.</p>
+<!-- ## Inappropriate Insects -->
+<!-- Modern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. Three branches are randomly selected from each tree, and 3 cm by 3 cm patches are marked on each branch. The number of mealybugs on the patch is counted. The three treatments then get randomly assigned to the three branches for each tree. After three days the mealybugs are counted again. The change in number of mealybugs is computed ($before-after$). -->
+<!-- ## Inappropriate Insects -->
+<!-- ```{r, echo=FALSE} -->
+<!-- library(tidyr) -->
+<!-- library(dplyr) -->
+<!-- library(knitr) -->
+<!-- tree <- c(rep("tree1",3), rep("tree2",3), rep("tree3", 3),rep("tree4", 3), rep("tree5", 3)) -->
+<!-- treatment <- rep(c("water", "spores", "oil"), 5) -->
+<!-- bugs_change <- c(-9, -4, 4, 18, 29, 29, 10, 4, 14, 9, -2, 14, -6, 11, 7) -->
+<!-- mealybugs <- data.frame(tree, treatment, bugs_change) -->
+<!-- mealybugs %>% -->
+<!--   spread(tree, bugs_change) %>% -->
+<!--   kable() -->
+<!-- ``` -->
+<!-- Draw the factor diagram. -->
+<!-- ## Formal ANOVA for Complete Block Design -->
+<!-- $${y}_{ijk}={\mu}+{\tau}_{i}+{\beta}_{j}+{e}_{ijk}$$ -->
+<!-- |    Source |                                         SS                                          |      df      |             MS              |              F              | -->
+<!-- |--------------:|:-------------:|:-------------:|:-------------:|:-------------:| -->
+<!-- | Treatment |                  $\sum_{i=1}^{a}b(\bar{y}_{i.}-\bar{y}_{..})^{2}$                   |    $a-1$     | $\frac{{SS}_{T}}{{df}_{T}}$ | $\frac{{MS}_{T}}{{MS}_{E}}$ | -->
+<!-- |    Blocks |                  $\sum_{j=1}^{b}a(\bar{y}_{.j}-\bar{y}_{..})^{2}$                   |    $b-1$     | $\frac{{SS}_{B}}{{df}_{B}}$ | $\frac{{MS}_{B}}{{MS}_{E}}$ | -->
+<!-- |     Error | $\sum_{i=1}^{a}\sum_{j=1}^{b}({y}_{ij}-\bar{y}_{i.}-\bar{y}_{.j}+\bar{y}_{..})^{2}$ | $(a-1)(b-1)$ | $\frac{{SS}_{E}}{{df}_{E}}$ |                             | -->
+<!-- ## Data Analysis Structure -->
+<!-- ```{r} -->
+<!-- mealybugs -->
+<!-- ``` -->
+<!-- ## Informal Analysis Structure -->
+<!-- ```{r} -->
+<!-- library(tidyr) -->
+<!-- mealybugs %>% -->
+<!--   spread(treatment, bugs_change) -->
+<!-- ``` -->
+<!-- This structure will be useful for checking ANOVA conditions. -->
+<!-- ## Data Analysis Structure -->
+<!-- ```{r} -->
+<!-- mealybugs -->
+<!-- ``` -->
+<!-- ## Formal ANOVA -->
+<!-- ```{r} -->
+<!-- mod <- lm(bugs_change ~ treatment + tree, data = mealybugs) -->
+<!-- anova(mod) -->
+<!-- ``` -->
+<!-- Write a sentence interpreting the results of the F-test for treatment and a sentence interpreting the F-test for tree in the context of the problem. -->
+<!-- ## Formal ANOVA -->
+<!-- ```{r} -->
+<!-- mod <- lm(bugs_change ~ treatment + tree, data = mealybugs) -->
+<!-- anova(mod) -->
+<!-- ``` -->
+<!-- There are no statistically significant differences in the reduction in mealy bugs between the three treatment conditions, $F(2, 8) = 3.00$, $p = .107$. There are significant differences in the reduction in mealy bugs across trees, however, $F(4, 8) = 9.04$, $p = .005$. That is, some trees improved more than other trees. -->
 </section>
 <section id="mp1-time" class="slide level2">
 <h2>MP1 time</h2>
