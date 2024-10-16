@@ -24,6 +24,7 @@ mealybugs <- data.frame(tree, treatment, bugs_change)
 
 ## Announcements
 
+-   SDS Presentation of the Major on Tuesday
 -   HW 5 due Friday 10/18 11:59p
 -   Exam 1 [self-scheduled](https://www.science.smith.edu/self-scheduled-exams/) 10/25-10/27
 -   Office hours (Bass 412)
