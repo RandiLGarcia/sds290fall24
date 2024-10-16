@@ -165,7 +165,7 @@
     "href": "schedule.html#week-6",
     "title": "Schedule",
     "section": "Week 6",
-    "text": "Week 6\n\nMon, Oct 7\n\nBlocking\nHomework due today:\n\nRead Ch Stat2 Ch 6.1-6.2\n\n\n\n\nTues, Oct 8\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p"
+    "text": "Week 6\n\nMon, Oct 7\n\nBlocking\nHomework due today:\n\nRead Ch Stat2 Ch 6.1-6.2\n\n\n\n\nTues, Oct 8\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Oct 9\n\nFitting the model for a block design\nHomework due today:\n\nRead Ch Stat2 Ch 6.3\n\nOffice hours: Thursday 4p-5p and by appointment\n\n\n\nFri, Oct 11\n\nOffice hours cancelled\nHomework due today:\n\nMP1 Qualtrics survey due for pre-approval by 11:55p"
   },
   {
     "objectID": "schedule.html#week-7",
@@ -2222,8 +2222,8 @@
     "objectID": "lectures/11_assessing_cb.html#announcements",
     "href": "lectures/11_assessing_cb.html#announcements",
     "title": "Assessing the Complete Block Design",
-    "section": "",
-    "text": "HW 5 due Friday 11:59p\nExam 1 next Thursday\nOffice hours (Bass 412)\n\nNo OH on Thurs\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw5-questions channel on Slack!"
+    "section": "Announcements",
+    "text": "Announcements\n\nHW 5 due Friday 10/18 11:59p\nExam 1 self-scheduled 10/25-10/27\nOffice hours (Bass 412)\n\nFriday: 3:00-4:00p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z, Cindy, and Sarah can help with 290.\nPost questions to hw5-questions Slack channel."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#presentation-of-the-sds-major",
@@ -2258,7 +2258,7 @@
     "href": "lectures/11_assessing_cb.html#side-by-side-dotplot",
     "title": "Assessing the Complete Block Design",
     "section": "Side-by-side dotplot",
-    "text": "Side-by-side dotplot\nWe add our blocking factor as color and also as group.\n\nqplot(x = treatment, y = bugs_change, color = tree, group = tree, data = mealybugs) + \n  geom_line()\n\n\n\n\n\n\n\n\nWe can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not."
+    "text": "Side-by-side dotplot\nWe add our blocking factor as color and also as group.\n\nqplot(x = treatment, y = bugs_change, color = tree, group = tree, data = mealybugs) + \n  geom_line()\n\n\nWe can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#formal-anova-for-complete-block-design",
@@ -2342,21 +2342,21 @@
     "href": "lectures/11_assessing_cb.html#assessing-s-condition-1",
     "title": "Assessing the Complete Block Design",
     "section": "Assessing S Condition",
-    "text": "Assessing S Condition\n\\[\\hat{{y}}_{ij}={\\mu}+{\\tau}_{i}+{\\beta}_{j}\\]\n\nWhere \\(\\hat{{y}}_{ij}\\) are the fitted values, that is, everything but the ticket at the end of the assembly line.\n\n\nplot(mod, which = 1)\n\n\n\n\n\n\n\n\nIf the plot thickens, that is, has a patterning that looks like a funnel, then the S condition is not satisfied."
+    "text": "Assessing S Condition\n\\[\\hat{{y}}_{ij}={\\mu}+{\\tau}_{i}+{\\beta}_{j}\\]\n\nWhere \\(\\hat{{y}}_{ij}\\) are the fitted values, that is, everything but the ticket at the end of the assembly line.\n\n\nplot(mod, which = 1)\n\n\nIf the plot thickens, that is, has a patterning that looks like a funnel, then the S condition is not satisfied."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#assessing-n-condition",
     "href": "lectures/11_assessing_cb.html#assessing-n-condition",
     "title": "Assessing the Complete Block Design",
     "section": "Assessing N Condition",
-    "text": "Assessing N Condition\n\nplot(mod, which = 2)\n\n\n\n\n\n\n\n\nWe’re looking for residuals to be on the line. If so, then we can say they are normally distributed."
+    "text": "Assessing N Condition\n\nplot(mod, which = 2)\n\n\nWe’re looking for residuals to be on the line. If so, then we can say they are normally distributed."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#assessing-the-z-condition",
     "href": "lectures/11_assessing_cb.html#assessing-the-z-condition",
     "title": "Assessing the Complete Block Design",
     "section": "Assessing the Z Condition",
-    "text": "Assessing the Z Condition\n\nqplot(mod$residuals, bins = 6)\n\n\n\n\n\n\n\n\nIf the histogram centered at zero? Then the Z condition is satisfied."
+    "text": "Assessing the Z Condition\n\nqplot(mod$residuals, bins = 6)\n\n\nIf the histogram centered at zero? Then the Z condition is satisfied."
   },
   {
     "objectID": "lectures/11_assessing_cb.html#sleeping-shrews",

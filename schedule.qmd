@@ -152,8 +152,6 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:30a - 11:30a  
 -   Cindy, Nora, Sarah **tutoring Sabin-Reed 301 7-9p**
 
-::: 
-
 #### Wed, Oct 9
 
 -   Fitting the model for a block design
@@ -166,6 +164,8 @@ Please read the specified sections *before* class that day.
 -   **Office hours cancelled**
 -   Homework due today:
     -   **MP1 Qualtrics survey due for pre-approval by 11:55p**
+
+::: 
 
 ## Week 7
 

@@ -1,7 +1,7 @@
 ---
 title: "Assessing the Complete Block Design"
 author: Prof Randi Garcia, SDS 290
-date: March 5, 2024
+date: October 16, 2024
 format: 
   revealjs:
     scrollable: true
@@ -24,14 +24,13 @@ mealybugs <- data.frame(tree, treatment, bugs_change)
 
 ## Announcements
 
--   HW 5 due Friday 11:59p
--   Exam 1 next Thursday
+-   HW 5 due Friday 10/18 11:59p
+-   Exam 1 [self-scheduled](https://www.science.smith.edu/self-scheduled-exams/) 10/25-10/27
 -   Office hours (Bass 412)
-    -   No OH on Thurs
-    -   Friday: 10:50a - 12:05p
+    -   Friday: 3:00-4:00p
 -   Where to get HW help
-    -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301.
-    -   Post questions to [#hw5-questions](https://smith.enterprise.slack.com/archives/C06MZ0M2PJP) channel on Slack!
+    -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301. Nora Z, Cindy, and Sarah can help with 290.
+    -   Post questions to [hw5-questions](https://smith.enterprise.slack.com/archives/C07RQ22U2LX) Slack channel.
 
 ## Agenda
 
