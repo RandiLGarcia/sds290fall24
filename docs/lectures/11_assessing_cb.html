@@ -434,8 +434,8 @@ Prof Randi Garcia, SDS 290
 <ul>
 <li>If you’re approved:
 <ul>
-<li>10 minutes to go through the <a href="https://randilgarcia.github.io/sds290spring24/lectures/10_complete_block.html#/next-steps">checklist</a>.</li>
-<li>Paste anonymous survey link in the <a href="https://docs.google.com/spreadsheets/d/1WbIAQYpILOiKDwRHYNUFscP3_WSdfquexOufaSWb684/edit#gid=0">spreadsheet</a>.</li>
+<li>20 minutes to go through the <a href="https://randilgarcia.github.io/sds290fall24/lectures/10_complete_block.html#/next-steps">checklist</a>.</li>
+<li>Paste anonymous survey link in the <a href="https://docs.google.com/spreadsheets/d/1450Zh34eISDn-nLjccItp4oD7uWKYzDIJUcVU9uVSFw/edit?gid=0#gid=0">spreadsheet</a>.</li>
 <li>If you’re ready, work on your homework!</li>
 </ul></li>
 <li>If you’re <strong>NOT</strong> approved
@@ -445,9 +445,9 @@ Prof Randi Garcia, SDS 290
 </ul>
 <p><strong>Step 2:</strong></p>
 <ul>
-<li>20 min to participate in as many studies as you can!
+<li>25 min to participate in as many studies as you can!
 <ul>
-<li>Note: see content warnings</li>
+<li>Note: see content notes</li>
 <li>Please only participate in audio studies if you have headphones</li>
 </ul></li>
 </ul>
@@ -456,11 +456,11 @@ Prof Randi Garcia, SDS 290
 <h2>Inappropriate Insects</h2>
 <p>Modern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. Three branches are randomly selected from each tree, and 3 cm by 3 cm patches are marked on each branch. The number of mealybugs on the patch is counted. The three treatments then get randomly assigned to the three branches for each tree. After three days the mealybugs are counted again. The change in number of mealybugs is computed (<span class="math inline">\(before-after\)</span>).</p>
 </section>
-<section id="side-by-side-dotplot" class="slide level2">
-<h2>Side-by-side dotplot</h2>
+<section id="side-by-side-lineplot" class="slide level2">
+<h2>Side-by-side lineplot</h2>
 <p>We add our blocking factor as <code>color</code> and also as <code>group</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">qplot</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> bugs_change, <span class="at">color =</span> tree, <span class="at">group =</span> tree, <span class="at">data =</span> mealybugs) <span class="sc">+</span> </span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">ggplot</span>(mealybugs, <span class="fu">aes</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> bugs_change, <span class="at">color =</span> tree, <span class="at">group =</span> tree)) <span class="sc">+</span> </span>
 <span id="cb1-2"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>

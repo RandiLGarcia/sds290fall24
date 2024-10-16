@@ -2244,7 +2244,7 @@
     "href": "lectures/11_assessing_cb.html#mp1-data-collection",
     "title": "Assessing the Complete Block Design",
     "section": "MP1 data collection",
-    "text": "MP1 data collection\nStep 1:\n\nIf you’re approved:\n\n10 minutes to go through the checklist.\nPaste anonymous survey link in the spreadsheet.\nIf you’re ready, work on your homework!\n\nIf you’re NOT approved\n\nUse this time to work on your revisions.\n\n\nStep 2:\n\n20 min to participate in as many studies as you can!\n\nNote: see content warnings\nPlease only participate in audio studies if you have headphones"
+    "text": "MP1 data collection\nStep 1:\n\nIf you’re approved:\n\n20 minutes to go through the checklist.\nPaste anonymous survey link in the spreadsheet.\nIf you’re ready, work on your homework!\n\nIf you’re NOT approved\n\nUse this time to work on your revisions.\n\n\nStep 2:\n\n25 min to participate in as many studies as you can!\n\nNote: see content notes\nPlease only participate in audio studies if you have headphones"
   },
   {
     "objectID": "lectures/11_assessing_cb.html#inappropriate-insects",
@@ -4751,5 +4751,12 @@
     "title": "Analysis of the Complete Block Design",
     "section": "Testing Condition for Sleeping Shrews Data",
     "text": "Testing Condition for Sleeping Shrews Data\n\nqplot(x = DSW, y = LSW, data = SleepingShrews_wide) +\n  geom_abline(intercept = 2, slope = 1, color = \"blue\", linetype = 2) +   \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\") #A condition\n\nqplot(x = DSW, y = REM, data = SleepingShrews_wide) +\n  geom_abline(intercept = 2, slope = 1, color = \"blue\", linetype = 2) +   \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\") #A condition\n\nqplot(x = LSW, y = REM, data = SleepingShrews_wide) +\n  geom_abline(intercept = -2, slope = 1, color = \"blue\", linetype = 2) +   \n  geom_smooth(method = \"lm\", se = 0, color = \"orange\") #A condition\n\nSleepingShrews %&gt;%\n  group_by(Phase) %&gt;%\n  summarize(m = mean(Rate),\n            sd = sd(Rate)) %&gt;%\n  summarize(max(sd)/min(sd)) #S condition\n\nmod &lt;- lm(Rate ~ Phase + Shrew, data = SleepingShrews)\nplot(mod, which = 1) #S condition\nplot(mod, which = 2) #N condition\nqplot(mod$residuals, bins = 6) #N and Z conditions"
+  },
+  {
+    "objectID": "lectures/11_assessing_cb.html#side-by-side-lineplot",
+    "href": "lectures/11_assessing_cb.html#side-by-side-lineplot",
+    "title": "Assessing the Complete Block Design",
+    "section": "Side-by-side lineplot",
+    "text": "Side-by-side lineplot\nWe add our blocking factor as color and also as group.\n\nggplot(mealybugs, aes(x = treatment, y = bugs_change, color = tree, group = tree)) + \n  geom_line()\n\n\nWe can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not."
   }
 ]

@@ -42,28 +42,28 @@ mealybugs <- data.frame(tree, treatment, bugs_change)
 **Step 1:**
 
 -   If you're approved:
-    -   10 minutes to go through the [checklist](https://randilgarcia.github.io/sds290spring24/lectures/10_complete_block.html#/next-steps).
-    -   Paste anonymous survey link in the [spreadsheet](https://docs.google.com/spreadsheets/d/1WbIAQYpILOiKDwRHYNUFscP3_WSdfquexOufaSWb684/edit#gid=0).
+    -   20 minutes to go through the [checklist](https://randilgarcia.github.io/sds290fall24/lectures/10_complete_block.html#/next-steps).
+    -   Paste anonymous survey link in the [spreadsheet](https://docs.google.com/spreadsheets/d/1450Zh34eISDn-nLjccItp4oD7uWKYzDIJUcVU9uVSFw/edit?gid=0#gid=0).
     -   If you're ready, work on your homework!
 -   If you're **NOT** approved
     -   Use this time to work on your revisions.
 
 **Step 2:**
 
--   20 min to participate in as many studies as you can!
-    -   Note: see content warnings
+-   25 min to participate in as many studies as you can!
+    -   Note: see content notes
     -   Please only participate in audio studies if you have headphones
 
 ## Inappropriate Insects
 
 Modern zoos try to reproduce natural habitats in their exhibits as much as possible. They try to use appropriate plants, but these plants can be infested with inappropriate insects. Cycads (plants that look vaguely like palms) can be infected with mealybugs, and the zoo wishes to test three treatments: 1) water, 2) horticultural oil, and 3) fungal spores in water. Nine infested cycads are taken to the testing area. Three branches are randomly selected from each tree, and 3 cm by 3 cm patches are marked on each branch. The number of mealybugs on the patch is counted. The three treatments then get randomly assigned to the three branches for each tree. After three days the mealybugs are counted again. The change in number of mealybugs is computed ($before-after$).
 
-## Side-by-side dotplot
+## Side-by-side lineplot
 
 We add our blocking factor as `color` and also as `group`.
 
 ```{r}
-qplot(x = treatment, y = bugs_change, color = tree, group = tree, data = mealybugs) + 
+ggplot(mealybugs, aes(x = treatment, y = bugs_change, color = tree, group = tree)) + 
   geom_line()
 ```
 
