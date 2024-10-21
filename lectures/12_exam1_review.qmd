@@ -1,7 +1,7 @@
 ---
 title: "Exam 1 Review"
 author: Prof Randi Garcia, SDS 290
-date: March 12, 2024
+date: October 21, 2024
 format: 
   revealjs:
     scrollable: true
@@ -14,31 +14,25 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
 
 ## Announcements
 
--   Exam 1 distributed on Thursday 10:50a on Gradescope
-    -   Time to work in class
-    -   Due on Friday night on Gradescope
--   Office hours
-    -   Thurs 2:45p - 4:00p
-    -   Friday 10:50a - 12:05p
+-   Exam 1 [self-scheduled](https://www.science.smith.edu/self-scheduled-exams/) 10/25-10/27
+-   Office hours (Bass 412)
+    -   Tuesday 10:30a - 11:30a
+    -   Wednesday 1:20p - 2:35p
+    -   Friday 3:00p - 4:00p
 
 ## Agenda
 
 1.  MP1 hypotheses and steps for analysis
 2.  MP1 data analysis plan 
-3.  Exam 1 review
+3.  Exam review
 
 ## Exam 1
 
--   Open notes
--   Open book
--   Open slides
--   CLOSED Google/ChatGPT/Etc
--   Content:
-    -   conceptual questions and data analysis questions
-    -   some multiple choice and true/false questions
-    -   questions about interpreting output
-    -   you will need to do analysis in R!
-        -   Render your Quarto file as PDF and those pages to your Exam.
+-   Closed notes, closed book, closed internet
+-   75 minute to complete the exam
+-   You can use your phone for a calculator
+-   Can have 1 single-sided notes page ("cheatsheet"). 
+    -   You do **not** need to turn it in with your exam.
 
 ## MP1 hypotheses
 
@@ -68,6 +62,8 @@ Basic analysis plan...
 8.  I will then test pairwise comparisons using the Fisher's LSD method.
 9.  I will also calculate effect sizes for these differences, confidence intervals, and the overall $R^2$.
 10. I will write up all of my analyses clearly in words and proofread before I submit my report!
+
+# Exam Review 
 
 ## Radioactive Twins
 

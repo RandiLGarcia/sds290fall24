@@ -193,7 +193,7 @@
     "href": "schedule.html#week-10",
     "title": "Schedule",
     "section": "Week 10",
-    "text": "Week 10\n\nMon, Nov 4\n\nAssessing two-way design\nMP2 assignment and survey\nHomework due today:\n\nRead Ch Stat2 7.5\n\n\n\n\nTues, Nov 5\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Nov 6\n\nMP2 group assignments and work time\nHomework due today:\n\nNo reading\n\n\n\n\nFri, Nov 8\n\nOffice hours: 3:00p - 4:00p\n\nHomework due today:\n\nHW #6 due today at 11:55p"
+    "text": "Week 10\n\nMon, Nov 4\n\nMP2 assignment and survey\nPractice designs\nFitting two-way ANOVA\nAssessing two-way design\nHomework due today:\n\nRead Ch Stat2 7.3, 7.5\n\n\n\n\nTues, Nov 5\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Nov 6\n\nMP2 group assignments and work time\nHomework due today:\n\nNo reading\n\n\n\n\nFri, Nov 8\n\nOffice hours: 3:00p - 4:00p\n\nHomework due today:\n\nHW #6 due today at 11:55p"
   },
   {
     "objectID": "schedule.html#spring-break",
@@ -291,7 +291,7 @@
     "href": "schedule.html#week-8---exam-1",
     "title": "Schedule",
     "section": "Week 8 - Exam 1",
-    "text": "Week 8 - Exam 1\n\nMon, Oct 21\n\nReview for Exam 1\n\n\n\nTues, Oct 22\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Oct 23\n\nNo Class: Study for Exam 1\n\n\n\nFri, Oct 25\n\nExam 1 - Self-Scheduled McConnell Foyer (more information)\n\nFriday 10/25 3-6p\nSaturday 10/26 12-6p\nSunday 10/27 12-6p\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nNo homework"
+    "text": "Week 8 - Exam 1\n\nMon, Oct 21\n\nReview for Exam 1\n\n\n\nTues, Oct 22\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Oct 23\n\nNo Class: Study for Exam 1\nSpecial Exam office hours: 1:20 - 2:35p\n\n\n\nFri, Oct 25\n\nExam 1 - Self-Scheduled McConnell Foyer (more information)\n\nFriday 10/25 3-6p\nSaturday 10/26 12-6p\nSunday 10/27 12-6p\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nNo homework"
   },
   {
     "objectID": "schedule.html#week-10---mp1-due",
@@ -2391,21 +2391,21 @@
     "href": "lectures/12_exam1_review.html#announcements",
     "title": "Exam 1 Review",
     "section": "Announcements",
-    "text": "Announcements\n\nExam 1 distributed on Thursday 10:50a on Gradescope\n\nTime to work in class\nDue on Friday night on Gradescope\n\nOffice hours\n\nThurs 2:45p - 4:00p\nFriday 10:50a - 12:05p"
+    "text": "Announcements\n\nExam 1 self-scheduled 10/25-10/27\nOffice hours (Bass 412)\n\nTuesday 10:30a - 11:30a\nWednesday 1:20p - 2:35p\nFriday 3:00p - 4:00p"
   },
   {
     "objectID": "lectures/12_exam1_review.html#agenda",
     "href": "lectures/12_exam1_review.html#agenda",
     "title": "Exam 1 Review",
     "section": "Agenda",
-    "text": "Agenda\n\nMP1 hypotheses and steps for analysis\nMP1 data analysis plan\nExam 1 review"
+    "text": "Agenda\n\nMP1 hypotheses and steps for analysis\nMP1 data analysis plan\nExam review"
   },
   {
     "objectID": "lectures/12_exam1_review.html#exam-1",
     "href": "lectures/12_exam1_review.html#exam-1",
     "title": "Exam 1 Review",
     "section": "Exam 1",
-    "text": "Exam 1\n\nOpen notes\nOpen book\nOpen slides\nCLOSED Google/ChatGPT/Etc\nContent:\n\nconceptual questions and data analysis questions\nsome multiple choice and true/false questions\nquestions about interpreting output\nyou will need to do analysis in R!\n\nRender your Quarto file as PDF and those pages to your Exam."
+    "text": "Exam 1\n\nClosed notes, closed book, closed internet\n75 minute to complete the exam\nYou can use your phone for a calculator\nCan have 1 single-sided notes page (“cheatsheet”).\n\nYou do not need to turn it in with your exam."
   },
   {
     "objectID": "lectures/12_exam1_review.html#mp1-hypotheses",
@@ -4414,7 +4414,7 @@
     "href": "schedule.html#week-9---mp1-due",
     "title": "Schedule",
     "section": "Week 9 - MP1 due",
-    "text": "Week 9 - MP1 due\n\nMon, Oct 28\n\nAnalysis of MP1 data\nInteractions\nTwo-way factorial designs\nHomework due today:\n\nRead Ch Stat2 7.1-7.2\n\n\n\n\nTues, Oct 29\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Oct 30\n\nFitting two-way ANOVA\nPractice designs\nHomework due today:\n\nRead Ch Stat2 7.3\n\n\n\n\nFri, Nov 1\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nMini Project 1 due 11:59p (upload to Moodle by Midnight)"
+    "text": "Week 9 - MP1 due\n\nMon, Oct 28\n\nAnalysis of MP1 data\nComplete block design catch-up\nHomework due today:\n\nRead Ch Stat2 6.4-6.5\n\n\n\n\nTues, Oct 29\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Oct 30\n\nInteractions\nTwo-way factorial designs\nHomework due today:\n\nRead Ch Stat2 7.1 - 7.2\n\n\n\n\nFri, Nov 1\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nMini Project 1 due 11:59p (upload to Moodle by Midnight)"
   },
   {
     "objectID": "lectures/01_intro_to_experimental.html#exit-ticket",

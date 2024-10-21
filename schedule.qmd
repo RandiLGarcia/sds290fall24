@@ -165,8 +165,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **MP1 Qualtrics survey due for pre-approval by 11:55p**
 
-::: 
-
 ## Week 7
 
 #### Mon, Oct 14
@@ -190,6 +188,8 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **HW #5 due tonight at 11:55p**
 
+::: 
+
 ## Week 8 - Exam 1
 
 #### Mon, Oct 21
@@ -204,6 +204,7 @@ Please read the specified sections *before* class that day.
 #### Wed, Oct 23
 
 -   **No Class**: Study for Exam 1
+-   **Special Exam office hours**: 1:20 - 2:35p
 
 #### Fri, Oct 25
 
@@ -220,10 +221,9 @@ Please read the specified sections *before* class that day.
 #### Mon, Oct 28
 
 -   Analysis of MP1 data
--   Interactions
--   Two-way factorial designs
+-   Complete block design catch-up
 -   Homework due today:
-    -   Read Ch **Stat2** 7.1-7.2
+    -   Read Ch **Stat2** 6.4-6.5
 
 #### Tues, Oct 29
 
@@ -232,10 +232,10 @@ Please read the specified sections *before* class that day.
 
 #### Wed, Oct 30
 
--   Fitting two-way ANOVA
--   Practice designs
+-   Interactions
+-   Two-way factorial designs
 -   Homework due today:
-    -   Read Ch **Stat2** 7.3
+    -   Read Ch **Stat2** 7.1 - 7.2
 
 #### Fri, Nov 1
 
@@ -247,10 +247,12 @@ Please read the specified sections *before* class that day.
 
 #### Mon, Nov 4
 
--   Assessing two-way design
 -   MP2 assignment and survey
+-   Practice designs
+-   Fitting two-way ANOVA
+-   Assessing two-way design
 -   Homework due today:
-    -   Read Ch **Stat2** 7.5
+    -   Read Ch **Stat2** 7.3, 7.5
 
 #### Tues, Nov 5
 

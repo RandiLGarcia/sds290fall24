@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -164,6 +164,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./lectures/11_assessing_cb.html">
  <span class="dropdown-text">11 - Assessing the Complete Block</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./lectures/12_exam1_review.html">
+ <span class="dropdown-text">Exam 1 Review</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -239,8 +243,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-7" id="toc-week-7" class="nav-link active" data-scroll-target="#week-7">Week 7</a></li>
-  <li><a href="#week-8---exam-1" id="toc-week-8---exam-1" class="nav-link" data-scroll-target="#week-8---exam-1">Week 8 - Exam 1</a></li>
+  <li><a href="#week-8---exam-1" id="toc-week-8---exam-1" class="nav-link active" data-scroll-target="#week-8---exam-1">Week 8 - Exam 1</a></li>
   <li><a href="#week-9---mp1-due" id="toc-week-9---mp1-due" class="nav-link" data-scroll-target="#week-9---mp1-due">Week 9 - MP1 due</a></li>
   <li><a href="#week-10" id="toc-week-10" class="nav-link" data-scroll-target="#week-10">Week 10</a></li>
   <li><a href="#week-11" id="toc-week-11" class="nav-link" data-scroll-target="#week-11">Week 11</a></li>
@@ -524,7 +527,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-</div>
 <section id="week-7" class="level2">
 <h2 class="anchored" data-anchor-id="week-7">Week 7</h2>
 <section id="mon-oct-14" class="level4">
@@ -561,6 +563,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
+</div>
 <section id="week-8---exam-1" class="level2">
 <h2 class="anchored" data-anchor-id="week-8---exam-1">Week 8 - Exam 1</h2>
 <section id="mon-oct-21" class="level4">
@@ -581,6 +584,7 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="wed-oct-23">Wed, Oct 23</h4>
 <ul>
 <li><strong>No Class</strong>: Study for Exam 1</li>
+<li><strong>Special Exam office hours</strong>: 1:20 - 2:35p</li>
 </ul>
 </section>
 <section id="fri-oct-25" class="level4">
@@ -606,11 +610,10 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="mon-oct-28">Mon, Oct 28</h4>
 <ul>
 <li>Analysis of MP1 data</li>
-<li>Interactions</li>
-<li>Two-way factorial designs</li>
+<li>Complete block design catch-up</li>
 <li>Homework due today:
 <ul>
-<li>Read Ch <strong>Stat2</strong> 7.1-7.2</li>
+<li>Read Ch <strong>Stat2</strong> 6.4-6.5</li>
 </ul></li>
 </ul>
 </section>
@@ -625,11 +628,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="wed-oct-30" class="level4">
 <h4 class="anchored" data-anchor-id="wed-oct-30">Wed, Oct 30</h4>
 <ul>
-<li>Fitting two-way ANOVA</li>
-<li>Practice designs</li>
+<li>Interactions</li>
+<li>Two-way factorial designs</li>
 <li>Homework due today:
 <ul>
-<li>Read Ch <strong>Stat2</strong> 7.3</li>
+<li>Read Ch <strong>Stat2</strong> 7.1 - 7.2</li>
 </ul></li>
 </ul>
 </section>
@@ -649,11 +652,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="mon-nov-4" class="level4">
 <h4 class="anchored" data-anchor-id="mon-nov-4">Mon, Nov 4</h4>
 <ul>
-<li>Assessing two-way design</li>
 <li>MP2 assignment and survey</li>
+<li>Practice designs</li>
+<li>Fitting two-way ANOVA</li>
+<li>Assessing two-way design</li>
 <li>Homework due today:
 <ul>
-<li>Read Ch <strong>Stat2</strong> 7.5</li>
+<li>Read Ch <strong>Stat2</strong> 7.3, 7.5</li>
 </ul></li>
 </ul>
 </section>
@@ -966,6 +971,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1000,7 +1023,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
