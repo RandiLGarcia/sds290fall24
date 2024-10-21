@@ -14,6 +14,7 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
 
 ## Announcements
 
+-   
 -   Exam 1 [self-scheduled](https://www.science.smith.edu/self-scheduled-exams/) 10/25-10/27
 -   Office hours (Bass 412)
     -   Tuesday 10:30a - 11:30a
