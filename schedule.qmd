@@ -188,8 +188,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **HW #5 due tonight at 11:55p**
 
-::: 
-
 ## Week 8 - Exam 1
 
 #### Mon, Oct 21
@@ -215,6 +213,8 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 3:00p - 4:00p
 -   Homework due today:
     -   No homework
+
+::: 
 
 ## Week 9 - MP1 due
 

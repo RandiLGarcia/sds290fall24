@@ -2474,15 +2474,15 @@
     "objectID": "lectures/13_two-way_factorial.html#announcements",
     "href": "lectures/13_two-way_factorial.html#announcements",
     "title": "Two-Way Factorial Designs",
-    "section": "",
-    "text": "Still grading Exam 1 (expect next week)\nMini-Project 1 Technical Report due on Friday 11:59p on Moodle\nOffice hours\n\nThurs 2:45p - 4:00p\nFriday 10:50a - 12:05p\n\nWhere to get MP1 help\n\nOffice hours\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
+    "section": "Announcements",
+    "text": "Announcements\n\nMini-Project 1 Technical Report due on Friday 11:59p on Moodle\nOffice hours\n\nTuesday 10:30a - 11:30a\nFriday 3:00p - 4:00p\n\nWhere to get MP1 help\n\nOffice hours\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/13_two-way_factorial.html#agenda",
     "href": "lectures/13_two-way_factorial.html#agenda",
     "title": "Two-Way Factorial Designs",
     "section": "Agenda",
-    "text": "Agenda\n\nMid-semester Assessment\nMP1 data processing\nReview blocking\n\nAssessing conditions in block designs\n\nTwo-Way Factorial Design"
+    "text": "Agenda\n\nMP1 data processing\nReview blocking\n\nAssessing conditions in block designs\n\nTwo-Way Factorial Design"
   },
   {
     "objectID": "lectures/13_two-way_factorial.html#mid-semester-assessment",
@@ -2608,7 +2608,7 @@
     "href": "lectures/13_two-way_factorial.html#design-name-disambiguation",
     "title": "Two-Way Factorial Designs",
     "section": "Design Name Disambiguation",
-    "text": "Design Name Disambiguation\nOne-Way Design\n\nIf the factor is a true experimental factor\n\nOne-Way Randomized Design\n\n\nBlock design or Two-Way Additive Model\n\nIf the factor of interest is experimental\n\nRandomized Block Design\n\nIf every block gets every treatment\n\nComplete Block Design"
+    "text": "Design Name Disambiguation\nOne-Way Design\n\nIf the factor is a true experimental factor\n\nOne-Way Randomized Design\n\n\nBlock design\n\nIf every block gets every treatment\n\nComplete Block Design\n\nIf the factor of interest is experimental\n\nRandomized Complete Block Design"
   },
   {
     "objectID": "lectures/13_two-way_factorial.html#design-name-disambiguation-1",
