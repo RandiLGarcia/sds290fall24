@@ -6,7 +6,6 @@ author: "Randi Garcia"
 ```{r global-options, include=FALSE}
 knitr::opts_chunk$set(eval = FALSE)
 library(tidyverse)
-library(dae)
 library(Stat2Data)
 ```
 

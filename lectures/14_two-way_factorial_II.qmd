@@ -257,7 +257,7 @@ ggplot(piglets, aes(x = B12, y = gain,
 
 ## Two-Way Factorial in R
 
-[See Two-Way Factorial code](https://randilgarcia.github.io/sds290spring24/code/09_two-way_fac_inR.Rmd)
+[See Two-Way Factorial code](https://randilgarcia.github.io/sds290fall24/code/09_two-way_fac_inR.Rmd)
 
 ## Teaching Methods
 
