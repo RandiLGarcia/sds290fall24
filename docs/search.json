@@ -32,7 +32,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Due Friday, September 13th:\n\nHW #1: CITI Training\n\nDue Friday, September 20th:\n\nHW #2: 0.23, 5.11, 5.16, 5.18, 5.27 (a only)\nFind more details on Gradescope\n\nDue Friday, September 27th:\n\nHW #3: 5.32, 5.38, 5.54\nFind more details on Gradescope\n\nDue Friday, October 4th:\n\nHW #4: 5.59, 5.60, 5.70, 5.36\nFind more details on Gradescope\n\nDue Friday, October 18th:\n\nHW #5: 5.46, 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)"
+    "text": "Due Friday, September 13th:\n\nHW #1: CITI Training\n\nDue Friday, September 20th:\n\nHW #2: 0.23, 5.11, 5.16, 5.18, 5.27 (a only)\nFind more details on Gradescope\n\nDue Friday, September 27th:\n\nHW #3: 5.32, 5.38, 5.54\nFind more details on Gradescope\n\nDue Friday, October 4th:\n\nHW #4: 5.59, 5.60, 5.70, 5.36\nFind more details on Gradescope\n\nDue Friday, October 18th:\n\nHW #5: 5.46, 6.12, 6.13, 6.15, 6.16, 6.31 (a-b only)\n\nDue Friday, Nov 8th:\n\nHW #6: 6.1, 6.5, 6.26, 6.36, 6.37"
   },
   {
     "objectID": "syllabus.html",
@@ -193,7 +193,7 @@
     "href": "schedule.html#week-10",
     "title": "Schedule",
     "section": "Week 10",
-    "text": "Week 10\n\nMon, Nov 4\n\nMP2 assignment and survey\nPractice designs\nFitting two-way ANOVA\nAssessing two-way design\nHomework due today:\n\nRead Ch Stat2 7.3, 7.5\n\n\n\n\nTues, Nov 5\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Nov 6\n\nMP2 group assignments and work time\nHomework due today:\n\nNo reading\n\n\n\n\nFri, Nov 8\n\nOffice hours: 3:00p - 4:00p\n\nHomework due today:\n\nHW #6 due today at 11:55p"
+    "text": "Week 10\n\nMon, Nov 4\n\nMP1 Self-assessment\nMP2 Assignment and survey\nPractice designs\nFitting two-way ANOVA\nAssessing two-way design\nHomework due today:\n\nRead Ch Stat2 7.3, 7.5\n\n\n\n\nTues, Nov 5\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Nov 6\n\nMP2 group assignments and work time\nHomework due today:\n\nNo reading\n\n\n\n\nFri, Nov 8\n\nOffice hours: 3:00p - 4:00p\n\nHomework due today:\n\nHW #6 due today at 11:55p"
   },
   {
     "objectID": "schedule.html#spring-break",
@@ -2733,15 +2733,15 @@
     "objectID": "lectures/14_two-way_factorial_II.html#announcements",
     "href": "lectures/14_two-way_factorial_II.html#announcements",
     "title": "Two-Way Factorial Designs II",
-    "section": "",
-    "text": "Expect Exam 1 grade next week\nMini-Project 1 due tomorrow 11:59p on Moodle\nOffice hours\n\nToday: 2:45p - 4:00p\nTomorrow: 10:50a - 12:05p\n\nWhere to get MP1 help\n\nOffice hours\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
+    "section": "Announcements",
+    "text": "Announcements\n\nMini-Project 1 due Friday Nov 1 11:59p on Moodle\nOffice hours\n\nFriday 3:00p - 4:00p\n\nWhere to get MP1 help\n\nOffice hours\nPost questions to #mini-project1 channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#agenda",
     "href": "lectures/14_two-way_factorial_II.html#agenda",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Agenda",
-    "text": "Agenda\n\nReview blocking\n\nAssessing conditions in block designs\n\nTwo-Way Factorial Design"
+    "text": "Agenda\n\nFinish Assessing conditions in block designs\nTwo-Way Factorial Design"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#how-to-check-assumptions-for-complete-block-design",
@@ -2851,30 +2851,30 @@
   {
     "objectID": "lectures/14_two-way_factorial_II.html#paper-helicopters",
     "href": "lectures/14_two-way_factorial_II.html#paper-helicopters",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Paper Helicopters",
     "text": "Paper Helicopters\nPaper helicopters can be cut from one half of an 8.5 by 11 sheet of paper. We can conduct an experiment by dropping helicopters from a fixed height and clocking the time it takes to drop. We can vary wing length: 4.25 in, 4.0 in, 3.75 in, and 3.5 in, as well as body width: 3.25 in, 3.75 in, 4.0 in, and 4.25 in. We’ll make 32 planes and randomly assign them to the 16 combinations."
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#parks-and-recreation",
     "href": "lectures/14_two-way_factorial_II.html#parks-and-recreation",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Parks and Recreation",
     "text": "Parks and Recreation\nDeputy director of the Pawnee Parks and Rec department, Leslie Knope, needs to know how resistant different vegetative types are to trampling so that the number of visitors can be controlled in sensitive areas. Twenty lanes of a park are established, each .5 m wide and 1.5 m long. These twenty lanes are randomly assigned to five treatments: 0, 25, 75, 200, or 500 walking passes. Each pass consists of a 70-kg individual wearing boots, walking in a natural gait. One year after trampling, the average height of the vegetation along the lanes are measured."
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#design-name-disambiguation",
     "href": "lectures/14_two-way_factorial_II.html#design-name-disambiguation",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Design Name Disambiguation",
-    "text": "Design Name Disambiguation\nOne-Way Design\n\nIf the factor is a true experimental factor\n\nOne-Way Randomized Design or\n\n\nBlock design or Two-Way Additive Model\n\nIf the factor of interest is experimental\n\nRandomized Block Design\n\nIf every block gets every treatment\n\nComplete Block Design"
+    "text": "Design Name Disambiguation\nOne-Way Design\n\nIf the factor is a true experimental factor\n\nOne-Way Randomized Design\n\n\nBlock design\n\nIf every block gets every treatment\n\nComplete Block Design\n\nIf the factor of interest is experimental\n\nRandomized Complete Block Design"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#design-name-disambiguation-1",
     "href": "lectures/14_two-way_factorial_II.html#design-name-disambiguation-1",
-    "title": "Two-Way Factorial Design (cont.)",
+    "title": "Two-Way Factorial Designs II",
     "section": "Design Name Disambiguation",
-    "text": "Design Name Disambiguation\nTwo-Way Factorial Design\n\nIf the factor of interest is experimental\n\nRandomized Two-Way Factorial\n\nThere is no blocking in this design"
+    "text": "Design Name Disambiguation\nTwo-Way Factorial Design\n\nIf at least one factor of interest is experimental\n\nRandomized Two-Way Factorial\n\nThere is no blocking in this design"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#piglets",
@@ -2958,7 +2958,7 @@
     "href": "lectures/14_two-way_factorial_II.html#practice-1-1",
     "title": "Two-Way Factorial Designs II",
     "section": "Practice 1",
-    "text": "Practice 1\n\n\n\n\n\n\n\n\n\n\n\nYES\nYES\nNO"
+    "text": "Practice 1"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#practice-2",
@@ -2972,7 +2972,7 @@
     "href": "lectures/14_two-way_factorial_II.html#practice-2-1",
     "title": "Two-Way Factorial Designs II",
     "section": "Practice 2",
-    "text": "Practice 2\n\n\n\n\n\n\n\n\n\n\n\nNO\nYES\nNO"
+    "text": "Practice 2"
   },
   {
     "objectID": "lectures/14_two-way_factorial_II.html#two-way-factorial-in-r",
@@ -4414,7 +4414,7 @@
     "href": "schedule.html#week-9---mp1-due",
     "title": "Schedule",
     "section": "Week 9 - MP1 due",
-    "text": "Week 9 - MP1 due\n\nMon, Oct 28\n\nAnalysis of MP1 data\nComplete block design catch-up\nHomework due today:\n\nRead Ch Stat2 6.4-6.5\n\n\n\n\nTues, Oct 29\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Oct 30\n\nInteractions\nTwo-way factorial designs\nHomework due today:\n\nRead Ch Stat2 7.1 - 7.2\n\n\n\n\nFri, Nov 1\n\nOffice hours: 3:00p - 4:00p\nHomework due today:\n\nMini Project 1 due 11:59p (upload to Moodle by Midnight)"
+    "text": "Week 9 - MP1 due\n\nMon, Oct 28\n\nAnalysis of MP1 data\nComplete block design catch-up\nHomework due today:\n\nRead Ch Stat2 6.4-6.5\n\n\n\n\nTues, Oct 29\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p"
   },
   {
     "objectID": "lectures/01_intro_to_experimental.html#exit-ticket",
@@ -4758,5 +4758,12 @@
     "title": "Assessing the Complete Block Design",
     "section": "Side-by-side lineplot",
     "text": "Side-by-side lineplot\nWe add our blocking factor as color and also as group.\n\nggplot(mealybugs, aes(x = treatment, y = bugs_change, color = tree, group = tree)) + \n  geom_line()\n\n\nWe can see that Tree 2’s infestation was very responsive to the treatments whereas Tree 1’s was not."
+  },
+  {
+    "objectID": "lectures/14_two-way_factorial_II.html#assessing-conditions-in-block-designs",
+    "href": "lectures/14_two-way_factorial_II.html#assessing-conditions-in-block-designs",
+    "title": "Two-Way Factorial Designs II",
+    "section": "Assessing conditions in block designs",
+    "text": "Assessing conditions in block designs\nFinish slides from Monday"
   }
 ]

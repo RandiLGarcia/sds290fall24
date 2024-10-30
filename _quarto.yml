@@ -80,8 +80,8 @@ website:
             href: code/02_informal_anova.qmd
           - text: SandwichAnts Analysis
             href: code/SandwichAnts analysis.qmd
-#          - text: Two-Way Factorial Design
-#            href: code/09_two-way_fac_inR.qmd    
+          - text: Two-Way Factorial Design
+            href: code/09_two-way_fac_inR.qmd    
 #          - text: Complete Block, Spilt-Plot Design in R
 #            href: code/13_spitplot_design_inR.qmd       
 #          - text: 06 - Extensions in R

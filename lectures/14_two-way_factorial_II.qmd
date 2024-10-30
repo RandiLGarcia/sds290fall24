@@ -31,6 +31,40 @@ library(Stat2Data)
 
 ## Assessing conditions in block designs
 
+[Finish slides from Monday](https://randilgarcia.github.io/sds290fall24/lectures/13_two-way_factorial.html#/anscombe-block-plots)
+
+# New Example Studies
+
+## Paper Helicopters
+
+[Paper helicopters](https://williamghunter.net/images/teaching-engineers-experimental-design-with-a-paper-helicopter/teaching-engineers-experimental-design-with-a-paper-helicopter-image1.png) can be cut from one half of an 8.5 by 11 sheet of paper. We can conduct an experiment by dropping helicopters from a fixed height and clocking the time it takes to drop. We can vary wing length: 4.25 in, 4.0 in, 3.75 in, and 3.5 in, as well as body width: 3.25 in, 3.75 in, 4.0 in, and 4.25 in. We'll make 32 planes and randomly assign them to the 16 combinations.
+
+## Parks and Recreation
+
+Deputy director of the Pawnee Parks and Rec department, Leslie Knope, needs to know how resistant different vegetative types are to trampling so that the number of visitors can be controlled in sensitive areas. Twenty lanes of a park are established, each .5 m wide and 1.5 m long. These twenty lanes are randomly assigned to five treatments: 0, 25, 75, 200, or 500 walking passes. Each pass consists of a 70-kg individual wearing boots, walking in a natural gait. One year after trampling, the average height of the vegetation along the lanes are measured.
+
+## Design Name Disambiguation
+
+**One-Way Design**
+
+-   If the factor is a true experimental factor
+    -   One-Way **Randomized** Design
+
+**Block design**
+
+-   If every block gets every treatment
+    -   **Complete** Block Design
+-   If the factor of interest is experimental
+    -   **Randomized** Complete Block Design
+
+## Design Name Disambiguation
+
+**Two-Way Factorial Design**
+
+-   If at least one factor of interest is experimental
+    -   **Randomized** Two-Way Factorial
+-   There is no blocking in this design
+
 ## Piglets
 
 It seems natural to think that adding the right vitamins to a pig's diet might produce fatter pigs faster. You've decided to study the effects of B12 in two doses (0mg and 5mg). But pigs have bacteria living in their intestines that might prevent the uptake of vitamins, so you decided to give antibiotics to the pigs in one of two doses (0mg or 40 mg). You design your experiment in such a way that 3 piglets are randomly assigned to each of the 4 treatment conditions. You measure their weight every day, and take each pig's average daily weight gain as your final number recorded.

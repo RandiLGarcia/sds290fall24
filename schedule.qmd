@@ -214,8 +214,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   No homework
 
-::: 
-
 ## Week 9 - MP1 due
 
 #### Mon, Oct 28
@@ -229,6 +227,8 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: 10:30a - 11:30a  
 -   Cindy, Nora, Sarah **tutoring Sabin-Reed 301 7-9p**
+
+::: 
 
 #### Wed, Oct 30
 
@@ -247,7 +247,8 @@ Please read the specified sections *before* class that day.
 
 #### Mon, Nov 4
 
--   MP2 assignment and survey
+-   MP1 Self-assessment
+-   MP2 Assignment and survey
 -   Practice designs
 -   Fitting two-way ANOVA
 -   Assessing two-way design

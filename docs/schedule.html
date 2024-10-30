@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -172,6 +172,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./lectures/13_two-way_factorial.html">
  <span class="dropdown-text">13 - Two-Way Factorial</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./lectures/14_two-way_factorial_II.html">
+ <span class="dropdown-text">14 - Two-Way Factorial (cont.)</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -190,6 +194,10 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="./code/SandwichAnts analysis.qmd">
  <span class="dropdown-text">SandwichAnts Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./code/09_two-way_fac_inR.qmd">
+ <span class="dropdown-text">Two-Way Factorial Design</span></a>
   </li>  
     </ul>
   </li>
@@ -247,8 +255,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-9---mp1-due" id="toc-week-9---mp1-due" class="nav-link active" data-scroll-target="#week-9---mp1-due">Week 9 - MP1 due</a></li>
-  <li><a href="#week-10" id="toc-week-10" class="nav-link" data-scroll-target="#week-10">Week 10</a></li>
+  <li><a href="#week-10" id="toc-week-10" class="nav-link active" data-scroll-target="#week-10">Week 10</a></li>
   <li><a href="#week-11" id="toc-week-11" class="nav-link" data-scroll-target="#week-11">Week 11</a></li>
   <li><a href="#week-12" id="toc-week-12" class="nav-link" data-scroll-target="#week-12">Week 12</a></li>
   <li><a href="#week-13" id="toc-week-13" class="nav-link" data-scroll-target="#week-13">Week 13</a></li>
@@ -606,7 +613,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-</div>
 <section id="week-9---mp1-due" class="level2">
 <h2 class="anchored" data-anchor-id="week-9---mp1-due">Week 9 - MP1 due</h2>
 <section id="mon-oct-28" class="level4">
@@ -628,6 +634,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Cindy, Nora, Sarah <strong>tutoring Sabin-Reed 301 7-9p</strong></li>
 </ul>
 </section>
+</section>
+</div>
 <section id="wed-oct-30" class="level4">
 <h4 class="anchored" data-anchor-id="wed-oct-30">Wed, Oct 30</h4>
 <ul>
@@ -649,13 +657,13 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-</section>
 <section id="week-10" class="level2">
 <h2 class="anchored" data-anchor-id="week-10">Week 10</h2>
 <section id="mon-nov-4" class="level4">
 <h4 class="anchored" data-anchor-id="mon-nov-4">Mon, Nov 4</h4>
 <ul>
-<li>MP2 assignment and survey</li>
+<li>MP1 Self-assessment</li>
+<li>MP2 Assignment and survey</li>
 <li>Practice designs</li>
 <li>Fitting two-way ANOVA</li>
 <li>Assessing two-way design</li>
@@ -974,24 +982,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1026,11 +1016,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
