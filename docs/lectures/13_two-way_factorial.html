@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.555">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Prof Randi Garcia, SDS 290">
   <meta name="dcterms.date" content="2024-10-28">
@@ -452,7 +452,7 @@ Prof Randi Garcia, SDS 290
 <section id="formal-anova-for-complete-block-design" class="slide level2">
 <h2>Formal ANOVA for Complete Block Design</h2>
 <p><span class="math display">\[{y}_{ij}={\mu}+{\tau}_{i}+{\beta}_{j}+{e}_{ij}\]</span></p>
-<table class="caption-top">
+<table>
 <colgroup>
 <col style="width: 20%">
 <col style="width: 20%">
@@ -656,168 +656,70 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">plot</span>(mod, <span class="at">which =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="13_two-way_factorial_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
-<section>
-<section id="new-example-studies" class="title-slide slide level1 center">
-<h1>New Example Studies</h1>
-
-</section>
-<section id="paper-helicopters" class="slide level2">
-<h2>Paper Helicopters</h2>
-<p><a href="https://williamghunter.net/images/teaching-engineers-experimental-design-with-a-paper-helicopter/teaching-engineers-experimental-design-with-a-paper-helicopter-image1.png">Paper helicopters</a> can be cut from one half of an 8.5 by 11 sheet of paper. We can conduct an experiment by dropping helicopters from a fixed height and clocking the time it takes to drop. We can vary wing length: 4.25 in, 4.0 in, 3.75 in, and 3.5 in, as well as body width: 3.25 in, 3.75 in, 4.0 in, and 4.25 in. We’ll make 32 planes and randomly assign them to the 16 combinations.</p>
-</section>
-<section id="parks-and-recreation" class="slide level2">
-<h2>Parks and Recreation</h2>
-<p>Deputy director of the Pawnee Parks and Rec department, Leslie Knope, needs to know how resistant different vegetative types are to trampling so that the number of visitors can be controlled in sensitive areas. Twenty lanes of a park are established, each .5 m wide and 1.5 m long. These twenty lanes are randomly assigned to five treatments: 0, 25, 75, 200, or 500 walking passes. Each pass consists of a 70-kg individual wearing boots, walking in a natural gait. One year after trampling, the average height of the vegetation along the lanes are measured.</p>
-</section>
-<section id="design-name-disambiguation" class="slide level2">
-<h2>Design Name Disambiguation</h2>
-<p><strong>One-Way Design</strong></p>
-<ul>
-<li>If the factor is a true experimental factor
-<ul>
-<li>One-Way <strong>Randomized</strong> Design</li>
-</ul></li>
-</ul>
-<p><strong>Block design</strong></p>
-<ul>
-<li>If every block gets every treatment
-<ul>
-<li><strong>Complete</strong> Block Design</li>
-</ul></li>
-<li>If the factor of interest is experimental
-<ul>
-<li><strong>Randomized</strong> Complete Block Design</li>
-</ul></li>
-</ul>
-</section>
-<section id="design-name-disambiguation-1" class="slide level2">
-<h2>Design Name Disambiguation</h2>
-<p><strong>Two-Way Factorial Design</strong></p>
-<ul>
-<li>If at least one factor of interest is experimental
-<ul>
-<li><strong>Randomized</strong> Two-Way Factorial</li>
-</ul></li>
-<li>There is no blocking in this design</li>
-</ul>
-</section>
-<section id="piglets" class="slide level2">
-<h2>Piglets</h2>
-<p>It seems natural to think that adding the right vitamins to a pig’s diet might produce fatter pigs faster. You’ve decided to study the effects of B12 in two doses (0mg and 5mg). But pigs have bacteria living in their intestines that might prevent the uptake of vitamins, so you decided to give antibiotics to the pigs in one of two doses (0mg or 40 mg). You design your experiment in such a way that 3 piglets are randomly assigned to each of the 4 treatment conditions. You measure their weight every day, and take each pig’s average daily weight gain as your final number recorded.</p>
-</section>
-<section id="two-way-factorial-design-factor-diagram" class="slide level2">
-<h2>Two-Way Factorial Design Factor Diagram</h2>
-
-<img data-src="pics/piglets.png" class="r-stretch"><ul>
-<li>Draw the factor diagram</li>
-</ul>
-</section>
-<section id="research-questions-in-a-two-way-factorial-design" class="slide level2 scrollable">
-<h2>Research Questions in a Two-Way Factorial Design</h2>
-<ol type="1">
-<li>Does treatment A have an effect on the response variable?
-<ul>
-<li>Is there a main effect of factor A?</li>
-</ul></li>
-<li>Does treatment B have an effect on the response variable?
-<ul>
-<li>Is there a main effect of factor B?</li>
-</ul></li>
-<li>Does being in a specific combination of treatments have an effect over and above the additive effects of treatment A and B alone?
-<ul>
-<li>Is there an interaction between factor A and factor B?</li>
-</ul></li>
-</ol>
-</section>
-<section id="two-way-factorial-design-formulas" class="slide level2">
-<h2>Two-Way Factorial Design Formulas</h2>
-<p><span class="math display">\[{y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}\]</span></p>
-<ul>
-<li>Where <span class="math inline">\(i\)</span>, from 1 to <span class="math inline">\(a\)</span>, is the level of the first factor,</li>
-<li><span class="math inline">\(j\)</span>, from 1 to <span class="math inline">\(b\)</span>, is the level of the second factor,</li>
-<li>and <span class="math inline">\(k\)</span>, from 1 to <span class="math inline">\(n\)</span>, is the observation in each cell.</li>
-</ul>
-</section>
-<section id="sum-of-squares-ss" class="slide level2">
-<h2>Sum of Squares (SS)</h2>
-<p><span class="math display">\[{SS}_{A} = \sum_{i=1}^{a}bn(\bar{y}_{i..}-\bar{y}_{…})^{2}\]</span></p>
-<p><span class="math display">\[{SS}_{B} = \sum_{j=1}^{b}an(\bar{y}_{.j.}-\bar{y}_{…})^{2}\]</span></p>
-<p><span class="math display">\[{SS}_{AB} = n\sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{y}_{ij.}-\bar{y}_{i..}-\bar{y}_{.j.}+\bar{y}_{…})^{2}\]</span></p>
-<p><span class="math display">\[{SS}_{E} = \sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{n}({y}_{ijk}-\bar{y}_{ij.})^{2}\]</span></p>
-</section>
-<section id="degrees-of-freedom-df" class="slide level2">
-<h2>Degrees of Freedom (df)</h2>
-<p><span class="math display">\[{df}_{A}=a-1\]</span></p>
-<p><span class="math display">\[{df}_{B}=b-1\]</span></p>
-<p><span class="math display">\[{df}_{AB}=(a-1)(b-1)\]</span></p>
-<p><span class="math display">\[{df}_{E}=ab(n-1)\]</span></p>
-</section>
-<section id="mean-squares-ms" class="slide level2">
-<h2>Mean Squares (MS)</h2>
-<p><span class="math display">\[{MS}_{A}=\frac{{SS}_{A}}{{df}_{A}}\]</span></p>
-<p><span class="math display">\[{MS}_{B}=\frac{{SS}_{B}}{{df}_{B}}\]</span></p>
-<p><span class="math display">\[{MS}_{AB}=\frac{{SS}_{AB}}{{df}_{AB}}\]</span></p>
-<p><span class="math display">\[{MS}_{E}=\frac{{SS}_{E}}{{df}_{E}}\]</span></p>
-</section>
-<section id="f-ratios-and-the-f-distribution" class="slide level2">
-<h2>F-ratios and the F-distribution</h2>
-<p>The ultimate statistics we want to calculate is Variability in treatment effects/Variability in residuals. The F-ratio.</p>
-<p><span class="math display">\[F = \frac{{MS}_{A}}{{MS}_{E}}\]</span></p>
-<p><span class="math display">\[F = \frac{{MS}_{B}}{{MS}_{E}}\]</span></p>
-<p><span class="math display">\[F = \frac{{MS}_{AB}}{{MS}_{E}}\]</span></p>
-</section>
-<section id="anova-source-table-for-two-way-factorial" class="slide level2">
-<h2>ANOVA Source Table for Two-Way Factorial</h2>
-<p><span class="math display">\[{y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}\]</span></p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: right;">Source</th>
-<th style="text-align: center;">SS</th>
-<th style="text-align: center;">df</th>
-<th style="text-align: center;">MS</th>
-<th style="text-align: center;">F</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">Treatment A</td>
-<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}bn(\bar{y}_{i..}-\bar{y}_{…})^{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(a-1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{A}}{{df}_{A}}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{A}}{{MS}_{E}}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">Treatment B</td>
-<td style="text-align: center;"><span class="math inline">\(\sum_{j=1}^{b}an(\bar{y}_{.j.}-\bar{y}_{…})^{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(b-1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{B}}{{df}_{B}}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{B}}{{MS}_{E}}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">Interaction AB</td>
-<td style="text-align: center;"><span class="math inline">\(n\sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{y}_{ij.}-\bar{y}_{i..}-\bar{y}_{.j.}+\bar{y}_{…})^{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\((a-1)(b-1)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{AB}}{{df}_{AB}}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{MS}_{AB}}{{MS}_{E}}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">Error</td>
-<td style="text-align: center;"><span class="math inline">\(\sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{n}({y}_{ijk}-\bar{y}_{ij.})^{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(ab(n-1)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{{SS}_{E}}{{df}_{E}}\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
+<!-- # New Example Studies -->
+<!-- ## Paper Helicopters -->
+<!-- [Paper helicopters](https://williamghunter.net/images/teaching-engineers-experimental-design-with-a-paper-helicopter/teaching-engineers-experimental-design-with-a-paper-helicopter-image1.png) can be cut from one half of an 8.5 by 11 sheet of paper. We can conduct an experiment by dropping helicopters from a fixed height and clocking the time it takes to drop. We can vary wing length: 4.25 in, 4.0 in, 3.75 in, and 3.5 in, as well as body width: 3.25 in, 3.75 in, 4.0 in, and 4.25 in. We'll make 32 planes and randomly assign them to the 16 combinations. -->
+<!-- ## Parks and Recreation -->
+<!-- Deputy director of the Pawnee Parks and Rec department, Leslie Knope, needs to know how resistant different vegetative types are to trampling so that the number of visitors can be controlled in sensitive areas. Twenty lanes of a park are established, each .5 m wide and 1.5 m long. These twenty lanes are randomly assigned to five treatments: 0, 25, 75, 200, or 500 walking passes. Each pass consists of a 70-kg individual wearing boots, walking in a natural gait. One year after trampling, the average height of the vegetation along the lanes are measured. -->
+<!-- ## Design Name Disambiguation -->
+<!-- **One-Way Design** -->
+<!-- -   If the factor is a true experimental factor -->
+<!--     -   One-Way **Randomized** Design -->
+<!-- **Block design** -->
+<!-- -   If every block gets every treatment -->
+<!--     -   **Complete** Block Design -->
+<!-- -   If the factor of interest is experimental -->
+<!--     -   **Randomized** Complete Block Design -->
+<!-- ## Design Name Disambiguation -->
+<!-- **Two-Way Factorial Design** -->
+<!-- -   If at least one factor of interest is experimental -->
+<!--     -   **Randomized** Two-Way Factorial -->
+<!-- -   There is no blocking in this design -->
+<!-- ## Piglets -->
+<!-- It seems natural to think that adding the right vitamins to a pig's diet might produce fatter pigs faster. You've decided to study the effects of B12 in two doses (0mg and 5mg). But pigs have bacteria living in their intestines that might prevent the uptake of vitamins, so you decided to give antibiotics to the pigs in one of two doses (0mg or 40 mg). You design your experiment in such a way that 3 piglets are randomly assigned to each of the 4 treatment conditions. You measure their weight every day, and take each pig's average daily weight gain as your final number recorded. -->
+<!-- ## Two-Way Factorial Design Factor Diagram -->
+<!-- ![](pics/piglets.png) -->
+<!-- -   Draw the factor diagram -->
+<!-- ## Research Questions in a Two-Way Factorial Design -->
+<!-- 1.  Does treatment A have an effect on the response variable? -->
+<!--     -   Is there a main effect of factor A? -->
+<!-- 2.  Does treatment B have an effect on the response variable? -->
+<!--     -   Is there a main effect of factor B? -->
+<!-- 3.  Does being in a specific combination of treatments have an effect over and above the additive effects of treatment A and B alone? -->
+<!--     -   Is there an interaction between factor A and factor B? -->
+<!-- ## Two-Way Factorial Design Formulas -->
+<!-- $${y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}$$ -->
+<!-- -   Where $i$, from 1 to $a$, is the level of the first factor, -->
+<!-- -   $j$, from 1 to $b$, is the level of the second factor, -->
+<!-- -   and $k$, from 1 to $n$, is the observation in each cell. -->
+<!-- ## Sum of Squares (SS) -->
+<!-- $${SS}_{A} = \sum_{i=1}^{a}bn(\bar{y}_{i..}-\bar{y}_{…})^{2}$$ -->
+<!-- $${SS}_{B} = \sum_{j=1}^{b}an(\bar{y}_{.j.}-\bar{y}_{…})^{2}$$ -->
+<!-- $${SS}_{AB} = n\sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{y}_{ij.}-\bar{y}_{i..}-\bar{y}_{.j.}+\bar{y}_{…})^{2}$$ -->
+<!-- $${SS}_{E} = \sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{n}({y}_{ijk}-\bar{y}_{ij.})^{2}$$ -->
+<!-- ## Degrees of Freedom (df) -->
+<!-- $${df}_{A}=a-1$$ -->
+<!-- $${df}_{B}=b-1$$ -->
+<!-- $${df}_{AB}=(a-1)(b-1)$$ -->
+<!-- $${df}_{E}=ab(n-1)$$ -->
+<!-- ## Mean Squares (MS) -->
+<!-- $${MS}_{A}=\frac{{SS}_{A}}{{df}_{A}}$$ -->
+<!-- $${MS}_{B}=\frac{{SS}_{B}}{{df}_{B}}$$ -->
+<!-- $${MS}_{AB}=\frac{{SS}_{AB}}{{df}_{AB}}$$ -->
+<!-- $${MS}_{E}=\frac{{SS}_{E}}{{df}_{E}}$$ -->
+<!-- ## F-ratios and the F-distribution -->
+<!-- The ultimate statistics we want to calculate is Variability in treatment effects/Variability in residuals. The F-ratio. -->
+<!-- $$F = \frac{{MS}_{A}}{{MS}_{E}}$$ -->
+<!-- $$F = \frac{{MS}_{B}}{{MS}_{E}}$$ -->
+<!-- $$F = \frac{{MS}_{AB}}{{MS}_{E}}$$ -->
+<!-- ## ANOVA Source Table for Two-Way Factorial -->
+<!-- $${y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}$$ -->
+<!-- |         Source |                                             SS                                             |      df      |              MS               |              F               | -->
+<!-- |--------------:|:-------------:|:-------------:|:-------------:|:-------------:| -->
+<!-- |    Treatment A |                     $\sum_{i=1}^{a}bn(\bar{y}_{i..}-\bar{y}_{…})^{2}$                      |    $a-1$     |  $\frac{{SS}_{A}}{{df}_{A}}$  | $\frac{{MS}_{A}}{{MS}_{E}}$  | -->
+<!-- |    Treatment B |                     $\sum_{j=1}^{b}an(\bar{y}_{.j.}-\bar{y}_{…})^{2}$                      |    $b-1$     |  $\frac{{SS}_{B}}{{df}_{B}}$  | $\frac{{MS}_{B}}{{MS}_{E}}$  | -->
+<!-- | Interaction AB | $n\sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{y}_{ij.}-\bar{y}_{i..}-\bar{y}_{.j.}+\bar{y}_{…})^{2}$ | $(a-1)(b-1)$ | $\frac{{SS}_{AB}}{{df}_{AB}}$ | $\frac{{MS}_{AB}}{{MS}_{E}}$ | -->
+<!-- |          Error |         $\sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{n}({y}_{ijk}-\bar{y}_{ij.})^{2}$          |  $ab(n-1)$   |  $\frac{{SS}_{E}}{{df}_{E}}$  |                              | -->
 <!-- ## Interaction Graphs -->
 <!-- For each of the following interaction graphs, answer the following questions with **YES** or **NO**. -->
 <!-- 1.  Is there a main effect of B12? -->
@@ -919,12 +821,12 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <!-- ## Anxiety and Memory -->
 <!-- A psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded \$5 for participation and \$10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded \$5 for participation and \$100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded.      -->
 
-<div class="quarto-auto-generated-content">
+<img data-src="13_two-way_factorial_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -1249,24 +1151,6 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
         // clear code selection
         e.clearSelection();
       });
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
-            }
-          }
-        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1303,11 +1187,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
+          return note.innerHTML;
         });
       }
       const findCites = (el) => {

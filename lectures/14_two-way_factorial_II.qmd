@@ -16,15 +16,20 @@ library(Stat2Data)
 
 ## Announcements
 
--   Expect Exam 1 grade next week
--   Mini-Project 1 due tomorrow 11:59p on Moodle
+-   Mini-Project 1 due Friday Nov 1 11:59p on Moodle
 -   Office hours
-    -   Today: 2:45p - 4:00p
-    -   Tomorrow: 10:50a - 12:05p
+    -   Friday 3:00p - 4:00p
 -   Where to get MP1 help
     -   Office hours
-    -   Post questions to #mini-project1 channel on Slack!
+    -   Post questions to [#mini-project1](https://smith.enterprise.slack.com/archives/C07TF997R6J) channel on Slack!
     -   Direct message me on Slack.
+
+## Agenda
+
+1.  Finish Assessing conditions in block designs
+2.  Two-Way Factorial Design
+
+## Assessing conditions in block designs
 
 ## Piglets
 
