@@ -247,7 +247,6 @@ Please read the specified sections *before* class that day.
 
 #### Mon, Nov 4
 
--   MP1 Self-assessment
 -   MP2 Assignment and survey
 -   Practice designs
 -   Fitting two-way ANOVA
@@ -261,6 +260,7 @@ Please read the specified sections *before* class that day.
 
 #### Wed, Nov 6
 
+-   MP1 Self-assessment
 -   MP2 group assignments and work time
 -   Assessing two-way design
 -   Homework due today:
