@@ -16,15 +16,13 @@ library(Stat2Data)
 
 ## Announcements
 
--   Exam 1 grades by Thursday
--   MSA feedback on Thursday
--   HW 6 posted and due Friday Apr 5 11:59p
+-   HW6 posted and due Friday Nov 8 11:59p
 -   Office hours
-    -   Thurs: Cancelled
-    -   Friday: 10:50a - 12:05p
--   Where to get HW help
+    -   Tuesday 10:30a - 11:30a
+    -   Friday 3:00p - 4:00p
+-   Where to get HW6 help
     -   [Spinelli center](https://www.smith.edu/qlc/tutoring.html) tutoring Sun-Thurs 7-9p, Sabin-Reed 301.
-    -   Post questions to #hw6-questions channel on Slack!
+    -   Post questions to [#hw6-questions](https://smith.enterprise.slack.com/archives/C07UK9AFPNY) channel on Slack!
     -   Direct message me on Slack.
 
 ## Agenda
@@ -36,7 +34,7 @@ library(Stat2Data)
 
 ## MP2 Group Preferences
 
-[Mini Project 2 Group Preferences](https://docs.google.com/forms/d/e/1FAIpQLSfRCdzIjjqSOaB_wYlh8wHEpUdSGZkcnQq5g3WDqDX8vWQdyg/viewform?usp=sf_link)
+[Mini Project 2 Group Preferences](https://docs.google.com/forms/d/e/1FAIpQLScUNlXyus46XpvYgz_vTFa8d-1J_aot3SEeCeGQ2F_g3Q6zUw/viewform?usp=sf_link)
 
 ## Piglets
 
@@ -332,7 +330,7 @@ $${y}_{ijk}={\mu}+{\alpha}_{i}+{\beta}_{j}+{\alpha\beta}_{ij}+{e}_{ijk}$$
 
 ## Two-Way Factorial in R
 
-[See Two-Way Factorial code](https://randilgarcia.github.io/sds290spring24/code/09_two-way_fac_inR.Rmd)
+[See Two-Way Factorial code](https://randilgarcia.github.io/sds290Fall24/code/09_two-way_fac_inR.Rmd)
 
 ## Teaching Methods
 
