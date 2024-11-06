@@ -1,5 +1,5 @@
 ---
-title: "Fitting Two-Way Factorial Designs"
+title: "Mini-Project 2 Work Time"
 author: Prof Randi Garcia, SDS 290
 date: November 6, 2024
 format: 
