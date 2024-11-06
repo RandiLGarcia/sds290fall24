@@ -1,7 +1,7 @@
 ---
 title: "Fitting Two-Way Factorial Designs"
 author: Prof Randi Garcia, SDS 290
-date: April 2, 2024
+date: November 4, 2024
 format: 
   revealjs:
     scrollable: true

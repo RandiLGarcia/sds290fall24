@@ -3230,8 +3230,8 @@
     "objectID": "lectures/16_fit_factorial.html#announcements",
     "href": "lectures/16_fit_factorial.html#announcements",
     "title": "Fitting Two-Way Factorial Designs",
-    "section": "",
-    "text": "Exam 1 grades posted\nHW 6 due tomorrow at 11:59p\nOffice hours\n\nToday: Cancelled\nTomorrow: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw6-questions channel on Slack!\nDirect message me on Slack."
+    "section": "Announcements",
+    "text": "Announcements\n\nHW6 due Friday Nov 8 11:59p\nOffice hours\n\nFriday 3:00p - 4:00p\n\nWhere to get HW6 help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw6-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/16_fit_factorial.html#sds-biostatistics-job-candidates",
@@ -3245,14 +3245,14 @@
     "href": "lectures/16_fit_factorial.html#agenda",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "Agenda",
-    "text": "Agenda\n\nMSA Feedback\nMP2 Assignment\nTwo-Way Factorial Design\n\nInteractions\nFitting the ANOVA model"
+    "text": "Agenda\n\nMP2 Assignment and groups\nMP2 Work time"
   },
   {
     "objectID": "lectures/16_fit_factorial.html#mp2-assignment",
     "href": "lectures/16_fit_factorial.html#mp2-assignment",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "MP2 Assignment",
-    "text": "MP2 Assignment\n\nMP2 instructions\nMP2 Group Assignments"
+    "text": "MP2 Assignment\n\nMP2 Assignment Instructions\nMP2 Group Assignments"
   },
   {
     "objectID": "lectures/16_fit_factorial.html#interaction-graphs",
@@ -3588,7 +3588,7 @@
     "href": "lectures/16_fit_factorial.html#confidence-intervals-and-effect-sizes-1",
     "title": "Fitting Two-Way Factorial Designs",
     "section": "Confidence Intervals and Effect Sizes",
-    "text": "Confidence Intervals and Effect Sizes\n\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\n\n\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
+    "text": "Confidence Intervals and Effect Sizes\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
   },
   {
     "objectID": "lectures/20_repeated_measures_II.html",
@@ -4765,5 +4765,33 @@
     "title": "Two-Way Factorial Designs II",
     "section": "Assessing conditions in block designs",
     "text": "Assessing conditions in block designs\nFinish slides from Monday"
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#example-teaching-methods",
+    "href": "lectures/16_fit_factorial.html#example-teaching-methods",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Example: Teaching Methods",
+    "text": "Example: Teaching Methods\nA professor wanted to compare three different teaching methods to determine how students would perceive the course: 1) instructionist, 2) inquiry-based, and 3) team-based. She randomly assigned the same class (same topic different students) from 6 different semesters to treatments. At the end of the semester students were asked to rate the course on a 5-point scale, and the average class rating was calculated."
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#example-swimsuitsweater-study",
+    "href": "lectures/16_fit_factorial.html#example-swimsuitsweater-study",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Example: Swimsuit/Sweater Study",
+    "text": "Example: Swimsuit/Sweater Study\nObjectification theory (Fredrickson & Roberts, 1997) posits that American culture socializes women to adopt observers’ perspectives on their physical selves. This self-objectification is hypothesized to (a) produce body shame, which in turn leads to restrained eating, and (b) consume attentional resources, which is manifested in diminished mental performance on a math test. An experiment manipulated self-objectification by having participants try on a swimsuit or a sweater. Further, it tested 20 women and 20 men, in each condition, and found that the effects on math performance were present for women only."
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#example-anxiety-and-memory",
+    "href": "lectures/16_fit_factorial.html#example-anxiety-and-memory",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "Example: Anxiety and Memory",
+    "text": "Example: Anxiety and Memory\nA psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded $5 for participation and $10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded $5 for participation and $100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded."
+  },
+  {
+    "objectID": "lectures/16_fit_factorial.html#mp2-work-time",
+    "href": "lectures/16_fit_factorial.html#mp2-work-time",
+    "title": "Fitting Two-Way Factorial Designs",
+    "section": "MP2 Work time",
+    "text": "MP2 Work time\n\nMP2 Group Assignments\nTime to discuss your MP2 projects.\n\nGoals for today:\n\nDecide on a topic\nDiscuss your design and run it by me\nDiscuss your stimuli\nDivide up your work (finding/creating stimuli, creating Qualtrics survey, writing consent form, preparing R code, ect.)"
   }
 ]
