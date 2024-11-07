@@ -241,8 +241,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **Mini Project 1 due 11:59p** (upload to Moodle by Midnight)
 
-::: 
-
 ## Week 10
 
 #### Mon, Nov 4
@@ -265,6 +263,8 @@ Please read the specified sections *before* class that day.
 -   Assessing two-way design
 -   Homework due today:
     -   No reading
+    
+:::     
     
 #### Fri, Nov 8
 
