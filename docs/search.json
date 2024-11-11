@@ -193,7 +193,7 @@
     "href": "schedule.html#week-10",
     "title": "Schedule",
     "section": "Week 10",
-    "text": "Week 10\n\nMon, Nov 4\n\nMP2 Assignment and survey\nPractice designs\nFitting two-way ANOVA\nHomework due today:\n\nRead Ch Stat2 7.3, 7.5\n\n\n\n\nTues, Nov 5\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Nov 6\n\nMP1 Self-assessment\nMP2 group assignments and work time\nAssessing two-way design\nHomework due today:\n\nNo reading"
+    "text": "Week 10\n\nMon, Nov 4\n\nMP2 Assignment and survey\nPractice designs\nFitting two-way ANOVA\nHomework due today:\n\nRead Ch Stat2 7.3, 7.5\n\n\n\n\nTues, Nov 5\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Nov 6\n\nMP1 Self-assessment\nMP2 group assignments and work time\nHomework due today:\n\nNo reading\n\n\n\n\nFri, Nov 8\n\nOffice hours: 3:00p - 4:00p\n\nHomework due today:\n\nHW #6 due today at 11:55p"
   },
   {
     "objectID": "schedule.html#spring-break",
@@ -207,7 +207,7 @@
     "href": "schedule.html#week-11",
     "title": "Schedule",
     "section": "Week 11",
-    "text": "Week 11\n\nMon, Nov 11\n\nPractice designs\nMP2 work time\nHomework due today:\n\nNo reading\n\n\n\n\nTues, Nov 12\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Nov 13\n\nMultiple tests\nInference Test for S Condition\nHomework due today:\n\nRead Ch Stat2 8.1 - 8.2\nRead Ch Stat2 8.6\n\n\n\n\nFri, Nov 15\n\nOffice hours: 3:00p - 4:00p\n\nHomework due today:\n\nHW #7 due today at 11:55p"
+    "text": "Week 11\n\nMon, Nov 11\n\nPractice designs\nAssessing two-way design\nHomework due today:\n\nNo reading\n\n\n\n\nTues, Nov 12\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Nov 13\n\nMultiple tests\nInference Test for S Condition\nHomework due today:\n\nRead Ch Stat2 8.1 - 8.2\nRead Ch Stat2 8.6\n\n\n\n\nFri, Nov 15\n\nOffice hours: 3:00p - 4:00p\n\nHomework due today:\n\nHW #7 due today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-12",
@@ -3369,9 +3369,9 @@
   {
     "objectID": "lectures/17_catch-up_factorial.html#announcements",
     "href": "lectures/17_catch-up_factorial.html#announcements",
-    "title": "Chapter 7 Catch-up",
-    "section": "",
-    "text": "Added to the syllabus:\n\nI will be dropping the lowest exam grade at the end of the term.\n\nHW 7 due Friday 11:59p\n\nFind a research article that uses ANOVA!\n\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw7-questions channel on Slack!\nDirect message me on Slack."
+    "title": "Assessing Two-Way Factorial Designs",
+    "section": "Announcements",
+    "text": "Announcements\n\nHW7 posted and due Friday Nov 15 11:59p\n\nFind a research article that uses ANOVA!\n\nOffice hours\n\nTuesday 10:30a - 11:30a\nFriday 3:00p - 4:00p\n\nWhere to get HW7 help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw7-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#sds-biostatistics-job-candidate---friday",
@@ -3390,35 +3390,35 @@
   {
     "objectID": "lectures/17_catch-up_factorial.html#agenda",
     "href": "lectures/17_catch-up_factorial.html#agenda",
-    "title": "Chapter 7 Catch-up",
+    "title": "Assessing Two-Way Factorial Designs",
     "section": "Agenda",
-    "text": "Agenda\n\nConditions for the Two-Way Factorial ANOVA\nConfidence intervals and effect sizes\nMP2 work time"
+    "text": "Agenda\n\nConditions for the Two-Way Factorial ANOVA\nConfidence intervals and effect sizes"
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#warm-up-teaching-methods",
     "href": "lectures/17_catch-up_factorial.html#warm-up-teaching-methods",
-    "title": "Chapter 7 Catch-up",
+    "title": "Assessing Two-Way Factorial Designs",
     "section": "Warm-up: Teaching Methods",
     "text": "Warm-up: Teaching Methods\nA professor wanted to compare three different teaching methods to determine how students would perceive the course: 1) instructionist, 2) inquiry-based, and 3) team-based. She randomly assigned the same class (same topic different students) from 6 different semesters to treatments. At the end of the semester students were asked to rate the course on a 5-point scale, and the average class rating was calculated."
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#warm-up-swimsuitsweater-study",
     "href": "lectures/17_catch-up_factorial.html#warm-up-swimsuitsweater-study",
-    "title": "Chapter 7 Catch-up",
+    "title": "Assessing Two-Way Factorial Designs",
     "section": "Warm-up: Swimsuit/Sweater Study",
     "text": "Warm-up: Swimsuit/Sweater Study\nObjectification theory (Fredrickson & Roberts, 1997) posits that American culture socializes women to adopt observers’ perspectives on their physical selves. This self-objectification is hypothesized to (a) produce body shame, which in turn leads to restrained eating, and (b) consume attentional resources, which is manifested in diminished mental performance on a math test. An experiment manipulated self-objectification by having participants try on a swimsuit or a sweater. Further, it tested 20 women and 20 men, in each condition, and found that the effects on math performance were present for women only."
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#warm-up-anxiety-and-memory",
     "href": "lectures/17_catch-up_factorial.html#warm-up-anxiety-and-memory",
-    "title": "Chapter 7 Catch-up",
+    "title": "Assessing Two-Way Factorial Designs",
     "section": "Warm-up: Anxiety and Memory",
-    "text": "Warm-up: Anxiety and Memory\nA psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded $5 for participation and $10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded $5 for participation and $100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded. |"
+    "text": "Warm-up: Anxiety and Memory\nA psychologist wants to study the effect of anxiety on 4 different types of memory. Twelve participants are assigned to one of two anxiety conditions: 1) low anxiety group is told that they will be awarded $5 for participation and $10 if they remember sufficiently accurately, and 2) high anxiety group is told they will be awarded $5 for participation and $100 if they remember sufficiently accurately. All subjects perform four memory trials in random order, testing 4 different types of memory. The number of errors on each trial is recorded."
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#anova-source-table-for-two-way-factorial",
     "href": "lectures/17_catch-up_factorial.html#anova-source-table-for-two-way-factorial",
-    "title": "Chapter 7 Catch-up",
+    "title": "Assessing Two-Way Factorial Designs",
     "section": "ANOVA Source Table for Two-Way Factorial",
     "text": "ANOVA Source Table for Two-Way Factorial\n\\[{y}_{ijk}={\\mu}+{\\alpha}_{i}+{\\beta}_{j}+{\\alpha\\beta}_{ij}+{e}_{ijk}\\]\n\n\n\n\n\n\n\n\n\n\nSource\nSS\ndf\nMS\nF\n\n\n\n\nTreatment A\n\\(\\sum_{i=1}^{a}bn(\\bar{y}_{i..}-\\bar{y}_{…})^{2}\\)\n\\(a-1\\)\n\\(\\frac{{SS}_{A}}{{df}_{A}}\\)\n\\(\\frac{{MS}_{A}}{{MS}_{E}}\\)\n\n\nTreatment B\n\\(\\sum_{j=1}^{b}an(\\bar{y}_{.j.}-\\bar{y}_{…})^{2}\\)\n\\(b-1\\)\n\\(\\frac{{SS}_{B}}{{df}_{B}}\\)\n\\(\\frac{{MS}_{B}}{{MS}_{E}}\\)\n\n\nInteraction AB\n\\(n\\sum_{i=1}^{a}\\sum_{j=1}^{b}(\\bar{y}_{ij.}-\\bar{y}_{i..}-\\bar{y}_{.j.}+\\bar{y}_{…})^{2}\\)\n\\((a-1)(b-1)\\)\n\\(\\frac{{SS}_{AB}}{{df}_{AB}}\\)\n\\(\\frac{{MS}_{AB}}{{MS}_{E}}\\)\n\n\nError\n\\(\\sum_{i=1}^{a}\\sum_{j=1}^{b}\\sum_{k=1}^{n}({y}_{ijk}-\\bar{y}_{ij.})^{2}\\)\n\\(ab(n-1)\\)\n\\(\\frac{{SS}_{E}}{{df}_{E}}\\)"
   },
@@ -3439,7 +3439,7 @@
   {
     "objectID": "lectures/17_catch-up_factorial.html#three-research-questions-three-f-ratios",
     "href": "lectures/17_catch-up_factorial.html#three-research-questions-three-f-ratios",
-    "title": "Chapter 7 Catch-up",
+    "title": "Assessing Two-Way Factorial Designs",
     "section": "Three Research Questions, Three F-ratios",
     "text": "Three Research Questions, Three F-ratios\n\nIs there a significant main effect of factor A?\nIs there a significant main effect of factor B?\nIs there an significant interaction between factor A and factor B?"
   },
@@ -3460,28 +3460,28 @@
   {
     "objectID": "lectures/17_catch-up_factorial.html#confidence-intervals-and-effect-sizes",
     "href": "lectures/17_catch-up_factorial.html#confidence-intervals-and-effect-sizes",
-    "title": "Chapter 7 Catch-up",
+    "title": "Assessing Two-Way Factorial Designs",
     "section": "Confidence intervals and effect sizes",
     "text": "Confidence intervals and effect sizes\n\nIf the interaction is significant\n\nCalculate CIs and effect sizes for sets of conditional averages (also called “simple effects”)\nFor example, for the 0mg antibiotics condition, what’s the effect size for B12\n\nIf the interaction is NOT significant\n\nCalculate CIs and effect sizes for sets of marginal averages (also called “main effects”)\nFor example, what is the effect size for B12 overall?"
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#conditional-averages-and-marginal-averages",
     "href": "lectures/17_catch-up_factorial.html#conditional-averages-and-marginal-averages",
-    "title": "Chapter 7 Catch-up",
+    "title": "Assessing Two-Way Factorial Designs",
     "section": "Conditional Averages and Marginal Averages",
     "text": "Conditional Averages and Marginal Averages\n\n\nThe numbers in blue are Marginal Averages\nThe numbers in green are Conditional Averages"
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#confidence-intervals-and-effect-sizes-1",
     "href": "lectures/17_catch-up_factorial.html#confidence-intervals-and-effect-sizes-1",
-    "title": "Chapter 7 Catch-up",
+    "title": "Assessing Two-Way Factorial Designs",
     "section": "Confidence Intervals and Effect Sizes",
-    "text": "Confidence Intervals and Effect Sizes\n\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\n\n\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
+    "text": "Confidence Intervals and Effect Sizes\nConfidence Intervals\n\\[(\\bar{y_i}-\\bar{y_j}) \\pm t^*\\cdot SD \\sqrt{1/n_i+1/n_j}\\]\nEffect size\n\\[D_{ij} = \\frac{(\\bar{y_i}-\\bar{y_j})}{SD}\\]\n\nWhere \\(SD = \\sqrt{MSE}\\)"
   },
   {
     "objectID": "lectures/17_catch-up_factorial.html#two-way-factorial-in-r",
     "href": "lectures/17_catch-up_factorial.html#two-way-factorial-in-r",
-    "title": "Chapter 7 Catch-up",
+    "title": "Assessing Two-Way Factorial Designs",
     "section": "Two-Way Factorial in R",
     "text": "Two-Way Factorial in R\nSee Two-Way Factorial code"
   },
