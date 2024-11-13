@@ -4793,5 +4793,12 @@
     "title": "Mini-Project 2 Work Time",
     "section": "MP2 Work time",
     "text": "MP2 Work time\n\nMP2 Group Assignments\nTime to discuss your MP2 projects.\n\nGoals for today:\n\nDecide on a topic\nDiscuss your design and run it by me\nDiscuss your stimuli\nDivide up your work (finding/creating stimuli, creating Qualtrics survey, writing consent form, preparing R code, ect.)"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#two-way-factorial-in-r",
+    "href": "lectures/19_repeated_measures.html#two-way-factorial-in-r",
+    "title": "Repeated Measures",
+    "section": "Two-Way Factorial in R",
+    "text": "Two-Way Factorial in R\nSee Two-Way Factorial code"
   }
 ]
