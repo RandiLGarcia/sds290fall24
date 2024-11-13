@@ -291,7 +291,6 @@ Please read the specified sections *before* class that day.
 -   Inference Test for S Condition
 -   Homework due today:
     -   Read Ch **Stat2** 8.1 - 8.2
-    -   Read Ch **Stat2** 8.6
 
 #### Fri, Nov 15
 
@@ -306,7 +305,7 @@ Please read the specified sections *before* class that day.
 -   Repeated measures designs 
 -   MP2 Work time
 -   Homework due today:
-    -   Read Ch **Stat2** 8.4
+    -   Read Ch **Stat2** 8.6
 
 #### Tues, Nov 19
 
@@ -317,7 +316,7 @@ Please read the specified sections *before* class that day.
 
 -   Repeated measures designs
 -   Homework due today:
-    -   Read Ch **Stat2** 8.7-8.8
+    -   Read Ch **Stat2** 8.7
 
 #### Fri, Nov 22
 
