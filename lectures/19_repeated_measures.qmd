@@ -35,6 +35,21 @@ library(Stat2Data)
 
 [See Two-Way Factorial code](https://randilgarcia.github.io/sds290fall24/code/09_two-way_fac_inR.Rmd)
 
+```{r, include=FALSE}
+data("BirdCalcium")
+
+mod <- lm(Ca ~ Sex*Hormone, data = BirdCalcium)
+anova(mod)
+```
+
+## Try it on the BirdCalcium data
+
+Use the `BirdCalcium` dataset to:
+
+1.  Test if there are differences in `Ca` (blood calcium) depending on the bird `Sex`, `Hormone` condition, and their interaction using a **two-way factorial ANOVA**. Interpret the result of your analysis in context.
+2.  Check the ANOVA conditions for the residuals (**SINZ**).  
+2.  Calculate the **effect size (D)** for the main effect of `Hormone`.
+
 ## Example: Walking Babies
 
 ```{r}

@@ -4800,5 +4800,12 @@
     "title": "Repeated Measures",
     "section": "Two-Way Factorial in R",
     "text": "Two-Way Factorial in R\nSee Two-Way Factorial code"
+  },
+  {
+    "objectID": "lectures/19_repeated_measures.html#try-it-on-the-birdcalcium-data",
+    "href": "lectures/19_repeated_measures.html#try-it-on-the-birdcalcium-data",
+    "title": "Repeated Measures",
+    "section": "Try it on the BirdCalcium data",
+    "text": "Try it on the BirdCalcium data\nUse the BirdCalcium dataset to:\n\nTest if there are differences in Ca (blood calcium) depending on the bird Sex, Hormone condition, and their interaction using a two-way factorial ANOVA. Interpret the result of your analysis in context.\nCheck the ANOVA conditions for the residuals (SINZ).\n\nCalculate the effect size (D) for the main effect of Hormone."
   }
 ]
