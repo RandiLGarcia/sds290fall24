@@ -33,9 +33,9 @@ title: 'Homework'
 
     -   HW #7: 7.5, 7.7, 7.8, 7.11, 7.12, find a peer-reviewed journal article that uses ANOVA and include a link.
 
-<!-- 8.  Due Friday, April 26th: -->
+8.  Due Friday, Nov 22nd:
 
-<!--     -   HW #8: 7.20, 7.21, 7.22, 7.34, 7.38 -->
+    -   HW #8: 7.20, 7.21, 7.22, 7.34, 7.38
 
 <!-- 9.  (Extra credit) Due Thursday, May 9th (3:00 pm): -->
 

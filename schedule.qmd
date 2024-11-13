@@ -269,8 +269,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     - [**HW #6 due today at 11:55p**](homework.html)  
 
-:::   
-
 ## Week 11
 
 #### Mon, Nov 11
@@ -284,6 +282,8 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: 10:30a - 11:30a   
 -   Cindy, Nora, Sarah **tutoring Sabin-Reed 301 7-9p**
+
+:::   
 
 #### Wed, Nov 13
 
@@ -304,6 +304,7 @@ Please read the specified sections *before* class that day.
 #### Mon, Nov 18
 
 -   Repeated measures designs 
+-   MP2 Work time
 -   Homework due today:
     -   Read Ch **Stat2** 8.4
 
@@ -323,7 +324,7 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 3:00p - 4:00p  
 -   Homework due today:
     -   **MP2 Pre-approval due tonight 11:55p** (upload to Moodle)
-    -   [**HW #8 due today at 9:20a**](homework.html)
+    -   [**HW #8 due tonight at 11:59p**](homework.html)
 
 ## Week 13
 
@@ -342,13 +343,15 @@ Please read the specified sections *before* class that day.
 
 #### Fri, Nov 29
 
--   **Office hours**: No office hours
+-   **Office hours**: No office hours   
 
 ## Week 14
 
 #### Mon, Dec 2
 
 -   Review for Exam 2
+-   Homework due today:
+    -   [**HW #9 due tonight at 11:59p**](homework.html)
 
 #### Tues, Dec 3
 
@@ -357,11 +360,17 @@ Please read the specified sections *before* class that day.
 
 #### Wed, Dec 4
 
--   **Exam 2**
+-   **Exam 2** (Option to take in-class during class time)
 
 #### Fri, Dec 6
 
 -   **Office hours**: 3:00p - 4:00p  
+-   **Exam 2 - Self-Scheduled** McConnell Foyer ([more information](https://www.science.smith.edu/self-scheduled-exams/))
+    -   Friday 12/6 3-6p
+    -   Saturday 12/7 12-6p 
+    -   Sunday 12/8 12-6p
+-   Homework due today:
+    -   No homework
 
 
 ## Week 15 - Exam 2
