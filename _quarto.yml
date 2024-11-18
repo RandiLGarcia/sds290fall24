@@ -66,8 +66,8 @@ website:
 #         href: lectures/18_MP2_time.html  
         - text: 18 - Repeated Measures
           href: lectures/19_repeated_measures.html  
-#        - text: 20 - Repeated Measures (cont.)
-#          href: lectures/20_repeated_measures_II.html  
+        - text: 19 - Repeated Measures (cont.)
+          href: lectures/20_repeated_measures_II.html  
 #        - text: 21 - MP2 Data Analysis
 #          href: lectures/21_mp2_data_analysis.html
 #        - text: 22 - Exam 2 Review
@@ -82,9 +82,9 @@ website:
             href: code/SandwichAnts analysis.qmd
           - text: Two-Way Factorial Design
             href: code/09_two-way_fac_inR.qmd    
-#          - text: Complete Block, Spilt-Plot Design in R
-#            href: code/13_spitplot_design_inR.qmd       
-#          - text: 06 - Extensions in R
+          - text: Complete Block, Spilt-Plot Design in R
+            href: code/13_spitplot_design_inR.qmd       
+#          - text: Extensions of Basic Designs in R
 #            href: lectures/15_extensions_inR.Rmd    
 #          - text: 07 - Multiple Comparisons
 #            href: lectures/18_multiple_comparisons_and_assumptions.Rmd             

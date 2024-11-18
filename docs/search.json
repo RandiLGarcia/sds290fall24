@@ -207,14 +207,14 @@
     "href": "schedule.html#week-11",
     "title": "Schedule",
     "section": "Week 11",
-    "text": "Week 11\n\nMon, Nov 11\n\nPractice designs\nAssessing two-way design\nHomework due today:\n\nNo reading\n\n\n\n\nTues, Nov 12\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p"
+    "text": "Week 11\n\nMon, Nov 11\n\nPractice designs\nAssessing two-way design\nHomework due today:\n\nNo reading\n\n\n\n\nTues, Nov 12\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Nov 13\n\nMultiple tests\nInference Test for S Condition\nHomework due today:\n\nRead Ch Stat2 8.1 - 8.2\n\n\n\n\nFri, Nov 15\n\nOffice hours: 3:00p - 4:00p\n\nHomework due today:\n\nHW #7 due today at 11:55p"
   },
   {
     "objectID": "schedule.html#week-12",
     "href": "schedule.html#week-12",
     "title": "Schedule",
     "section": "Week 12",
-    "text": "Week 12\n\nMon, Nov 18\n\nRepeated measures designs\nMP2 Work time\nHomework due today:\n\nRead Ch Stat2 8.6\n\n\n\n\nTues, Nov 19\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Nov 20\n\nRepeated measures designs\nHomework due today:\n\nRead Ch Stat2 8.7\n\n\n\n\nFri, Nov 22\n\nOffice hours: 3:00p - 4:00p\n\nHomework due today:\n\nMP2 Pre-approval due tonight 11:55p (upload to Moodle)\nHW #8 due tonight at 11:59p"
+    "text": "Week 12\n\nMon, Nov 18\n\nRepeated measures designs\nMP2 Work time\nHomework due today:\n\nRead Ch Stat2 8.6\n\n\n\n\nTues, Nov 19\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Nov 20\n\nRepeated measures designs\nHomework due today:\n\nRead Ch Stat2 8.7\n\n\n\n\nFri, Nov 22\n\nOffice hours: 3:00p - 4:00p\n\nHomework due today:\n\nMP2 Pre-approval due tonight 11:59p (upload to Moodle)\nHW #8 due tonight at 11:59p"
   },
   {
     "objectID": "schedule.html#week-13",
@@ -3602,7 +3602,7 @@
     "href": "lectures/20_repeated_measures_II.html#announcements",
     "title": "Repeated Measures (cont.)",
     "section": "Announcements",
-    "text": "Announcements\n\nHW 8 posted and due Friday Apr 26 11:59p\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw8-questions channel on Slack!\nDirect message me on Slack."
+    "text": "Announcements\n\nHW8 posted and due Friday Nov 22 11:59p\nMP2 surveys due on Friday Nov 22 11:59p (Moodle)\nOffice hours\n\nTuesday 10:30a - 11:30a\nFriday 3:00p - 4:00p\n\nWhere to get HW8 help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw8-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/20_repeated_measures_II.html#sds-job-candidates-for-mass-mutual-position",
@@ -3630,7 +3630,7 @@
     "href": "lectures/20_repeated_measures_II.html#agenda",
     "title": "Repeated Measures (cont.)",
     "section": "Agenda",
-    "text": "Agenda\n\nMP2 Data Collection!!\nRepeated measures (cont.)"
+    "text": "Agenda\n\nRepeated measures\nMP2 work time"
   },
   {
     "objectID": "lectures/20_repeated_measures_II.html#mp2-data-collection",
@@ -4807,5 +4807,12 @@
     "title": "Repeated Measures",
     "section": "Try it on the BirdCalcium data",
     "text": "Try it on the BirdCalcium data\nUse the BirdCalcium dataset to:\n\nTest if there are differences in Ca (blood calcium) depending on the bird Sex, Hormone condition, and their interaction using a two-way factorial ANOVA. Interpret the result of your analysis in context.\nCheck the ANOVA conditions for the residuals (SINZ).\n\nCalculate the effect size (D) for the main effect of Hormone."
+  },
+  {
+    "objectID": "lectures/20_repeated_measures_II.html#warm-up-tuplips",
+    "href": "lectures/20_repeated_measures_II.html#warm-up-tuplips",
+    "title": "Repeated Measures (cont.)",
+    "section": "Warm-up: Tuplips",
+    "text": "Warm-up: Tuplips\nA plant breeder wishes to study the effects of soil drainage and variety of tulip bulbs on flower production. Twelve 3m by 10m experimental sites are available in the test garden–each is a .5m deep trench. You can manipulate soil drainage by changing the ratio of sand to clay for the soil you put in a trench. After talking to your collaborator, you decided that four different levels of soil drainage would suffice. You’ll be testing 15 different types of tulips, and measuring flower production in the spring."
   }
 ]

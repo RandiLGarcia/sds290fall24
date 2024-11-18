@@ -283,8 +283,6 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:30a - 11:30a   
 -   Cindy, Nora, Sarah **tutoring Sabin-Reed 301 7-9p**
 
-:::   
-
 #### Wed, Nov 13
 
 -   Multiple tests
@@ -297,6 +295,8 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 3:00p - 4:00p  
 -   Homework due today:
     -   [**HW #7 due today at 11:55p**](homework.html)
+
+:::  
 
 ## Week 12
 
@@ -322,7 +322,7 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: 3:00p - 4:00p  
 -   Homework due today:
-    -   **MP2 Pre-approval due tonight 11:55p** (upload to Moodle)
+    -   **MP2 Pre-approval due tonight 11:59p** (upload to Moodle)
     -   [**HW #8 due tonight at 11:59p**](homework.html)
 
 ## Week 13

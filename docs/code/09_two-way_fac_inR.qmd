@@ -110,6 +110,8 @@ mod2 <- lm(WgtGain ~ Antibiotic * B12, data = PigFeed)
 
 anova(mod2)
 ```
+There was no evidence of a main effect of antibiotics on average daily weight gain (at the 5% level), F(1,8) = 5.30, p = .050. There was a statistically significant main effect of B12 on average daily weight gain such that bigs who got 5mg B12 gained more weight on averaged than pigs that got no B12, F(1, 8) = 60.33, p < .001. There was a statistically significant interaction of antibiotics and B12 on average daily weight gain, F(1,8) = 47.67, p < .001. The nature of this interaction is such that B12 increases weight pig weight gain when the pigs have been given antibiotics, CI95% = [], however there is no significant effect of B12 when teh pigs have not gotten any antibiotics, Ci95% = [-8.34, 14.34].     
+
 
 # Residual Analysis
 
