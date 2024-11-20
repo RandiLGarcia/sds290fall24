@@ -64,12 +64,12 @@ website:
           href: lectures/17_catch-up_factorial.html
 #        - text: 18 - Mini Project 2 Work Time
 #         href: lectures/18_MP2_time.html  
-        - text: 18 - Repeated Measures
+        - text: 18 - Split-Plot Designs
           href: lectures/19_repeated_measures.html  
-        - text: 19 - Repeated Measures (cont.)
+        - text: 19 - Split-Plot Designs (cont.)
           href: lectures/20_repeated_measures_II.html  
-#        - text: 21 - MP2 Data Analysis
-#          href: lectures/21_mp2_data_analysis.html
+        - text: 20 - Split-Plot Designs (cont.)
+          href: lectures/21_mp2_data_analysis.html
 #        - text: 22 - Exam 2 Review
 #          href: lectures/22_exam2_review.html       
       - text: Code

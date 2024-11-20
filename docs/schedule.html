@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -190,11 +190,15 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="./lectures/19_repeated_measures.html">
- <span class="dropdown-text">18 - Repeated Measures</span></a>
+ <span class="dropdown-text">18 - Split-Plot Designs</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./lectures/20_repeated_measures_II.html">
- <span class="dropdown-text">19 - Repeated Measures (cont.)</span></a>
+ <span class="dropdown-text">19 - Split-Plot Designs (cont.)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lectures/21_mp2_data_analysis.html">
+ <span class="dropdown-text">20 - Split-Plot Designs (cont.)</span></a>
   </li>  
     </ul>
   </li>
@@ -295,8 +299,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-12" id="toc-week-12" class="nav-link active" data-scroll-target="#week-12">Week 12</a></li>
-  <li><a href="#week-13" id="toc-week-13" class="nav-link" data-scroll-target="#week-13">Week 13</a></li>
+  <li><a href="#week-13" id="toc-week-13" class="nav-link active" data-scroll-target="#week-13">Week 13</a></li>
   <li><a href="#week-14" id="toc-week-14" class="nav-link" data-scroll-target="#week-14">Week 14</a></li>
   <li><a href="#week-15---exam-2" id="toc-week-15---exam-2" class="nav-link" data-scroll-target="#week-15---exam-2">Week 15 - Exam 2</a></li>
   <li><a href="#finals-week---mp2-due" id="toc-finals-week---mp2-due" class="nav-link" data-scroll-target="#finals-week---mp2-due">Finals Week - MP2 due</a></li>
@@ -783,7 +786,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-</div>
 <section id="week-12" class="level2">
 <h2 class="anchored" data-anchor-id="week-12">Week 12</h2>
 <section id="mon-nov-18" class="level4">
@@ -805,6 +807,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Cindy, Nora, Sarah <strong>tutoring Sabin-Reed 301 7-9p</strong></li>
 </ul>
 </section>
+</section>
+</div>
 <section id="wed-nov-20" class="level4">
 <h4 class="anchored" data-anchor-id="wed-nov-20">Wed, Nov 20</h4>
 <ul>
@@ -826,7 +830,6 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="homework.html"><strong>HW #8 due tonight at 11:59p</strong></a></li>
 </ul></li>
 </ul>
-</section>
 </section>
 <section id="week-13" class="level2">
 <h2 class="anchored" data-anchor-id="week-13">Week 13</h2>
@@ -1034,6 +1037,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1068,7 +1089,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

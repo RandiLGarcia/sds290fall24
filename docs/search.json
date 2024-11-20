@@ -214,7 +214,7 @@
     "href": "schedule.html#week-12",
     "title": "Schedule",
     "section": "Week 12",
-    "text": "Week 12\n\nMon, Nov 18\n\nRepeated measures designs\nMP2 Work time\nHomework due today:\n\nRead Ch Stat2 8.6\n\n\n\n\nTues, Nov 19\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p\n\n\n\nWed, Nov 20\n\nRepeated measures designs\nHomework due today:\n\nRead Ch Stat2 8.7\n\n\n\n\nFri, Nov 22\n\nOffice hours: 3:00p - 4:00p\n\nHomework due today:\n\nMP2 Pre-approval due tonight 11:59p (upload to Moodle)\nHW #8 due tonight at 11:59p"
+    "text": "Week 12\n\nMon, Nov 18\n\nRepeated measures designs\nMP2 Work time\nHomework due today:\n\nRead Ch Stat2 8.6\n\n\n\n\nTues, Nov 19\n\nOffice hours: 10:30a - 11:30a\n\nCindy, Nora, Sarah tutoring Sabin-Reed 301 7-9p"
   },
   {
     "objectID": "schedule.html#week-13",
@@ -3965,15 +3965,15 @@
     "objectID": "lectures/21_mp2_data_analysis.html#announcements",
     "href": "lectures/21_mp2_data_analysis.html#announcements",
     "title": "Repeated Measures (cont.)",
-    "section": "",
-    "text": "HW 8 posted and due Friday Apr 26 11:59p\nOffice hours\n\nThurs: 2:45p - 4:00p\nFriday: 10:50a - 12:05p\n\nWhere to get HW help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw8-questions channel on Slack!\nDirect message me on Slack."
+    "section": "Announcements",
+    "text": "Announcements\n\nHW8 due Friday Nov 22 11:59p\nMP2 surveys due on Friday Nov 22 11:59p (Moodle)\nOffice hours\n\nFriday 3:00p - 4:00p\n\nWhere to get HW8 help\n\nSpinelli center tutoring Sun-Thurs 7-9p, Sabin-Reed 301.\nPost questions to #hw8-questions channel on Slack!\nDirect message me on Slack."
   },
   {
     "objectID": "lectures/21_mp2_data_analysis.html#agenda",
     "href": "lectures/21_mp2_data_analysis.html#agenda",
     "title": "Repeated Measures (cont.)",
     "section": "Agenda",
-    "text": "Agenda\n\nFinish split plot designs\nMP2 data analysis and work time"
+    "text": "Agenda\n\nSplit plot designs"
   },
   {
     "objectID": "lectures/21_mp2_data_analysis.html#formal-anova-for-the-split-plot-design",
@@ -4814,5 +4814,19 @@
     "title": "Repeated Measures (cont.)",
     "section": "Warm-up: Tuplips",
     "text": "Warm-up: Tuplips\nA plant breeder wishes to study the effects of soil drainage and variety of tulip bulbs on flower production. Twelve 3m by 10m experimental sites are available in the test garden–each is a .5m deep trench. You can manipulate soil drainage by changing the ratio of sand to clay for the soil you put in a trench. After talking to your collaborator, you decided that four different levels of soil drainage would suffice. You’ll be testing 15 different types of tulips, and measuring flower production in the spring."
+  },
+  {
+    "objectID": "lectures/21_mp2_data_analysis.html#diabetic-dogs",
+    "href": "lectures/21_mp2_data_analysis.html#diabetic-dogs",
+    "title": "Repeated Measures (cont.)",
+    "section": "Diabetic Dogs",
+    "text": "Diabetic Dogs\nThe disease diabetes affects the rate of turnover of lactic acid in a system of biochemical reactions called the Cori cycle. This experiment compares two methods of using radioactive carbon-14 to measure rate of turnover. Method 1 is injection all at once, and method 2 is infused continuously. 10 dogs were sorted into two groups, 5 were controls and 5 had their pancreas removed (to make it diabetic). The rate of turnover was then measured twice for each dog, once for each method. The order of the two methods was randomly assigned."
+  },
+  {
+    "objectID": "lectures/21_mp2_data_analysis.html#split-plot-design",
+    "href": "lectures/21_mp2_data_analysis.html#split-plot-design",
+    "title": "Repeated Measures (cont.)",
+    "section": "Split-Plot Design",
+    "text": "Split-Plot Design\nIf you suspect a design in a split-plot design, you should be able to answer the following questions:\n\nWhat are the whole plots, that is, what is the nuisance factor?\nWhat is the between-blocks factor? Is it observational or experimental?\nWhat is the within-blocks factor? Is it observational or experimental?"
   }
 ]

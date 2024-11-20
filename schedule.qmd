@@ -296,8 +296,6 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   [**HW #7 due today at 11:55p**](homework.html)
 
-:::  
-
 ## Week 12
 
 #### Mon, Nov 18
@@ -311,6 +309,8 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: 10:30a - 11:30a   
 -   Cindy, Nora, Sarah **tutoring Sabin-Reed 301 7-9p**
+
+:::  
 
 #### Wed, Nov 20
 
