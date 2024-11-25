@@ -310,8 +310,6 @@ Please read the specified sections *before* class that day.
 -   **Office hours**: 10:30a - 11:30a   
 -   Cindy, Nora, Sarah **tutoring Sabin-Reed 301 7-9p**
 
-:::  
-
 #### Wed, Nov 20
 
 -   Repeated measures designs
@@ -324,6 +322,8 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   **MP2 Pre-approval due tonight 11:59p** (upload to Moodle)
     -   [**HW #8 due tonight at 11:59p**](homework.html)
+
+:::  
 
 ## Week 13
 
