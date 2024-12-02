@@ -1,7 +1,7 @@
 ---
 title: "Exam 2 Review"
 author: Prof Randi Garcia, SDS 290
-date: April 30, 2024
+date: December 2, 2024
 format: 
   revealjs:
     scrollable: true
@@ -16,35 +16,23 @@ library(Stat2Data)
 
 ## Announcements
 
--   Extra Credit HW 9 is now posted
-    -   Score can replace second lowest homework grade
--   Exam 2 released on Thursday (ON MOODLE)
-    -   Due **Tuesday** night 11:59p (ON Gradescope)
-    -   I'll be available for the first half of class time on Thurs
--   Office hours this week
-    -   Thurs: 2:45p - 4:00p
-    -   Friday: cancelled
-
-## Agenda
-
-1.  Course Feedback Questionnaire time
-2.  Exam 2 review
-
-## Course feedback questionnaire
-
--   About 10 to 15 minutes to complete
+-   HW9 due (tonight) Monday Dec 2 11:59p
+-   Exam 2 [self-scheduled](https://www.science.smith.edu/self-scheduled-exams/) 12/6-12/8
+    -   Or in class on Wednesday
+-   Office hours (Bass 412)
+    -   Tuesday 10:30a - 11:30a
+    -   Friday 3:00p - 4:00p
+-   Where to get HW9 help
+    -   Post questions to [#hw9-questions](https://smith.enterprise.slack.com/archives/C0832L2SC3S) channel on Slack!
+    -   Direct message me on Slack.
 
 ## Exam 2
 
--   Open-book, open-notes, open-slides, open-internet
-    -   Careful with use of the internet!
--   No talking with each other about the exam
--   I can answer only clarifying questions
--   There are 4 (multi-part) short answer questions and 1 (multi-part) data analysis question
--   Exam will be **given electronically via Moodle**
-    -   Check Moodle at 10:50a on Thursday under Exams
--   **Submit your exam electronically on Gradescope** by 11:55pm on Tuesday May 7.
-    -   Needs to be in PDF format.
+-   Closed notes, closed book, closed internet
+-   85 minute to complete the exam
+-   You can use your phone for a calculator
+-   Can have 1 single-sided notes page ("cheatsheet"). 
+    -   You do **not** need to turn it in with your exam.
 
 ## Design Names
 

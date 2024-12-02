@@ -178,7 +178,7 @@ hamster %>%
   select(-conc, -interact) %>%
   spread(organ, lconc) %>%
   ggplot(aes(x = heart, y = brain, shape = day_length)) +
-  geom_point()
+  geom_point() 
 ```
 
 ## Formal Modeling with the ANOVA

@@ -323,8 +323,6 @@ Please read the specified sections *before* class that day.
     -   **MP2 Pre-approval due tonight 11:59p** (upload to Moodle)
     -   [**HW #8 due tonight at 11:59p**](homework.html)
 
-:::  
-
 ## Week 13
 
 #### Mon, Nov 25
@@ -344,7 +342,9 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: No office hours   
 
-## Week 14
+:::  
+
+## Week 14 - Exam 2
 
 #### Mon, Dec 2
 
@@ -372,7 +372,7 @@ Please read the specified sections *before* class that day.
     -   No homework
 
 
-## Week 15 - Exam 2
+## Week 15 
 
 #### Mon, Dec 9
 

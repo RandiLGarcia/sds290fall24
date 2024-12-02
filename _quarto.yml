@@ -70,8 +70,8 @@ website:
           href: lectures/20_repeated_measures_II.html  
         - text: 20 - Split-Plot Designs (cont.)
           href: lectures/21_mp2_data_analysis.html
-#        - text: 22 - Exam 2 Review
-#          href: lectures/22_exam2_review.html       
+        - text: 22 - Exam 2 Review
+          href: lectures/22_exam2_review.html       
       - text: Code
         menu:
           - text: Animal Data
@@ -107,7 +107,7 @@ website:
         - text: 'HW8: 7.20, 7.21, 7.22, 7.34, 7.38'
           href: homework.html      
         - text: 'HW9: 8.1, 8.3, 8.6, 8.12, 8.14(a only), 8.36, 8.37'      
-#          href: homework.html          
+          href: homework.html          
       - text: Projects
         menu:
         - text: 'Mini project 1'
