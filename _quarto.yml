@@ -73,7 +73,9 @@ website:
         - text: 20 - Split-Plot Designs (cont.)
           href: lectures/21_mp2_data_analysis.html
         - text: 22 - Exam 2 Review
-          href: lectures/22_exam2_review.html       
+          href: lectures/22_exam2_review.html  
+        - text: 23 - MP2 Analysis
+          href: lectures/23_mp2_data_analysis.html          
       - text: Code
         menu:
           - text: Animal Data

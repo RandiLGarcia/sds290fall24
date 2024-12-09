@@ -342,8 +342,6 @@ Please read the specified sections *before* class that day.
 
 -   **Office hours**: No office hours   
 
-:::  
-
 ## Week 14 - Exam 2
 
 #### Mon, Dec 2
@@ -371,6 +369,7 @@ Please read the specified sections *before* class that day.
 -   Homework due today:
     -   No homework
 
+::: 
 
 ## Week 15 
 

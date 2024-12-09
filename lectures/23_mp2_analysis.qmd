@@ -1,0 +1,36 @@
+---
+title: "MP2 Analysis"
+author: Prof Randi Garcia, SDS 290
+date: December 9, 2024
+format: 
+  revealjs:
+    scrollable: true
+    theme: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
+library(tidyverse)
+library(Stat2Data)
+```
+
+## Announcements
+
+-   MP1 Grades and feedback
+-   MP2 Peer Evaluation
+-   Office hours (Bass 412)
+    -   Tuesday 10:30a - 11:30a 
+    -   By appointment next week
+
+# Course evaluation time
+
+## MP2 Feedback
+
+- Grammar issues
+- Finding the right level of hedging in your language
+- Integrating statistical information into your text. (two to three decimal places only, p < .001 please!!!!). Your statistical information should be used to tell a coherent, accurate, story/description of your results. Move away from listing results. 
+- Don't repeat figures or information. They only need to be there once. 
+- Be sure you introduction gives breif reference to your factors and their levels enough for me to understand your hypotheses. Hypotheses shoudl cover all levels of your factors. 
+- Do not include information about data cleaning. Do not tell me anything about your downloading the data. 
+
+# MP2 Group Work time
