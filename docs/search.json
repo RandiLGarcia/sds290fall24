@@ -312,7 +312,7 @@
     "href": "schedule.html#finals-week---mp2-due",
     "title": "Schedule",
     "section": "Finals Week - MP2 due",
-    "text": "Finals Week - MP2 due\n\nMon, Dec 16\n\nNo class\n\n\n\nTues, Dec 17\n\nOffice hours: No office hours, by appointment\n\n\n\nWed, Dec 18\n\nMP2 due today at formal end of finals. Typically 2p or 3p. (upload to Moodle)"
+    "text": "Finals Week - MP2 due\n\nMon, Dec 16\n\nNo class\n\n\n\nTues, Dec 17\n\nOffice hours: No office hours, by appointment\n\n\n\nWed, Dec 18\n\nMP2 due today at formal end of finals. Typically 2p or 3p. (upload to Moodle)\nMP2 Peer Evaluation due today at formal end of finals. Typically 2p or 3p. (upload to Moodle)"
   },
   {
     "objectID": "lectures/02_one-way-ANOVA.html#announcements",
@@ -4848,6 +4848,6 @@
     "href": "lectures/23_mp2_analysis.html#mp2-feedback",
     "title": "MP2 Analysis",
     "section": "MP2 Feedback",
-    "text": "MP2 Feedback\n\nGrammar issues\nFinding the right level of hedging in your language\nIntegrating statistical information into your text. (two to three decimal places only, p &lt; .001 please!!!!). Your statistical information should be used to tell a coherent, accurate, story/description of your results. Move away from listing results.\nDon’t repeat figures or information. They only need to be there once.\nBe sure you introduction gives breif reference to your factors and their levels enough for me to understand your hypotheses. Hypotheses shoudl cover all levels of your factors.\nDo not include information about data cleaning. Do not tell me anything about your downloading the data."
+    "text": "MP2 Feedback\n\nGrammar issues\nFinding the right level of hedging in your language\nIntegrating statistical information into your text. (two to three decimal places only, p &lt; .001 please!!!!). Your statistical information should be used to tell a coherent, accurate, story/description of your results. Move away from listing results.\nDon’t repeat figures or information. They only need to be there once.\nBe sure you introduction gives brief reference to your factors and their levels enough for me to understand your hypotheses. Hypotheses should cover all levels of your factors.\nDo not include information about data cleaning. Do not tell me anything about your downloading the data."
   }
 ]

@@ -405,4 +405,5 @@ Please read the specified sections *before* class that day.
 #### Wed, Dec 18
 
 -   **MP2 due today at formal end of finals. Typically 2p or 3p.** (upload to Moodle)
+-   **MP2 Peer Evaluation due today at formal end of finals. Typically 2p or 3p.** (upload to Moodle)
 

@@ -30,7 +30,7 @@ library(Stat2Data)
 - Finding the right level of hedging in your language
 - Integrating statistical information into your text. (two to three decimal places only, p < .001 please!!!!). Your statistical information should be used to tell a coherent, accurate, story/description of your results. Move away from listing results. 
 - Don't repeat figures or information. They only need to be there once. 
-- Be sure you introduction gives breif reference to your factors and their levels enough for me to understand your hypotheses. Hypotheses shoudl cover all levels of your factors. 
+- Be sure you introduction gives brief reference to your factors and their levels enough for me to understand your hypotheses. Hypotheses should cover all levels of your factors. 
 - Do not include information about data cleaning. Do not tell me anything about your downloading the data. 
 
 # MP2 Group Work time
